@@ -1,9 +1,9 @@
-var Bugkiller = {
+var BugKillers = {
 	name : "ycc",
-	position : "captain",
+	position : "caption",
 	height : "160cm",
 	age : "30",
-	speak = function () {
-		console.log("my name is"+this.name);
+	speak : function(){
+		console.log("my name is "+this.name);
 	}
 }
