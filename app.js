@@ -6,4 +6,7 @@ var BugKillers = {
 	speak : function(){
 		console.log("my name is "+this.name);
 	}
+	eat : function(){
+		console.log(this.age);
+	}
 }
