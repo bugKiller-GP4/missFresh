@@ -1,3 +1,6 @@
-body{
-	background: red;
-}
+@import "./yo/base";
+@import "./yo/variables";
+
+
+@import "./yo/reset";
+@import "./modules/common.scss"

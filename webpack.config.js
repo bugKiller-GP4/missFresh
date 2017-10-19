@@ -19,6 +19,14 @@ if(process.env.NODE_ENV === 'dev'){
 		},
 		// devtool 配置
 	  	devtool: 'source-map',
+	  	
+	  	resolve : {
+	  		alias : {
+	  			'vue$' : 'vue/dist/vue.js',
+	  			'vue-router$' : 'vue-router/dist/vue-router.js'
+	  		}
+	  	},
+	  	
 		module : {
 			rules : [
 				{
@@ -30,6 +38,14 @@ if(process.env.NODE_ENV === 'dev'){
 						}
 					]
 					
+				},
+				{
+					test:/\.vue$/,
+					exclude : /node_modules/,
+					use : [
+					{
+						loader : 'vue-loader'
+					}]
 				},
 				{
 					test : /\.scss$/,
@@ -54,7 +70,7 @@ if(process.env.NODE_ENV === 'dev'){
 			        test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
 			        loader: 'url-loader',
 			        options: {
-			          limit: 1000,
+			          limit: 10,
 			          name: 'media/images/[name].[ext]'
 			        }
 		      	},
@@ -64,7 +80,7 @@ if(process.env.NODE_ENV === 'dev'){
 			        test: /\.(mp4|webm|ogg|mp3|wav|flac|aac)(\?.*)?$/,
 			        loader: 'url-loader',
 			        options: {
-			          limit: 10000,
+			          limit: 10,
 			          name: 'media/mp4/[name].[ext]'
 			        }
 		      	},
@@ -74,7 +90,7 @@ if(process.env.NODE_ENV === 'dev'){
 			        test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
 			        loader: 'url-loader',
 			        options: {
-			          limit: 10000,
+			          limit: 10,
 			          name: 'media/iconfont/[name].[ext]'
 			        }
 		      	}
@@ -105,6 +121,18 @@ if(process.env.NODE_ENV === 'dev'){
 		},
 		// devtool 配置
 	  	devtool: 'source-map',
+	  	devServer : {
+			host : 'localhost',
+			port : '7000',
+			contentBase : __dirname + '/prd',
+			noInfo : true,
+		},
+		resolve : {
+	  		alias : {
+	  			'vue$' : 'vue/dist/vue.js',
+	  			'vue-router$' : 'vue-router/dist/vue-router.js'
+	  		}
+	  	},
 		module : {
 			rules : [
 				{
@@ -116,6 +144,14 @@ if(process.env.NODE_ENV === 'dev'){
 						}
 					]
 					
+				},
+				{
+					test:/\.vue$/,
+					exclude : /node_modules/,
+					use : [
+					{
+						loader : 'vue-loader'
+					}]
 				},
 				{
 					test : /\.scss$/,
@@ -181,9 +217,7 @@ if(process.env.NODE_ENV === 'dev'){
 		      compress: {
 		        warnings: false
 		      },
-		      output: {
-		        comments: false
-		      }
+		    	except: ['$super', '$', 'exports', 'require']
 		    }),
 		]
 	}

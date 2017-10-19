@@ -5,8 +5,8 @@
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev" : "export NODE_ENV=dev && webpack && webpack-dev-server",
-    "prd" : "export NODE_ENV=prd && webpack"
+    "dev": "set NODE_ENV=dev&&webpack&&webpack-dev-server",
+    "prd": "set NODE_ENV=prd&&webpack"
   },
   "author": "",
   "license": "ISC",
@@ -22,7 +22,13 @@
     "sass-loader": "^6.0.6",
     "style-loader": "^0.19.0",
     "url-loader": "^0.6.2",
+    "vue-loader": "^13.3.0",
+    "vue-template-compiler": "^2.5.2",
     "webpack": "^3.8.0",
     "webpack-dev-server": "^2.9.2"
+  },
+  "dependencies": {
+    "vue": "^2.5.2",
+    "vue-router": "^3.0.1"
   }
 }
