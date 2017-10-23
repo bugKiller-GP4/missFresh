@@ -20,14 +20,14 @@
 					<img src="//static-as.missfresh.cn/frontend/img/home-search-3x-black.png"/>
 				</div>
 			</li>
-			<li>
-				<div>
+			<li >
+				<div class="scroll">
 					<ul>
 						<li>
 							<router-link to="/index/hot" tag="span" :active-class="'active'">热卖</router-link>
 						</li>
 						<li>
-							<router-link :to="{ name : 'huoguo' , params : {id : 123456} }" tag="span" :active-class="'active'">火锅</router-link>
+							<router-link :to="{ name : 'huoguo' , params : {id : 123456} }"  tag="span" :active-class="'active'">火锅</router-link>
 						</li>
 						<li>
 							<router-link to="/index/fruits" tag="span" :active-class="'active'">水果</router-link>
@@ -73,6 +73,7 @@
 </template>
 
 <script>
+	import IsScroll from "../scripts/libs/iscroll-probe.js"
 	export default {
 		props : ["id","change"],
 		data(){
@@ -82,6 +83,9 @@
 		methods : {
 		},
 		mounted(){
+			new IsScroll('.scroll',{
+				scrollX: true
+			})
 		}
 	}
 </script>

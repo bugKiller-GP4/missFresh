@@ -1,7 +1,7 @@
 <template lang="html">
 	<div>
 		<ul>
-			<li>
+			<li class="active">
 				<i class="iconfont">&#xe607;</i>
 				<p>首页</p>
 			</li>

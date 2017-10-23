@@ -73,7 +73,7 @@ header{
                     div{
                         &:first-child{
                             @include flex();
-                            overflow: hidden;
+                            overflow-x: scroll;
                             ul{
                                 width: 702px;
                                 @include flexbox();
@@ -84,6 +84,10 @@ header{
                                     height: 100%;
                                     line-height: 40px;
                                     width: 54px;
+                                    &:nth-child(2){
+                                        background: url('https://j-image.missfresh.cn/img_20171013205830872.png') center right no-repeat;
+                                        background-size: contain;
+                                    }
                                     span{
                                         color: black;
                                         display: inline-block;

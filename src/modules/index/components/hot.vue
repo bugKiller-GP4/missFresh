@@ -1,6 +1,16 @@
 <template>
 	<div>
-		<mt-loadmore :top-method="loadTop" :bottom-method="loadBottom" :bottom-all-loaded="allLoaded" ref="loadmore" :bottomAllLoaded="false">
+		<mt-loadmore :bottomDistance="0" :top-method="loadTop" :bottom-method="loadBottom" :bottom-all-loaded="allLoaded" ref="loadmore" :bottomAllLoaded="false" @top-status-change="handleTopChange" @bottom-status-change="handleBottomChange" >
+			<div slot="top" class="mint-loadmore-top">
+		      <span v-show="topStatus !== 'loading'" :class="{ 'rotate': topStatus === 'drop' }">
+		      	<img src="../../../../dev/media/images/loading-gif.gif" width="120" height="40"/>
+		      	<p>优质生鲜 两小时到</p>
+		      </span>
+		      <span v-show="topStatus === 'loading'">
+		      	<img src="../../../../dev/media/images/loading-gif.gif" width="120" height="40"/>
+		      	<p>优质生鲜 两小时到</p>
+		      </span>
+		    </div>
 			<div class="banner">
 				<mt-swipe :auto="4000">
 				  <mt-swipe-item v-for="(value,i) in imgs" :key="i"><img :src="value.path"/></mt-swipe-item>
@@ -74,6 +84,12 @@
 					</ul>
 				</div>
 			</div>
+			<div slot="bottom" class="mint-loadmore-bottom">
+		      <span v-show="bottomStatus !== 'loading'" :class="{ 'rotate': bottomStatus === 'drop' }">
+		      </span>
+		      <span v-show="bottomStatus === 'loading'">
+		      </span>
+		    </div>
 		</mt-loadmore>
 	</div>
 </template>
@@ -101,8 +117,10 @@
 				card_right_bottom_right :{},
 				goods_lists : [],
 				godds_lists_all : [],
-				page_num : 7
-				
+				page_num : 7,
+				topStatus: '',
+				bottomStatus : '',
+				allLoaded : false
 			}
 		},
 		mounted(){
@@ -167,9 +185,12 @@
 				this.allLoaded = true;
 				this.$refs.loadmore.onBottomLoaded();
 			},
-			allLoaded(){
-				console.log(2);
-			}
+			handleTopChange(status) {
+	        	this.topStatus = status;
+	      	},
+	      	handleBottomChange(status) {
+	        	this.bottomStatus = status;
+	      	}
 		}
 	}
 </script>
