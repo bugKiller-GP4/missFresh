@@ -16,6 +16,26 @@ if(process.env.NODE_ENV === 'dev'){
 			port : '7000',
 			contentBase : __dirname + '/dev',
 			noInfo : true,
+			proxy : 
+			{
+				
+				'/api' : 
+				{
+					target : "https://as-vip.missfresh.cn/",
+					changeOrigin : true,
+					pathRewrite : {
+						'^/api' : ''
+					}
+				},
+				'/list' : 
+				{
+					target : "http://localhost:3000",
+					changeOrigin : true,
+					pathRewrite : {
+						'^/list' :''
+					}
+				}
+			}
 		},
 		// devtool 配置
 	  	devtool: 'source-map',
@@ -23,7 +43,8 @@ if(process.env.NODE_ENV === 'dev'){
 	  	resolve : {
 	  		alias : {
 	  			'vue$' : 'vue/dist/vue.js',
-	  			'vue-router$' : 'vue-router/dist/vue-router.js'
+	  			'vue-router$' : 'vue-router/dist/vue-router.js',
+	  			'axios$' : "axios/dist/axios.js"	  		
 	  		}
 	  	},
 	  	

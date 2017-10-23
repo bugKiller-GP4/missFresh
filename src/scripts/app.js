@@ -1,2 +1,5 @@
 import "../styles/app.scss"
 import "../modules/index/scripts/main.js"
+import "../media/iconfont/iconfont.ttf"
+import "../media/iconfont/iconfont.woff"
+import "../media/images/loading-gif.gif"

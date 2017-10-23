@@ -1,0 +1,243 @@
+{
+    "content": {
+        "data": {
+            "isLogin": false,
+            "page": {
+                "pageSize": 15,
+                "start": "15",
+                "result": [
+                    {
+                        "logger": {
+                            "traceCapable": true,
+                            "name": "com.lagou.entity.mobile.MobilePosition"
+                        },
+                        "positionId": 3606984,
+                        "positionName": "会计（AP方向）",
+                        "city": "武汉",
+                        "createTime": "今天 17:11",
+                        "salary": "4k-6k",
+                        "companyId": 73809,
+                        "companyLogo": "image1/M00/2A/CD/Cgo8PFVtV22ARlWcAAAt0M-Ekoo310.png",
+                        "companyName": "斑马快跑",
+                        "companyFullName": "武汉斑马快跑科技有限公司"
+                    },
+                    {
+                        "logger": {
+                            "traceCapable": true,
+                            "name": "com.lagou.entity.mobile.MobilePosition"
+                        },
+                        "positionId": 3606900,
+                        "positionName": "运营经理、主管",
+                        "city": "武汉",
+                        "createTime": "今天 17:10",
+                        "salary": "6k-8k",
+                        "companyId": 73809,
+                        "companyLogo": "image1/M00/2A/CD/Cgo8PFVtV22ARlWcAAAt0M-Ekoo310.png",
+                        "companyName": "斑马快跑",
+                        "companyFullName": "武汉斑马快跑科技有限公司"
+                    },
+                    {
+                        "logger": {
+                            "traceCapable": true,
+                            "name": "com.lagou.entity.mobile.MobilePosition"
+                        },
+                        "positionId": 3615406,
+                        "positionName": "培训主管",
+                        "city": "杭州",
+                        "createTime": "今天 17:09",
+                        "salary": "10k-20k",
+                        "companyId": 165220,
+                        "companyLogo": "i/image/M00/88/B1/Cgp3O1huOLmARNH1AAAZ87HZC1Q803.jpg",
+                        "companyName": "昊汉网络",
+                        "companyFullName": "浙江昊汉网络有限公司"
+                    },
+                    {
+                        "logger": {
+                            "traceCapable": true,
+                            "name": "com.lagou.entity.mobile.MobilePosition"
+                        },
+                        "positionId": 3605552,
+                        "positionName": "Java",
+                        "city": "北京",
+                        "createTime": "今天 17:09",
+                        "salary": "20k-40k",
+                        "companyId": 50702,
+                        "companyLogo": "i/image/M00/6A/05/Cgp3O1gW8zSAUwUsAABMptH-XY087.jpeg",
+                        "companyName": "美团点评",
+                        "companyFullName": "北京三快在线科技有限公司"
+                    },
+                    {
+                        "logger": {
+                            "traceCapable": true,
+                            "name": "com.lagou.entity.mobile.MobilePosition"
+                        },
+                        "positionId": 3607104,
+                        "positionName": "销售经理",
+                        "city": "北京",
+                        "createTime": "今天 17:08",
+                        "salary": "10k-15k",
+                        "companyId": 59006,
+                        "companyLogo": "i/image/M00/6B/7A/CgpFT1mx_3-AUUHwAAAjBUUULDY841.jpg",
+                        "companyName": "小存折",
+                        "companyFullName": "北京清果网络科技有限公司"
+                    },
+                    {
+                        "logger": {
+                            "traceCapable": true,
+                            "name": "com.lagou.entity.mobile.MobilePosition"
+                        },
+                        "positionId": 3607130,
+                        "positionName": "运维工程师",
+                        "city": "北京",
+                        "createTime": "今天 17:08",
+                        "salary": "10k-20k",
+                        "companyId": 59006,
+                        "companyLogo": "i/image/M00/6B/7A/CgpFT1mx_3-AUUHwAAAjBUUULDY841.jpg",
+                        "companyName": "小存折",
+                        "companyFullName": "北京清果网络科技有限公司"
+                    },
+                    {
+                        "logger": {
+                            "traceCapable": true,
+                            "name": "com.lagou.entity.mobile.MobilePosition"
+                        },
+                        "positionId": 3615886,
+                        "positionName": "产品运营",
+                        "city": "北京",
+                        "createTime": "今天 17:06",
+                        "salary": "6k-10k",
+                        "companyId": 67077,
+                        "companyLogo": "i/image/M00/07/BD/Cgp3O1bOsJ6ASIvyAAA6KAo0Xpg760.png",
+                        "companyName": "FDT金融创新工场",
+                        "companyFullName": "杭州牛经数据技术有限公司"
+                    },
+                    {
+                        "logger": {
+                            "traceCapable": true,
+                            "name": "com.lagou.entity.mobile.MobilePosition"
+                        },
+                        "positionId": 3615899,
+                        "positionName": "策划",
+                        "city": "北京",
+                        "createTime": "今天 17:06",
+                        "salary": "6k-10k",
+                        "companyId": 67077,
+                        "companyLogo": "i/image/M00/07/BD/Cgp3O1bOsJ6ASIvyAAA6KAo0Xpg760.png",
+                        "companyName": "FDT金融创新工场",
+                        "companyFullName": "杭州牛经数据技术有限公司"
+                    },
+                    {
+                        "logger": {
+                            "traceCapable": true,
+                            "name": "com.lagou.entity.mobile.MobilePosition"
+                        },
+                        "positionId": 3615905,
+                        "positionName": "数学编辑",
+                        "city": "深圳",
+                        "createTime": "今天 17:06",
+                        "salary": "8k-10k",
+                        "companyId": 140103,
+                        "companyLogo": "i/image/M00/11/B5/CgpEMljsqBmASjyZAABAF3Xbpqc794.jpg",
+                        "companyName": "优学天下",
+                        "companyFullName": "深圳市优学天下教育发展股份有限公司"
+                    },
+                    {
+                        "logger": {
+                            "traceCapable": true,
+                            "name": "com.lagou.entity.mobile.MobilePosition"
+                        },
+                        "positionId": 3616041,
+                        "positionName": "理科编辑",
+                        "city": "深圳",
+                        "createTime": "今天 17:06",
+                        "salary": "8k-10k",
+                        "companyId": 140103,
+                        "companyLogo": "i/image/M00/11/B5/CgpEMljsqBmASjyZAABAF3Xbpqc794.jpg",
+                        "companyName": "优学天下",
+                        "companyFullName": "深圳市优学天下教育发展股份有限公司"
+                    },
+                    {
+                        "logger": {
+                            "traceCapable": true,
+                            "name": "com.lagou.entity.mobile.MobilePosition"
+                        },
+                        "positionId": 3616188,
+                        "positionName": "Linux研发实习工程师",
+                        "city": "北京",
+                        "createTime": "今天 17:01",
+                        "salary": "4k-7k",
+                        "companyId": 115087,
+                        "companyLogo": "i/image/M00/08/7C/Cgp3O1bQBL2Ae-OMAAAo-36QDd8532.png",
+                        "companyName": "米文动力",
+                        "companyFullName": "北京米文动力科技有限公司"
+                    },
+                    {
+                        "logger": {
+                            "traceCapable": true,
+                            "name": "com.lagou.entity.mobile.MobilePosition"
+                        },
+                        "positionId": 3605640,
+                        "positionName": "运营专员",
+                        "city": "杭州",
+                        "createTime": "今天 17:00",
+                        "salary": "4k-6k",
+                        "companyId": 11455,
+                        "companyLogo": "i/image/M00/00/06/Cgp3O1Yh56qAS7-1AAAVh3BShHM064.jpg",
+                        "companyName": "速网电商",
+                        "companyFullName": "浙江速网电子商务有限公司"
+                    },
+                    {
+                        "logger": {
+                            "traceCapable": true,
+                            "name": "com.lagou.entity.mobile.MobilePosition"
+                        },
+                        "positionId": 3614662,
+                        "positionName": "Android",
+                        "city": "合肥",
+                        "createTime": "今天 16:59",
+                        "salary": "10k-15k",
+                        "companyId": 190042,
+                        "companyLogo": "i/image/M00/0E/77/CgpEMljnJoaAG0ZNAAAMWN3a2Fw375.png",
+                        "companyName": "安徽华米科技",
+                        "companyFullName": "安徽华米信息科技有限公司"
+                    },
+                    {
+                        "logger": {
+                            "traceCapable": true,
+                            "name": "com.lagou.entity.mobile.MobilePosition"
+                        },
+                        "positionId": 3614680,
+                        "positionName": "IOS",
+                        "city": "合肥",
+                        "createTime": "今天 16:59",
+                        "salary": "10k-15k",
+                        "companyId": 190042,
+                        "companyLogo": "i/image/M00/0E/77/CgpEMljnJoaAG0ZNAAAMWN3a2Fw375.png",
+                        "companyName": "安徽华米科技",
+                        "companyFullName": "安徽华米信息科技有限公司"
+                    },
+                    {
+                        "logger": {
+                            "traceCapable": true,
+                            "name": "com.lagou.entity.mobile.MobilePosition"
+                        },
+                        "positionId": 3614537,
+                        "positionName": "投资助理实习生（2018届理工科硕士）",
+                        "city": "北京",
+                        "createTime": "今天 16:57",
+                        "salary": "3k-5k",
+                        "companyId": 100816,
+                        "companyLogo": "i/image/M00/08/79/CgqKkVbQAaCAGva_AAEH1bjXBYw848.jpg",
+                        "companyName": "潜力股",
+                        "companyFullName": "北京潜力股科技有限公司"
+                    }
+                ],
+                "totalCount": "261802",
+                "pageNo": 2
+            }
+        },
+        "rows": []
+    },
+    "message": "第2页数据,每页15条, 查询成功!",
+    "state": 1
+}
