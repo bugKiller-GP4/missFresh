@@ -7,6 +7,20 @@
         height: 100%;
     }
 }
+section{
+    >div{
+        height: 100%;
+    }
+}
+.load_img{
+    @include flexbox();
+    @include justify-content(center);
+    @include align-items(center);
+    height: 100%;
+    img{
+        width: 30%;
+    }
+}
 .img_second{
     height: 335px;
     width:100%;
@@ -31,6 +45,7 @@
             padding-left: 15px;
             height: 70px;
             position: relative;
+            background: white;
             span{
                 &:first-child{
                     display: block;

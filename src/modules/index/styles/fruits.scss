@@ -20,77 +20,6 @@ section{
         width: 30%;
     }
 }
-.promise{
-    ul{
-        @include flexbox();
-        height: 49px;
-        li{
-            @include flex();
-            @include flexbox();
-            @include align-items(center);
-            @include justify-content(center);
-            color: #4d4d4d;
-            img{
-                margin-top: -2px;
-                margin-right: 3px;
-                width: 16px;
-                height: 16px;
-            }
-        }
-    }
-}
-.cards{
-    width: 100%;
-    height: 150px;
-    padding: 0 15px;
-    section{
-        width: 100%;
-        padding-bottom: 15px;
-        height: 100%;
-        @include flexbox();
-        @include border(0 0 1px 0,#e6e6e6);
-        div{
-            &:first-child{
-                @include flex(53);
-                img{
-                    width: 100%;
-                    height: 100%;
-                }
-            }
-            &:last-child{
-                @include flex(47);
-                @include flexbox();
-                @include flex-direction(column);
-                height: 100%;
-                div{
-                    &:first-child{
-                        @include flex();
-                        width:100%; 
-                        margin-left: 3px;
-                        
-                    }
-                    &:last-child{
-                        @include flex();
-                        @include flexbox();
-                        @include flex-direction(row);
-                        width:100%; 
-                        margin-left: 3px;
-                        div{
-                            img{
-                                padding-top: 3px;
-                                padding-right: 3px;
-                                width: 100%;
-                            }
-                            @include flex();
-                            width: 100%;
-                        }
-                    }                        
-                }
-            }
-        }
-    }
-}
-
 .goods{
     height: 100%;
     overflow-y: scroll;
@@ -112,6 +41,20 @@ section{
                 img{
                     width: 100%;
                 }
+            }
+            .no_banner{
+                padding-left: 15px;
+                height: 70px;
+                color: rgb(255, 29, 63);
+                 position: relative;
+                 span{
+                     &:first-child{
+                        position: absolute;
+                        margin-top: 27px;
+                        height: 20px;
+                        font-size: 18px;
+                     }
+                 }
             }
             .sell_out{
                 padding-left: 15px;

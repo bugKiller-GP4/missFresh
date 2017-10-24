@@ -1,0 +1,94 @@
+@import "../../../styles/app.scss";
+.search_header{
+    height: 44px;
+    background: white;
+    color: #4b4b4b;
+    box-shadow: 0 0 10px rgba(0,0,0,.06);
+    padding: 5px;
+    @include flexbox();
+    @include flex-direction(row);
+    .back{
+        line-height: 34px;
+        margin-left: -10px;
+        width: 44px;
+        img{
+            height: 18px;
+            width: 18px;
+            margin: auto 15px;
+            vertical-align: middle;
+        }
+    }
+    .search_box{
+        height: auto;
+        line-height: 30px;
+        width: 75%;
+        background: #e6e6e6;
+        border-radius: 4px;
+        img{
+            width: 14px;
+            position: relative;
+            margin-left: 10px;
+            margin-right: 6px;
+            vertical-align: middle;
+        }
+        input{
+            display: inline-block;
+            vertical-align: middle;
+            background: #e6e6e6;
+            color: #262626;
+            font-size: 14px;
+            width: 76%;
+            border: 0;
+            height: 34px;
+            line-height: 16px;
+        }
+    }
+    .search_text{
+        line-height: 34px;
+        margin: auto 15px;
+        color: #262626;
+        position: absolute;
+        right: 0;
+    }
+}
+.hot_title{
+    height: 36px;
+    padding-left: 10px;
+    color: #969696;
+    span{
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 36px;
+    }
+}
+.hot_list,.history_list{
+    background: white;
+    padding: 15px 10px 5px;
+    span{
+        margin: 0 0 10px 10px;
+        display: inline-block;
+        color: #262626;
+        line-height: 30px;
+        padding: 0 10px;
+        background: #f6f5f5;
+        border-radius: 4px;
+    }
+}
+.history_title{
+    height: 36px;
+    padding-left: 10px;
+    color: #969696;
+    span{
+        display: inline-block;
+        vertical-align: middle;
+        line-height: 36px;
+    }
+}
+.search_all{
+    background: #f0f0f0;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    z-index: 100000;
+    right: -100%;
+}

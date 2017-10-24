@@ -4,7 +4,7 @@ import Hot from "../components/hot.vue"
 import Huoguo from "../components/huoguo.vue"
 import Fruits from "../components/fruits.vue"
 import index from "../components/index.vue"
-import xinxianshi from "../components/xinxianshi.vue"
+import search from "../components/search.vue"
 vue.use(VueRouter);
 
 const router = new VueRouter({
@@ -32,9 +32,10 @@ const router = new VueRouter({
 		]
 	},
 	{
-		path : "/xinxianshi",
-		component : xinxianshi
-	}]
+		path : "/search",
+		component : search
+	}
+	]
 })
 
 var vm = new vue({
