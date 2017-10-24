@@ -1,2 +1,2 @@
 import "../styles/app.scss"
-import "../modules/index/scripts/main.js"
+import "../modules/mine/scripts/main.js"

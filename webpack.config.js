@@ -13,9 +13,18 @@ if(process.env.NODE_ENV === 'dev'){
 		},
 		devServer : {
 			host : 'localhost',
-			port : '7000',
+			port : '5000',
 			contentBase : __dirname + '/dev',
 			noInfo : true,
+			proxy: {
+				'/api': {
+					target: 'http://datainfo.duapp.com/shopdata/userinfo.php',
+					changeOrigin: true,
+					pathReWrite: {
+						'^/api': ''
+					} 
+				}
+			}
 		},
 		// devtool 配置
 	  	devtool: 'source-map',
@@ -109,6 +118,10 @@ if(process.env.NODE_ENV === 'dev'){
 			})
 			
 		]
+		// externals:{
+		// 	'vue': 'window.Vue',
+		// 	'vue-router': 'window.VueRouter'
+		// }
 	}
 }else{
 	module.exports  = {
@@ -220,5 +233,9 @@ if(process.env.NODE_ENV === 'dev'){
 		    	except: ['$super', '$', 'exports', 'require']
 		    }),
 		]
+		// externals:{
+		// 	'vue': 'window.Vue',
+		// 	'vue-router': 'window.VueRouter'
+		// }
 	}
 }
