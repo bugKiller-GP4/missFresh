@@ -1,0 +1,237 @@
+@import "../../../styles/app.scss";
+@font-face {
+    font-family: 'iconfont';
+    src: url('../img/iconfontlyl.woff') format('woff'),
+    url('../img/iconfontlyl.ttf') format('truetype');
+  }
+  .iconfont{
+    font-family:"iconfont" !important;
+    font-size:16px;font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+  }
+#app{
+    width:100%;
+    height: 100%;
+}
+.box{
+    height: 100%;
+    width: 100%;
+    background: #f5f5f5;
+    @include flexbox();
+    @include flex-direction(column);
+    section{
+        @include flex();
+        width: 100%;
+        overflow-y:scroll ;
+        .top_img_box{
+            width: 100%;
+            img{
+                width: 100%;
+            }
+        }
+        .middle_box{
+            overflow: hidden;
+            position: relative;
+            margin-top: .1rem;
+            height: 2.4rem;
+            background: #fff;
+            >div:nth-of-type(1){
+                top: 0.1rem;
+                position: absolute;
+                right: 0.2rem;
+                span{
+                    display: inline;
+                    padding-left: 0.05rem;
+                    font-size:12px;
+                    color:#777;
+                    &:nth-child(2){
+                        font-size: 14px;
+                    } 
+                }
+            }
+            >p{
+                text-align:center;
+                overflow: hidden;
+                &:nth-of-type(1){
+                    margin-top: .33rem;
+                }
+                &:nth-of-type(2){
+                    font-size: 12px;
+                    color: #777;
+                    overflow: hidden;
+                    margin-top: .05rem;
+                    span{
+                        display: inline-block;
+                        font-size: 12px;
+                    }
+                }
+            }
+            .Invitation_welfare{
+                padding-top:.1rem;
+                overflow-x: scroll;
+                ul{
+                    width: 150%;
+                    @include flexbox();
+                    li{
+                        @include flex();
+                        &:nth-child(1){
+                            img{
+                                width: 90%;
+                                display: block;
+                                margin: 0 auto;
+                            }
+                            div{
+                                margin-top: .05rem;
+                                height: 0.16rem;
+                                border:0.01rem solid #ffb4d2;
+                                border-right: none;
+                                margin-left: 0.1rem;
+                                border-radius: 8px 0 0 7px;
+                                overflow: hidden;
+                                margin-bottom: 0.05rem;
+                                position: relative;
+                                >p{
+                                    display: block;
+                                    color: #fff;
+                                    width:0.15rem;
+                                    text-align: center;
+                                    height: 0.2rem;
+                                    line-height: 0.15rem;
+                                    background: #ff4891;
+                                    span{
+                                        transform:scale(0.875);
+                                        font-size: 12px;
+                                    }
+                                }
+                                .line{
+                                    display: block;
+                                    width: 0.02rem;
+                                    height: 0.1rem;
+                                    background: #ff4891;
+                                    position: absolute;
+                                    top:.02rem;
+                                    left:50%;
+                                    margin-left:-0.06rem;
+                                }
+                            }
+                            >p{
+                                text-align: center;
+                                font-size: 12px;
+                            }
+                        }
+                        &:nth-child(2), &:nth-child(3), &:nth-child(4){
+                            img{
+                                width: 90%;
+                                display: block;
+                                margin: 0 auto;
+                            }
+                            div{
+                                margin-top: .05rem;
+                                height: 0.16rem;
+                                border:0.01rem solid #ffb4d2;
+                                border-right: none;
+                                border-left: none;
+                                overflow: hidden;
+                                margin-bottom: 0.05rem;
+                                position: relative;
+                                >p{
+                                    display: block;
+                                    color: #fff;
+                                    width:0.15rem;
+                                    text-align: center;
+                                    height: 0.2rem;
+                                    line-height: 0.15rem;
+                                    background: #ff4891;
+                                    span{
+                                        transform:scale(0.875);
+                                        font-size: 12px;
+                                    }
+                                }
+                                .line{
+                                    display: block;
+                                    width: 0.02rem;
+                                    height: 0.1rem;
+                                    background: #ff4891;
+                                    position: absolute;
+                                    top:.02rem;
+                                    left:50%;
+                                    margin-left:-0.01rem;
+                                }
+                            }
+                            >p{
+                                text-align: center;
+                                font-size: 12px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .bottom_box{
+            overflow: hidden;
+            margin-top:.1rem;
+            background: #fff;
+            .bottom_p{
+                @include flexbox();
+                position: relative;
+                span{
+                    @include flex();
+                    font-size:16px;
+                    text-align: center;
+                    line-height: .44rem;
+                }
+                .bottom_line{
+                    position: absolute;
+                    width: 50%;
+                    height:.02rem;
+                    background: rgb(255, 72, 145);
+                    bottom:0;
+                    left: 0;
+                }
+                @keyframes lineright {
+                    0%{
+                        left:0%;
+                    }
+                    100%{
+                        left:50%;
+                    }
+                }
+                @keyframes lineleft {
+                    0%{
+                        left:50%;
+                    }
+                    100%{
+                        left:0%;
+                    }
+                }
+                .line_r{
+                    animation: lineright 0.5s 0s 1;
+                    left:50%;
+                }
+                .line_l{
+                    animation: lineleft 0.5s 0s 1;
+                    left:0%;
+                }
+                .line_color{
+                    color:#ff4891;
+                }
+            }
+            .bottom_list{
+                >p{
+                    text-align: center;
+                    line-height: .3rem;
+                    height:.3rem;
+                    background: #f5f5f5;
+                    font-size: 12px;
+                    color:#666;
+                }
+            }
+        }
+    }
+    footer{
+        height:.5rem;
+        width:100%;
+    }
+}

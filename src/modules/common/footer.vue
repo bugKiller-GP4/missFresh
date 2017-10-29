@@ -1,4 +1,4 @@
-<!--<template lang="html">
+<template lang="html">
 	<div>
 		<ul>
 			<router-link tag="li" :to="{name : 'hot'}" active-class="active">
@@ -29,5 +29,5 @@
 </script>
 
 <style lang="scss">
-	@import "../styles/footer.scss";
-</style>-->
+	@import "./footer.scss";
+</style>

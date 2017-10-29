@@ -15,7 +15,7 @@
 </template>
 
 <script>
-	import IndexFooter from "./footer.vue"
+	import IndexFooter from "../../common/footer.vue"
 	import IndexHeader from "./header.vue"
 	import IndexSection from "./section.vue"
 	import search from "./search.vue"

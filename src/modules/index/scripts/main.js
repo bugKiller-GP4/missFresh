@@ -5,6 +5,11 @@ import Huoguo from "../components/huoguo.vue"
 import Fruits from "../components/fruits.vue"
 import index from "../components/index.vue"
 import search from "../components/search.vue"
+import detail from "../../detail-goods/components/detail-goods.vue"
+import welfare from "../../welfare/components/index.vue"
+import somethingNew from "../../somethingNew/components/index.vue"
+import mine from "../../mine/components/mine.vue"
+import login from "../../mine/components/login.vue"
 vue.use(VueRouter);
 
 const router = new VueRouter({
@@ -33,7 +38,33 @@ const router = new VueRouter({
 	},
 	{
 		path : "/search",
-		component : search
+		component : search,
+		name : "search"
+	},
+	{
+		path : "/detail",
+		component : detail,
+		name : "detail"
+	},
+	{
+		path: "/welfare",
+		component : welfare,
+		name : "welfare"
+	},
+	{
+		path:"/somethingNew",
+		component: somethingNew,
+		name : 'somethingNew'
+	},
+	{
+		path:"/mine",
+		component:mine,
+		name : "mine"
+	},
+	{
+		path:"/login",
+		component:login,
+		name : "login"
 	}
 	]
 })

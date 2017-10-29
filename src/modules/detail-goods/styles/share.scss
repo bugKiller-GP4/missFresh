@@ -1,0 +1,81 @@
+html,body{
+    width: 100%;
+    height: 100%;
+}
+section{
+    overflow-y: scroll;
+    
+}
+#app{
+    width: 100%;
+    height: 100%;
+    .goods{
+        width: 100%;
+        height: 100%;
+        background: #fff;
+        @include flexbox();
+        @include flex-direction(column);
+        .sharebox{
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,.5);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 9999;
+            .share-contener{
+                width: 100%;
+                height: 174px;
+                background: #fff;
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                padding: 0 5%;
+                .share-title{
+                    width: 100%;
+                    height: 20px;
+                    line-height: 20px;
+                    font-size: 14px;
+                    color: #4B4B4B;
+                    margin-top: 10px;
+                    padding-left: 5%;
+                }
+                .share-list{
+                    width: 100%;
+                    height: 94px;
+                    @include flexbox();
+                    li{
+                        @include flex();
+                        @include flexbox();
+                        @include flex-direction(column);
+                        @include justify-content(center);
+                        @include align-items(center);
+                        p{
+                            img{
+                                height: 53px;
+                            }
+                        }
+                        span{
+                            font-size: 13px;
+                            color: #4B4B4B;
+                            padding-top: 5px;
+                        }
+                    }
+                }
+                .cancel{
+                    width: 100%;
+                    height: 50px;
+                    span{
+                        display: block;
+                        font-size: 16px;
+                        color: #4B4B4B;
+                        text-align: center;
+                        line-height: 50px;
+                       @include border(1px 0 0 0,#ddd,solid);
+                    }
+                    
+                }
+            }
+        }
+    }
+}
