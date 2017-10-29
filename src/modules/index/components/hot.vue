@@ -49,7 +49,7 @@
 					</div>
 					<div class="goods_list">
 						<ul>
-							<li v-for="(goods_list,i) in goods_lists" v-if="(goods_list.buy_permission===0)">
+							<li v-for="(goods_list,i) in goods_lists" v-if="(goods_list.buy_permission===0)" @click="gotodetail(goods_list.sku)">
 								<div class="li_container">
 									<div class="img_left">
 										<img :src="goods_list.image" v-lazy="goods_list.image"/>
@@ -143,6 +143,7 @@
 				}
 			})
 			.then(function(response){
+				console.log(response);
 				that.imgs =  response.data.product_list.banner;
 				that.brands = response.data.product_list.brands;
 				that.card_left = response.data.product_list.category_areas[0];
@@ -194,6 +195,9 @@
 	      	},
 	      	handleBottomChange(status) {
 	        	this.bottomStatus = status;
+	      	},
+	      	gotodetail(params){
+	      		this.$router.push({ name : 'detail',query : {sku : params}});
 	      	}
 		}
 	}
