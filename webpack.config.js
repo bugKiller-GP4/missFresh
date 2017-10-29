@@ -117,11 +117,11 @@ if(process.env.NODE_ENV === 'dev'){
 				filename : 'index.html'
 			})
 			
-		]
-		// externals:{
-		// 	'vue': 'window.Vue',
-		// 	'vue-router': 'window.VueRouter'
-		// }
+		],
+		externals:{
+			'vue': 'window.Vue',
+			'vue-router': 'window.VueRouter'
+		}
 	}
 }else{
 	module.exports  = {
@@ -232,10 +232,10 @@ if(process.env.NODE_ENV === 'dev'){
 		      },
 		    	except: ['$super', '$', 'exports', 'require']
 		    }),
-		]
-		// externals:{
-		// 	'vue': 'window.Vue',
-		// 	'vue-router': 'window.VueRouter'
-		// }
+		],
+		externals:{
+			'vue': 'window.Vue',
+			'vue-router': 'window.VueRouter'
+		}
 	}
 }

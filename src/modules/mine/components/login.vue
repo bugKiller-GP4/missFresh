@@ -4,10 +4,11 @@
           <button @click="back"></button>
           <span>验证手机</span>
       </header>
+      <div class="reg" @click="inReg">注册</div>
       <div class="login-list">
             <div class="phone">
                 <input type="text" placeholder="请输入手机号" class="phone-num" ref="phoneNum" autofocus>
-                <!-- <button class="get-yzm" @click="getCode">语音验证码</button> -->
+                <button class="get-yzm" >语音验证码</button>
             </div>
             <div class="password">
                 <input type="password" placeholder="请输入验证码" class="in-yzm" ref="pwd">
@@ -16,7 +17,7 @@
             <p>为方便您及时查询订单信息，需要验证您的手机号来登录</p>
       </div>
       <div class="warn" v-show="isShow">请输入正确的手机号</div>
-      <!-- <div class="warn" v-show="wasShow">请输入正确的验证码</div>       -->
+      <div class="warn" v-show="wasShow">用户名密码不符</div>      
   </div>
 </template>
 <script>
@@ -26,7 +27,6 @@
         data() {
             return {
                 isShow : false
-                // teleNum:
                 // wasShow : false
             }
         },
@@ -39,12 +39,16 @@
                     }).then((res)=>{
                         switch(res.data){
                             case 0 : break;
-                            case 2 : break;
+                            case 2 : this.wasShow = true;
+                                    setTimeout(function() {
+                                        this.wasShow = false
+                                    }.bind(this), 1500);break;
                             default: 
                             // this.$router.push({path: 'Mine',query:{isShow:true}});
                                     this.$router.push({name: 'Mine',params:{isShow:true}});
                                     bus.$emit('is-log', 1);
-                                     break;
+                                    sessionStorage.setItem('User',this.$refs.phoneNum.value)
+                                    break;
                         }
                     });
                 }else{
@@ -56,6 +60,9 @@
             },
             back(){
                 history.go(-1)
+            },
+            inReg(){
+                this.$router.push('Register');
             }
         }
     }

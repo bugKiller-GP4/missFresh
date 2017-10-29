@@ -15,6 +15,7 @@
             <p>为方便您及时查询订单信息，需要验证您的手机号来注册</p>
       </div>
       <div class="warn" v-show="isShow">请输入正确格式的手机号和密码</div>
+      <div class="warn" v-show="wasShow">用户名已存在</div>      
   </div>
 </template>
 <script>
@@ -22,7 +23,8 @@
     export default {
         data() {
             return {
-                isShow : false
+                isShow : false,
+                wasShow : false
             }
         },
         methods: {
@@ -34,6 +36,10 @@
                     }).then((res)=>{
                         switch(res.data){
                             case 1 : this.$router.push('./Login'); break;
+                            case 0 : this.wasShow = true; 
+                                    setTimeout(function() {
+                                        this.wasShow = false
+                                    }.bind(this), 1500);
                         }
                     });
                 }else{

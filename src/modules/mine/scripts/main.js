@@ -8,10 +8,5 @@ const router = new VueRouter({
 })
 
 new Vue({
-    // el: '#app',
-    // components: {
-    //     Mine: Mine,
-    //     Login : Login
-    // }
     router
 }).$mount('#app')
