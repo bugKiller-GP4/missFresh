@@ -1,0 +1,34 @@
+@import "../../../styles/app.scss";
+
+footer{
+    height: .5rem;
+    div{
+        height: 100%;
+    }
+    ul{
+        background: white;
+        @include flexbox();
+        width: 100%;
+        height: 100%;
+        box-shadow: 0 0 10px rgba(0,0,0,.06);
+        @include border(1px 0 0 0);
+        li{
+            @include flex();
+            @include flexbox();
+            @include align-items(center);
+            @include justify-content(center);
+            @include flex-direction(column);
+            .iconfont{
+                font-size: .21rem;
+            }
+            p{
+                font-size: .12rem;
+            }
+        }
+    }
+}
+
+
+.active{
+    color:#ff4891;
+}

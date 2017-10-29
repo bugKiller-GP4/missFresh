@@ -1,0 +1,46 @@
+@import "../../../styles/app.scss";
+body{
+    height: 100%;
+    width: 100%;
+}
+#app{
+    height: 100%;
+    width: 100%;
+    background: white;
+}
+.m-index{
+    @include flexbox();
+    @include flex-direction(column);
+    height: 100%;
+    header{
+        height: 1.24rem;
+    }
+    section{
+        @include flex();
+        width: 100%;
+        overflow-y: scroll;
+    }
+    footer{
+        height: .5rem;
+    }
+}
+@keyframes slidein 
+{
+    0%{right: -100%;}
+    100%{right: 0;}
+}
+@keyframes slideout 
+{
+    0%{right: 0;}
+    100%{right: -100%;}
+}
+.slidein{
+    animation : slidein 1s 0s 1;
+    -webkit-animation: slidein 1s 0s 1;  /* Safari 和 Chrome */
+    right: 0% !important;
+}
+.slideout{
+    animation : slideout 1s 0s 1;
+    -webkit-animation: slideout 1s 0s 1;  /* Safari 和 Chrome */
+    right: -100% !important;
+}
