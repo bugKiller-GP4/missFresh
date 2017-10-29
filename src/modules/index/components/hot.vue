@@ -144,7 +144,6 @@
 				}
 			})
 			.then(function(response){
-				console.log(response);
 				that.imgs =  response.data.product_list.banner;
 				that.brands = response.data.product_list.brands;
 				that.card_left = response.data.product_list.category_areas[0];

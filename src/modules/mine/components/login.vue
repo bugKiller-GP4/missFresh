@@ -22,13 +22,12 @@
 </template>
 <script>
     import axios from 'axios';
-    // import bus from '../../../scripts/bus';
+    import store from '../../index/scripts/vuex/store';
     export default {
         data() {
             return {
-                isShow : false
-                // teleNum:
-                // wasShow : false
+                isShow : false,
+                wasShow : false
             }
         },
         methods: {  
@@ -45,9 +44,8 @@
                                         this.wasShow = false
                                     }.bind(this), 1500);break;
                             default: 
-                            // this.$router.push({path: 'Mine',query:{isShow:true}});
-                                    this.$router.push({name: 'Mine',params:{isShow:true}});
-                                    bus.$emit('is-log', 1);
+                                    store.state.isLogin = true;
+                                    this.$router.push('mine');
                                     sessionStorage.setItem('User',this.$refs.phoneNum.value)
                                     break;
                         }
@@ -63,7 +61,7 @@
                 history.go(-1)
             },
             inReg(){
-                this.$router.push('Register');
+                this.$router.push('register');
             }
         }
     }

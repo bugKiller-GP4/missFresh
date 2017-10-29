@@ -1,8 +1,7 @@
 <template lang="html">
 	<div class="goods" v-if="showall" >
-		<share v-if="showShare" :showShare="showShare" @showShareFunction="changeShare"></share>
 		<header>
-			<div class="back">
+			<div class="back"v-on:click="goBack">
 				<span class="iconfont">&#xe7ed;</span>
 			</div>
 			<ul class="goods-navbar">
@@ -15,9 +14,11 @@
 		</header>
 		<section>
 			<div class="goods-banner">
-				<ul>
-					<li v-for="(item,i) in data.images"><img :src="item"></li>
-				</ul>
+				<mt-swipe :auto="3000">
+					<mt-swipe-item v-for="(item,i) in data.images">
+						<img :src="item">
+					</mt-swipe-item>
+				</mt-swipe>
 			</div>
 			<div class="detail-info">
 				<div class="title">“{{data.subtitle}}”</div>
@@ -97,54 +98,88 @@
 			<div class="shopcar">
 				<span class="iconfont">
 					&#xe6af;
-					<i class="goods_num">1</i>
+					<i class="goods_num" v-show="shownum">{{num}}</i>
 				</span>
 			</div>
-			<div class="addToCar">
+			<div class="addToCar" v-on:click="addToCar(data)">
 				<span>加入购物车</span>
 			</div>
 		</footer>
+		<share v-if="showShare" :showShare="showShare" @cancelShareBox="changeShare" @showGoToShare="showGotoShare" @shareType="sharetype"></share>
+		<gotoshare v-if="gotosharebox" :data="data" @cancelBox="cancelShare" :type="type"></gotoshare>
 	</div>
 </template>
 
 <script>
-	
 	import axios from 'axios';
 	import share from "./share.vue";
-	//import "mint-ui/lib/style.css";
+	import gotoshare from "./goToShare.vue"
+	import "mint-ui/lib/style.css";
+	import { Swipe, SwipeItem } from 'mint-ui';
+	import store from "../../index/scripts/vuex/store.js"
 	export default {
 		data() {
 			return {
 				data: {},
+				showall:false,
 				showShare:false,
-				showall:false
-				
+				gotosharebox:false,
+				type:'',
+				num:0,
+				shownum:false
 			}
 		},
 		components:{
-			share
+			share,
+			gotoshare
+			
 		},
 		methods: {
+			goBack(){
+				this.$router.push({name:"hot"});
+			},
 			showShareBox(){
 				this.showShare=true
 			},
 			changeShare(){
-				this.showShare=false
+				this.showShare=false;
+			},
+			showGotoShare(){
+				this.showShare=false;
+				this.gotosharebox=true;
+			},
+			sharetype(type){
+				this.type = type
+			},
+			cancelShare(){
+				this.gotosharebox=false
+			},
+			addToCar(params){
+				this.shownum=true
+				this.num++
+				store.commit('addtocarts',params)
 			}
 		},
 		mounted() {
 			axios({
 				method: 'get',
-				url: '/api/v3/product/p-hbazqc-2g?access_token=QXhldlYrc0RpZ0l1a0FKN1pRZEtIanFGT3V1RkszMnZDZGNzcXFacG8vRT0%3D&device_id=6624ad620c5a34adf57e36d47e3a8dd5&env=web&fromSource=zhuye&platform=web&uuid=6624ad620c5a34adf57e36d47e3a8dd5&version=3.8.0.1',
+				url: '/api/v3/product/'+ this.$route.query.sku +'?device_id=6624ad620c5a34adf57e36d47e3a8dd5&env=web&fromSource=zhuye&platform=web&uuid=6624ad620c5a34adf57e36d47e3a8dd5&version=3.8.0.1',
 				headers: {
 					"platform":"web",
 					"version":"3.8.0.1",
-					"x-region":'{"station_code":"","address_code":"110114"}',
-					"X-Tingyun-Id":"Q1KLryMuSto;r=57523193"
+					"x-region":'{"station_code":"","address_code":"110105"}',
+					"X-Tingyun-Id":'Q1KLryMuSto;r=78646786'
 				}
 			}).then((res) => {
 				this.data = res.data;
 				this.showall = true
+				//console.log(this.data)
+				for(var i=0;i<store.state.goods_list.length;i++){
+					if(res.data.sku==store.state.goods_list[i].sku){
+						this.num=store.state.goods_list[i].num;
+						this.shownum=true;
+					}
+				}
 			})
 		}
 	}

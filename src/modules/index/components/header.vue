@@ -226,7 +226,6 @@
 				}
 			})
 			.then(function(response){
-				console.log(response.data.category_list);
 				that.img_urls = response.data.category_list;
 			})
 		}

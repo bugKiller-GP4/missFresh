@@ -70,7 +70,7 @@ body{
                 .move{
                     width: .44rem;
                     height: .27rem;
-                    background: grey;
+                    background: #99e6af;
                     position: absolute;
                     right: 0;
                     border-radius: .5rem;
@@ -78,7 +78,7 @@ body{
                         width: .32rem;
                         height: .32rem;
                         border-radius: 50%;
-                        background: green;
+                        background: #33cd5f;
                         position: absolute;
                         top: -0.02rem;
                     }
@@ -86,10 +86,19 @@ body{
                         left: 0;
                     }
                     .rightball{
-                        left: 50%;
+                        left: 40%;
                     }
                 }
             }
+        }
+        .out{
+            background-color: #FC6D41;
+            color: #fff;
+            width: 95%;
+            height: 48px;
+            border-radius: .05rem;
+            border: 0;
+            margin-top: .3rem;
         }
     }
 }

@@ -23,6 +23,10 @@ section{
             top: 0;
             left: 0;
             z-index: 9999;
+            @include flexbox();
+            .canceltop{
+                @include flex();
+            }
             .share-contener{
                 width: 100%;
                 height: 174px;

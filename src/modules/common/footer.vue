@@ -13,7 +13,7 @@
 				<i class="iconfont">&#xe62c;</i>
 				<p>福利</p>
 			</router-link>
-			<router-link tag="li" :to="{name : 'somethingNew'}">
+			<router-link tag="li" :to="{name : 'cart'}">
 				<i class="iconfont">&#xe627;</i>
 				<p>购物车</p>
 			</router-link>

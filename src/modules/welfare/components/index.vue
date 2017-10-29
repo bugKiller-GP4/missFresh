@@ -39,19 +39,27 @@
                     <span @click="line_right" :class="{line_color : lefttab}">{{data.invate_charts[1].name}}</span>
                     <div :class="[{line_r : lefttab},{line_l : righttab},'bottom_line']"></div>
                 </div>
-                <Allpk :datapk="data"/>
+                <Allpk :datapk="data" v-if="righttab" />
+                <Frendpk :datapk="data" v-if="lefttab"/>
             </div>
         </section>
-         <footer id="bbb">
-             <div>11111</div>
+         <footer id="bottom">
+           <p @click="pshare">立即邀请</p>
          </footer>
+         <div class="share" v-if="fshare">
+             <div :class="{b_draw : draw_share}">
+                    <p @click="lshare">新浪微博</p>
+                    <p @click="lshare">取消</p>
+             </div>
+         </div>
     </div>    
 </template>
 <script>
 import axios from 'axios';
 import Vue from "vue";
 import "mint-ui/lib/style.css";
-import Allpk from "./allpk.vue"
+import Allpk from "./allpk.vue";
+import Frendpk from "./frendpk.vue";
 
     export default{
         data(){
@@ -63,7 +71,9 @@ import Allpk from "./allpk.vue"
                 banner:'',
                 title:'',
                 pro_doc:'',
-                invate_config:[]
+                invate_config:[],
+                fshare:false,
+                draw_share:false
             }
         },
         methods:{
@@ -74,10 +84,19 @@ import Allpk from "./allpk.vue"
             line_left(){
                 this.lefttab = false;
                 this.righttab = true;
+            },
+            pshare(){
+                this.fshare = true
+                this.draw_share = false
+            },
+            lshare(){
+                this.draw_share = true
+                setTimeout(()=>{this.fshare = false},500)
             }
         },
         components:{
-            Allpk
+            Allpk,
+            Frendpk
         },
         mounted(){
             axios({

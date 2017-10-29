@@ -3,6 +3,7 @@
     <p>{{datapk.invate_charts[0].notice_tip}}</p>
             <ul>
                 <li>
+                    
                 </li> 
             </ul>       
     </div>
@@ -17,15 +18,17 @@ export default {
   },
   data(){
       return {
-          
+        
       }
+  },
+  methods:{
   },
   mounted(){
       console.log(this.datapk)
   }
 }
 </script>
-<style>
-
+<style lang="scss">
+    @import "../styles/allpk.scss";
 </style>
 

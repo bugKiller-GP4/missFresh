@@ -10,6 +10,9 @@ import welfare from "../../welfare/components/index.vue"
 import somethingNew from "../../somethingNew/components/index.vue"
 import mine from "../../mine/components/mine.vue"
 import login from "../../mine/components/login.vue"
+import register from "../../mine/components/register.vue"
+import setting from "../../mine/components/setting.vue"
+import cart from "../../cart/components/index.vue"
 vue.use(VueRouter);
 
 const router = new VueRouter({
@@ -65,6 +68,21 @@ const router = new VueRouter({
 		path:"/login",
 		component:login,
 		name : "login"
+	},
+	{
+		path: '/register',
+		component: register,
+		name:'register'
+	},
+	{
+		path: '/setting',
+		component: setting,
+		name: 'setting'
+	},
+	{
+		path: '/cart',
+		component : cart ,
+		name : 'cart'
 	}
 	]
 })
