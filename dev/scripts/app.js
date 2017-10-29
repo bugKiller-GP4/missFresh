@@ -60,7 +60,7 @@
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 14);
+/******/ 	return __webpack_require__(__webpack_require__.s = 12);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -149,6 +149,12 @@ function toComment(sourceMap) {
 /* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
+module.exports = __webpack_require__.p + "media/images/loading-gif.gif";
+
+/***/ }),
+/* 2 */
+/***/ (function(module, exports, __webpack_require__) {
+
 /*
   MIT License http://www.opensource.org/licenses/mit-license.php
   Author Tobias Koppers @sokra
@@ -165,7 +171,7 @@ if (typeof DEBUG !== 'undefined' && DEBUG) {
   ) }
 }
 
-var listToStyles = __webpack_require__(23)
+var listToStyles = __webpack_require__(21)
 
 /*
 type StyleObject = {
@@ -367,7 +373,7 @@ function applyToTag (styleElement, obj) {
 
 
 /***/ }),
-/* 2 */
+/* 3 */
 /***/ (function(module, exports) {
 
 /* globals __VUE_SSR_CONTEXT__ */
@@ -476,7 +482,7 @@ module.exports = function normalizeComponent (
 
 
 /***/ }),
-/* 3 */
+/* 4 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, setImmediate) {/*!
@@ -11032,13 +11038,7 @@ return Vue$3;
 
 })));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9), __webpack_require__(17).setImmediate))
-
-/***/ }),
-/* 4 */
-/***/ (function(module, exports, __webpack_require__) {
-
-module.exports = __webpack_require__.p + "media/images/loading-gif.gif";
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(10), __webpack_require__(15).setImmediate))
 
 /***/ }),
 /* 5 */
@@ -12629,10 +12629,50 @@ return /******/ (function(modules) { // webpackBootstrap
 });
 ;
 //# sourceMappingURL=axios.map
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(6)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(7)))
 
 /***/ }),
 /* 6 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _vue = __webpack_require__(4);
+
+var _vue2 = _interopRequireDefault(_vue);
+
+var _vuex = __webpack_require__(39);
+
+var _vuex2 = _interopRequireDefault(_vuex);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+_vue2.default.use(_vuex2.default);
+
+var store = new _vuex2.default.Store({
+	state: {
+		type: 'hot',
+		isInSearch: false
+	},
+	mutations: {
+		update: function update(state, newtype) {
+			state.type = newtype;
+		},
+		show: function show(state, type) {
+			state.isInSearch = type;
+		}
+	}
+});
+
+exports.default = store;
+
+/***/ }),
+/* 7 */
 /***/ (function(module, exports) {
 
 // shim for using process in browser
@@ -12822,7 +12862,7 @@ process.umask = function() { return 0; };
 
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports =
@@ -12995,7 +13035,7 @@ module.exports = function normalizeComponent (
 /* 1 */
 /***/ function(module, exports) {
 
-module.exports = __webpack_require__(3);
+module.exports = __webpack_require__(4);
 
 /***/ },
 /* 2 */
@@ -22602,19 +22642,19 @@ module.exports={render:function (){var _vm=this;var _h=_vm.$createElement;var _c
 /* 199 */
 /***/ function(module, exports) {
 
-module.exports = __webpack_require__(25);
+module.exports = __webpack_require__(23);
 
 /***/ },
 /* 200 */
 /***/ function(module, exports) {
 
-module.exports = __webpack_require__(26);
+module.exports = __webpack_require__(24);
 
 /***/ },
 /* 201 */
 /***/ function(module, exports) {
 
-module.exports = __webpack_require__(27);
+module.exports = __webpack_require__(25);
 
 /***/ },
 /* 202 */
@@ -22627,13 +22667,13 @@ module.exports = __webpack_require__(14);
 /******/ ]);
 
 /***/ }),
-/* 8 */
+/* 9 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(28);
+var content = __webpack_require__(26);
 if(typeof content === 'string') content = [[module.i, content, '']];
 // Prepare cssTransformation
 var transform;
@@ -22641,7 +22681,7 @@ var transform;
 var options = {"hmr":true}
 options.transform = transform
 // add the styles to the DOM
-var update = __webpack_require__(29)(content, options);
+var update = __webpack_require__(27)(content, options);
 if(content.locals) module.exports = content.locals;
 // Hot Module Replacement
 if(false) {
@@ -22658,7 +22698,7 @@ if(false) {
 }
 
 /***/ }),
-/* 9 */
+/* 10 */
 /***/ (function(module, exports) {
 
 var g;
@@ -22685,56 +22725,20 @@ module.exports = g;
 
 
 /***/ }),
-/* 10 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-var _vue = __webpack_require__(3);
-
-var _vue2 = _interopRequireDefault(_vue);
-
-var _vuex = __webpack_require__(41);
-
-var _vuex2 = _interopRequireDefault(_vuex);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-_vue2.default.use(_vuex2.default);
-
-var store = new _vuex2.default.Store({
-	state: {
-		type: 'hot'
-	},
-	mutations: {
-		update: function update(state, newtype) {
-			state.type = newtype;
-		}
-	}
-});
-
-exports.default = store;
-
-/***/ }),
 /* 11 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_3_0_vue_loader_lib_selector_type_script_index_0_bustCache_footer_vue__ = __webpack_require__(49);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_3_0_vue_loader_lib_selector_type_script_index_0_bustCache_footer_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_3_0_vue_loader_lib_selector_type_script_index_0_bustCache_footer_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_13_3_0_vue_loader_lib_template_compiler_index_id_data_v_9216102e_hasScoped_false_buble_transforms_node_modules_vue_loader_13_3_0_vue_loader_lib_selector_type_template_index_0_bustCache_footer_vue__ = __webpack_require__(50);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_3_0_vue_loader_lib_selector_type_script_index_0_bustCache_search_vue__ = __webpack_require__(65);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_3_0_vue_loader_lib_selector_type_script_index_0_bustCache_search_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_3_0_vue_loader_lib_selector_type_script_index_0_bustCache_search_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_13_3_0_vue_loader_lib_template_compiler_index_id_data_v_37efd976_hasScoped_false_buble_transforms_node_modules_vue_loader_13_3_0_vue_loader_lib_selector_type_template_index_0_bustCache_search_vue__ = __webpack_require__(66);
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(47)
+  __webpack_require__(61)
 }
-var normalizeComponent = __webpack_require__(2)
+var normalizeComponent = __webpack_require__(3)
 /* script */
 
 /* template */
@@ -22748,14 +22752,14 @@ var __vue_scopeId__ = null
 /* moduleIdentifier (server only) */
 var __vue_module_identifier__ = null
 var Component = normalizeComponent(
-  __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_3_0_vue_loader_lib_selector_type_script_index_0_bustCache_footer_vue___default.a,
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_13_3_0_vue_loader_lib_template_compiler_index_id_data_v_9216102e_hasScoped_false_buble_transforms_node_modules_vue_loader_13_3_0_vue_loader_lib_selector_type_template_index_0_bustCache_footer_vue__["a" /* default */],
+  __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_3_0_vue_loader_lib_selector_type_script_index_0_bustCache_search_vue___default.a,
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_13_3_0_vue_loader_lib_template_compiler_index_id_data_v_37efd976_hasScoped_false_buble_transforms_node_modules_vue_loader_13_3_0_vue_loader_lib_selector_type_template_index_0_bustCache_search_vue__["a" /* default */],
   __vue_template_functional__,
   __vue_styles__,
   __vue_scopeId__,
   __vue_module_identifier__
 )
-Component.options.__file = "src\\modules\\index\\components\\footer.vue"
+Component.options.__file = "src\\modules\\index\\components\\search.vue"
 if (Component.esModule && Object.keys(Component.esModule).some(function (key) {  return key !== "default" && key.substr(0, 2) !== "__"})) {  console.error("named exports are not supported in *.vue files.")}
 
 /* hot reload */
@@ -22765,9 +22769,9 @@ if (false) {(function () {
   if (!hotAPI.compatible) return
   module.hot.accept()
   if (!module.hot.data) {
-    hotAPI.createRecord("data-v-9216102e", Component.options)
+    hotAPI.createRecord("data-v-37efd976", Component.options)
   } else {
-    hotAPI.reload("data-v-9216102e", Component.options)
+    hotAPI.reload("data-v-37efd976", Component.options)
 ' + '  }
   module.hot.dispose(function (data) {
     disposed = true
@@ -22779,117 +22783,26 @@ if (false) {(function () {
 
 /***/ }),
 /* 12 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_3_0_vue_loader_lib_selector_type_script_index_0_bustCache_header_vue__ = __webpack_require__(53);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_3_0_vue_loader_lib_selector_type_script_index_0_bustCache_header_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_3_0_vue_loader_lib_selector_type_script_index_0_bustCache_header_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_13_3_0_vue_loader_lib_template_compiler_index_id_data_v_4fb1484a_hasScoped_false_buble_transforms_node_modules_vue_loader_13_3_0_vue_loader_lib_selector_type_template_index_0_bustCache_header_vue__ = __webpack_require__(55);
-var disposed = false
-function injectStyle (ssrContext) {
-  if (disposed) return
-  __webpack_require__(51)
-}
-var normalizeComponent = __webpack_require__(2)
-/* script */
 
-/* template */
 
-/* template functional */
-  var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = injectStyle
-/* scopeId */
-var __vue_scopeId__ = null
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_3_0_vue_loader_lib_selector_type_script_index_0_bustCache_header_vue___default.a,
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_13_3_0_vue_loader_lib_template_compiler_index_id_data_v_4fb1484a_hasScoped_false_buble_transforms_node_modules_vue_loader_13_3_0_vue_loader_lib_selector_type_template_index_0_bustCache_header_vue__["a" /* default */],
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "src\\modules\\index\\components\\header.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {  return key !== "default" && key.substr(0, 2) !== "__"})) {  console.error("named exports are not supported in *.vue files.")}
+__webpack_require__(13);
 
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-loader/node_modules/vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-4fb1484a", Component.options)
-  } else {
-    hotAPI.reload("data-v-4fb1484a", Component.options)
-' + '  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
+__webpack_require__(14);
 
-/* harmony default export */ __webpack_exports__["default"] = (Component.exports);
+__webpack_require__(68);
 
+__webpack_require__(69);
+
+__webpack_require__(70);
 
 /***/ }),
 /* 13 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
+/***/ (function(module, exports) {
 
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_3_0_vue_loader_lib_selector_type_script_index_0_bustCache_section_vue__ = __webpack_require__(58);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_3_0_vue_loader_lib_selector_type_script_index_0_bustCache_section_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_3_0_vue_loader_lib_selector_type_script_index_0_bustCache_section_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_13_3_0_vue_loader_lib_template_compiler_index_id_data_v_0b130887_hasScoped_false_buble_transforms_node_modules_vue_loader_13_3_0_vue_loader_lib_selector_type_template_index_0_bustCache_section_vue__ = __webpack_require__(59);
-var disposed = false
-function injectStyle (ssrContext) {
-  if (disposed) return
-  __webpack_require__(56)
-}
-var normalizeComponent = __webpack_require__(2)
-/* script */
-
-/* template */
-
-/* template functional */
-  var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = injectStyle
-/* scopeId */
-var __vue_scopeId__ = null
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_3_0_vue_loader_lib_selector_type_script_index_0_bustCache_section_vue___default.a,
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_13_3_0_vue_loader_lib_template_compiler_index_id_data_v_0b130887_hasScoped_false_buble_transforms_node_modules_vue_loader_13_3_0_vue_loader_lib_selector_type_template_index_0_bustCache_section_vue__["a" /* default */],
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "src\\modules\\index\\components\\section.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {  return key !== "default" && key.substr(0, 2) !== "__"})) {  console.error("named exports are not supported in *.vue files.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-loader/node_modules/vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-0b130887", Component.options)
-  } else {
-    hotAPI.reload("data-v-0b130887", Component.options)
-' + '  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-/* harmony default export */ __webpack_exports__["default"] = (Component.exports);
-
+// removed by extract-text-webpack-plugin
 
 /***/ }),
 /* 14 */
@@ -22898,56 +22811,33 @@ if (false) {(function () {
 "use strict";
 
 
-__webpack_require__(15);
-
-__webpack_require__(16);
-
-__webpack_require__(66);
-
-__webpack_require__(67);
-
-__webpack_require__(68);
-
-/***/ }),
-/* 15 */
-/***/ (function(module, exports) {
-
-// removed by extract-text-webpack-plugin
-
-/***/ }),
-/* 16 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-var _vue = __webpack_require__(3);
+var _vue = __webpack_require__(4);
 
 var _vue2 = _interopRequireDefault(_vue);
 
-var _vueRouter = __webpack_require__(19);
+var _vueRouter = __webpack_require__(17);
 
 var _vueRouter2 = _interopRequireDefault(_vueRouter);
 
-var _hot = __webpack_require__(20);
+var _hot = __webpack_require__(18);
 
 var _hot2 = _interopRequireDefault(_hot);
 
-var _huoguo = __webpack_require__(32);
+var _huoguo = __webpack_require__(30);
 
 var _huoguo2 = _interopRequireDefault(_huoguo);
 
-var _fruits = __webpack_require__(37);
+var _fruits = __webpack_require__(35);
 
 var _fruits2 = _interopRequireDefault(_fruits);
 
-var _index = __webpack_require__(43);
+var _index = __webpack_require__(41);
 
 var _index2 = _interopRequireDefault(_index);
 
-var _xinxianshi = __webpack_require__(61);
+var _search = __webpack_require__(11);
 
-var _xinxianshi2 = _interopRequireDefault(_xinxianshi);
+var _search2 = _interopRequireDefault(_search);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
@@ -22973,8 +22863,8 @@ var router = new _vueRouter2.default({
 
 		}]
 	}, {
-		path: "/xinxianshi",
-		component: _xinxianshi2.default
+		path: "/search",
+		component: _search2.default
 	}]
 });
 
@@ -22984,7 +22874,7 @@ var vm = new _vue2.default({
 });
 
 /***/ }),
-/* 17 */
+/* 15 */
 /***/ (function(module, exports, __webpack_require__) {
 
 var apply = Function.prototype.apply;
@@ -23037,13 +22927,13 @@ exports._unrefActive = exports.active = function(item) {
 };
 
 // setimmediate attaches itself to the global object
-__webpack_require__(18);
+__webpack_require__(16);
 exports.setImmediate = setImmediate;
 exports.clearImmediate = clearImmediate;
 
 
 /***/ }),
-/* 18 */
+/* 16 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /* WEBPACK VAR INJECTION */(function(global, process) {(function (global, undefined) {
@@ -23233,10 +23123,10 @@ exports.clearImmediate = clearImmediate;
     attachTo.clearImmediate = clearImmediate;
 }(typeof self === "undefined" ? typeof global === "undefined" ? this : global : self));
 
-/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(9), __webpack_require__(6)))
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(10), __webpack_require__(7)))
 
 /***/ }),
-/* 19 */
+/* 17 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /**
@@ -25873,20 +25763,20 @@ return VueRouter;
 
 
 /***/ }),
-/* 20 */
+/* 18 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_3_0_vue_loader_lib_selector_type_script_index_0_bustCache_hot_vue__ = __webpack_require__(24);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_3_0_vue_loader_lib_selector_type_script_index_0_bustCache_hot_vue__ = __webpack_require__(22);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_3_0_vue_loader_lib_selector_type_script_index_0_bustCache_hot_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_3_0_vue_loader_lib_selector_type_script_index_0_bustCache_hot_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_13_3_0_vue_loader_lib_template_compiler_index_id_data_v_ae930222_hasScoped_false_buble_transforms_node_modules_vue_loader_13_3_0_vue_loader_lib_selector_type_template_index_0_bustCache_hot_vue__ = __webpack_require__(31);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_13_3_0_vue_loader_lib_template_compiler_index_id_data_v_ae930222_hasScoped_false_buble_transforms_node_modules_vue_loader_13_3_0_vue_loader_lib_selector_type_template_index_0_bustCache_hot_vue__ = __webpack_require__(29);
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(21)
+  __webpack_require__(19)
 }
-var normalizeComponent = __webpack_require__(2)
+var normalizeComponent = __webpack_require__(3)
 /* script */
 
 /* template */
@@ -25930,17 +25820,17 @@ if (false) {(function () {
 
 
 /***/ }),
-/* 21 */
+/* 19 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(22);
+var content = __webpack_require__(20);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(1)("14527c2d", content, false);
+var update = __webpack_require__(2)("14527c2d", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
@@ -25956,7 +25846,7 @@ if(false) {
 }
 
 /***/ }),
-/* 22 */
+/* 20 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(true);
@@ -25964,13 +25854,13 @@ exports = module.exports = __webpack_require__(0)(true);
 
 
 // module
-exports.push([module.i, "\n@charset \"UTF-8\";\n/**\r\n * Yo框架全局base定义\r\n * 本文件与variables不同地方在于，这里所定义的map可以使用在variables和任何地方\r\n * 本文件中map使用\"_\"开头，extra中不使用\"_\"\r\n * base ⇌ extra\r\n */\n/**\r\n * Yo框架全局Variables\r\n * Yo基础变量map，如果不想定义某属性，将其value设置为null\r\n * Yo仅使用2种长度单位：px用于边框，rem用于除边框之外的所有地方\r\n * 本文件中map使用\"_\"开头，config中不使用\"_\"\r\n * variables ⇌ config\r\n */\n/**\r\n * Yo框架自定义全局函数\r\n * 扩充Sass默认函数库，用以增强语法\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的第一项\r\n * @function first\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的最后一项\r\n * @function last\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的倒数第几项\r\n * @function nth-last\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $index 指定需要返回的值在list中的倒数位置 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 移除SassList中的某个项目并返回新的List\r\n * @function remove\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {String} $value 指定需要被删除的值 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 截取SassList中的某个部分并返回新的List\r\n * @function slice\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $start 指定需要截取的开始下标 <2.1.0>\r\n * @param {Integer} $end 指定需要截取的结束下标（不包括end），当该值缺省时默认为末尾下标 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 从SassList中添加/删除项目，然后返回新的List。\r\n * @function splice\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $index 指定需要移除的开始下标 <2.1.0>\r\n * @param {Integer} $count 指定需要移除的数量，不可以为负值，0表示不移除 <2.1.0>\r\n * @param {String} $values 指定需要添加的新值（可以是多个），如果该值缺省，则表示只移除不添加新值 <2.1.0>\r\n */\n/**\r\n * Yo框架全局基础方法\r\n * 包括响应式方案，CSS3兼容性方案，厂商前缀方案，iconfont方案，flex布局等全局方法\r\n */\n/**\r\n * @module 常用方法\r\n * @description 给需要的属性加厂家前缀\r\n * @method prefix\r\n * @version 1.0.0\r\n * @param {String} $property 指定属性 <1.0.0>\r\n * @param {String} $value 指定属性值 <1.0.0>\r\n * @skip\r\n */\n/**\r\n * @module 常用方法\r\n * @description 定义字体图标\r\n * @method _iconfont\r\n * @version 1.0.0\r\n * @skip\r\n */\n/**\r\n * @module 常用方法\r\n * @description 四则运算(系统要求：iOS6.0+,Android4.4+)\r\n * @method calc\r\n * @version 1.7.0\r\n * @param {String} $property 指定需要进行计算的CSS属性 <1.7.0>\r\n * @param {String} $value 与原生CSS语法一致，区别在于需要使用引号包裹表达式 <1.7.0>\r\n * @example\r\n * .calc {\r\n *     @include calc(width, \"100% - 100px\");\r\n * }\r\n *\r\n * <div class=\"calc\">四则运算</div>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 定义响应式方案\r\n * @method responsive\r\n * @version 1.0.0\r\n * @param {String} $media 指定媒体查询条件，取值为`config`文件map `media-types`中的值 <1.0.0>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 清除浮动方案\r\n * @method clearfix\r\n * @version 1.0.0\r\n * @param {String} $type 指定清除浮动的方式，包括：pseudo-element | bfc，默认值：pseudo-element <1.8.5>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 清除行内级元素间间隙方案\r\n * @method clearspace\r\n * @version 3.0.3\r\n * @param {Length} $font-size 指定子元素字号，默认值：.14rem <3.0.3>\r\n * @example\r\n * .demo {\r\n *     @include clearspace;\r\n * }\r\n *\r\n * <div class=\"demo\">\r\n *      <span class=\"item\">1</span>\r\n *      <span class=\"item\">2</span>\r\n *      <span class=\"item\">3</span>\r\n * </div>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 描述元素内容在横、纵方向上的对齐方式，默认为水平垂直居中对齐\r\n * @method align\r\n * @version 2.0.0\r\n * @param {String} $flexbox 元素布局方式，可选值：flex | inline-flex，默认值：flex <2.0.0>\r\n * @param {Keyword} $justify-content 元素内容的水平对齐方式，取值与`justify-content`属性一致，默认值：center <2.0.0>\r\n * @param {Keyword} $align-items 元素内容的垂直对齐方式，取值与`align-items`属性一致，默认值：center <2.0.0>\r\n * @example\r\n * .demo {\r\n *     @include align;\r\n * }\r\n *\r\n * <div class=\"demo\">\r\n *      <img alt=\"未知尺寸图片居中\" />\r\n * </div>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 定义是否有滚动条\r\n * @method overflow\r\n * @version 1.0.0\r\n * @param {String} $overflow 取值与最新原生语法一致，默认值：auto <1.0.0>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 生成全屏方法\r\n * @method fullscreen\r\n * @version 1.7.0\r\n * @param {Integer} $z-index 指定层叠级别 <1.7.0>\r\n * @param {Keywords} $position 指定定位方式，取除`static | relative`之外的值，默认值：absolute <1.8.5>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义使用何种滤镜\r\n * @method filter\r\n * @version 1.7.0\r\n * @param {String} $filter 取值与`filter`属性一致 <1.7.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义UA默认外观\r\n * @method appearance\r\n * @version 1.0.0\r\n * @param {String} $appearance 取值与`appearance`属性一致，默认值：none <1.0.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义如何选中内容\r\n * @method user-select\r\n * @version 1.0.0\r\n * @param {String} $user-select 取值与`user-select`属性一致，默认值：none <1.0.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义盒模型\r\n * @method box-sizing\r\n * @version 1.0.0\r\n * @param {String} $box-sizing 指定盒模型类型，取值与`box-sizing`属性一致，默认值：border-box <1.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义渐变色值\r\n * @method gradient\r\n * @version 1.0.0\r\n * @param {String} $type 指定渐变的4种类型：linear, repeating-linear, radial, repeating-radial <1.0.0>\r\n * @param {String} $dir 指定渐变方向，可选值：[left | right] || [top | bottom] | angle <2.0.0>\r\n * @param {String} $gradient 指定渐变取值，与w3c最新原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景图像缩放（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-size\r\n * @version 1.4.0\r\n * @param {Keywords | Length} $background-size 指定背景图缩放值，取值与`background-size`属性一致 <1.4.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景裁减（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-clip\r\n * @version 1.6.0\r\n * @param {Keywords} $background-clip 指定背景图缩放值，取值与`background-clip`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景显示区域（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-origin\r\n * @version 1.6.0\r\n * @param {Keywords} $background-origin 指定背景图`background-position`属性计算相对的参考点，取值与`background-origin`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 为元素添加边框（包括1px边框）\r\n * @method border\r\n * @version 2.0.0\r\n * @param {String} $border-width 指定边框厚度（单位为px），默认值：1px，取值与`border-width`属性一致，不同方向代表边框位置 <2.0.0>\r\n * @param {String} $border-color 指定边框颜色 <2.0.0>\r\n * @param {String} $border-style 指定边框样式 <2.0.0>\r\n * @param {String} $radius 指定边框圆角半径，默认值：null <2.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义圆角，用于修复某些安卓机型上“圆角+边框+背景”，背景溢出的情况\r\n * @method border-radius\r\n * @version 1.6.0\r\n * @param {Length} $border-radius 指定元素的圆角半径，取值与`border-radius`属性一致 <1.6.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 定义简单变换\r\n * @method transform\r\n * @version 1.0.0\r\n * @param {String} $transform 取值范围与`transform`属性一致 <1.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 定义变换原点\r\n * @method transform-origin\r\n * @version 1.0.0\r\n * @param {Length | Percentage | Keywords} $transform-origin 取值范围与`transform-origin`属性一致 <1.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定某元素的子元素是（看起来）位于三维空间内，还是在该元素所在的平面内被扁平化\r\n * @method transform-style\r\n * @version 2.0.0\r\n * @param {String} $transform-style 取值范围与`transform-style`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定观察者与「z=0」平面的距离，使具有三维位置变换的元素产生透视效果。「z>0」的三维元素比正常大，而「z<0」时则比正常小，大小程度由该属性的值决定。\r\n * @method perspective\r\n * @version 2.0.0\r\n * @param {none | Length} $perspective 取值范围与`perspective`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定透视点的位置\r\n * @method perspective-origin\r\n * @version 2.0.0\r\n * @param {Length | Percentage | Keywords} $perspective-origin 取值范围与`perspective-origin`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定元素背面面向用户时是否可见\r\n * @method backface-visibility\r\n * @version 2.0.0\r\n * @param {Keywords} $backface-visibility 取值范围与`backface-visibility`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 定义动画\r\n * @method animation\r\n * @version 1.0.0\r\n * @param {String} $animation 取值与原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定需要引用的动画名称\r\n * @method animation-name\r\n * @version 3.0.0\r\n * @param {String} $animation-name 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画运行一次所持续的时长\r\n * @method animation-duration\r\n * @version 3.0.0\r\n * @param {String} $animation-duration 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画运行方式\r\n * @method animation-timing-function\r\n * @version 3.0.0\r\n * @param {String} $animation-timing-function 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画延迟多久之后再开始\r\n * @method animation-delay\r\n * @version 3.0.0\r\n * @param {String} $animation-delay 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画循环几次\r\n * @method animation-iteration-count\r\n * @version 3.0.0\r\n * @param {String} $animation-iteration-count 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画的运动方向\r\n * @method animation-direction\r\n * @version 3.0.0\r\n * @param {String} $animation-direction 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画的运动状态\r\n * @method animation-play-state\r\n * @version 3.0.0\r\n * @param {String} $animation-play-state 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画时间之外的状态\r\n * @method animation-fill-mode\r\n * @version 3.0.0\r\n * @param {String} $animation-fill-mode 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Transition\r\n * @description 定义补间\r\n * @method transition\r\n * @version 1.0.0\r\n * @param {String} $transition 取值与原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义显示类型为伸缩盒\r\n * @method flexbox\r\n * @version 1.0.0\r\n * @param {String} $flexbox 默认值：flex，可选值：flex | inline-flex <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素如何分配空间\r\n * @method flex\r\n * @version 1.0.0\r\n * @param {Number} $flex 取值与`flex`属性一致，默认值：1 <1.0.0>\r\n * @param {String} $direction 默认值: row，可选值：row | column <1.5.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素的排版顺序\r\n * @method order\r\n * @version 1.0.0\r\n * @param {Integer} $order 取值与`order`属性一致，默认值：1 <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性盒子元素流动方向及遇见边界时是否换行(要求系统：iOS7.0+, Android4.4+)\r\n * @method flex-flow\r\n * @version 2.0.0\r\n * @param {String} $flex-flow 取值与`flex-flow`属性一致，默认值：row nowrap <2.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素的流动方向\r\n * @method flex-direction\r\n * @version 1.0.0\r\n * @param {String} $flex-direction 取值与`flex-direction`属性一致，默认值：row <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性盒子元素溢出后排版(要求系统：iOS7.0+, Android4.4+)\r\n * @method flex-wrap\r\n * @version 1.0.0\r\n * @param {String} $flex-wrap 取值与`flex-wrap`属性一致，默认值：nowrap <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性容器主轴对齐方式(其中`space-around`值需要iOS7.0+,Android4.4+)\r\n * @method justify-content\r\n * @version 1.0.0\r\n * @param {String} $justify-content 取值与`justify-content`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义多行弹性容器侧轴对齐方式(要求系统：iOS7.0+,Android4.4+)\r\n * @method align-content\r\n * @version 1.8.5\r\n * @param {String} $align-content 取值与`align-content`属性一致，默认值：center <1.8.5>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义单行弹性容器侧轴对齐方式\r\n * @method align-items\r\n * @version 1.0.0\r\n * @param {String} $align-items 取值与`align-items`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性容器中子元素自身的在侧轴对齐方式(要求系统：iOS7.0+,Android4.4+)\r\n * @method align-self\r\n * @version 1.0.0\r\n * @param {String} $align-self 取值与`align-self`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成矩形方法\r\n * @method rect\r\n * @version 1.0.0\r\n * @param {Length} $width 定义矩形的长度 <1.0.0>\r\n * @param {Length} $height 定义矩形的高度 <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成正方形方法\r\n * @method square\r\n * @version 1.0.0\r\n * @param {Length} $size 定义正方形的边长 <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成圆形方法\r\n * @method circle\r\n * @version 1.0.0\r\n * @param {Length} $size 定义圆的半径长度 <1.0.0>\r\n * @param {Length} $radius 定义圆的圆角半径长度 <1.0.0>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 在自适应宽度情况下，确保内容元素的宽高比固定，比如：实现随屏幕大小而变化的正方形。\r\n * @method fixed-scale\r\n * @version 3.0.10\r\n * @param {Length} $width 默认值：100%。用以指定内容元素的初始宽度，由于尺寸需动态变化，不要使用固定单位 <3.0.10>\r\n * @param {Length} $scale 默认值：1/1，即正方形。用以指定内容元素的宽度高比 <3.0.10>\r\n */\n/**\r\n * @module 文本\r\n * @description 链接处理方法\r\n * @method link\r\n * @version 1.0.0\r\n * @param {Color} $color 定义链接颜色 <1.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 文本碰到边界是否换行\r\n * @method wrap\r\n * @version 1.0.0\r\n * @param {Boolean} $is-wrap 定义文本是否换行，默认值：true <2.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 单行文本溢出时显示省略号\r\n * @method ellipsis\r\n * @version 1.0.0\r\n * @param {Length} $width 定义容器的宽度，默认值：null <2.0.0>\r\n * @param {Integer} $line-clamp 定义需要显示的行数，默认值：1（即使用单行溢出的处理方案），需要注意的是本参数只支持webkit内核 <2.1.2>\r\n */\n/**\r\n * @module 文本\r\n * @description 文字隐藏方案\r\n * @method texthide\r\n * @version 1.0.0\r\n * @param {Length} $width 定义容器的宽度，默认值：null <2.0.0>\r\n */\n/**\r\n * Yo框架全局Reset\r\n * Yo重置Mobile及高级浏览器上常见的差异\r\n */\n*,\n::before,\n::after {\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n  -webkit-tap-highlight-color: transparent;\n}\nhtml,\nbody {\n  overflow: hidden;\n  height: 100%;\n}\n::-webkit-scrollbar {\n  display: none;\n}\nhtml {\n  background-color: #eee;\n  color: #212121;\n  font-size: 100px;\n  -webkit-user-select: none;\n  user-select: none;\n}\nbody {\n  margin: 0;\n  font-size: 0.14em;\n  line-height: 1.5;\n  font-family: Helvetica Neue, Helvetica, STHeiTi, sans-serif;\n}\nul,\nol,\ndl,\ndd,\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\nfigure,\nform,\nfieldset,\nlegend,\ninput,\ntextarea,\nbutton,\np,\nblockquote,\nth,\ntd,\npre,\nxmp {\n  margin: 0;\n  padding: 0;\n}\ninput,\ntextarea,\nbutton,\nselect,\npre,\nxmp,\ntt,\ncode,\nkbd,\nsamp {\n  line-height: inherit;\n  font-family: inherit;\n}\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\nsmall,\nbig,\ninput,\ntextarea,\nbutton,\nselect {\n  font-size: inherit;\n}\naddress,\ncite,\ndfn,\nem,\ni,\noptgroup,\nvar {\n  font-style: normal;\n}\ntable {\n  border-collapse: collapse;\n  border-spacing: 0;\n  table-layout: fixed;\n  text-align: left;\n}\nul,\nol,\nmenu {\n  list-style: none;\n}\nfieldset,\nimg {\n  border: 0;\n  vertical-align: middle;\n}\narticle,\naside,\ndetails,\nfigcaption,\nfigure,\nfooter,\nheader,\nmain,\nmenu,\nnav,\nsection,\nsummary {\n  display: block;\n}\naudio,\ncanvas,\nvideo {\n  display: inline-block;\n}\nblockquote:before,\nblockquote:after,\nq:before,\nq:after {\n  content: \" \";\n}\ntextarea,\npre,\nxmp {\n  overflow: auto;\n  -webkit-overflow-scrolling: touch;\n}\ntextarea {\n  resize: vertical;\n}\ninput,\ntextarea,\nbutton,\nselect,\nsummary,\na {\n  outline: 0 none;\n}\ninput,\ntextarea,\nbutton,\nselect {\n  color: inherit;\n}\ninput:disabled,\n  textarea:disabled,\n  button:disabled,\n  select:disabled {\n    opacity: 1;\n}\nbutton::-moz-focus-inner,\ninput::-moz-focus-inner {\n  padding: 0;\n  border: 0;\n}\ninput[type=\"button\"],\ninput[type=\"submit\"],\ninput[type=\"reset\"],\ninput[type=\"file\"]::-webkit-file-upload-button,\ninput[type=\"search\"]::-webkit-search-cancel-button {\n  -webkit-appearance: none;\n  appearance: none;\n}\n::-webkit-details-marker {\n  display: none;\n}\nmark {\n  background-color: transparent;\n}\na,\nins,\ns,\nu,\ndel {\n  text-decoration: none;\n}\na,\nimg {\n  -webkit-touch-callout: none;\n}\na {\n  color: #00afc7;\n}\n.g-clear::after,\n.g-mod::after {\n  display: block;\n  overflow: hidden;\n  clear: both;\n  height: 0;\n  content: \" \";\n}\n@font-face {\n  font-family: yofont;\n  src: url(//ss.qunarzz.com/yo/font/1.0.3/yofont.woff) format(\"woff\"), url(//ss.qunarzz.com/yo/font/1.0.3/yofont.ttf) format(\"truetype\");\n}\n.yo-ico {\n  font-family: yofont !important;\n  font-style: normal;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n  vertical-align: middle;\n}\n@font-face {\n  font-family: 'iconfont';\n  src: url(\"http://localhost:7000/media/iconfont/iconfont.woff\") format(\"woff\"), url(\"http://localhost:7000/media/iconfont/iconfont.ttf\") format(\"truetype\");\n}\n.iconfont {\n  font-family: \"iconfont\" !important;\n  font-size: 16px;\n  font-style: normal;\n  -webkit-font-smoothing: antialiased;\n  -webkit-text-stroke-width: 0.2px;\n  -moz-osx-font-smoothing: grayscale;\n}\n.banner {\n  width: 100%;\n  height: 150px;\n}\n.banner img {\n    height: 100%;\n}\n.promise ul {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: flex;\n  height: 49px;\n}\n.promise ul li {\n    -webkit-box-flex: 1;\n    -webkit-flex: 1;\n    flex: 1;\n    width: .1px;\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: flex;\n    -webkit-box-align: center;\n    -webkit-align-items: center;\n    align-items: center;\n    -webkit-box-pack: center;\n    -webkit-justify-content: center;\n    justify-content: center;\n    color: #4d4d4d;\n}\n.promise ul li img {\n      margin-top: -2px;\n      margin-right: 3px;\n      width: 16px;\n      height: 16px;\n}\n.cards {\n  width: 100%;\n  height: 150px;\n  padding: 0 15px;\n}\n.cards section {\n    width: 100%;\n    padding-bottom: 15px;\n    height: 100%;\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: flex;\n    position: relative;\n}\n.cards section::after {\n      pointer-events: none;\n      position: absolute;\n      z-index: 999;\n      top: 0;\n      left: 0;\n      content: \" \";\n      border-color: #e6e6e6;\n      border-style: solid;\n      border-width: 0 0 1px 0;\n      -webkit-transform-origin: 0 0;\n      transform-origin: 0 0;\n}\n@media (max--moz-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.49), (max-device-pixel-ratio: 1.49), (max-resolution: 143dpi), (max-resolution: 1.49dppx) {\n.cards section::after {\n          width: 100%;\n          height: 100%;\n}\n}\n@media (min--moz-device-pixel-ratio: 1.5) and (max--moz-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.49), (min-device-pixel-ratio: 1.5) and (max-device-pixel-ratio: 2.49), (min-resolution: 144dpi) and (max-resolution: 239dpi), (min-resolution: 1.5dppx) and (max-resolution: 2.49dppx) {\n.cards section::after {\n          width: 200%;\n          height: 200%;\n          -webkit-transform: scale(0.5);\n          transform: scale(0.5);\n}\n}\n@media (min--moz-device-pixel-ratio: 2.5), (-webkit-min-device-pixel-ratio: 2.5), (min-device-pixel-ratio: 2.5), (min-resolution: 240dpi), (min-resolution: 2.5dppx) {\n.cards section::after {\n          width: 300%;\n          height: 300%;\n          -webkit-transform: scale(0.33333);\n          transform: scale(0.33333);\n}\n}\n.cards section div:first-child {\n      -webkit-box-flex: 53;\n      -webkit-flex: 53;\n      flex: 53;\n      width: .1px;\n}\n.cards section div:first-child img {\n        width: 100%;\n        height: 100%;\n}\n.cards section div:last-child {\n      -webkit-box-flex: 47;\n      -webkit-flex: 47;\n      flex: 47;\n      width: .1px;\n      display: -webkit-box;\n      display: -webkit-flex;\n      display: flex;\n      -webkit-box-orient: vertical;\n      -webkit-box-direction: normal;\n      -webkit-flex-direction: column;\n      flex-direction: column;\n      height: 100%;\n}\n.cards section div:last-child div:first-child {\n        -webkit-box-flex: 1;\n        -webkit-flex: 1;\n        flex: 1;\n        width: .1px;\n        width: 100%;\n        margin-left: 3px;\n}\n.cards section div:last-child div:last-child {\n        -webkit-box-flex: 1;\n        -webkit-flex: 1;\n        flex: 1;\n        width: .1px;\n        display: -webkit-box;\n        display: -webkit-flex;\n        display: flex;\n        -webkit-box-orient: horizontal;\n        -webkit-box-direction: normal;\n        -webkit-flex-direction: row;\n        flex-direction: row;\n        width: 100%;\n        margin-left: 3px;\n}\n.cards section div:last-child div:last-child div {\n          -webkit-box-flex: 1;\n          -webkit-flex: 1;\n          flex: 1;\n          width: .1px;\n          width: 100%;\n}\n.cards section div:last-child div:last-child div img {\n            padding-top: 3px;\n            padding-right: 3px;\n            width: 100%;\n}\n.goods {\n  height: 100%;\n  overflow-y: scroll;\n}\n.goods .title {\n    height: 60px;\n    padding-left: 15px;\n}\n.goods .title span {\n      color: #ff1d3f;\n      font-size: 18px;\n      line-height: 60px;\n}\n.goods .goods_list {\n    height: 100%;\n}\n.goods .goods_list ul {\n      height: 100%;\n}\n.goods .goods_list ul .img_container {\n        height: 92px;\n}\n.goods .goods_list ul .img_container img {\n          width: 100%;\n}\n.goods .goods_list ul .sell_out {\n        padding-left: 15px;\n        height: 70px;\n        position: relative;\n}\n.goods .goods_list ul .sell_out span:first-child {\n          display: block;\n          position: absolute;\n          color: #4b4b4b;\n          top: 27px;\n          font-size: 18px;\n          height: 20px;\n}\n.goods .goods_list ul .sell_out span:last-child {\n          position: absolute;\n          bottom: 0;\n          font-size: 12px;\n          color: #968D91;\n          height: 18px;\n          line-height: 18px;\n}\n.goods .goods_list ul li {\n        height: 164px;\n        position: relative;\n}\n.goods .goods_list ul li::after {\n          pointer-events: none;\n          position: absolute;\n          z-index: 999;\n          top: 0;\n          left: 0;\n          content: \" \";\n          border-color: #f5f5f5;\n          border-style: solid;\n          border-width: 0 0 1px 0;\n          -webkit-transform-origin: 0 0;\n          transform-origin: 0 0;\n}\n@media (max--moz-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.49), (max-device-pixel-ratio: 1.49), (max-resolution: 143dpi), (max-resolution: 1.49dppx) {\n.goods .goods_list ul li::after {\n              width: 100%;\n              height: 100%;\n}\n}\n@media (min--moz-device-pixel-ratio: 1.5) and (max--moz-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.49), (min-device-pixel-ratio: 1.5) and (max-device-pixel-ratio: 2.49), (min-resolution: 144dpi) and (max-resolution: 239dpi), (min-resolution: 1.5dppx) and (max-resolution: 2.49dppx) {\n.goods .goods_list ul li::after {\n              width: 200%;\n              height: 200%;\n              -webkit-transform: scale(0.5);\n              transform: scale(0.5);\n}\n}\n@media (min--moz-device-pixel-ratio: 2.5), (-webkit-min-device-pixel-ratio: 2.5), (min-device-pixel-ratio: 2.5), (min-resolution: 240dpi), (min-resolution: 2.5dppx) {\n.goods .goods_list ul li::after {\n              width: 300%;\n              height: 300%;\n              -webkit-transform: scale(0.33333);\n              transform: scale(0.33333);\n}\n}\n.goods .goods_list ul li div.li_container {\n          width: 100%;\n          height: 100%;\n          padding-top: 20px;\n          padding-bottom: 23px;\n          display: -webkit-box;\n          display: -webkit-flex;\n          display: flex;\n          position: relative;\n}\n.goods .goods_list ul li div.li_container .img_left {\n            width: 150px;\n            padding: 0 15px;\n            position: relative;\n}\n.goods .goods_list ul li div.li_container .img_left img {\n              border: 0;\n}\n.goods .goods_list ul li div.li_container .img_left img:first-child {\n                width: 100%;\n}\n.goods .goods_list ul li div.li_container .img_left img:last-child {\n                position: absolute;\n                left: 16px;\n                height: 32px;\n                top: 0;\n}\n.goods .goods_list ul li div.li_container .message_right {\n            -webkit-box-flex: 1;\n            -webkit-flex: 1;\n            flex: 1;\n            width: .1px;\n            width: 100%;\n            position: relative;\n}\n.goods .goods_list ul li div.li_container .message_right .message_title {\n              font-size: 16px;\n              padding-top: 11px;\n              white-space: nowrap;\n              overflow: hidden;\n              text-overflow: ellipsis;\n              letter-spacing: -1px;\n              color: #474245;\n              width: 140px;\n}\n.goods .goods_list ul li div.li_container .message_right .message_info {\n              font-size: 14px;\n              color: #969696;\n              white-space: nowrap;\n              text-overflow: ellipsis;\n              overflow: hidden;\n              width: 140px;\n}\n.goods .goods_list ul li div.li_container .message_right .message_des {\n              height: 25px;\n              line-height: 17px;\n}\n.goods .goods_list ul li div.li_container .message_right .message_des span {\n                display: inline-block;\n                border-radius: 2px;\n                font-size: 9px;\n                height: 13px;\n                line-height: 11px;\n                background: white;\n                color: #c6c6c6;\n                border: 1px solid #c6c6c6;\n                margin-right: 5px;\n                padding: 1px;\n}\n.goods .goods_list ul li div.li_container .message_right .message_highprice {\n              font-size: 12px;\n              color: #ffc38d;\n              line-height: 8px;\n}\n.goods .goods_list ul li div.li_container .message_right .message_lowprice {\n              color: #ff4891;\n              font-size: 12px;\n}\n.goods .goods_list ul li div.li_container .message_right .message_lowprice span span:first-child {\n                letter-spacing: -3px;\n}\n.goods .goods_list ul li div.li_container .message_right .message_lowprice span span:last-child {\n                font-size: 16px;\n                letter-spacing: -1px;\n                display: inline-block;\n                height: 22px;\n                vertical-align: bottom;\n}\n.goods .goods_list ul li div.li_container .message_right .message_cart {\n              position: absolute;\n              bottom: 5px;\n              right: 4%;\n              height: 30px;\n              text-align: right;\n}\n.goods .goods_list ul li div.li_container .message_right .message_cart img {\n                width: 49px;\n                position: absolute;\n                bottom: -8px;\n                right: -6px !important;\n}\nimage[lazy=loading] {\n  width: 40px;\n  height: 300px;\n  margin: auto;\n}\n", "", {"version":3,"sources":["D:/missFresh/src/modules/index/components/hot.vue"],"names":[],"mappings":"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","file":"hot.vue","sourcesContent":["@charset \"UTF-8\";\n/**\r\n * Yo框架全局base定义\r\n * 本文件与variables不同地方在于，这里所定义的map可以使用在variables和任何地方\r\n * 本文件中map使用\"_\"开头，extra中不使用\"_\"\r\n * base ⇌ extra\r\n */\n/**\r\n * Yo框架全局Variables\r\n * Yo基础变量map，如果不想定义某属性，将其value设置为null\r\n * Yo仅使用2种长度单位：px用于边框，rem用于除边框之外的所有地方\r\n * 本文件中map使用\"_\"开头，config中不使用\"_\"\r\n * variables ⇌ config\r\n */\n/**\r\n * Yo框架自定义全局函数\r\n * 扩充Sass默认函数库，用以增强语法\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的第一项\r\n * @function first\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的最后一项\r\n * @function last\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的倒数第几项\r\n * @function nth-last\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $index 指定需要返回的值在list中的倒数位置 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 移除SassList中的某个项目并返回新的List\r\n * @function remove\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {String} $value 指定需要被删除的值 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 截取SassList中的某个部分并返回新的List\r\n * @function slice\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $start 指定需要截取的开始下标 <2.1.0>\r\n * @param {Integer} $end 指定需要截取的结束下标（不包括end），当该值缺省时默认为末尾下标 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 从SassList中添加/删除项目，然后返回新的List。\r\n * @function splice\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $index 指定需要移除的开始下标 <2.1.0>\r\n * @param {Integer} $count 指定需要移除的数量，不可以为负值，0表示不移除 <2.1.0>\r\n * @param {String} $values 指定需要添加的新值（可以是多个），如果该值缺省，则表示只移除不添加新值 <2.1.0>\r\n */\n/**\r\n * Yo框架全局基础方法\r\n * 包括响应式方案，CSS3兼容性方案，厂商前缀方案，iconfont方案，flex布局等全局方法\r\n */\n/**\r\n * @module 常用方法\r\n * @description 给需要的属性加厂家前缀\r\n * @method prefix\r\n * @version 1.0.0\r\n * @param {String} $property 指定属性 <1.0.0>\r\n * @param {String} $value 指定属性值 <1.0.0>\r\n * @skip\r\n */\n/**\r\n * @module 常用方法\r\n * @description 定义字体图标\r\n * @method _iconfont\r\n * @version 1.0.0\r\n * @skip\r\n */\n/**\r\n * @module 常用方法\r\n * @description 四则运算(系统要求：iOS6.0+,Android4.4+)\r\n * @method calc\r\n * @version 1.7.0\r\n * @param {String} $property 指定需要进行计算的CSS属性 <1.7.0>\r\n * @param {String} $value 与原生CSS语法一致，区别在于需要使用引号包裹表达式 <1.7.0>\r\n * @example\r\n * .calc {\r\n *     @include calc(width, \"100% - 100px\");\r\n * }\r\n *\r\n * <div class=\"calc\">四则运算</div>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 定义响应式方案\r\n * @method responsive\r\n * @version 1.0.0\r\n * @param {String} $media 指定媒体查询条件，取值为`config`文件map `media-types`中的值 <1.0.0>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 清除浮动方案\r\n * @method clearfix\r\n * @version 1.0.0\r\n * @param {String} $type 指定清除浮动的方式，包括：pseudo-element | bfc，默认值：pseudo-element <1.8.5>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 清除行内级元素间间隙方案\r\n * @method clearspace\r\n * @version 3.0.3\r\n * @param {Length} $font-size 指定子元素字号，默认值：.14rem <3.0.3>\r\n * @example\r\n * .demo {\r\n *     @include clearspace;\r\n * }\r\n *\r\n * <div class=\"demo\">\r\n *      <span class=\"item\">1</span>\r\n *      <span class=\"item\">2</span>\r\n *      <span class=\"item\">3</span>\r\n * </div>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 描述元素内容在横、纵方向上的对齐方式，默认为水平垂直居中对齐\r\n * @method align\r\n * @version 2.0.0\r\n * @param {String} $flexbox 元素布局方式，可选值：flex | inline-flex，默认值：flex <2.0.0>\r\n * @param {Keyword} $justify-content 元素内容的水平对齐方式，取值与`justify-content`属性一致，默认值：center <2.0.0>\r\n * @param {Keyword} $align-items 元素内容的垂直对齐方式，取值与`align-items`属性一致，默认值：center <2.0.0>\r\n * @example\r\n * .demo {\r\n *     @include align;\r\n * }\r\n *\r\n * <div class=\"demo\">\r\n *      <img alt=\"未知尺寸图片居中\" />\r\n * </div>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 定义是否有滚动条\r\n * @method overflow\r\n * @version 1.0.0\r\n * @param {String} $overflow 取值与最新原生语法一致，默认值：auto <1.0.0>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 生成全屏方法\r\n * @method fullscreen\r\n * @version 1.7.0\r\n * @param {Integer} $z-index 指定层叠级别 <1.7.0>\r\n * @param {Keywords} $position 指定定位方式，取除`static | relative`之外的值，默认值：absolute <1.8.5>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义使用何种滤镜\r\n * @method filter\r\n * @version 1.7.0\r\n * @param {String} $filter 取值与`filter`属性一致 <1.7.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义UA默认外观\r\n * @method appearance\r\n * @version 1.0.0\r\n * @param {String} $appearance 取值与`appearance`属性一致，默认值：none <1.0.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义如何选中内容\r\n * @method user-select\r\n * @version 1.0.0\r\n * @param {String} $user-select 取值与`user-select`属性一致，默认值：none <1.0.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义盒模型\r\n * @method box-sizing\r\n * @version 1.0.0\r\n * @param {String} $box-sizing 指定盒模型类型，取值与`box-sizing`属性一致，默认值：border-box <1.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义渐变色值\r\n * @method gradient\r\n * @version 1.0.0\r\n * @param {String} $type 指定渐变的4种类型：linear, repeating-linear, radial, repeating-radial <1.0.0>\r\n * @param {String} $dir 指定渐变方向，可选值：[left | right] || [top | bottom] | angle <2.0.0>\r\n * @param {String} $gradient 指定渐变取值，与w3c最新原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景图像缩放（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-size\r\n * @version 1.4.0\r\n * @param {Keywords | Length} $background-size 指定背景图缩放值，取值与`background-size`属性一致 <1.4.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景裁减（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-clip\r\n * @version 1.6.0\r\n * @param {Keywords} $background-clip 指定背景图缩放值，取值与`background-clip`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景显示区域（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-origin\r\n * @version 1.6.0\r\n * @param {Keywords} $background-origin 指定背景图`background-position`属性计算相对的参考点，取值与`background-origin`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 为元素添加边框（包括1px边框）\r\n * @method border\r\n * @version 2.0.0\r\n * @param {String} $border-width 指定边框厚度（单位为px），默认值：1px，取值与`border-width`属性一致，不同方向代表边框位置 <2.0.0>\r\n * @param {String} $border-color 指定边框颜色 <2.0.0>\r\n * @param {String} $border-style 指定边框样式 <2.0.0>\r\n * @param {String} $radius 指定边框圆角半径，默认值：null <2.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义圆角，用于修复某些安卓机型上“圆角+边框+背景”，背景溢出的情况\r\n * @method border-radius\r\n * @version 1.6.0\r\n * @param {Length} $border-radius 指定元素的圆角半径，取值与`border-radius`属性一致 <1.6.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 定义简单变换\r\n * @method transform\r\n * @version 1.0.0\r\n * @param {String} $transform 取值范围与`transform`属性一致 <1.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 定义变换原点\r\n * @method transform-origin\r\n * @version 1.0.0\r\n * @param {Length | Percentage | Keywords} $transform-origin 取值范围与`transform-origin`属性一致 <1.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定某元素的子元素是（看起来）位于三维空间内，还是在该元素所在的平面内被扁平化\r\n * @method transform-style\r\n * @version 2.0.0\r\n * @param {String} $transform-style 取值范围与`transform-style`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定观察者与「z=0」平面的距离，使具有三维位置变换的元素产生透视效果。「z>0」的三维元素比正常大，而「z<0」时则比正常小，大小程度由该属性的值决定。\r\n * @method perspective\r\n * @version 2.0.0\r\n * @param {none | Length} $perspective 取值范围与`perspective`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定透视点的位置\r\n * @method perspective-origin\r\n * @version 2.0.0\r\n * @param {Length | Percentage | Keywords} $perspective-origin 取值范围与`perspective-origin`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定元素背面面向用户时是否可见\r\n * @method backface-visibility\r\n * @version 2.0.0\r\n * @param {Keywords} $backface-visibility 取值范围与`backface-visibility`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 定义动画\r\n * @method animation\r\n * @version 1.0.0\r\n * @param {String} $animation 取值与原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定需要引用的动画名称\r\n * @method animation-name\r\n * @version 3.0.0\r\n * @param {String} $animation-name 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画运行一次所持续的时长\r\n * @method animation-duration\r\n * @version 3.0.0\r\n * @param {String} $animation-duration 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画运行方式\r\n * @method animation-timing-function\r\n * @version 3.0.0\r\n * @param {String} $animation-timing-function 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画延迟多久之后再开始\r\n * @method animation-delay\r\n * @version 3.0.0\r\n * @param {String} $animation-delay 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画循环几次\r\n * @method animation-iteration-count\r\n * @version 3.0.0\r\n * @param {String} $animation-iteration-count 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画的运动方向\r\n * @method animation-direction\r\n * @version 3.0.0\r\n * @param {String} $animation-direction 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画的运动状态\r\n * @method animation-play-state\r\n * @version 3.0.0\r\n * @param {String} $animation-play-state 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画时间之外的状态\r\n * @method animation-fill-mode\r\n * @version 3.0.0\r\n * @param {String} $animation-fill-mode 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Transition\r\n * @description 定义补间\r\n * @method transition\r\n * @version 1.0.0\r\n * @param {String} $transition 取值与原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义显示类型为伸缩盒\r\n * @method flexbox\r\n * @version 1.0.0\r\n * @param {String} $flexbox 默认值：flex，可选值：flex | inline-flex <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素如何分配空间\r\n * @method flex\r\n * @version 1.0.0\r\n * @param {Number} $flex 取值与`flex`属性一致，默认值：1 <1.0.0>\r\n * @param {String} $direction 默认值: row，可选值：row | column <1.5.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素的排版顺序\r\n * @method order\r\n * @version 1.0.0\r\n * @param {Integer} $order 取值与`order`属性一致，默认值：1 <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性盒子元素流动方向及遇见边界时是否换行(要求系统：iOS7.0+, Android4.4+)\r\n * @method flex-flow\r\n * @version 2.0.0\r\n * @param {String} $flex-flow 取值与`flex-flow`属性一致，默认值：row nowrap <2.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素的流动方向\r\n * @method flex-direction\r\n * @version 1.0.0\r\n * @param {String} $flex-direction 取值与`flex-direction`属性一致，默认值：row <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性盒子元素溢出后排版(要求系统：iOS7.0+, Android4.4+)\r\n * @method flex-wrap\r\n * @version 1.0.0\r\n * @param {String} $flex-wrap 取值与`flex-wrap`属性一致，默认值：nowrap <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性容器主轴对齐方式(其中`space-around`值需要iOS7.0+,Android4.4+)\r\n * @method justify-content\r\n * @version 1.0.0\r\n * @param {String} $justify-content 取值与`justify-content`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义多行弹性容器侧轴对齐方式(要求系统：iOS7.0+,Android4.4+)\r\n * @method align-content\r\n * @version 1.8.5\r\n * @param {String} $align-content 取值与`align-content`属性一致，默认值：center <1.8.5>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义单行弹性容器侧轴对齐方式\r\n * @method align-items\r\n * @version 1.0.0\r\n * @param {String} $align-items 取值与`align-items`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性容器中子元素自身的在侧轴对齐方式(要求系统：iOS7.0+,Android4.4+)\r\n * @method align-self\r\n * @version 1.0.0\r\n * @param {String} $align-self 取值与`align-self`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成矩形方法\r\n * @method rect\r\n * @version 1.0.0\r\n * @param {Length} $width 定义矩形的长度 <1.0.0>\r\n * @param {Length} $height 定义矩形的高度 <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成正方形方法\r\n * @method square\r\n * @version 1.0.0\r\n * @param {Length} $size 定义正方形的边长 <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成圆形方法\r\n * @method circle\r\n * @version 1.0.0\r\n * @param {Length} $size 定义圆的半径长度 <1.0.0>\r\n * @param {Length} $radius 定义圆的圆角半径长度 <1.0.0>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 在自适应宽度情况下，确保内容元素的宽高比固定，比如：实现随屏幕大小而变化的正方形。\r\n * @method fixed-scale\r\n * @version 3.0.10\r\n * @param {Length} $width 默认值：100%。用以指定内容元素的初始宽度，由于尺寸需动态变化，不要使用固定单位 <3.0.10>\r\n * @param {Length} $scale 默认值：1/1，即正方形。用以指定内容元素的宽度高比 <3.0.10>\r\n */\n/**\r\n * @module 文本\r\n * @description 链接处理方法\r\n * @method link\r\n * @version 1.0.0\r\n * @param {Color} $color 定义链接颜色 <1.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 文本碰到边界是否换行\r\n * @method wrap\r\n * @version 1.0.0\r\n * @param {Boolean} $is-wrap 定义文本是否换行，默认值：true <2.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 单行文本溢出时显示省略号\r\n * @method ellipsis\r\n * @version 1.0.0\r\n * @param {Length} $width 定义容器的宽度，默认值：null <2.0.0>\r\n * @param {Integer} $line-clamp 定义需要显示的行数，默认值：1（即使用单行溢出的处理方案），需要注意的是本参数只支持webkit内核 <2.1.2>\r\n */\n/**\r\n * @module 文本\r\n * @description 文字隐藏方案\r\n * @method texthide\r\n * @version 1.0.0\r\n * @param {Length} $width 定义容器的宽度，默认值：null <2.0.0>\r\n */\n/**\r\n * Yo框架全局Reset\r\n * Yo重置Mobile及高级浏览器上常见的差异\r\n */\n*,\n::before,\n::after {\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n  -webkit-tap-highlight-color: transparent; }\n\nhtml,\nbody {\n  overflow: hidden;\n  height: 100%; }\n\n::-webkit-scrollbar {\n  display: none; }\n\nhtml {\n  background-color: #eee;\n  color: #212121;\n  font-size: 100px;\n  -webkit-user-select: none;\n  user-select: none; }\n\nbody {\n  margin: 0;\n  font-size: 0.14em;\n  line-height: 1.5;\n  font-family: Helvetica Neue, Helvetica, STHeiTi, sans-serif; }\n\nul,\nol,\ndl,\ndd,\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\nfigure,\nform,\nfieldset,\nlegend,\ninput,\ntextarea,\nbutton,\np,\nblockquote,\nth,\ntd,\npre,\nxmp {\n  margin: 0;\n  padding: 0; }\n\ninput,\ntextarea,\nbutton,\nselect,\npre,\nxmp,\ntt,\ncode,\nkbd,\nsamp {\n  line-height: inherit;\n  font-family: inherit; }\n\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\nsmall,\nbig,\ninput,\ntextarea,\nbutton,\nselect {\n  font-size: inherit; }\n\naddress,\ncite,\ndfn,\nem,\ni,\noptgroup,\nvar {\n  font-style: normal; }\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0;\n  table-layout: fixed;\n  text-align: left; }\n\nul,\nol,\nmenu {\n  list-style: none; }\n\nfieldset,\nimg {\n  border: 0;\n  vertical-align: middle; }\n\narticle,\naside,\ndetails,\nfigcaption,\nfigure,\nfooter,\nheader,\nmain,\nmenu,\nnav,\nsection,\nsummary {\n  display: block; }\n\naudio,\ncanvas,\nvideo {\n  display: inline-block; }\n\nblockquote:before,\nblockquote:after,\nq:before,\nq:after {\n  content: \"\\0020\"; }\n\ntextarea,\npre,\nxmp {\n  overflow: auto;\n  -webkit-overflow-scrolling: touch; }\n\ntextarea {\n  resize: vertical; }\n\ninput,\ntextarea,\nbutton,\nselect,\nsummary,\na {\n  outline: 0 none; }\n\ninput,\ntextarea,\nbutton,\nselect {\n  color: inherit; }\n  input:disabled,\n  textarea:disabled,\n  button:disabled,\n  select:disabled {\n    opacity: 1; }\n\nbutton::-moz-focus-inner,\ninput::-moz-focus-inner {\n  padding: 0;\n  border: 0; }\n\ninput[type=\"button\"],\ninput[type=\"submit\"],\ninput[type=\"reset\"],\ninput[type=\"file\"]::-webkit-file-upload-button,\ninput[type=\"search\"]::-webkit-search-cancel-button {\n  -webkit-appearance: none;\n  appearance: none; }\n\n::-webkit-details-marker {\n  display: none; }\n\nmark {\n  background-color: transparent; }\n\na,\nins,\ns,\nu,\ndel {\n  text-decoration: none; }\n\na,\nimg {\n  -webkit-touch-callout: none; }\n\na {\n  color: #00afc7; }\n\n.g-clear::after,\n.g-mod::after {\n  display: block;\n  overflow: hidden;\n  clear: both;\n  height: 0;\n  content: \"\\0020\"; }\n\n@font-face {\n  font-family: yofont;\n  src: url(//ss.qunarzz.com/yo/font/1.0.3/yofont.woff) format(\"woff\"), url(//ss.qunarzz.com/yo/font/1.0.3/yofont.ttf) format(\"truetype\"); }\n\n.yo-ico {\n  font-family: yofont !important;\n  font-style: normal;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n  vertical-align: middle; }\n\n@font-face {\n  font-family: 'iconfont';\n  src: url(\"http://localhost:7000/media/iconfont/iconfont.woff\") format(\"woff\"), url(\"http://localhost:7000/media/iconfont/iconfont.ttf\") format(\"truetype\"); }\n\n.iconfont {\n  font-family: \"iconfont\" !important;\n  font-size: 16px;\n  font-style: normal;\n  -webkit-font-smoothing: antialiased;\n  -webkit-text-stroke-width: 0.2px;\n  -moz-osx-font-smoothing: grayscale; }\n\n.banner {\n  width: 100%;\n  height: 150px; }\n  .banner img {\n    height: 100%; }\n\n.promise ul {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: flex;\n  height: 49px; }\n  .promise ul li {\n    -webkit-box-flex: 1;\n    -webkit-flex: 1;\n    flex: 1;\n    width: .1px;\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: flex;\n    -webkit-box-align: center;\n    -webkit-align-items: center;\n    align-items: center;\n    -webkit-box-pack: center;\n    -webkit-justify-content: center;\n    justify-content: center;\n    color: #4d4d4d; }\n    .promise ul li img {\n      margin-top: -2px;\n      margin-right: 3px;\n      width: 16px;\n      height: 16px; }\n\n.cards {\n  width: 100%;\n  height: 150px;\n  padding: 0 15px; }\n  .cards section {\n    width: 100%;\n    padding-bottom: 15px;\n    height: 100%;\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: flex;\n    position: relative; }\n    .cards section::after {\n      pointer-events: none;\n      position: absolute;\n      z-index: 999;\n      top: 0;\n      left: 0;\n      content: \"\\0020\";\n      border-color: #e6e6e6;\n      border-style: solid;\n      border-width: 0 0 1px 0;\n      -webkit-transform-origin: 0 0;\n      transform-origin: 0 0; }\n      @media (max--moz-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.49), (max-device-pixel-ratio: 1.49), (max-resolution: 143dpi), (max-resolution: 1.49dppx) {\n        .cards section::after {\n          width: 100%;\n          height: 100%; } }\n      @media (min--moz-device-pixel-ratio: 1.5) and (max--moz-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.49), (min-device-pixel-ratio: 1.5) and (max-device-pixel-ratio: 2.49), (min-resolution: 144dpi) and (max-resolution: 239dpi), (min-resolution: 1.5dppx) and (max-resolution: 2.49dppx) {\n        .cards section::after {\n          width: 200%;\n          height: 200%;\n          -webkit-transform: scale(0.5);\n          transform: scale(0.5); } }\n      @media (min--moz-device-pixel-ratio: 2.5), (-webkit-min-device-pixel-ratio: 2.5), (min-device-pixel-ratio: 2.5), (min-resolution: 240dpi), (min-resolution: 2.5dppx) {\n        .cards section::after {\n          width: 300%;\n          height: 300%;\n          -webkit-transform: scale(0.33333);\n          transform: scale(0.33333); } }\n    .cards section div:first-child {\n      -webkit-box-flex: 53;\n      -webkit-flex: 53;\n      flex: 53;\n      width: .1px; }\n      .cards section div:first-child img {\n        width: 100%;\n        height: 100%; }\n    .cards section div:last-child {\n      -webkit-box-flex: 47;\n      -webkit-flex: 47;\n      flex: 47;\n      width: .1px;\n      display: -webkit-box;\n      display: -webkit-flex;\n      display: flex;\n      -webkit-box-orient: vertical;\n      -webkit-box-direction: normal;\n      -webkit-flex-direction: column;\n      flex-direction: column;\n      height: 100%; }\n      .cards section div:last-child div:first-child {\n        -webkit-box-flex: 1;\n        -webkit-flex: 1;\n        flex: 1;\n        width: .1px;\n        width: 100%;\n        margin-left: 3px; }\n      .cards section div:last-child div:last-child {\n        -webkit-box-flex: 1;\n        -webkit-flex: 1;\n        flex: 1;\n        width: .1px;\n        display: -webkit-box;\n        display: -webkit-flex;\n        display: flex;\n        -webkit-box-orient: horizontal;\n        -webkit-box-direction: normal;\n        -webkit-flex-direction: row;\n        flex-direction: row;\n        width: 100%;\n        margin-left: 3px; }\n        .cards section div:last-child div:last-child div {\n          -webkit-box-flex: 1;\n          -webkit-flex: 1;\n          flex: 1;\n          width: .1px;\n          width: 100%; }\n          .cards section div:last-child div:last-child div img {\n            padding-top: 3px;\n            padding-right: 3px;\n            width: 100%; }\n\n.goods {\n  height: 100%;\n  overflow-y: scroll; }\n  .goods .title {\n    height: 60px;\n    padding-left: 15px; }\n    .goods .title span {\n      color: #ff1d3f;\n      font-size: 18px;\n      line-height: 60px; }\n  .goods .goods_list {\n    height: 100%; }\n    .goods .goods_list ul {\n      height: 100%; }\n      .goods .goods_list ul .img_container {\n        height: 92px; }\n        .goods .goods_list ul .img_container img {\n          width: 100%; }\n      .goods .goods_list ul .sell_out {\n        padding-left: 15px;\n        height: 70px;\n        position: relative; }\n        .goods .goods_list ul .sell_out span:first-child {\n          display: block;\n          position: absolute;\n          color: #4b4b4b;\n          top: 27px;\n          font-size: 18px;\n          height: 20px; }\n        .goods .goods_list ul .sell_out span:last-child {\n          position: absolute;\n          bottom: 0;\n          font-size: 12px;\n          color: #968D91;\n          height: 18px;\n          line-height: 18px; }\n      .goods .goods_list ul li {\n        height: 164px;\n        position: relative; }\n        .goods .goods_list ul li::after {\n          pointer-events: none;\n          position: absolute;\n          z-index: 999;\n          top: 0;\n          left: 0;\n          content: \"\\0020\";\n          border-color: #f5f5f5;\n          border-style: solid;\n          border-width: 0 0 1px 0;\n          -webkit-transform-origin: 0 0;\n          transform-origin: 0 0; }\n          @media (max--moz-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.49), (max-device-pixel-ratio: 1.49), (max-resolution: 143dpi), (max-resolution: 1.49dppx) {\n            .goods .goods_list ul li::after {\n              width: 100%;\n              height: 100%; } }\n          @media (min--moz-device-pixel-ratio: 1.5) and (max--moz-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.49), (min-device-pixel-ratio: 1.5) and (max-device-pixel-ratio: 2.49), (min-resolution: 144dpi) and (max-resolution: 239dpi), (min-resolution: 1.5dppx) and (max-resolution: 2.49dppx) {\n            .goods .goods_list ul li::after {\n              width: 200%;\n              height: 200%;\n              -webkit-transform: scale(0.5);\n              transform: scale(0.5); } }\n          @media (min--moz-device-pixel-ratio: 2.5), (-webkit-min-device-pixel-ratio: 2.5), (min-device-pixel-ratio: 2.5), (min-resolution: 240dpi), (min-resolution: 2.5dppx) {\n            .goods .goods_list ul li::after {\n              width: 300%;\n              height: 300%;\n              -webkit-transform: scale(0.33333);\n              transform: scale(0.33333); } }\n        .goods .goods_list ul li div.li_container {\n          width: 100%;\n          height: 100%;\n          padding-top: 20px;\n          padding-bottom: 23px;\n          display: -webkit-box;\n          display: -webkit-flex;\n          display: flex;\n          position: relative; }\n          .goods .goods_list ul li div.li_container .img_left {\n            width: 150px;\n            padding: 0 15px;\n            position: relative; }\n            .goods .goods_list ul li div.li_container .img_left img {\n              border: 0; }\n              .goods .goods_list ul li div.li_container .img_left img:first-child {\n                width: 100%; }\n              .goods .goods_list ul li div.li_container .img_left img:last-child {\n                position: absolute;\n                left: 16px;\n                height: 32px;\n                top: 0; }\n          .goods .goods_list ul li div.li_container .message_right {\n            -webkit-box-flex: 1;\n            -webkit-flex: 1;\n            flex: 1;\n            width: .1px;\n            width: 100%;\n            position: relative; }\n            .goods .goods_list ul li div.li_container .message_right .message_title {\n              font-size: 16px;\n              padding-top: 11px;\n              white-space: nowrap;\n              overflow: hidden;\n              text-overflow: ellipsis;\n              letter-spacing: -1px;\n              color: #474245;\n              width: 140px; }\n            .goods .goods_list ul li div.li_container .message_right .message_info {\n              font-size: 14px;\n              color: #969696;\n              white-space: nowrap;\n              text-overflow: ellipsis;\n              overflow: hidden;\n              width: 140px; }\n            .goods .goods_list ul li div.li_container .message_right .message_des {\n              height: 25px;\n              line-height: 17px; }\n              .goods .goods_list ul li div.li_container .message_right .message_des span {\n                display: inline-block;\n                border-radius: 2px;\n                font-size: 9px;\n                height: 13px;\n                line-height: 11px;\n                background: white;\n                color: #c6c6c6;\n                border: 1px solid #c6c6c6;\n                margin-right: 5px;\n                padding: 1px; }\n            .goods .goods_list ul li div.li_container .message_right .message_highprice {\n              font-size: 12px;\n              color: #ffc38d;\n              line-height: 8px; }\n            .goods .goods_list ul li div.li_container .message_right .message_lowprice {\n              color: #ff4891;\n              font-size: 12px; }\n              .goods .goods_list ul li div.li_container .message_right .message_lowprice span span:first-child {\n                letter-spacing: -3px; }\n              .goods .goods_list ul li div.li_container .message_right .message_lowprice span span:last-child {\n                font-size: 16px;\n                letter-spacing: -1px;\n                display: inline-block;\n                height: 22px;\n                vertical-align: bottom; }\n            .goods .goods_list ul li div.li_container .message_right .message_cart {\n              position: absolute;\n              bottom: 5px;\n              right: 4%;\n              height: 30px;\n              text-align: right; }\n              .goods .goods_list ul li div.li_container .message_right .message_cart img {\n                width: 49px;\n                position: absolute;\n                bottom: -8px;\n                right: -6px !important; }\n\nimage[lazy=loading] {\n  width: 40px;\n  height: 300px;\n  margin: auto; }\n"],"sourceRoot":""}]);
+exports.push([module.i, "\n@charset \"UTF-8\";\n/**\r\n * Yo框架全局base定义\r\n * 本文件与variables不同地方在于，这里所定义的map可以使用在variables和任何地方\r\n * 本文件中map使用\"_\"开头，extra中不使用\"_\"\r\n * base ⇌ extra\r\n */\n/**\r\n * Yo框架全局Variables\r\n * Yo基础变量map，如果不想定义某属性，将其value设置为null\r\n * Yo仅使用2种长度单位：px用于边框，rem用于除边框之外的所有地方\r\n * 本文件中map使用\"_\"开头，config中不使用\"_\"\r\n * variables ⇌ config\r\n */\n/**\r\n * Yo框架自定义全局函数\r\n * 扩充Sass默认函数库，用以增强语法\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的第一项\r\n * @function first\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的最后一项\r\n * @function last\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的倒数第几项\r\n * @function nth-last\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $index 指定需要返回的值在list中的倒数位置 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 移除SassList中的某个项目并返回新的List\r\n * @function remove\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {String} $value 指定需要被删除的值 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 截取SassList中的某个部分并返回新的List\r\n * @function slice\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $start 指定需要截取的开始下标 <2.1.0>\r\n * @param {Integer} $end 指定需要截取的结束下标（不包括end），当该值缺省时默认为末尾下标 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 从SassList中添加/删除项目，然后返回新的List。\r\n * @function splice\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $index 指定需要移除的开始下标 <2.1.0>\r\n * @param {Integer} $count 指定需要移除的数量，不可以为负值，0表示不移除 <2.1.0>\r\n * @param {String} $values 指定需要添加的新值（可以是多个），如果该值缺省，则表示只移除不添加新值 <2.1.0>\r\n */\n/**\r\n * Yo框架全局基础方法\r\n * 包括响应式方案，CSS3兼容性方案，厂商前缀方案，iconfont方案，flex布局等全局方法\r\n */\n/**\r\n * @module 常用方法\r\n * @description 给需要的属性加厂家前缀\r\n * @method prefix\r\n * @version 1.0.0\r\n * @param {String} $property 指定属性 <1.0.0>\r\n * @param {String} $value 指定属性值 <1.0.0>\r\n * @skip\r\n */\n/**\r\n * @module 常用方法\r\n * @description 定义字体图标\r\n * @method _iconfont\r\n * @version 1.0.0\r\n * @skip\r\n */\n/**\r\n * @module 常用方法\r\n * @description 四则运算(系统要求：iOS6.0+,Android4.4+)\r\n * @method calc\r\n * @version 1.7.0\r\n * @param {String} $property 指定需要进行计算的CSS属性 <1.7.0>\r\n * @param {String} $value 与原生CSS语法一致，区别在于需要使用引号包裹表达式 <1.7.0>\r\n * @example\r\n * .calc {\r\n *     @include calc(width, \"100% - 100px\");\r\n * }\r\n *\r\n * <div class=\"calc\">四则运算</div>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 定义响应式方案\r\n * @method responsive\r\n * @version 1.0.0\r\n * @param {String} $media 指定媒体查询条件，取值为`config`文件map `media-types`中的值 <1.0.0>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 清除浮动方案\r\n * @method clearfix\r\n * @version 1.0.0\r\n * @param {String} $type 指定清除浮动的方式，包括：pseudo-element | bfc，默认值：pseudo-element <1.8.5>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 清除行内级元素间间隙方案\r\n * @method clearspace\r\n * @version 3.0.3\r\n * @param {Length} $font-size 指定子元素字号，默认值：.14rem <3.0.3>\r\n * @example\r\n * .demo {\r\n *     @include clearspace;\r\n * }\r\n *\r\n * <div class=\"demo\">\r\n *      <span class=\"item\">1</span>\r\n *      <span class=\"item\">2</span>\r\n *      <span class=\"item\">3</span>\r\n * </div>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 描述元素内容在横、纵方向上的对齐方式，默认为水平垂直居中对齐\r\n * @method align\r\n * @version 2.0.0\r\n * @param {String} $flexbox 元素布局方式，可选值：flex | inline-flex，默认值：flex <2.0.0>\r\n * @param {Keyword} $justify-content 元素内容的水平对齐方式，取值与`justify-content`属性一致，默认值：center <2.0.0>\r\n * @param {Keyword} $align-items 元素内容的垂直对齐方式，取值与`align-items`属性一致，默认值：center <2.0.0>\r\n * @example\r\n * .demo {\r\n *     @include align;\r\n * }\r\n *\r\n * <div class=\"demo\">\r\n *      <img alt=\"未知尺寸图片居中\" />\r\n * </div>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 定义是否有滚动条\r\n * @method overflow\r\n * @version 1.0.0\r\n * @param {String} $overflow 取值与最新原生语法一致，默认值：auto <1.0.0>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 生成全屏方法\r\n * @method fullscreen\r\n * @version 1.7.0\r\n * @param {Integer} $z-index 指定层叠级别 <1.7.0>\r\n * @param {Keywords} $position 指定定位方式，取除`static | relative`之外的值，默认值：absolute <1.8.5>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义使用何种滤镜\r\n * @method filter\r\n * @version 1.7.0\r\n * @param {String} $filter 取值与`filter`属性一致 <1.7.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义UA默认外观\r\n * @method appearance\r\n * @version 1.0.0\r\n * @param {String} $appearance 取值与`appearance`属性一致，默认值：none <1.0.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义如何选中内容\r\n * @method user-select\r\n * @version 1.0.0\r\n * @param {String} $user-select 取值与`user-select`属性一致，默认值：none <1.0.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义盒模型\r\n * @method box-sizing\r\n * @version 1.0.0\r\n * @param {String} $box-sizing 指定盒模型类型，取值与`box-sizing`属性一致，默认值：border-box <1.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义渐变色值\r\n * @method gradient\r\n * @version 1.0.0\r\n * @param {String} $type 指定渐变的4种类型：linear, repeating-linear, radial, repeating-radial <1.0.0>\r\n * @param {String} $dir 指定渐变方向，可选值：[left | right] || [top | bottom] | angle <2.0.0>\r\n * @param {String} $gradient 指定渐变取值，与w3c最新原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景图像缩放（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-size\r\n * @version 1.4.0\r\n * @param {Keywords | Length} $background-size 指定背景图缩放值，取值与`background-size`属性一致 <1.4.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景裁减（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-clip\r\n * @version 1.6.0\r\n * @param {Keywords} $background-clip 指定背景图缩放值，取值与`background-clip`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景显示区域（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-origin\r\n * @version 1.6.0\r\n * @param {Keywords} $background-origin 指定背景图`background-position`属性计算相对的参考点，取值与`background-origin`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 为元素添加边框（包括1px边框）\r\n * @method border\r\n * @version 2.0.0\r\n * @param {String} $border-width 指定边框厚度（单位为px），默认值：1px，取值与`border-width`属性一致，不同方向代表边框位置 <2.0.0>\r\n * @param {String} $border-color 指定边框颜色 <2.0.0>\r\n * @param {String} $border-style 指定边框样式 <2.0.0>\r\n * @param {String} $radius 指定边框圆角半径，默认值：null <2.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义圆角，用于修复某些安卓机型上“圆角+边框+背景”，背景溢出的情况\r\n * @method border-radius\r\n * @version 1.6.0\r\n * @param {Length} $border-radius 指定元素的圆角半径，取值与`border-radius`属性一致 <1.6.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 定义简单变换\r\n * @method transform\r\n * @version 1.0.0\r\n * @param {String} $transform 取值范围与`transform`属性一致 <1.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 定义变换原点\r\n * @method transform-origin\r\n * @version 1.0.0\r\n * @param {Length | Percentage | Keywords} $transform-origin 取值范围与`transform-origin`属性一致 <1.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定某元素的子元素是（看起来）位于三维空间内，还是在该元素所在的平面内被扁平化\r\n * @method transform-style\r\n * @version 2.0.0\r\n * @param {String} $transform-style 取值范围与`transform-style`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定观察者与「z=0」平面的距离，使具有三维位置变换的元素产生透视效果。「z>0」的三维元素比正常大，而「z<0」时则比正常小，大小程度由该属性的值决定。\r\n * @method perspective\r\n * @version 2.0.0\r\n * @param {none | Length} $perspective 取值范围与`perspective`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定透视点的位置\r\n * @method perspective-origin\r\n * @version 2.0.0\r\n * @param {Length | Percentage | Keywords} $perspective-origin 取值范围与`perspective-origin`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定元素背面面向用户时是否可见\r\n * @method backface-visibility\r\n * @version 2.0.0\r\n * @param {Keywords} $backface-visibility 取值范围与`backface-visibility`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 定义动画\r\n * @method animation\r\n * @version 1.0.0\r\n * @param {String} $animation 取值与原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定需要引用的动画名称\r\n * @method animation-name\r\n * @version 3.0.0\r\n * @param {String} $animation-name 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画运行一次所持续的时长\r\n * @method animation-duration\r\n * @version 3.0.0\r\n * @param {String} $animation-duration 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画运行方式\r\n * @method animation-timing-function\r\n * @version 3.0.0\r\n * @param {String} $animation-timing-function 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画延迟多久之后再开始\r\n * @method animation-delay\r\n * @version 3.0.0\r\n * @param {String} $animation-delay 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画循环几次\r\n * @method animation-iteration-count\r\n * @version 3.0.0\r\n * @param {String} $animation-iteration-count 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画的运动方向\r\n * @method animation-direction\r\n * @version 3.0.0\r\n * @param {String} $animation-direction 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画的运动状态\r\n * @method animation-play-state\r\n * @version 3.0.0\r\n * @param {String} $animation-play-state 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画时间之外的状态\r\n * @method animation-fill-mode\r\n * @version 3.0.0\r\n * @param {String} $animation-fill-mode 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Transition\r\n * @description 定义补间\r\n * @method transition\r\n * @version 1.0.0\r\n * @param {String} $transition 取值与原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义显示类型为伸缩盒\r\n * @method flexbox\r\n * @version 1.0.0\r\n * @param {String} $flexbox 默认值：flex，可选值：flex | inline-flex <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素如何分配空间\r\n * @method flex\r\n * @version 1.0.0\r\n * @param {Number} $flex 取值与`flex`属性一致，默认值：1 <1.0.0>\r\n * @param {String} $direction 默认值: row，可选值：row | column <1.5.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素的排版顺序\r\n * @method order\r\n * @version 1.0.0\r\n * @param {Integer} $order 取值与`order`属性一致，默认值：1 <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性盒子元素流动方向及遇见边界时是否换行(要求系统：iOS7.0+, Android4.4+)\r\n * @method flex-flow\r\n * @version 2.0.0\r\n * @param {String} $flex-flow 取值与`flex-flow`属性一致，默认值：row nowrap <2.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素的流动方向\r\n * @method flex-direction\r\n * @version 1.0.0\r\n * @param {String} $flex-direction 取值与`flex-direction`属性一致，默认值：row <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性盒子元素溢出后排版(要求系统：iOS7.0+, Android4.4+)\r\n * @method flex-wrap\r\n * @version 1.0.0\r\n * @param {String} $flex-wrap 取值与`flex-wrap`属性一致，默认值：nowrap <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性容器主轴对齐方式(其中`space-around`值需要iOS7.0+,Android4.4+)\r\n * @method justify-content\r\n * @version 1.0.0\r\n * @param {String} $justify-content 取值与`justify-content`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义多行弹性容器侧轴对齐方式(要求系统：iOS7.0+,Android4.4+)\r\n * @method align-content\r\n * @version 1.8.5\r\n * @param {String} $align-content 取值与`align-content`属性一致，默认值：center <1.8.5>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义单行弹性容器侧轴对齐方式\r\n * @method align-items\r\n * @version 1.0.0\r\n * @param {String} $align-items 取值与`align-items`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性容器中子元素自身的在侧轴对齐方式(要求系统：iOS7.0+,Android4.4+)\r\n * @method align-self\r\n * @version 1.0.0\r\n * @param {String} $align-self 取值与`align-self`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成矩形方法\r\n * @method rect\r\n * @version 1.0.0\r\n * @param {Length} $width 定义矩形的长度 <1.0.0>\r\n * @param {Length} $height 定义矩形的高度 <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成正方形方法\r\n * @method square\r\n * @version 1.0.0\r\n * @param {Length} $size 定义正方形的边长 <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成圆形方法\r\n * @method circle\r\n * @version 1.0.0\r\n * @param {Length} $size 定义圆的半径长度 <1.0.0>\r\n * @param {Length} $radius 定义圆的圆角半径长度 <1.0.0>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 在自适应宽度情况下，确保内容元素的宽高比固定，比如：实现随屏幕大小而变化的正方形。\r\n * @method fixed-scale\r\n * @version 3.0.10\r\n * @param {Length} $width 默认值：100%。用以指定内容元素的初始宽度，由于尺寸需动态变化，不要使用固定单位 <3.0.10>\r\n * @param {Length} $scale 默认值：1/1，即正方形。用以指定内容元素的宽度高比 <3.0.10>\r\n */\n/**\r\n * @module 文本\r\n * @description 链接处理方法\r\n * @method link\r\n * @version 1.0.0\r\n * @param {Color} $color 定义链接颜色 <1.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 文本碰到边界是否换行\r\n * @method wrap\r\n * @version 1.0.0\r\n * @param {Boolean} $is-wrap 定义文本是否换行，默认值：true <2.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 单行文本溢出时显示省略号\r\n * @method ellipsis\r\n * @version 1.0.0\r\n * @param {Length} $width 定义容器的宽度，默认值：null <2.0.0>\r\n * @param {Integer} $line-clamp 定义需要显示的行数，默认值：1（即使用单行溢出的处理方案），需要注意的是本参数只支持webkit内核 <2.1.2>\r\n */\n/**\r\n * @module 文本\r\n * @description 文字隐藏方案\r\n * @method texthide\r\n * @version 1.0.0\r\n * @param {Length} $width 定义容器的宽度，默认值：null <2.0.0>\r\n */\n/**\r\n * Yo框架全局Reset\r\n * Yo重置Mobile及高级浏览器上常见的差异\r\n */\n*,\n::before,\n::after {\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n  -webkit-tap-highlight-color: transparent;\n}\nhtml,\nbody {\n  overflow: hidden;\n  height: 100%;\n}\n::-webkit-scrollbar {\n  display: none;\n}\nhtml {\n  background-color: #eee;\n  color: #212121;\n  font-size: 100px;\n  -webkit-user-select: none;\n  user-select: none;\n}\nbody {\n  margin: 0;\n  font-size: 0.14em;\n  line-height: 1.5;\n  font-family: Helvetica Neue, Helvetica, STHeiTi, sans-serif;\n}\nul,\nol,\ndl,\ndd,\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\nfigure,\nform,\nfieldset,\nlegend,\ninput,\ntextarea,\nbutton,\np,\nblockquote,\nth,\ntd,\npre,\nxmp {\n  margin: 0;\n  padding: 0;\n}\ninput,\ntextarea,\nbutton,\nselect,\npre,\nxmp,\ntt,\ncode,\nkbd,\nsamp {\n  line-height: inherit;\n  font-family: inherit;\n}\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\nsmall,\nbig,\ninput,\ntextarea,\nbutton,\nselect {\n  font-size: inherit;\n}\naddress,\ncite,\ndfn,\nem,\ni,\noptgroup,\nvar {\n  font-style: normal;\n}\ntable {\n  border-collapse: collapse;\n  border-spacing: 0;\n  table-layout: fixed;\n  text-align: left;\n}\nul,\nol,\nmenu {\n  list-style: none;\n}\nfieldset,\nimg {\n  border: 0;\n  vertical-align: middle;\n}\narticle,\naside,\ndetails,\nfigcaption,\nfigure,\nfooter,\nheader,\nmain,\nmenu,\nnav,\nsection,\nsummary {\n  display: block;\n}\naudio,\ncanvas,\nvideo {\n  display: inline-block;\n}\nblockquote:before,\nblockquote:after,\nq:before,\nq:after {\n  content: \" \";\n}\ntextarea,\npre,\nxmp {\n  overflow: auto;\n  -webkit-overflow-scrolling: touch;\n}\ntextarea {\n  resize: vertical;\n}\ninput,\ntextarea,\nbutton,\nselect,\nsummary,\na {\n  outline: 0 none;\n}\ninput,\ntextarea,\nbutton,\nselect {\n  color: inherit;\n}\ninput:disabled,\n  textarea:disabled,\n  button:disabled,\n  select:disabled {\n    opacity: 1;\n}\nbutton::-moz-focus-inner,\ninput::-moz-focus-inner {\n  padding: 0;\n  border: 0;\n}\ninput[type=\"button\"],\ninput[type=\"submit\"],\ninput[type=\"reset\"],\ninput[type=\"file\"]::-webkit-file-upload-button,\ninput[type=\"search\"]::-webkit-search-cancel-button {\n  -webkit-appearance: none;\n  appearance: none;\n}\n::-webkit-details-marker {\n  display: none;\n}\nmark {\n  background-color: transparent;\n}\na,\nins,\ns,\nu,\ndel {\n  text-decoration: none;\n}\na,\nimg {\n  -webkit-touch-callout: none;\n}\na {\n  color: #00afc7;\n}\n.g-clear::after,\n.g-mod::after {\n  display: block;\n  overflow: hidden;\n  clear: both;\n  height: 0;\n  content: \" \";\n}\n@font-face {\n  font-family: yofont;\n  src: url(//ss.qunarzz.com/yo/font/1.0.3/yofont.woff) format(\"woff\"), url(//ss.qunarzz.com/yo/font/1.0.3/yofont.ttf) format(\"truetype\");\n}\n.yo-ico {\n  font-family: yofont !important;\n  font-style: normal;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n  vertical-align: middle;\n}\n@font-face {\n  font-family: 'iconfont';\n  src: url(\"http://localhost:7000/media/iconfont/iconfont.woff\") format(\"woff\"), url(\"http://localhost:7000/media/iconfont/iconfont.ttf\") format(\"truetype\");\n}\n.iconfont {\n  font-family: \"iconfont\" !important;\n  font-size: 16px;\n  font-style: normal;\n  -webkit-font-smoothing: antialiased;\n  -webkit-text-stroke-width: 0.2px;\n  -moz-osx-font-smoothing: grayscale;\n}\n.banner {\n  width: 100%;\n  height: 150px;\n}\n.banner img {\n    height: 100%;\n}\nsection > div {\n  height: 100%;\n}\n.load_img {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: flex;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n  justify-content: center;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n  align-items: center;\n  height: 100%;\n}\n.load_img img {\n    width: 30%;\n}\n.promise ul {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: flex;\n  height: 49px;\n}\n.promise ul li {\n    -webkit-box-flex: 1;\n    -webkit-flex: 1;\n    flex: 1;\n    width: .1px;\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: flex;\n    -webkit-box-align: center;\n    -webkit-align-items: center;\n    align-items: center;\n    -webkit-box-pack: center;\n    -webkit-justify-content: center;\n    justify-content: center;\n    color: #4d4d4d;\n}\n.promise ul li img {\n      margin-top: -2px;\n      margin-right: 3px;\n      width: 16px;\n      height: 16px;\n}\n.cards {\n  width: 100%;\n  height: 150px;\n  padding: 0 15px;\n}\n.cards section {\n    width: 100%;\n    padding-bottom: 15px;\n    height: 100%;\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: flex;\n    position: relative;\n}\n.cards section::after {\n      pointer-events: none;\n      position: absolute;\n      z-index: 999;\n      top: 0;\n      left: 0;\n      content: \" \";\n      border-color: #e6e6e6;\n      border-style: solid;\n      border-width: 0 0 1px 0;\n      -webkit-transform-origin: 0 0;\n      transform-origin: 0 0;\n}\n@media (max--moz-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.49), (max-device-pixel-ratio: 1.49), (max-resolution: 143dpi), (max-resolution: 1.49dppx) {\n.cards section::after {\n          width: 100%;\n          height: 100%;\n}\n}\n@media (min--moz-device-pixel-ratio: 1.5) and (max--moz-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.49), (min-device-pixel-ratio: 1.5) and (max-device-pixel-ratio: 2.49), (min-resolution: 144dpi) and (max-resolution: 239dpi), (min-resolution: 1.5dppx) and (max-resolution: 2.49dppx) {\n.cards section::after {\n          width: 200%;\n          height: 200%;\n          -webkit-transform: scale(0.5);\n          transform: scale(0.5);\n}\n}\n@media (min--moz-device-pixel-ratio: 2.5), (-webkit-min-device-pixel-ratio: 2.5), (min-device-pixel-ratio: 2.5), (min-resolution: 240dpi), (min-resolution: 2.5dppx) {\n.cards section::after {\n          width: 300%;\n          height: 300%;\n          -webkit-transform: scale(0.33333);\n          transform: scale(0.33333);\n}\n}\n.cards section div:first-child {\n      -webkit-box-flex: 53;\n      -webkit-flex: 53;\n      flex: 53;\n      width: .1px;\n}\n.cards section div:first-child img {\n        width: 100%;\n        height: 100%;\n}\n.cards section div:last-child {\n      -webkit-box-flex: 47;\n      -webkit-flex: 47;\n      flex: 47;\n      width: .1px;\n      display: -webkit-box;\n      display: -webkit-flex;\n      display: flex;\n      -webkit-box-orient: vertical;\n      -webkit-box-direction: normal;\n      -webkit-flex-direction: column;\n      flex-direction: column;\n      height: 100%;\n}\n.cards section div:last-child div:first-child {\n        -webkit-box-flex: 1;\n        -webkit-flex: 1;\n        flex: 1;\n        width: .1px;\n        width: 100%;\n        margin-left: 3px;\n}\n.cards section div:last-child div:last-child {\n        -webkit-box-flex: 1;\n        -webkit-flex: 1;\n        flex: 1;\n        width: .1px;\n        display: -webkit-box;\n        display: -webkit-flex;\n        display: flex;\n        -webkit-box-orient: horizontal;\n        -webkit-box-direction: normal;\n        -webkit-flex-direction: row;\n        flex-direction: row;\n        width: 100%;\n        margin-left: 3px;\n}\n.cards section div:last-child div:last-child div {\n          -webkit-box-flex: 1;\n          -webkit-flex: 1;\n          flex: 1;\n          width: .1px;\n          width: 100%;\n}\n.cards section div:last-child div:last-child div img {\n            padding-top: 3px;\n            padding-right: 3px;\n            width: 100%;\n}\n.goods {\n  height: 100%;\n  overflow-y: scroll;\n}\n.goods .title {\n    height: 60px;\n    padding-left: 15px;\n}\n.goods .title span {\n      color: #ff1d3f;\n      font-size: 18px;\n      line-height: 60px;\n}\n.goods .goods_list {\n    height: 100%;\n}\n.goods .goods_list ul {\n      height: 100%;\n}\n.goods .goods_list ul .img_container {\n        height: 92px;\n}\n.goods .goods_list ul .img_container img {\n          width: 100%;\n}\n.goods .goods_list ul .sell_out {\n        padding-left: 15px;\n        height: 70px;\n        position: relative;\n}\n.goods .goods_list ul .sell_out span:first-child {\n          display: block;\n          position: absolute;\n          color: #4b4b4b;\n          top: 27px;\n          font-size: 18px;\n          height: 20px;\n}\n.goods .goods_list ul .sell_out span:last-child {\n          position: absolute;\n          bottom: 0;\n          font-size: 12px;\n          color: #968D91;\n          height: 18px;\n          line-height: 18px;\n}\n.goods .goods_list ul li {\n        height: 164px;\n        position: relative;\n}\n.goods .goods_list ul li::after {\n          pointer-events: none;\n          position: absolute;\n          z-index: 999;\n          top: 0;\n          left: 0;\n          content: \" \";\n          border-color: #f5f5f5;\n          border-style: solid;\n          border-width: 0 0 1px 0;\n          -webkit-transform-origin: 0 0;\n          transform-origin: 0 0;\n}\n@media (max--moz-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.49), (max-device-pixel-ratio: 1.49), (max-resolution: 143dpi), (max-resolution: 1.49dppx) {\n.goods .goods_list ul li::after {\n              width: 100%;\n              height: 100%;\n}\n}\n@media (min--moz-device-pixel-ratio: 1.5) and (max--moz-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.49), (min-device-pixel-ratio: 1.5) and (max-device-pixel-ratio: 2.49), (min-resolution: 144dpi) and (max-resolution: 239dpi), (min-resolution: 1.5dppx) and (max-resolution: 2.49dppx) {\n.goods .goods_list ul li::after {\n              width: 200%;\n              height: 200%;\n              -webkit-transform: scale(0.5);\n              transform: scale(0.5);\n}\n}\n@media (min--moz-device-pixel-ratio: 2.5), (-webkit-min-device-pixel-ratio: 2.5), (min-device-pixel-ratio: 2.5), (min-resolution: 240dpi), (min-resolution: 2.5dppx) {\n.goods .goods_list ul li::after {\n              width: 300%;\n              height: 300%;\n              -webkit-transform: scale(0.33333);\n              transform: scale(0.33333);\n}\n}\n.goods .goods_list ul li div.li_container {\n          width: 100%;\n          height: 100%;\n          padding-top: 20px;\n          padding-bottom: 23px;\n          display: -webkit-box;\n          display: -webkit-flex;\n          display: flex;\n          position: relative;\n}\n.goods .goods_list ul li div.li_container .img_left {\n            width: 150px;\n            padding: 0 15px;\n            position: relative;\n}\n.goods .goods_list ul li div.li_container .img_left img {\n              border: 0;\n}\n.goods .goods_list ul li div.li_container .img_left img:first-child {\n                width: 100%;\n}\n.goods .goods_list ul li div.li_container .img_left img:last-child {\n                position: absolute;\n                left: 16px;\n                height: 32px;\n                top: 0;\n}\n.goods .goods_list ul li div.li_container .message_right {\n            -webkit-box-flex: 1;\n            -webkit-flex: 1;\n            flex: 1;\n            width: .1px;\n            width: 100%;\n            position: relative;\n}\n.goods .goods_list ul li div.li_container .message_right .message_title {\n              font-size: 16px;\n              padding-top: 11px;\n              white-space: nowrap;\n              overflow: hidden;\n              text-overflow: ellipsis;\n              letter-spacing: -1px;\n              color: #474245;\n              width: 140px;\n}\n.goods .goods_list ul li div.li_container .message_right .message_info {\n              font-size: 14px;\n              color: #969696;\n              white-space: nowrap;\n              text-overflow: ellipsis;\n              overflow: hidden;\n              width: 140px;\n}\n.goods .goods_list ul li div.li_container .message_right .message_des {\n              height: 25px;\n              line-height: 17px;\n}\n.goods .goods_list ul li div.li_container .message_right .message_des span {\n                display: inline-block;\n                border-radius: 2px;\n                font-size: 9px;\n                height: 13px;\n                line-height: 11px;\n                background: white;\n                color: #c6c6c6;\n                border: 1px solid #c6c6c6;\n                margin-right: 5px;\n                padding: 1px;\n}\n.goods .goods_list ul li div.li_container .message_right .message_highprice {\n              font-size: 12px;\n              color: #ffc38d;\n              line-height: 8px;\n}\n.goods .goods_list ul li div.li_container .message_right .message_lowprice {\n              color: #ff4891;\n              font-size: 12px;\n}\n.goods .goods_list ul li div.li_container .message_right .message_lowprice span span:first-child {\n                letter-spacing: -3px;\n}\n.goods .goods_list ul li div.li_container .message_right .message_lowprice span span:last-child {\n                font-size: 16px;\n                letter-spacing: -1px;\n                display: inline-block;\n                height: 22px;\n                vertical-align: bottom;\n}\n.goods .goods_list ul li div.li_container .message_right .message_cart {\n              position: absolute;\n              bottom: 5px;\n              right: 4%;\n              height: 30px;\n              text-align: right;\n}\n.goods .goods_list ul li div.li_container .message_right .message_cart img {\n                width: 49px;\n                position: absolute;\n                bottom: -8px;\n                right: -6px !important;\n}\nimage[lazy=loading] {\n  width: 40px;\n  height: 300px;\n  margin: auto;\n}\n", "", {"version":3,"sources":["D:/missFresh/src/modules/index/components/hot.vue"],"names":[],"mappings":"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","file":"hot.vue","sourcesContent":["@charset \"UTF-8\";\n/**\r\n * Yo框架全局base定义\r\n * 本文件与variables不同地方在于，这里所定义的map可以使用在variables和任何地方\r\n * 本文件中map使用\"_\"开头，extra中不使用\"_\"\r\n * base ⇌ extra\r\n */\n/**\r\n * Yo框架全局Variables\r\n * Yo基础变量map，如果不想定义某属性，将其value设置为null\r\n * Yo仅使用2种长度单位：px用于边框，rem用于除边框之外的所有地方\r\n * 本文件中map使用\"_\"开头，config中不使用\"_\"\r\n * variables ⇌ config\r\n */\n/**\r\n * Yo框架自定义全局函数\r\n * 扩充Sass默认函数库，用以增强语法\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的第一项\r\n * @function first\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的最后一项\r\n * @function last\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的倒数第几项\r\n * @function nth-last\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $index 指定需要返回的值在list中的倒数位置 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 移除SassList中的某个项目并返回新的List\r\n * @function remove\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {String} $value 指定需要被删除的值 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 截取SassList中的某个部分并返回新的List\r\n * @function slice\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $start 指定需要截取的开始下标 <2.1.0>\r\n * @param {Integer} $end 指定需要截取的结束下标（不包括end），当该值缺省时默认为末尾下标 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 从SassList中添加/删除项目，然后返回新的List。\r\n * @function splice\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $index 指定需要移除的开始下标 <2.1.0>\r\n * @param {Integer} $count 指定需要移除的数量，不可以为负值，0表示不移除 <2.1.0>\r\n * @param {String} $values 指定需要添加的新值（可以是多个），如果该值缺省，则表示只移除不添加新值 <2.1.0>\r\n */\n/**\r\n * Yo框架全局基础方法\r\n * 包括响应式方案，CSS3兼容性方案，厂商前缀方案，iconfont方案，flex布局等全局方法\r\n */\n/**\r\n * @module 常用方法\r\n * @description 给需要的属性加厂家前缀\r\n * @method prefix\r\n * @version 1.0.0\r\n * @param {String} $property 指定属性 <1.0.0>\r\n * @param {String} $value 指定属性值 <1.0.0>\r\n * @skip\r\n */\n/**\r\n * @module 常用方法\r\n * @description 定义字体图标\r\n * @method _iconfont\r\n * @version 1.0.0\r\n * @skip\r\n */\n/**\r\n * @module 常用方法\r\n * @description 四则运算(系统要求：iOS6.0+,Android4.4+)\r\n * @method calc\r\n * @version 1.7.0\r\n * @param {String} $property 指定需要进行计算的CSS属性 <1.7.0>\r\n * @param {String} $value 与原生CSS语法一致，区别在于需要使用引号包裹表达式 <1.7.0>\r\n * @example\r\n * .calc {\r\n *     @include calc(width, \"100% - 100px\");\r\n * }\r\n *\r\n * <div class=\"calc\">四则运算</div>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 定义响应式方案\r\n * @method responsive\r\n * @version 1.0.0\r\n * @param {String} $media 指定媒体查询条件，取值为`config`文件map `media-types`中的值 <1.0.0>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 清除浮动方案\r\n * @method clearfix\r\n * @version 1.0.0\r\n * @param {String} $type 指定清除浮动的方式，包括：pseudo-element | bfc，默认值：pseudo-element <1.8.5>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 清除行内级元素间间隙方案\r\n * @method clearspace\r\n * @version 3.0.3\r\n * @param {Length} $font-size 指定子元素字号，默认值：.14rem <3.0.3>\r\n * @example\r\n * .demo {\r\n *     @include clearspace;\r\n * }\r\n *\r\n * <div class=\"demo\">\r\n *      <span class=\"item\">1</span>\r\n *      <span class=\"item\">2</span>\r\n *      <span class=\"item\">3</span>\r\n * </div>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 描述元素内容在横、纵方向上的对齐方式，默认为水平垂直居中对齐\r\n * @method align\r\n * @version 2.0.0\r\n * @param {String} $flexbox 元素布局方式，可选值：flex | inline-flex，默认值：flex <2.0.0>\r\n * @param {Keyword} $justify-content 元素内容的水平对齐方式，取值与`justify-content`属性一致，默认值：center <2.0.0>\r\n * @param {Keyword} $align-items 元素内容的垂直对齐方式，取值与`align-items`属性一致，默认值：center <2.0.0>\r\n * @example\r\n * .demo {\r\n *     @include align;\r\n * }\r\n *\r\n * <div class=\"demo\">\r\n *      <img alt=\"未知尺寸图片居中\" />\r\n * </div>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 定义是否有滚动条\r\n * @method overflow\r\n * @version 1.0.0\r\n * @param {String} $overflow 取值与最新原生语法一致，默认值：auto <1.0.0>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 生成全屏方法\r\n * @method fullscreen\r\n * @version 1.7.0\r\n * @param {Integer} $z-index 指定层叠级别 <1.7.0>\r\n * @param {Keywords} $position 指定定位方式，取除`static | relative`之外的值，默认值：absolute <1.8.5>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义使用何种滤镜\r\n * @method filter\r\n * @version 1.7.0\r\n * @param {String} $filter 取值与`filter`属性一致 <1.7.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义UA默认外观\r\n * @method appearance\r\n * @version 1.0.0\r\n * @param {String} $appearance 取值与`appearance`属性一致，默认值：none <1.0.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义如何选中内容\r\n * @method user-select\r\n * @version 1.0.0\r\n * @param {String} $user-select 取值与`user-select`属性一致，默认值：none <1.0.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义盒模型\r\n * @method box-sizing\r\n * @version 1.0.0\r\n * @param {String} $box-sizing 指定盒模型类型，取值与`box-sizing`属性一致，默认值：border-box <1.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义渐变色值\r\n * @method gradient\r\n * @version 1.0.0\r\n * @param {String} $type 指定渐变的4种类型：linear, repeating-linear, radial, repeating-radial <1.0.0>\r\n * @param {String} $dir 指定渐变方向，可选值：[left | right] || [top | bottom] | angle <2.0.0>\r\n * @param {String} $gradient 指定渐变取值，与w3c最新原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景图像缩放（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-size\r\n * @version 1.4.0\r\n * @param {Keywords | Length} $background-size 指定背景图缩放值，取值与`background-size`属性一致 <1.4.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景裁减（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-clip\r\n * @version 1.6.0\r\n * @param {Keywords} $background-clip 指定背景图缩放值，取值与`background-clip`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景显示区域（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-origin\r\n * @version 1.6.0\r\n * @param {Keywords} $background-origin 指定背景图`background-position`属性计算相对的参考点，取值与`background-origin`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 为元素添加边框（包括1px边框）\r\n * @method border\r\n * @version 2.0.0\r\n * @param {String} $border-width 指定边框厚度（单位为px），默认值：1px，取值与`border-width`属性一致，不同方向代表边框位置 <2.0.0>\r\n * @param {String} $border-color 指定边框颜色 <2.0.0>\r\n * @param {String} $border-style 指定边框样式 <2.0.0>\r\n * @param {String} $radius 指定边框圆角半径，默认值：null <2.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义圆角，用于修复某些安卓机型上“圆角+边框+背景”，背景溢出的情况\r\n * @method border-radius\r\n * @version 1.6.0\r\n * @param {Length} $border-radius 指定元素的圆角半径，取值与`border-radius`属性一致 <1.6.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 定义简单变换\r\n * @method transform\r\n * @version 1.0.0\r\n * @param {String} $transform 取值范围与`transform`属性一致 <1.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 定义变换原点\r\n * @method transform-origin\r\n * @version 1.0.0\r\n * @param {Length | Percentage | Keywords} $transform-origin 取值范围与`transform-origin`属性一致 <1.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定某元素的子元素是（看起来）位于三维空间内，还是在该元素所在的平面内被扁平化\r\n * @method transform-style\r\n * @version 2.0.0\r\n * @param {String} $transform-style 取值范围与`transform-style`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定观察者与「z=0」平面的距离，使具有三维位置变换的元素产生透视效果。「z>0」的三维元素比正常大，而「z<0」时则比正常小，大小程度由该属性的值决定。\r\n * @method perspective\r\n * @version 2.0.0\r\n * @param {none | Length} $perspective 取值范围与`perspective`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定透视点的位置\r\n * @method perspective-origin\r\n * @version 2.0.0\r\n * @param {Length | Percentage | Keywords} $perspective-origin 取值范围与`perspective-origin`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定元素背面面向用户时是否可见\r\n * @method backface-visibility\r\n * @version 2.0.0\r\n * @param {Keywords} $backface-visibility 取值范围与`backface-visibility`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 定义动画\r\n * @method animation\r\n * @version 1.0.0\r\n * @param {String} $animation 取值与原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定需要引用的动画名称\r\n * @method animation-name\r\n * @version 3.0.0\r\n * @param {String} $animation-name 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画运行一次所持续的时长\r\n * @method animation-duration\r\n * @version 3.0.0\r\n * @param {String} $animation-duration 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画运行方式\r\n * @method animation-timing-function\r\n * @version 3.0.0\r\n * @param {String} $animation-timing-function 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画延迟多久之后再开始\r\n * @method animation-delay\r\n * @version 3.0.0\r\n * @param {String} $animation-delay 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画循环几次\r\n * @method animation-iteration-count\r\n * @version 3.0.0\r\n * @param {String} $animation-iteration-count 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画的运动方向\r\n * @method animation-direction\r\n * @version 3.0.0\r\n * @param {String} $animation-direction 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画的运动状态\r\n * @method animation-play-state\r\n * @version 3.0.0\r\n * @param {String} $animation-play-state 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画时间之外的状态\r\n * @method animation-fill-mode\r\n * @version 3.0.0\r\n * @param {String} $animation-fill-mode 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Transition\r\n * @description 定义补间\r\n * @method transition\r\n * @version 1.0.0\r\n * @param {String} $transition 取值与原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义显示类型为伸缩盒\r\n * @method flexbox\r\n * @version 1.0.0\r\n * @param {String} $flexbox 默认值：flex，可选值：flex | inline-flex <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素如何分配空间\r\n * @method flex\r\n * @version 1.0.0\r\n * @param {Number} $flex 取值与`flex`属性一致，默认值：1 <1.0.0>\r\n * @param {String} $direction 默认值: row，可选值：row | column <1.5.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素的排版顺序\r\n * @method order\r\n * @version 1.0.0\r\n * @param {Integer} $order 取值与`order`属性一致，默认值：1 <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性盒子元素流动方向及遇见边界时是否换行(要求系统：iOS7.0+, Android4.4+)\r\n * @method flex-flow\r\n * @version 2.0.0\r\n * @param {String} $flex-flow 取值与`flex-flow`属性一致，默认值：row nowrap <2.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素的流动方向\r\n * @method flex-direction\r\n * @version 1.0.0\r\n * @param {String} $flex-direction 取值与`flex-direction`属性一致，默认值：row <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性盒子元素溢出后排版(要求系统：iOS7.0+, Android4.4+)\r\n * @method flex-wrap\r\n * @version 1.0.0\r\n * @param {String} $flex-wrap 取值与`flex-wrap`属性一致，默认值：nowrap <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性容器主轴对齐方式(其中`space-around`值需要iOS7.0+,Android4.4+)\r\n * @method justify-content\r\n * @version 1.0.0\r\n * @param {String} $justify-content 取值与`justify-content`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义多行弹性容器侧轴对齐方式(要求系统：iOS7.0+,Android4.4+)\r\n * @method align-content\r\n * @version 1.8.5\r\n * @param {String} $align-content 取值与`align-content`属性一致，默认值：center <1.8.5>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义单行弹性容器侧轴对齐方式\r\n * @method align-items\r\n * @version 1.0.0\r\n * @param {String} $align-items 取值与`align-items`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性容器中子元素自身的在侧轴对齐方式(要求系统：iOS7.0+,Android4.4+)\r\n * @method align-self\r\n * @version 1.0.0\r\n * @param {String} $align-self 取值与`align-self`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成矩形方法\r\n * @method rect\r\n * @version 1.0.0\r\n * @param {Length} $width 定义矩形的长度 <1.0.0>\r\n * @param {Length} $height 定义矩形的高度 <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成正方形方法\r\n * @method square\r\n * @version 1.0.0\r\n * @param {Length} $size 定义正方形的边长 <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成圆形方法\r\n * @method circle\r\n * @version 1.0.0\r\n * @param {Length} $size 定义圆的半径长度 <1.0.0>\r\n * @param {Length} $radius 定义圆的圆角半径长度 <1.0.0>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 在自适应宽度情况下，确保内容元素的宽高比固定，比如：实现随屏幕大小而变化的正方形。\r\n * @method fixed-scale\r\n * @version 3.0.10\r\n * @param {Length} $width 默认值：100%。用以指定内容元素的初始宽度，由于尺寸需动态变化，不要使用固定单位 <3.0.10>\r\n * @param {Length} $scale 默认值：1/1，即正方形。用以指定内容元素的宽度高比 <3.0.10>\r\n */\n/**\r\n * @module 文本\r\n * @description 链接处理方法\r\n * @method link\r\n * @version 1.0.0\r\n * @param {Color} $color 定义链接颜色 <1.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 文本碰到边界是否换行\r\n * @method wrap\r\n * @version 1.0.0\r\n * @param {Boolean} $is-wrap 定义文本是否换行，默认值：true <2.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 单行文本溢出时显示省略号\r\n * @method ellipsis\r\n * @version 1.0.0\r\n * @param {Length} $width 定义容器的宽度，默认值：null <2.0.0>\r\n * @param {Integer} $line-clamp 定义需要显示的行数，默认值：1（即使用单行溢出的处理方案），需要注意的是本参数只支持webkit内核 <2.1.2>\r\n */\n/**\r\n * @module 文本\r\n * @description 文字隐藏方案\r\n * @method texthide\r\n * @version 1.0.0\r\n * @param {Length} $width 定义容器的宽度，默认值：null <2.0.0>\r\n */\n/**\r\n * Yo框架全局Reset\r\n * Yo重置Mobile及高级浏览器上常见的差异\r\n */\n*,\n::before,\n::after {\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n  -webkit-tap-highlight-color: transparent; }\n\nhtml,\nbody {\n  overflow: hidden;\n  height: 100%; }\n\n::-webkit-scrollbar {\n  display: none; }\n\nhtml {\n  background-color: #eee;\n  color: #212121;\n  font-size: 100px;\n  -webkit-user-select: none;\n  user-select: none; }\n\nbody {\n  margin: 0;\n  font-size: 0.14em;\n  line-height: 1.5;\n  font-family: Helvetica Neue, Helvetica, STHeiTi, sans-serif; }\n\nul,\nol,\ndl,\ndd,\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\nfigure,\nform,\nfieldset,\nlegend,\ninput,\ntextarea,\nbutton,\np,\nblockquote,\nth,\ntd,\npre,\nxmp {\n  margin: 0;\n  padding: 0; }\n\ninput,\ntextarea,\nbutton,\nselect,\npre,\nxmp,\ntt,\ncode,\nkbd,\nsamp {\n  line-height: inherit;\n  font-family: inherit; }\n\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\nsmall,\nbig,\ninput,\ntextarea,\nbutton,\nselect {\n  font-size: inherit; }\n\naddress,\ncite,\ndfn,\nem,\ni,\noptgroup,\nvar {\n  font-style: normal; }\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0;\n  table-layout: fixed;\n  text-align: left; }\n\nul,\nol,\nmenu {\n  list-style: none; }\n\nfieldset,\nimg {\n  border: 0;\n  vertical-align: middle; }\n\narticle,\naside,\ndetails,\nfigcaption,\nfigure,\nfooter,\nheader,\nmain,\nmenu,\nnav,\nsection,\nsummary {\n  display: block; }\n\naudio,\ncanvas,\nvideo {\n  display: inline-block; }\n\nblockquote:before,\nblockquote:after,\nq:before,\nq:after {\n  content: \"\\0020\"; }\n\ntextarea,\npre,\nxmp {\n  overflow: auto;\n  -webkit-overflow-scrolling: touch; }\n\ntextarea {\n  resize: vertical; }\n\ninput,\ntextarea,\nbutton,\nselect,\nsummary,\na {\n  outline: 0 none; }\n\ninput,\ntextarea,\nbutton,\nselect {\n  color: inherit; }\n  input:disabled,\n  textarea:disabled,\n  button:disabled,\n  select:disabled {\n    opacity: 1; }\n\nbutton::-moz-focus-inner,\ninput::-moz-focus-inner {\n  padding: 0;\n  border: 0; }\n\ninput[type=\"button\"],\ninput[type=\"submit\"],\ninput[type=\"reset\"],\ninput[type=\"file\"]::-webkit-file-upload-button,\ninput[type=\"search\"]::-webkit-search-cancel-button {\n  -webkit-appearance: none;\n  appearance: none; }\n\n::-webkit-details-marker {\n  display: none; }\n\nmark {\n  background-color: transparent; }\n\na,\nins,\ns,\nu,\ndel {\n  text-decoration: none; }\n\na,\nimg {\n  -webkit-touch-callout: none; }\n\na {\n  color: #00afc7; }\n\n.g-clear::after,\n.g-mod::after {\n  display: block;\n  overflow: hidden;\n  clear: both;\n  height: 0;\n  content: \"\\0020\"; }\n\n@font-face {\n  font-family: yofont;\n  src: url(//ss.qunarzz.com/yo/font/1.0.3/yofont.woff) format(\"woff\"), url(//ss.qunarzz.com/yo/font/1.0.3/yofont.ttf) format(\"truetype\"); }\n\n.yo-ico {\n  font-family: yofont !important;\n  font-style: normal;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n  vertical-align: middle; }\n\n@font-face {\n  font-family: 'iconfont';\n  src: url(\"http://localhost:7000/media/iconfont/iconfont.woff\") format(\"woff\"), url(\"http://localhost:7000/media/iconfont/iconfont.ttf\") format(\"truetype\"); }\n\n.iconfont {\n  font-family: \"iconfont\" !important;\n  font-size: 16px;\n  font-style: normal;\n  -webkit-font-smoothing: antialiased;\n  -webkit-text-stroke-width: 0.2px;\n  -moz-osx-font-smoothing: grayscale; }\n\n.banner {\n  width: 100%;\n  height: 150px; }\n  .banner img {\n    height: 100%; }\n\nsection > div {\n  height: 100%; }\n\n.load_img {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: flex;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n  justify-content: center;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n  align-items: center;\n  height: 100%; }\n  .load_img img {\n    width: 30%; }\n\n.promise ul {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: flex;\n  height: 49px; }\n  .promise ul li {\n    -webkit-box-flex: 1;\n    -webkit-flex: 1;\n    flex: 1;\n    width: .1px;\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: flex;\n    -webkit-box-align: center;\n    -webkit-align-items: center;\n    align-items: center;\n    -webkit-box-pack: center;\n    -webkit-justify-content: center;\n    justify-content: center;\n    color: #4d4d4d; }\n    .promise ul li img {\n      margin-top: -2px;\n      margin-right: 3px;\n      width: 16px;\n      height: 16px; }\n\n.cards {\n  width: 100%;\n  height: 150px;\n  padding: 0 15px; }\n  .cards section {\n    width: 100%;\n    padding-bottom: 15px;\n    height: 100%;\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: flex;\n    position: relative; }\n    .cards section::after {\n      pointer-events: none;\n      position: absolute;\n      z-index: 999;\n      top: 0;\n      left: 0;\n      content: \"\\0020\";\n      border-color: #e6e6e6;\n      border-style: solid;\n      border-width: 0 0 1px 0;\n      -webkit-transform-origin: 0 0;\n      transform-origin: 0 0; }\n      @media (max--moz-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.49), (max-device-pixel-ratio: 1.49), (max-resolution: 143dpi), (max-resolution: 1.49dppx) {\n        .cards section::after {\n          width: 100%;\n          height: 100%; } }\n      @media (min--moz-device-pixel-ratio: 1.5) and (max--moz-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.49), (min-device-pixel-ratio: 1.5) and (max-device-pixel-ratio: 2.49), (min-resolution: 144dpi) and (max-resolution: 239dpi), (min-resolution: 1.5dppx) and (max-resolution: 2.49dppx) {\n        .cards section::after {\n          width: 200%;\n          height: 200%;\n          -webkit-transform: scale(0.5);\n          transform: scale(0.5); } }\n      @media (min--moz-device-pixel-ratio: 2.5), (-webkit-min-device-pixel-ratio: 2.5), (min-device-pixel-ratio: 2.5), (min-resolution: 240dpi), (min-resolution: 2.5dppx) {\n        .cards section::after {\n          width: 300%;\n          height: 300%;\n          -webkit-transform: scale(0.33333);\n          transform: scale(0.33333); } }\n    .cards section div:first-child {\n      -webkit-box-flex: 53;\n      -webkit-flex: 53;\n      flex: 53;\n      width: .1px; }\n      .cards section div:first-child img {\n        width: 100%;\n        height: 100%; }\n    .cards section div:last-child {\n      -webkit-box-flex: 47;\n      -webkit-flex: 47;\n      flex: 47;\n      width: .1px;\n      display: -webkit-box;\n      display: -webkit-flex;\n      display: flex;\n      -webkit-box-orient: vertical;\n      -webkit-box-direction: normal;\n      -webkit-flex-direction: column;\n      flex-direction: column;\n      height: 100%; }\n      .cards section div:last-child div:first-child {\n        -webkit-box-flex: 1;\n        -webkit-flex: 1;\n        flex: 1;\n        width: .1px;\n        width: 100%;\n        margin-left: 3px; }\n      .cards section div:last-child div:last-child {\n        -webkit-box-flex: 1;\n        -webkit-flex: 1;\n        flex: 1;\n        width: .1px;\n        display: -webkit-box;\n        display: -webkit-flex;\n        display: flex;\n        -webkit-box-orient: horizontal;\n        -webkit-box-direction: normal;\n        -webkit-flex-direction: row;\n        flex-direction: row;\n        width: 100%;\n        margin-left: 3px; }\n        .cards section div:last-child div:last-child div {\n          -webkit-box-flex: 1;\n          -webkit-flex: 1;\n          flex: 1;\n          width: .1px;\n          width: 100%; }\n          .cards section div:last-child div:last-child div img {\n            padding-top: 3px;\n            padding-right: 3px;\n            width: 100%; }\n\n.goods {\n  height: 100%;\n  overflow-y: scroll; }\n  .goods .title {\n    height: 60px;\n    padding-left: 15px; }\n    .goods .title span {\n      color: #ff1d3f;\n      font-size: 18px;\n      line-height: 60px; }\n  .goods .goods_list {\n    height: 100%; }\n    .goods .goods_list ul {\n      height: 100%; }\n      .goods .goods_list ul .img_container {\n        height: 92px; }\n        .goods .goods_list ul .img_container img {\n          width: 100%; }\n      .goods .goods_list ul .sell_out {\n        padding-left: 15px;\n        height: 70px;\n        position: relative; }\n        .goods .goods_list ul .sell_out span:first-child {\n          display: block;\n          position: absolute;\n          color: #4b4b4b;\n          top: 27px;\n          font-size: 18px;\n          height: 20px; }\n        .goods .goods_list ul .sell_out span:last-child {\n          position: absolute;\n          bottom: 0;\n          font-size: 12px;\n          color: #968D91;\n          height: 18px;\n          line-height: 18px; }\n      .goods .goods_list ul li {\n        height: 164px;\n        position: relative; }\n        .goods .goods_list ul li::after {\n          pointer-events: none;\n          position: absolute;\n          z-index: 999;\n          top: 0;\n          left: 0;\n          content: \"\\0020\";\n          border-color: #f5f5f5;\n          border-style: solid;\n          border-width: 0 0 1px 0;\n          -webkit-transform-origin: 0 0;\n          transform-origin: 0 0; }\n          @media (max--moz-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.49), (max-device-pixel-ratio: 1.49), (max-resolution: 143dpi), (max-resolution: 1.49dppx) {\n            .goods .goods_list ul li::after {\n              width: 100%;\n              height: 100%; } }\n          @media (min--moz-device-pixel-ratio: 1.5) and (max--moz-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.49), (min-device-pixel-ratio: 1.5) and (max-device-pixel-ratio: 2.49), (min-resolution: 144dpi) and (max-resolution: 239dpi), (min-resolution: 1.5dppx) and (max-resolution: 2.49dppx) {\n            .goods .goods_list ul li::after {\n              width: 200%;\n              height: 200%;\n              -webkit-transform: scale(0.5);\n              transform: scale(0.5); } }\n          @media (min--moz-device-pixel-ratio: 2.5), (-webkit-min-device-pixel-ratio: 2.5), (min-device-pixel-ratio: 2.5), (min-resolution: 240dpi), (min-resolution: 2.5dppx) {\n            .goods .goods_list ul li::after {\n              width: 300%;\n              height: 300%;\n              -webkit-transform: scale(0.33333);\n              transform: scale(0.33333); } }\n        .goods .goods_list ul li div.li_container {\n          width: 100%;\n          height: 100%;\n          padding-top: 20px;\n          padding-bottom: 23px;\n          display: -webkit-box;\n          display: -webkit-flex;\n          display: flex;\n          position: relative; }\n          .goods .goods_list ul li div.li_container .img_left {\n            width: 150px;\n            padding: 0 15px;\n            position: relative; }\n            .goods .goods_list ul li div.li_container .img_left img {\n              border: 0; }\n              .goods .goods_list ul li div.li_container .img_left img:first-child {\n                width: 100%; }\n              .goods .goods_list ul li div.li_container .img_left img:last-child {\n                position: absolute;\n                left: 16px;\n                height: 32px;\n                top: 0; }\n          .goods .goods_list ul li div.li_container .message_right {\n            -webkit-box-flex: 1;\n            -webkit-flex: 1;\n            flex: 1;\n            width: .1px;\n            width: 100%;\n            position: relative; }\n            .goods .goods_list ul li div.li_container .message_right .message_title {\n              font-size: 16px;\n              padding-top: 11px;\n              white-space: nowrap;\n              overflow: hidden;\n              text-overflow: ellipsis;\n              letter-spacing: -1px;\n              color: #474245;\n              width: 140px; }\n            .goods .goods_list ul li div.li_container .message_right .message_info {\n              font-size: 14px;\n              color: #969696;\n              white-space: nowrap;\n              text-overflow: ellipsis;\n              overflow: hidden;\n              width: 140px; }\n            .goods .goods_list ul li div.li_container .message_right .message_des {\n              height: 25px;\n              line-height: 17px; }\n              .goods .goods_list ul li div.li_container .message_right .message_des span {\n                display: inline-block;\n                border-radius: 2px;\n                font-size: 9px;\n                height: 13px;\n                line-height: 11px;\n                background: white;\n                color: #c6c6c6;\n                border: 1px solid #c6c6c6;\n                margin-right: 5px;\n                padding: 1px; }\n            .goods .goods_list ul li div.li_container .message_right .message_highprice {\n              font-size: 12px;\n              color: #ffc38d;\n              line-height: 8px; }\n            .goods .goods_list ul li div.li_container .message_right .message_lowprice {\n              color: #ff4891;\n              font-size: 12px; }\n              .goods .goods_list ul li div.li_container .message_right .message_lowprice span span:first-child {\n                letter-spacing: -3px; }\n              .goods .goods_list ul li div.li_container .message_right .message_lowprice span span:last-child {\n                font-size: 16px;\n                letter-spacing: -1px;\n                display: inline-block;\n                height: 22px;\n                vertical-align: bottom; }\n            .goods .goods_list ul li div.li_container .message_right .message_cart {\n              position: absolute;\n              bottom: 5px;\n              right: 4%;\n              height: 30px;\n              text-align: right; }\n              .goods .goods_list ul li div.li_container .message_right .message_cart img {\n                width: 49px;\n                position: absolute;\n                bottom: -8px;\n                right: -6px !important; }\n\nimage[lazy=loading] {\n  width: 40px;\n  height: 300px;\n  margin: auto; }\n"],"sourceRoot":""}]);
 
 // exports
 
 
 /***/ }),
-/* 23 */
+/* 21 */
 /***/ (function(module, exports) {
 
 /**
@@ -26003,7 +25893,7 @@ module.exports = function listToStyles (parentId, list) {
 
 
 /***/ }),
-/* 24 */
+/* 22 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26013,13 +25903,13 @@ Object.defineProperty(exports, "__esModule", {
 	value: true
 });
 
-var _vue = __webpack_require__(3);
+var _vue = __webpack_require__(4);
 
 var _vue2 = _interopRequireDefault(_vue);
 
-var _mintUi = __webpack_require__(7);
+var _mintUi = __webpack_require__(8);
 
-__webpack_require__(8);
+__webpack_require__(9);
 
 var _axios = __webpack_require__(5);
 
@@ -26027,6 +25917,9 @@ var _axios2 = _interopRequireDefault(_axios);
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+//
+//
+//
 //
 //
 //
@@ -26142,7 +26035,8 @@ exports.default = {
 			page_num: 7,
 			topStatus: '',
 			bottomStatus: '',
-			allLoaded: false
+			allLoaded: false,
+			isloading: true
 		};
 	},
 	mounted: function mounted() {
@@ -26169,6 +26063,7 @@ exports.default = {
 			that.card_right_bottom_right = response.data.product_list.category_areas[3];
 			that.goods_lists_all = response.data.product_list.products;
 			that.goods_lists = that.goods_lists_all.slice(1, 7);
+			that.isloading = false;
 		});
 	},
 
@@ -26216,7 +26111,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 25 */
+/* 23 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -26248,7 +26143,7 @@ module.exports = function (arr, predicate, ctx) {
 
 
 /***/ }),
-/* 26 */
+/* 24 */
 /***/ (function(module, exports) {
 
 /*
@@ -26295,7 +26190,7 @@ module.exports = function (arr, predicate, ctx) {
 
 
 /***/ }),
-/* 27 */
+/* 25 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*!
@@ -26307,7 +26202,7 @@ module.exports = function (arr, predicate, ctx) {
 
 
 /***/ }),
-/* 28 */
+/* 26 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(undefined);
@@ -26321,7 +26216,7 @@ exports.push([module.i, "/* Cell Component */\n/* Header Component */\n/* Button
 
 
 /***/ }),
-/* 29 */
+/* 27 */
 /***/ (function(module, exports, __webpack_require__) {
 
 /*
@@ -26377,7 +26272,7 @@ var singleton = null;
 var	singletonCounter = 0;
 var	stylesInsertedAtTop = [];
 
-var	fixUrls = __webpack_require__(30);
+var	fixUrls = __webpack_require__(28);
 
 module.exports = function(list, options) {
 	if (typeof DEBUG !== "undefined" && DEBUG) {
@@ -26693,7 +26588,7 @@ function updateLink (link, options, obj) {
 
 
 /***/ }),
-/* 30 */
+/* 28 */
 /***/ (function(module, exports) {
 
 
@@ -26788,7 +26683,7 @@ module.exports = function (css) {
 
 
 /***/ }),
-/* 31 */
+/* 29 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -26796,288 +26691,320 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    [
-      _c(
-        "mt-loadmore",
-        {
-          ref: "loadmore",
-          attrs: {
-            bottomDistance: 0,
-            "top-method": _vm.loadTop,
-            "bottom-method": _vm.loadBottom,
-            "bottom-all-loaded": _vm.allLoaded,
-            bottomAllLoaded: false
-          },
-          on: {
-            "top-status-change": _vm.handleTopChange,
-            "bottom-status-change": _vm.handleBottomChange
-          }
-        },
-        [
-          _c(
-            "div",
-            {
-              staticClass: "mint-loadmore-top",
-              attrs: { slot: "top" },
-              slot: "top"
-            },
-            [
-              _c(
-                "span",
-                {
-                  directives: [
-                    {
-                      name: "show",
-                      rawName: "v-show",
-                      value: _vm.topStatus !== "loading",
-                      expression: "topStatus !== 'loading'"
-                    }
-                  ],
-                  class: { rotate: _vm.topStatus === "drop" }
-                },
-                [
-                  _c("img", {
-                    attrs: {
-                      src: __webpack_require__(4),
-                      width: "120",
-                      height: "40"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("p", [_vm._v("优质生鲜 两小时到")])
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "span",
-                {
-                  directives: [
-                    {
-                      name: "show",
-                      rawName: "v-show",
-                      value: _vm.topStatus === "loading",
-                      expression: "topStatus === 'loading'"
-                    }
-                  ]
-                },
-                [
-                  _c("img", {
-                    attrs: {
-                      src: __webpack_require__(4),
-                      width: "120",
-                      height: "40"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("p", [_vm._v("优质生鲜 两小时到")])
-                ]
-              )
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "banner" },
-            [
-              _c(
-                "mt-swipe",
-                { attrs: { auto: 4000 } },
-                _vm._l(_vm.imgs, function(value, i) {
-                  return _c("mt-swipe-item", { key: i }, [
-                    _c("img", { attrs: { src: value.path } })
-                  ])
-                })
-              )
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "promise" }, [
+  return _c("div", [
+    _vm.isloading
+      ? _c("div", { staticClass: "load_img" }, [
+          _c("img", {
+            attrs: {
+              src: __webpack_require__(1)
+            }
+          })
+        ])
+      : _vm._e(),
+    _vm._v(" "),
+    !_vm.isloading
+      ? _c(
+          "div",
+          [
             _c(
-              "ul",
-              _vm._l(_vm.brands, function(value, i) {
-                return _c("li", { key: i }, [
-                  _c("img", { attrs: { src: value.image } }),
-                  _vm._v(_vm._s(value.name))
-                ])
-              })
-            )
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "cards" }, [
-            _c("section", [
-              _c("div", [_c("img", { attrs: { src: _vm.card_left.image } })]),
-              _vm._v(" "),
-              _c("div", [
-                _c("div", [
-                  _c("img", { attrs: { src: _vm.card_right_top.image } })
+              "mt-loadmore",
+              {
+                ref: "loadmore",
+                attrs: {
+                  bottomDistance: 0,
+                  "top-method": _vm.loadTop,
+                  "bottom-method": _vm.loadBottom,
+                  "bottom-all-loaded": _vm.allLoaded,
+                  bottomAllLoaded: false
+                },
+                on: {
+                  "top-status-change": _vm.handleTopChange,
+                  "bottom-status-change": _vm.handleBottomChange
+                }
+              },
+              [
+                _c(
+                  "div",
+                  {
+                    staticClass: "mint-loadmore-top",
+                    attrs: { slot: "top" },
+                    slot: "top"
+                  },
+                  [
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.topStatus !== "loading",
+                            expression: "topStatus !== 'loading'"
+                          }
+                        ],
+                        class: { rotate: _vm.topStatus === "drop" }
+                      },
+                      [
+                        _c("img", {
+                          attrs: {
+                            src: __webpack_require__(1),
+                            width: "120",
+                            height: "40"
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("p", [_vm._v("优质生鲜 两小时到")])
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.topStatus === "loading",
+                            expression: "topStatus === 'loading'"
+                          }
+                        ]
+                      },
+                      [
+                        _c("img", {
+                          attrs: {
+                            src: __webpack_require__(1),
+                            width: "120",
+                            height: "40"
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("p", [_vm._v("优质生鲜 两小时到")])
+                      ]
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "banner" },
+                  [
+                    _c(
+                      "mt-swipe",
+                      { attrs: { auto: 4000 } },
+                      _vm._l(_vm.imgs, function(value, i) {
+                        return _c("mt-swipe-item", { key: i }, [
+                          _c("img", { attrs: { src: value.path } })
+                        ])
+                      })
+                    )
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c("div", { staticClass: "promise" }, [
+                  _c(
+                    "ul",
+                    _vm._l(_vm.brands, function(value, i) {
+                      return _c("li", { key: i }, [
+                        _c("img", { attrs: { src: value.image } }),
+                        _vm._v(_vm._s(value.name))
+                      ])
+                    })
+                  )
                 ]),
                 _vm._v(" "),
-                _c("div", [
-                  _c("div", [
-                    _c("img", {
-                      attrs: { src: _vm.card_right_bottom_left.image }
-                    })
-                  ]),
-                  _vm._v(" "),
-                  _c("div", [
-                    _c("img", {
-                      attrs: { src: _vm.card_right_bottom_right.image }
-                    })
-                  ])
-                ])
-              ])
-            ])
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "goods" }, [
-            _c("div", { staticClass: "title" }, [_c("span", [_vm._v("今日特卖")])]),
-            _vm._v(" "),
-            _c("div", { staticClass: "goods_list" }, [
-              _c(
-                "ul",
-                _vm._l(_vm.goods_lists, function(goods_list, i) {
-                  return goods_list.buy_permission === 0
-                    ? _c("li", [
-                        _c("div", { staticClass: "li_container" }, [
-                          _c("div", { staticClass: "img_left" }, [
-                            _c("img", {
-                              directives: [
-                                {
-                                  name: "lazy",
-                                  rawName: "v-lazy",
-                                  value: goods_list.image,
-                                  expression: "goods_list.image"
-                                }
-                              ],
-                              attrs: { src: goods_list.image }
-                            }),
-                            _vm._v(" "),
-                            _c("img", {
-                              attrs: { src: goods_list.promote_tag }
-                            })
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "message_right" }, [
-                            _c("div", { staticClass: "message_title" }, [
-                              _vm._v(
-                                "\n\t\t\t\t\t\t\t\t\t" +
-                                  _vm._s(goods_list.name) +
-                                  "\n\t\t\t\t\t\t\t\t"
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "message_info" }, [
-                              _vm._v(
-                                "\n\t\t\t\t\t\t\t\t\t" +
-                                  _vm._s(goods_list.subtitle) +
-                                  "\n\t\t\t\t\t\t\t\t"
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "message_des" },
-                              _vm._l(goods_list.product_tags, function(value) {
-                                return _c("span", [_vm._v(_vm._s(value.name))])
-                              })
-                            ),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "message_highprice" }, [
-                              _c("span", [
-                                _vm._v(
-                                  "可用券价 ¥" +
-                                    _vm._s(
-                                      goods_list.vip_price_pro.price_up.price /
-                                        100
-                                    )
-                                )
-                              ])
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "message_lowprice" }, [
-                              _c("span", [
-                                _vm._v("商城价 "),
-                                _c("span", [_vm._v("¥ ")]),
-                                _c("span", [
-                                  _vm._v(
-                                    " " +
-                                      _vm._s(
-                                        goods_list.vip_price_pro.price_down
-                                          .price / 100
-                                      )
-                                  )
-                                ])
-                              ])
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "message_cart" }, [
-                              _c("img", {
-                                attrs: { src: goods_list.cart_image }
-                              })
-                            ])
-                          ])
+                _c("div", { staticClass: "cards" }, [
+                  _c("section", [
+                    _c("div", [
+                      _c("img", { attrs: { src: _vm.card_left.image } })
+                    ]),
+                    _vm._v(" "),
+                    _c("div", [
+                      _c("div", [
+                        _c("img", { attrs: { src: _vm.card_right_top.image } })
+                      ]),
+                      _vm._v(" "),
+                      _c("div", [
+                        _c("div", [
+                          _c("img", {
+                            attrs: { src: _vm.card_right_bottom_left.image }
+                          })
+                        ]),
+                        _vm._v(" "),
+                        _c("div", [
+                          _c("img", {
+                            attrs: { src: _vm.card_right_bottom_right.image }
+                          })
                         ])
                       ])
-                    : goods_list.code == "sell-out"
-                      ? _c("div", { staticClass: "sell_out" }, [
-                          _c("span", [_vm._v(_vm._s(goods_list.name))]),
-                          _c("span", [_vm._v(_vm._s(goods_list.second_title))])
-                        ])
-                      : _c(
-                          "div",
-                          { staticClass: "img_container" },
-                          _vm._l(goods_list.banner, function(value, i) {
-                            return _c("img", {
-                              key: i,
-                              attrs: { src: value.path }
-                            })
-                          })
-                        )
-                })
-              )
-            ])
-          ]),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass: "mint-loadmore-bottom",
-              attrs: { slot: "bottom" },
-              slot: "bottom"
-            },
-            [
-              _c("span", {
-                directives: [
+                    ])
+                  ])
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "goods" }, [
+                  _c("div", { staticClass: "title" }, [
+                    _c("span", [_vm._v("今日特卖")])
+                  ]),
+                  _vm._v(" "),
+                  _c("div", { staticClass: "goods_list" }, [
+                    _c(
+                      "ul",
+                      _vm._l(_vm.goods_lists, function(goods_list, i) {
+                        return goods_list.buy_permission === 0
+                          ? _c("li", [
+                              _c("div", { staticClass: "li_container" }, [
+                                _c("div", { staticClass: "img_left" }, [
+                                  _c("img", {
+                                    directives: [
+                                      {
+                                        name: "lazy",
+                                        rawName: "v-lazy",
+                                        value: goods_list.image,
+                                        expression: "goods_list.image"
+                                      }
+                                    ],
+                                    attrs: { src: goods_list.image }
+                                  }),
+                                  _vm._v(" "),
+                                  _c("img", {
+                                    attrs: { src: goods_list.promote_tag }
+                                  })
+                                ]),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "message_right" }, [
+                                  _c("div", { staticClass: "message_title" }, [
+                                    _vm._v(
+                                      "\n\t\t\t\t\t\t\t\t\t\t" +
+                                        _vm._s(goods_list.name) +
+                                        "\n\t\t\t\t\t\t\t\t\t"
+                                    )
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "message_info" }, [
+                                    _vm._v(
+                                      "\n\t\t\t\t\t\t\t\t\t\t" +
+                                        _vm._s(goods_list.subtitle) +
+                                        "\n\t\t\t\t\t\t\t\t\t"
+                                    )
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "message_des" },
+                                    _vm._l(goods_list.product_tags, function(
+                                      value
+                                    ) {
+                                      return _c("span", [
+                                        _vm._v(_vm._s(value.name))
+                                      ])
+                                    })
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "message_highprice" },
+                                    [
+                                      _c("span", [
+                                        _vm._v(
+                                          "可用券价 ¥" +
+                                            _vm._s(
+                                              goods_list.vip_price_pro.price_up
+                                                .price / 100
+                                            )
+                                        )
+                                      ])
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "message_lowprice" },
+                                    [
+                                      _c("span", [
+                                        _vm._v("商城价 "),
+                                        _c("span", [_vm._v("¥ ")]),
+                                        _c("span", [
+                                          _vm._v(
+                                            " " +
+                                              _vm._s(
+                                                goods_list.vip_price_pro
+                                                  .price_down.price / 100
+                                              )
+                                          )
+                                        ])
+                                      ])
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "message_cart" }, [
+                                    _c("img", {
+                                      attrs: { src: goods_list.cart_image }
+                                    })
+                                  ])
+                                ])
+                              ])
+                            ])
+                          : goods_list.code == "sell-out"
+                            ? _c("div", { staticClass: "sell_out" }, [
+                                _c("span", [_vm._v(_vm._s(goods_list.name))]),
+                                _c("span", [
+                                  _vm._v(_vm._s(goods_list.second_title))
+                                ])
+                              ])
+                            : _c(
+                                "div",
+                                { staticClass: "img_container" },
+                                _vm._l(goods_list.banner, function(value, i) {
+                                  return _c("img", {
+                                    key: i,
+                                    attrs: { src: value.path }
+                                  })
+                                })
+                              )
+                      })
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c(
+                  "div",
                   {
-                    name: "show",
-                    rawName: "v-show",
-                    value: _vm.bottomStatus !== "loading",
-                    expression: "bottomStatus !== 'loading'"
-                  }
-                ],
-                class: { rotate: _vm.bottomStatus === "drop" }
-              }),
-              _vm._v(" "),
-              _c("span", {
-                directives: [
-                  {
-                    name: "show",
-                    rawName: "v-show",
-                    value: _vm.bottomStatus === "loading",
-                    expression: "bottomStatus === 'loading'"
-                  }
-                ]
-              })
-            ]
-          )
-        ]
-      )
-    ],
-    1
-  )
+                    staticClass: "mint-loadmore-bottom",
+                    attrs: { slot: "bottom" },
+                    slot: "bottom"
+                  },
+                  [
+                    _c("span", {
+                      directives: [
+                        {
+                          name: "show",
+                          rawName: "v-show",
+                          value: _vm.bottomStatus !== "loading",
+                          expression: "bottomStatus !== 'loading'"
+                        }
+                      ],
+                      class: { rotate: _vm.bottomStatus === "drop" }
+                    }),
+                    _vm._v(" "),
+                    _c("span", {
+                      directives: [
+                        {
+                          name: "show",
+                          rawName: "v-show",
+                          value: _vm.bottomStatus === "loading",
+                          expression: "bottomStatus === 'loading'"
+                        }
+                      ]
+                    })
+                  ]
+                )
+              ]
+            )
+          ],
+          1
+        )
+      : _vm._e()
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -27091,20 +27018,20 @@ if (false) {
 }
 
 /***/ }),
-/* 32 */
+/* 30 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_3_0_vue_loader_lib_selector_type_script_index_0_bustCache_huoguo_vue__ = __webpack_require__(35);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_3_0_vue_loader_lib_selector_type_script_index_0_bustCache_huoguo_vue__ = __webpack_require__(33);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_3_0_vue_loader_lib_selector_type_script_index_0_bustCache_huoguo_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_3_0_vue_loader_lib_selector_type_script_index_0_bustCache_huoguo_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_13_3_0_vue_loader_lib_template_compiler_index_id_data_v_f6d69566_hasScoped_false_buble_transforms_node_modules_vue_loader_13_3_0_vue_loader_lib_selector_type_template_index_0_bustCache_huoguo_vue__ = __webpack_require__(36);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_13_3_0_vue_loader_lib_template_compiler_index_id_data_v_f6d69566_hasScoped_false_buble_transforms_node_modules_vue_loader_13_3_0_vue_loader_lib_selector_type_template_index_0_bustCache_huoguo_vue__ = __webpack_require__(34);
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(33)
+  __webpack_require__(31)
 }
-var normalizeComponent = __webpack_require__(2)
+var normalizeComponent = __webpack_require__(3)
 /* script */
 
 /* template */
@@ -27148,17 +27075,17 @@ if (false) {(function () {
 
 
 /***/ }),
-/* 33 */
+/* 31 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(34);
+var content = __webpack_require__(32);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(1)("70cef39d", content, false);
+var update = __webpack_require__(2)("70cef39d", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
@@ -27174,7 +27101,7 @@ if(false) {
 }
 
 /***/ }),
-/* 34 */
+/* 32 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(true);
@@ -27182,13 +27109,13 @@ exports = module.exports = __webpack_require__(0)(true);
 
 
 // module
-exports.push([module.i, "\n@charset \"UTF-8\";\n/**\r\n * Yo框架全局base定义\r\n * 本文件与variables不同地方在于，这里所定义的map可以使用在variables和任何地方\r\n * 本文件中map使用\"_\"开头，extra中不使用\"_\"\r\n * base ⇌ extra\r\n */\n/**\r\n * Yo框架全局Variables\r\n * Yo基础变量map，如果不想定义某属性，将其value设置为null\r\n * Yo仅使用2种长度单位：px用于边框，rem用于除边框之外的所有地方\r\n * 本文件中map使用\"_\"开头，config中不使用\"_\"\r\n * variables ⇌ config\r\n */\n/**\r\n * Yo框架自定义全局函数\r\n * 扩充Sass默认函数库，用以增强语法\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的第一项\r\n * @function first\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的最后一项\r\n * @function last\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的倒数第几项\r\n * @function nth-last\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $index 指定需要返回的值在list中的倒数位置 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 移除SassList中的某个项目并返回新的List\r\n * @function remove\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {String} $value 指定需要被删除的值 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 截取SassList中的某个部分并返回新的List\r\n * @function slice\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $start 指定需要截取的开始下标 <2.1.0>\r\n * @param {Integer} $end 指定需要截取的结束下标（不包括end），当该值缺省时默认为末尾下标 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 从SassList中添加/删除项目，然后返回新的List。\r\n * @function splice\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $index 指定需要移除的开始下标 <2.1.0>\r\n * @param {Integer} $count 指定需要移除的数量，不可以为负值，0表示不移除 <2.1.0>\r\n * @param {String} $values 指定需要添加的新值（可以是多个），如果该值缺省，则表示只移除不添加新值 <2.1.0>\r\n */\n/**\r\n * Yo框架全局基础方法\r\n * 包括响应式方案，CSS3兼容性方案，厂商前缀方案，iconfont方案，flex布局等全局方法\r\n */\n/**\r\n * @module 常用方法\r\n * @description 给需要的属性加厂家前缀\r\n * @method prefix\r\n * @version 1.0.0\r\n * @param {String} $property 指定属性 <1.0.0>\r\n * @param {String} $value 指定属性值 <1.0.0>\r\n * @skip\r\n */\n/**\r\n * @module 常用方法\r\n * @description 定义字体图标\r\n * @method _iconfont\r\n * @version 1.0.0\r\n * @skip\r\n */\n/**\r\n * @module 常用方法\r\n * @description 四则运算(系统要求：iOS6.0+,Android4.4+)\r\n * @method calc\r\n * @version 1.7.0\r\n * @param {String} $property 指定需要进行计算的CSS属性 <1.7.0>\r\n * @param {String} $value 与原生CSS语法一致，区别在于需要使用引号包裹表达式 <1.7.0>\r\n * @example\r\n * .calc {\r\n *     @include calc(width, \"100% - 100px\");\r\n * }\r\n *\r\n * <div class=\"calc\">四则运算</div>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 定义响应式方案\r\n * @method responsive\r\n * @version 1.0.0\r\n * @param {String} $media 指定媒体查询条件，取值为`config`文件map `media-types`中的值 <1.0.0>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 清除浮动方案\r\n * @method clearfix\r\n * @version 1.0.0\r\n * @param {String} $type 指定清除浮动的方式，包括：pseudo-element | bfc，默认值：pseudo-element <1.8.5>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 清除行内级元素间间隙方案\r\n * @method clearspace\r\n * @version 3.0.3\r\n * @param {Length} $font-size 指定子元素字号，默认值：.14rem <3.0.3>\r\n * @example\r\n * .demo {\r\n *     @include clearspace;\r\n * }\r\n *\r\n * <div class=\"demo\">\r\n *      <span class=\"item\">1</span>\r\n *      <span class=\"item\">2</span>\r\n *      <span class=\"item\">3</span>\r\n * </div>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 描述元素内容在横、纵方向上的对齐方式，默认为水平垂直居中对齐\r\n * @method align\r\n * @version 2.0.0\r\n * @param {String} $flexbox 元素布局方式，可选值：flex | inline-flex，默认值：flex <2.0.0>\r\n * @param {Keyword} $justify-content 元素内容的水平对齐方式，取值与`justify-content`属性一致，默认值：center <2.0.0>\r\n * @param {Keyword} $align-items 元素内容的垂直对齐方式，取值与`align-items`属性一致，默认值：center <2.0.0>\r\n * @example\r\n * .demo {\r\n *     @include align;\r\n * }\r\n *\r\n * <div class=\"demo\">\r\n *      <img alt=\"未知尺寸图片居中\" />\r\n * </div>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 定义是否有滚动条\r\n * @method overflow\r\n * @version 1.0.0\r\n * @param {String} $overflow 取值与最新原生语法一致，默认值：auto <1.0.0>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 生成全屏方法\r\n * @method fullscreen\r\n * @version 1.7.0\r\n * @param {Integer} $z-index 指定层叠级别 <1.7.0>\r\n * @param {Keywords} $position 指定定位方式，取除`static | relative`之外的值，默认值：absolute <1.8.5>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义使用何种滤镜\r\n * @method filter\r\n * @version 1.7.0\r\n * @param {String} $filter 取值与`filter`属性一致 <1.7.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义UA默认外观\r\n * @method appearance\r\n * @version 1.0.0\r\n * @param {String} $appearance 取值与`appearance`属性一致，默认值：none <1.0.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义如何选中内容\r\n * @method user-select\r\n * @version 1.0.0\r\n * @param {String} $user-select 取值与`user-select`属性一致，默认值：none <1.0.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义盒模型\r\n * @method box-sizing\r\n * @version 1.0.0\r\n * @param {String} $box-sizing 指定盒模型类型，取值与`box-sizing`属性一致，默认值：border-box <1.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义渐变色值\r\n * @method gradient\r\n * @version 1.0.0\r\n * @param {String} $type 指定渐变的4种类型：linear, repeating-linear, radial, repeating-radial <1.0.0>\r\n * @param {String} $dir 指定渐变方向，可选值：[left | right] || [top | bottom] | angle <2.0.0>\r\n * @param {String} $gradient 指定渐变取值，与w3c最新原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景图像缩放（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-size\r\n * @version 1.4.0\r\n * @param {Keywords | Length} $background-size 指定背景图缩放值，取值与`background-size`属性一致 <1.4.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景裁减（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-clip\r\n * @version 1.6.0\r\n * @param {Keywords} $background-clip 指定背景图缩放值，取值与`background-clip`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景显示区域（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-origin\r\n * @version 1.6.0\r\n * @param {Keywords} $background-origin 指定背景图`background-position`属性计算相对的参考点，取值与`background-origin`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 为元素添加边框（包括1px边框）\r\n * @method border\r\n * @version 2.0.0\r\n * @param {String} $border-width 指定边框厚度（单位为px），默认值：1px，取值与`border-width`属性一致，不同方向代表边框位置 <2.0.0>\r\n * @param {String} $border-color 指定边框颜色 <2.0.0>\r\n * @param {String} $border-style 指定边框样式 <2.0.0>\r\n * @param {String} $radius 指定边框圆角半径，默认值：null <2.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义圆角，用于修复某些安卓机型上“圆角+边框+背景”，背景溢出的情况\r\n * @method border-radius\r\n * @version 1.6.0\r\n * @param {Length} $border-radius 指定元素的圆角半径，取值与`border-radius`属性一致 <1.6.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 定义简单变换\r\n * @method transform\r\n * @version 1.0.0\r\n * @param {String} $transform 取值范围与`transform`属性一致 <1.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 定义变换原点\r\n * @method transform-origin\r\n * @version 1.0.0\r\n * @param {Length | Percentage | Keywords} $transform-origin 取值范围与`transform-origin`属性一致 <1.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定某元素的子元素是（看起来）位于三维空间内，还是在该元素所在的平面内被扁平化\r\n * @method transform-style\r\n * @version 2.0.0\r\n * @param {String} $transform-style 取值范围与`transform-style`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定观察者与「z=0」平面的距离，使具有三维位置变换的元素产生透视效果。「z>0」的三维元素比正常大，而「z<0」时则比正常小，大小程度由该属性的值决定。\r\n * @method perspective\r\n * @version 2.0.0\r\n * @param {none | Length} $perspective 取值范围与`perspective`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定透视点的位置\r\n * @method perspective-origin\r\n * @version 2.0.0\r\n * @param {Length | Percentage | Keywords} $perspective-origin 取值范围与`perspective-origin`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定元素背面面向用户时是否可见\r\n * @method backface-visibility\r\n * @version 2.0.0\r\n * @param {Keywords} $backface-visibility 取值范围与`backface-visibility`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 定义动画\r\n * @method animation\r\n * @version 1.0.0\r\n * @param {String} $animation 取值与原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定需要引用的动画名称\r\n * @method animation-name\r\n * @version 3.0.0\r\n * @param {String} $animation-name 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画运行一次所持续的时长\r\n * @method animation-duration\r\n * @version 3.0.0\r\n * @param {String} $animation-duration 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画运行方式\r\n * @method animation-timing-function\r\n * @version 3.0.0\r\n * @param {String} $animation-timing-function 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画延迟多久之后再开始\r\n * @method animation-delay\r\n * @version 3.0.0\r\n * @param {String} $animation-delay 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画循环几次\r\n * @method animation-iteration-count\r\n * @version 3.0.0\r\n * @param {String} $animation-iteration-count 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画的运动方向\r\n * @method animation-direction\r\n * @version 3.0.0\r\n * @param {String} $animation-direction 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画的运动状态\r\n * @method animation-play-state\r\n * @version 3.0.0\r\n * @param {String} $animation-play-state 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画时间之外的状态\r\n * @method animation-fill-mode\r\n * @version 3.0.0\r\n * @param {String} $animation-fill-mode 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Transition\r\n * @description 定义补间\r\n * @method transition\r\n * @version 1.0.0\r\n * @param {String} $transition 取值与原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义显示类型为伸缩盒\r\n * @method flexbox\r\n * @version 1.0.0\r\n * @param {String} $flexbox 默认值：flex，可选值：flex | inline-flex <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素如何分配空间\r\n * @method flex\r\n * @version 1.0.0\r\n * @param {Number} $flex 取值与`flex`属性一致，默认值：1 <1.0.0>\r\n * @param {String} $direction 默认值: row，可选值：row | column <1.5.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素的排版顺序\r\n * @method order\r\n * @version 1.0.0\r\n * @param {Integer} $order 取值与`order`属性一致，默认值：1 <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性盒子元素流动方向及遇见边界时是否换行(要求系统：iOS7.0+, Android4.4+)\r\n * @method flex-flow\r\n * @version 2.0.0\r\n * @param {String} $flex-flow 取值与`flex-flow`属性一致，默认值：row nowrap <2.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素的流动方向\r\n * @method flex-direction\r\n * @version 1.0.0\r\n * @param {String} $flex-direction 取值与`flex-direction`属性一致，默认值：row <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性盒子元素溢出后排版(要求系统：iOS7.0+, Android4.4+)\r\n * @method flex-wrap\r\n * @version 1.0.0\r\n * @param {String} $flex-wrap 取值与`flex-wrap`属性一致，默认值：nowrap <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性容器主轴对齐方式(其中`space-around`值需要iOS7.0+,Android4.4+)\r\n * @method justify-content\r\n * @version 1.0.0\r\n * @param {String} $justify-content 取值与`justify-content`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义多行弹性容器侧轴对齐方式(要求系统：iOS7.0+,Android4.4+)\r\n * @method align-content\r\n * @version 1.8.5\r\n * @param {String} $align-content 取值与`align-content`属性一致，默认值：center <1.8.5>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义单行弹性容器侧轴对齐方式\r\n * @method align-items\r\n * @version 1.0.0\r\n * @param {String} $align-items 取值与`align-items`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性容器中子元素自身的在侧轴对齐方式(要求系统：iOS7.0+,Android4.4+)\r\n * @method align-self\r\n * @version 1.0.0\r\n * @param {String} $align-self 取值与`align-self`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成矩形方法\r\n * @method rect\r\n * @version 1.0.0\r\n * @param {Length} $width 定义矩形的长度 <1.0.0>\r\n * @param {Length} $height 定义矩形的高度 <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成正方形方法\r\n * @method square\r\n * @version 1.0.0\r\n * @param {Length} $size 定义正方形的边长 <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成圆形方法\r\n * @method circle\r\n * @version 1.0.0\r\n * @param {Length} $size 定义圆的半径长度 <1.0.0>\r\n * @param {Length} $radius 定义圆的圆角半径长度 <1.0.0>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 在自适应宽度情况下，确保内容元素的宽高比固定，比如：实现随屏幕大小而变化的正方形。\r\n * @method fixed-scale\r\n * @version 3.0.10\r\n * @param {Length} $width 默认值：100%。用以指定内容元素的初始宽度，由于尺寸需动态变化，不要使用固定单位 <3.0.10>\r\n * @param {Length} $scale 默认值：1/1，即正方形。用以指定内容元素的宽度高比 <3.0.10>\r\n */\n/**\r\n * @module 文本\r\n * @description 链接处理方法\r\n * @method link\r\n * @version 1.0.0\r\n * @param {Color} $color 定义链接颜色 <1.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 文本碰到边界是否换行\r\n * @method wrap\r\n * @version 1.0.0\r\n * @param {Boolean} $is-wrap 定义文本是否换行，默认值：true <2.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 单行文本溢出时显示省略号\r\n * @method ellipsis\r\n * @version 1.0.0\r\n * @param {Length} $width 定义容器的宽度，默认值：null <2.0.0>\r\n * @param {Integer} $line-clamp 定义需要显示的行数，默认值：1（即使用单行溢出的处理方案），需要注意的是本参数只支持webkit内核 <2.1.2>\r\n */\n/**\r\n * @module 文本\r\n * @description 文字隐藏方案\r\n * @method texthide\r\n * @version 1.0.0\r\n * @param {Length} $width 定义容器的宽度，默认值：null <2.0.0>\r\n */\n/**\r\n * Yo框架全局Reset\r\n * Yo重置Mobile及高级浏览器上常见的差异\r\n */\n*,\n::before,\n::after {\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n  -webkit-tap-highlight-color: transparent;\n}\nhtml,\nbody {\n  overflow: hidden;\n  height: 100%;\n}\n::-webkit-scrollbar {\n  display: none;\n}\nhtml {\n  background-color: #eee;\n  color: #212121;\n  font-size: 100px;\n  -webkit-user-select: none;\n  user-select: none;\n}\nbody {\n  margin: 0;\n  font-size: 0.14em;\n  line-height: 1.5;\n  font-family: Helvetica Neue, Helvetica, STHeiTi, sans-serif;\n}\nul,\nol,\ndl,\ndd,\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\nfigure,\nform,\nfieldset,\nlegend,\ninput,\ntextarea,\nbutton,\np,\nblockquote,\nth,\ntd,\npre,\nxmp {\n  margin: 0;\n  padding: 0;\n}\ninput,\ntextarea,\nbutton,\nselect,\npre,\nxmp,\ntt,\ncode,\nkbd,\nsamp {\n  line-height: inherit;\n  font-family: inherit;\n}\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\nsmall,\nbig,\ninput,\ntextarea,\nbutton,\nselect {\n  font-size: inherit;\n}\naddress,\ncite,\ndfn,\nem,\ni,\noptgroup,\nvar {\n  font-style: normal;\n}\ntable {\n  border-collapse: collapse;\n  border-spacing: 0;\n  table-layout: fixed;\n  text-align: left;\n}\nul,\nol,\nmenu {\n  list-style: none;\n}\nfieldset,\nimg {\n  border: 0;\n  vertical-align: middle;\n}\narticle,\naside,\ndetails,\nfigcaption,\nfigure,\nfooter,\nheader,\nmain,\nmenu,\nnav,\nsection,\nsummary {\n  display: block;\n}\naudio,\ncanvas,\nvideo {\n  display: inline-block;\n}\nblockquote:before,\nblockquote:after,\nq:before,\nq:after {\n  content: \" \";\n}\ntextarea,\npre,\nxmp {\n  overflow: auto;\n  -webkit-overflow-scrolling: touch;\n}\ntextarea {\n  resize: vertical;\n}\ninput,\ntextarea,\nbutton,\nselect,\nsummary,\na {\n  outline: 0 none;\n}\ninput,\ntextarea,\nbutton,\nselect {\n  color: inherit;\n}\ninput:disabled,\n  textarea:disabled,\n  button:disabled,\n  select:disabled {\n    opacity: 1;\n}\nbutton::-moz-focus-inner,\ninput::-moz-focus-inner {\n  padding: 0;\n  border: 0;\n}\ninput[type=\"button\"],\ninput[type=\"submit\"],\ninput[type=\"reset\"],\ninput[type=\"file\"]::-webkit-file-upload-button,\ninput[type=\"search\"]::-webkit-search-cancel-button {\n  -webkit-appearance: none;\n  appearance: none;\n}\n::-webkit-details-marker {\n  display: none;\n}\nmark {\n  background-color: transparent;\n}\na,\nins,\ns,\nu,\ndel {\n  text-decoration: none;\n}\na,\nimg {\n  -webkit-touch-callout: none;\n}\na {\n  color: #00afc7;\n}\n.g-clear::after,\n.g-mod::after {\n  display: block;\n  overflow: hidden;\n  clear: both;\n  height: 0;\n  content: \" \";\n}\n@font-face {\n  font-family: yofont;\n  src: url(//ss.qunarzz.com/yo/font/1.0.3/yofont.woff) format(\"woff\"), url(//ss.qunarzz.com/yo/font/1.0.3/yofont.ttf) format(\"truetype\");\n}\n.yo-ico {\n  font-family: yofont !important;\n  font-style: normal;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n  vertical-align: middle;\n}\n@font-face {\n  font-family: 'iconfont';\n  src: url(\"http://localhost:7000/media/iconfont/iconfont.woff\") format(\"woff\"), url(\"http://localhost:7000/media/iconfont/iconfont.ttf\") format(\"truetype\");\n}\n.iconfont {\n  font-family: \"iconfont\" !important;\n  font-size: 16px;\n  font-style: normal;\n  -webkit-font-smoothing: antialiased;\n  -webkit-text-stroke-width: 0.2px;\n  -moz-osx-font-smoothing: grayscale;\n}\n.img_first {\n  height: 175px;\n  width: 100%;\n}\n.img_first img {\n    width: 100%;\n    height: 100%;\n}\n.img_second {\n  height: 335px;\n  width: 100%;\n}\n.img_second img {\n    height: 100%;\n    width: 100%;\n}\n.huoguo_list {\n  height: 100%;\n  background: #9c0e1a;\n  overflow-y: scroll;\n}\n.huoguo_list ul {\n    height: 100%;\n}\n.huoguo_list ul .img_container {\n      height: 92px;\n}\n.huoguo_list ul .img_container img {\n        width: 100%;\n}\n.huoguo_list ul .sell_out {\n      padding-left: 15px;\n      height: 70px;\n      position: relative;\n}\n.huoguo_list ul .sell_out span:first-child {\n        display: block;\n        position: absolute;\n        color: #4b4b4b;\n        top: 27px;\n        font-size: 18px;\n        height: 20px;\n}\n.huoguo_list ul .sell_out span:last-child {\n        position: absolute;\n        bottom: 0;\n        font-size: 12px;\n        color: #968D91;\n        height: 18px;\n        line-height: 18px;\n}\n.huoguo_list ul li {\n      height: 164px;\n      background: white;\n      margin: 0 1%;\n      position: relative;\n}\n.huoguo_list ul li::after {\n        pointer-events: none;\n        position: absolute;\n        z-index: 999;\n        top: 0;\n        left: 0;\n        content: \" \";\n        border-color: #f5f5f5;\n        border-style: solid;\n        border-width: 0 0 1px 0;\n        -webkit-transform-origin: 0 0;\n        transform-origin: 0 0;\n}\n@media (max--moz-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.49), (max-device-pixel-ratio: 1.49), (max-resolution: 143dpi), (max-resolution: 1.49dppx) {\n.huoguo_list ul li::after {\n            width: 100%;\n            height: 100%;\n}\n}\n@media (min--moz-device-pixel-ratio: 1.5) and (max--moz-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.49), (min-device-pixel-ratio: 1.5) and (max-device-pixel-ratio: 2.49), (min-resolution: 144dpi) and (max-resolution: 239dpi), (min-resolution: 1.5dppx) and (max-resolution: 2.49dppx) {\n.huoguo_list ul li::after {\n            width: 200%;\n            height: 200%;\n            -webkit-transform: scale(0.5);\n            transform: scale(0.5);\n}\n}\n@media (min--moz-device-pixel-ratio: 2.5), (-webkit-min-device-pixel-ratio: 2.5), (min-device-pixel-ratio: 2.5), (min-resolution: 240dpi), (min-resolution: 2.5dppx) {\n.huoguo_list ul li::after {\n            width: 300%;\n            height: 300%;\n            -webkit-transform: scale(0.33333);\n            transform: scale(0.33333);\n}\n}\n.huoguo_list ul li div.li_container {\n        width: 100%;\n        height: 100%;\n        padding-top: 20px;\n        padding-bottom: 23px;\n        display: -webkit-box;\n        display: -webkit-flex;\n        display: flex;\n        position: relative;\n}\n.huoguo_list ul li div.li_container .img_left {\n          width: 150px;\n          padding: 0 15px;\n          position: relative;\n}\n.huoguo_list ul li div.li_container .img_left img {\n            border: 0;\n}\n.huoguo_list ul li div.li_container .img_left img:first-child {\n              width: 100%;\n}\n.huoguo_list ul li div.li_container .img_left img:last-child {\n              position: absolute;\n              left: 16px;\n              height: 32px;\n              top: 0;\n}\n.huoguo_list ul li div.li_container .message_right {\n          -webkit-box-flex: 1;\n          -webkit-flex: 1;\n          flex: 1;\n          width: .1px;\n          width: 100%;\n          position: relative;\n}\n.huoguo_list ul li div.li_container .message_right .message_title {\n            font-size: 16px;\n            padding-top: 11px;\n            white-space: nowrap;\n            overflow: hidden;\n            text-overflow: ellipsis;\n            letter-spacing: -1px;\n            color: #474245;\n            width: 140px;\n}\n.huoguo_list ul li div.li_container .message_right .message_info {\n            font-size: 14px;\n            color: #969696;\n            white-space: nowrap;\n            text-overflow: ellipsis;\n            overflow: hidden;\n            width: 140px;\n}\n.huoguo_list ul li div.li_container .message_right .message_des {\n            height: 25px;\n            line-height: 17px;\n}\n.huoguo_list ul li div.li_container .message_right .message_des span {\n              display: inline-block;\n              border-radius: 2px;\n              font-size: 9px;\n              height: 13px;\n              line-height: 11px;\n              background: white;\n              color: #c6c6c6;\n              border: 1px solid #c6c6c6;\n              margin-right: 5px;\n              padding: 1px;\n}\n.huoguo_list ul li div.li_container .message_right .message_highprice {\n            font-size: 12px;\n            color: #ffc38d;\n            line-height: 8px;\n}\n.huoguo_list ul li div.li_container .message_right .message_lowprice {\n            color: #ff4891;\n            font-size: 12px;\n}\n.huoguo_list ul li div.li_container .message_right .message_lowprice span span:first-child {\n              letter-spacing: -3px;\n}\n.huoguo_list ul li div.li_container .message_right .message_lowprice span span:last-child {\n              font-size: 16px;\n              letter-spacing: -1px;\n              display: inline-block;\n              height: 22px;\n              vertical-align: bottom;\n}\n.huoguo_list ul li div.li_container .message_right .message_cart {\n            position: absolute;\n            bottom: 5px;\n            right: 4%;\n            height: 30px;\n            text-align: right;\n}\n.huoguo_list ul li div.li_container .message_right .message_cart img {\n              width: 49px;\n              position: absolute;\n              bottom: -8px;\n              right: -6px !important;\n}\n", "", {"version":3,"sources":["D:/missFresh/src/modules/index/components/huoguo.vue"],"names":[],"mappings":"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","file":"huoguo.vue","sourcesContent":["@charset \"UTF-8\";\n/**\r\n * Yo框架全局base定义\r\n * 本文件与variables不同地方在于，这里所定义的map可以使用在variables和任何地方\r\n * 本文件中map使用\"_\"开头，extra中不使用\"_\"\r\n * base ⇌ extra\r\n */\n/**\r\n * Yo框架全局Variables\r\n * Yo基础变量map，如果不想定义某属性，将其value设置为null\r\n * Yo仅使用2种长度单位：px用于边框，rem用于除边框之外的所有地方\r\n * 本文件中map使用\"_\"开头，config中不使用\"_\"\r\n * variables ⇌ config\r\n */\n/**\r\n * Yo框架自定义全局函数\r\n * 扩充Sass默认函数库，用以增强语法\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的第一项\r\n * @function first\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的最后一项\r\n * @function last\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的倒数第几项\r\n * @function nth-last\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $index 指定需要返回的值在list中的倒数位置 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 移除SassList中的某个项目并返回新的List\r\n * @function remove\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {String} $value 指定需要被删除的值 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 截取SassList中的某个部分并返回新的List\r\n * @function slice\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $start 指定需要截取的开始下标 <2.1.0>\r\n * @param {Integer} $end 指定需要截取的结束下标（不包括end），当该值缺省时默认为末尾下标 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 从SassList中添加/删除项目，然后返回新的List。\r\n * @function splice\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $index 指定需要移除的开始下标 <2.1.0>\r\n * @param {Integer} $count 指定需要移除的数量，不可以为负值，0表示不移除 <2.1.0>\r\n * @param {String} $values 指定需要添加的新值（可以是多个），如果该值缺省，则表示只移除不添加新值 <2.1.0>\r\n */\n/**\r\n * Yo框架全局基础方法\r\n * 包括响应式方案，CSS3兼容性方案，厂商前缀方案，iconfont方案，flex布局等全局方法\r\n */\n/**\r\n * @module 常用方法\r\n * @description 给需要的属性加厂家前缀\r\n * @method prefix\r\n * @version 1.0.0\r\n * @param {String} $property 指定属性 <1.0.0>\r\n * @param {String} $value 指定属性值 <1.0.0>\r\n * @skip\r\n */\n/**\r\n * @module 常用方法\r\n * @description 定义字体图标\r\n * @method _iconfont\r\n * @version 1.0.0\r\n * @skip\r\n */\n/**\r\n * @module 常用方法\r\n * @description 四则运算(系统要求：iOS6.0+,Android4.4+)\r\n * @method calc\r\n * @version 1.7.0\r\n * @param {String} $property 指定需要进行计算的CSS属性 <1.7.0>\r\n * @param {String} $value 与原生CSS语法一致，区别在于需要使用引号包裹表达式 <1.7.0>\r\n * @example\r\n * .calc {\r\n *     @include calc(width, \"100% - 100px\");\r\n * }\r\n *\r\n * <div class=\"calc\">四则运算</div>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 定义响应式方案\r\n * @method responsive\r\n * @version 1.0.0\r\n * @param {String} $media 指定媒体查询条件，取值为`config`文件map `media-types`中的值 <1.0.0>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 清除浮动方案\r\n * @method clearfix\r\n * @version 1.0.0\r\n * @param {String} $type 指定清除浮动的方式，包括：pseudo-element | bfc，默认值：pseudo-element <1.8.5>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 清除行内级元素间间隙方案\r\n * @method clearspace\r\n * @version 3.0.3\r\n * @param {Length} $font-size 指定子元素字号，默认值：.14rem <3.0.3>\r\n * @example\r\n * .demo {\r\n *     @include clearspace;\r\n * }\r\n *\r\n * <div class=\"demo\">\r\n *      <span class=\"item\">1</span>\r\n *      <span class=\"item\">2</span>\r\n *      <span class=\"item\">3</span>\r\n * </div>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 描述元素内容在横、纵方向上的对齐方式，默认为水平垂直居中对齐\r\n * @method align\r\n * @version 2.0.0\r\n * @param {String} $flexbox 元素布局方式，可选值：flex | inline-flex，默认值：flex <2.0.0>\r\n * @param {Keyword} $justify-content 元素内容的水平对齐方式，取值与`justify-content`属性一致，默认值：center <2.0.0>\r\n * @param {Keyword} $align-items 元素内容的垂直对齐方式，取值与`align-items`属性一致，默认值：center <2.0.0>\r\n * @example\r\n * .demo {\r\n *     @include align;\r\n * }\r\n *\r\n * <div class=\"demo\">\r\n *      <img alt=\"未知尺寸图片居中\" />\r\n * </div>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 定义是否有滚动条\r\n * @method overflow\r\n * @version 1.0.0\r\n * @param {String} $overflow 取值与最新原生语法一致，默认值：auto <1.0.0>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 生成全屏方法\r\n * @method fullscreen\r\n * @version 1.7.0\r\n * @param {Integer} $z-index 指定层叠级别 <1.7.0>\r\n * @param {Keywords} $position 指定定位方式，取除`static | relative`之外的值，默认值：absolute <1.8.5>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义使用何种滤镜\r\n * @method filter\r\n * @version 1.7.0\r\n * @param {String} $filter 取值与`filter`属性一致 <1.7.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义UA默认外观\r\n * @method appearance\r\n * @version 1.0.0\r\n * @param {String} $appearance 取值与`appearance`属性一致，默认值：none <1.0.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义如何选中内容\r\n * @method user-select\r\n * @version 1.0.0\r\n * @param {String} $user-select 取值与`user-select`属性一致，默认值：none <1.0.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义盒模型\r\n * @method box-sizing\r\n * @version 1.0.0\r\n * @param {String} $box-sizing 指定盒模型类型，取值与`box-sizing`属性一致，默认值：border-box <1.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义渐变色值\r\n * @method gradient\r\n * @version 1.0.0\r\n * @param {String} $type 指定渐变的4种类型：linear, repeating-linear, radial, repeating-radial <1.0.0>\r\n * @param {String} $dir 指定渐变方向，可选值：[left | right] || [top | bottom] | angle <2.0.0>\r\n * @param {String} $gradient 指定渐变取值，与w3c最新原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景图像缩放（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-size\r\n * @version 1.4.0\r\n * @param {Keywords | Length} $background-size 指定背景图缩放值，取值与`background-size`属性一致 <1.4.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景裁减（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-clip\r\n * @version 1.6.0\r\n * @param {Keywords} $background-clip 指定背景图缩放值，取值与`background-clip`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景显示区域（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-origin\r\n * @version 1.6.0\r\n * @param {Keywords} $background-origin 指定背景图`background-position`属性计算相对的参考点，取值与`background-origin`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 为元素添加边框（包括1px边框）\r\n * @method border\r\n * @version 2.0.0\r\n * @param {String} $border-width 指定边框厚度（单位为px），默认值：1px，取值与`border-width`属性一致，不同方向代表边框位置 <2.0.0>\r\n * @param {String} $border-color 指定边框颜色 <2.0.0>\r\n * @param {String} $border-style 指定边框样式 <2.0.0>\r\n * @param {String} $radius 指定边框圆角半径，默认值：null <2.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义圆角，用于修复某些安卓机型上“圆角+边框+背景”，背景溢出的情况\r\n * @method border-radius\r\n * @version 1.6.0\r\n * @param {Length} $border-radius 指定元素的圆角半径，取值与`border-radius`属性一致 <1.6.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 定义简单变换\r\n * @method transform\r\n * @version 1.0.0\r\n * @param {String} $transform 取值范围与`transform`属性一致 <1.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 定义变换原点\r\n * @method transform-origin\r\n * @version 1.0.0\r\n * @param {Length | Percentage | Keywords} $transform-origin 取值范围与`transform-origin`属性一致 <1.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定某元素的子元素是（看起来）位于三维空间内，还是在该元素所在的平面内被扁平化\r\n * @method transform-style\r\n * @version 2.0.0\r\n * @param {String} $transform-style 取值范围与`transform-style`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定观察者与「z=0」平面的距离，使具有三维位置变换的元素产生透视效果。「z>0」的三维元素比正常大，而「z<0」时则比正常小，大小程度由该属性的值决定。\r\n * @method perspective\r\n * @version 2.0.0\r\n * @param {none | Length} $perspective 取值范围与`perspective`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定透视点的位置\r\n * @method perspective-origin\r\n * @version 2.0.0\r\n * @param {Length | Percentage | Keywords} $perspective-origin 取值范围与`perspective-origin`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定元素背面面向用户时是否可见\r\n * @method backface-visibility\r\n * @version 2.0.0\r\n * @param {Keywords} $backface-visibility 取值范围与`backface-visibility`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 定义动画\r\n * @method animation\r\n * @version 1.0.0\r\n * @param {String} $animation 取值与原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定需要引用的动画名称\r\n * @method animation-name\r\n * @version 3.0.0\r\n * @param {String} $animation-name 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画运行一次所持续的时长\r\n * @method animation-duration\r\n * @version 3.0.0\r\n * @param {String} $animation-duration 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画运行方式\r\n * @method animation-timing-function\r\n * @version 3.0.0\r\n * @param {String} $animation-timing-function 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画延迟多久之后再开始\r\n * @method animation-delay\r\n * @version 3.0.0\r\n * @param {String} $animation-delay 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画循环几次\r\n * @method animation-iteration-count\r\n * @version 3.0.0\r\n * @param {String} $animation-iteration-count 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画的运动方向\r\n * @method animation-direction\r\n * @version 3.0.0\r\n * @param {String} $animation-direction 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画的运动状态\r\n * @method animation-play-state\r\n * @version 3.0.0\r\n * @param {String} $animation-play-state 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画时间之外的状态\r\n * @method animation-fill-mode\r\n * @version 3.0.0\r\n * @param {String} $animation-fill-mode 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Transition\r\n * @description 定义补间\r\n * @method transition\r\n * @version 1.0.0\r\n * @param {String} $transition 取值与原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义显示类型为伸缩盒\r\n * @method flexbox\r\n * @version 1.0.0\r\n * @param {String} $flexbox 默认值：flex，可选值：flex | inline-flex <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素如何分配空间\r\n * @method flex\r\n * @version 1.0.0\r\n * @param {Number} $flex 取值与`flex`属性一致，默认值：1 <1.0.0>\r\n * @param {String} $direction 默认值: row，可选值：row | column <1.5.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素的排版顺序\r\n * @method order\r\n * @version 1.0.0\r\n * @param {Integer} $order 取值与`order`属性一致，默认值：1 <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性盒子元素流动方向及遇见边界时是否换行(要求系统：iOS7.0+, Android4.4+)\r\n * @method flex-flow\r\n * @version 2.0.0\r\n * @param {String} $flex-flow 取值与`flex-flow`属性一致，默认值：row nowrap <2.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素的流动方向\r\n * @method flex-direction\r\n * @version 1.0.0\r\n * @param {String} $flex-direction 取值与`flex-direction`属性一致，默认值：row <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性盒子元素溢出后排版(要求系统：iOS7.0+, Android4.4+)\r\n * @method flex-wrap\r\n * @version 1.0.0\r\n * @param {String} $flex-wrap 取值与`flex-wrap`属性一致，默认值：nowrap <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性容器主轴对齐方式(其中`space-around`值需要iOS7.0+,Android4.4+)\r\n * @method justify-content\r\n * @version 1.0.0\r\n * @param {String} $justify-content 取值与`justify-content`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义多行弹性容器侧轴对齐方式(要求系统：iOS7.0+,Android4.4+)\r\n * @method align-content\r\n * @version 1.8.5\r\n * @param {String} $align-content 取值与`align-content`属性一致，默认值：center <1.8.5>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义单行弹性容器侧轴对齐方式\r\n * @method align-items\r\n * @version 1.0.0\r\n * @param {String} $align-items 取值与`align-items`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性容器中子元素自身的在侧轴对齐方式(要求系统：iOS7.0+,Android4.4+)\r\n * @method align-self\r\n * @version 1.0.0\r\n * @param {String} $align-self 取值与`align-self`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成矩形方法\r\n * @method rect\r\n * @version 1.0.0\r\n * @param {Length} $width 定义矩形的长度 <1.0.0>\r\n * @param {Length} $height 定义矩形的高度 <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成正方形方法\r\n * @method square\r\n * @version 1.0.0\r\n * @param {Length} $size 定义正方形的边长 <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成圆形方法\r\n * @method circle\r\n * @version 1.0.0\r\n * @param {Length} $size 定义圆的半径长度 <1.0.0>\r\n * @param {Length} $radius 定义圆的圆角半径长度 <1.0.0>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 在自适应宽度情况下，确保内容元素的宽高比固定，比如：实现随屏幕大小而变化的正方形。\r\n * @method fixed-scale\r\n * @version 3.0.10\r\n * @param {Length} $width 默认值：100%。用以指定内容元素的初始宽度，由于尺寸需动态变化，不要使用固定单位 <3.0.10>\r\n * @param {Length} $scale 默认值：1/1，即正方形。用以指定内容元素的宽度高比 <3.0.10>\r\n */\n/**\r\n * @module 文本\r\n * @description 链接处理方法\r\n * @method link\r\n * @version 1.0.0\r\n * @param {Color} $color 定义链接颜色 <1.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 文本碰到边界是否换行\r\n * @method wrap\r\n * @version 1.0.0\r\n * @param {Boolean} $is-wrap 定义文本是否换行，默认值：true <2.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 单行文本溢出时显示省略号\r\n * @method ellipsis\r\n * @version 1.0.0\r\n * @param {Length} $width 定义容器的宽度，默认值：null <2.0.0>\r\n * @param {Integer} $line-clamp 定义需要显示的行数，默认值：1（即使用单行溢出的处理方案），需要注意的是本参数只支持webkit内核 <2.1.2>\r\n */\n/**\r\n * @module 文本\r\n * @description 文字隐藏方案\r\n * @method texthide\r\n * @version 1.0.0\r\n * @param {Length} $width 定义容器的宽度，默认值：null <2.0.0>\r\n */\n/**\r\n * Yo框架全局Reset\r\n * Yo重置Mobile及高级浏览器上常见的差异\r\n */\n*,\n::before,\n::after {\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n  -webkit-tap-highlight-color: transparent; }\n\nhtml,\nbody {\n  overflow: hidden;\n  height: 100%; }\n\n::-webkit-scrollbar {\n  display: none; }\n\nhtml {\n  background-color: #eee;\n  color: #212121;\n  font-size: 100px;\n  -webkit-user-select: none;\n  user-select: none; }\n\nbody {\n  margin: 0;\n  font-size: 0.14em;\n  line-height: 1.5;\n  font-family: Helvetica Neue, Helvetica, STHeiTi, sans-serif; }\n\nul,\nol,\ndl,\ndd,\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\nfigure,\nform,\nfieldset,\nlegend,\ninput,\ntextarea,\nbutton,\np,\nblockquote,\nth,\ntd,\npre,\nxmp {\n  margin: 0;\n  padding: 0; }\n\ninput,\ntextarea,\nbutton,\nselect,\npre,\nxmp,\ntt,\ncode,\nkbd,\nsamp {\n  line-height: inherit;\n  font-family: inherit; }\n\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\nsmall,\nbig,\ninput,\ntextarea,\nbutton,\nselect {\n  font-size: inherit; }\n\naddress,\ncite,\ndfn,\nem,\ni,\noptgroup,\nvar {\n  font-style: normal; }\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0;\n  table-layout: fixed;\n  text-align: left; }\n\nul,\nol,\nmenu {\n  list-style: none; }\n\nfieldset,\nimg {\n  border: 0;\n  vertical-align: middle; }\n\narticle,\naside,\ndetails,\nfigcaption,\nfigure,\nfooter,\nheader,\nmain,\nmenu,\nnav,\nsection,\nsummary {\n  display: block; }\n\naudio,\ncanvas,\nvideo {\n  display: inline-block; }\n\nblockquote:before,\nblockquote:after,\nq:before,\nq:after {\n  content: \"\\0020\"; }\n\ntextarea,\npre,\nxmp {\n  overflow: auto;\n  -webkit-overflow-scrolling: touch; }\n\ntextarea {\n  resize: vertical; }\n\ninput,\ntextarea,\nbutton,\nselect,\nsummary,\na {\n  outline: 0 none; }\n\ninput,\ntextarea,\nbutton,\nselect {\n  color: inherit; }\n  input:disabled,\n  textarea:disabled,\n  button:disabled,\n  select:disabled {\n    opacity: 1; }\n\nbutton::-moz-focus-inner,\ninput::-moz-focus-inner {\n  padding: 0;\n  border: 0; }\n\ninput[type=\"button\"],\ninput[type=\"submit\"],\ninput[type=\"reset\"],\ninput[type=\"file\"]::-webkit-file-upload-button,\ninput[type=\"search\"]::-webkit-search-cancel-button {\n  -webkit-appearance: none;\n  appearance: none; }\n\n::-webkit-details-marker {\n  display: none; }\n\nmark {\n  background-color: transparent; }\n\na,\nins,\ns,\nu,\ndel {\n  text-decoration: none; }\n\na,\nimg {\n  -webkit-touch-callout: none; }\n\na {\n  color: #00afc7; }\n\n.g-clear::after,\n.g-mod::after {\n  display: block;\n  overflow: hidden;\n  clear: both;\n  height: 0;\n  content: \"\\0020\"; }\n\n@font-face {\n  font-family: yofont;\n  src: url(//ss.qunarzz.com/yo/font/1.0.3/yofont.woff) format(\"woff\"), url(//ss.qunarzz.com/yo/font/1.0.3/yofont.ttf) format(\"truetype\"); }\n\n.yo-ico {\n  font-family: yofont !important;\n  font-style: normal;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n  vertical-align: middle; }\n\n@font-face {\n  font-family: 'iconfont';\n  src: url(\"http://localhost:7000/media/iconfont/iconfont.woff\") format(\"woff\"), url(\"http://localhost:7000/media/iconfont/iconfont.ttf\") format(\"truetype\"); }\n\n.iconfont {\n  font-family: \"iconfont\" !important;\n  font-size: 16px;\n  font-style: normal;\n  -webkit-font-smoothing: antialiased;\n  -webkit-text-stroke-width: 0.2px;\n  -moz-osx-font-smoothing: grayscale; }\n\n.img_first {\n  height: 175px;\n  width: 100%; }\n  .img_first img {\n    width: 100%;\n    height: 100%; }\n\n.img_second {\n  height: 335px;\n  width: 100%; }\n  .img_second img {\n    height: 100%;\n    width: 100%; }\n\n.huoguo_list {\n  height: 100%;\n  background: #9c0e1a;\n  overflow-y: scroll; }\n  .huoguo_list ul {\n    height: 100%; }\n    .huoguo_list ul .img_container {\n      height: 92px; }\n      .huoguo_list ul .img_container img {\n        width: 100%; }\n    .huoguo_list ul .sell_out {\n      padding-left: 15px;\n      height: 70px;\n      position: relative; }\n      .huoguo_list ul .sell_out span:first-child {\n        display: block;\n        position: absolute;\n        color: #4b4b4b;\n        top: 27px;\n        font-size: 18px;\n        height: 20px; }\n      .huoguo_list ul .sell_out span:last-child {\n        position: absolute;\n        bottom: 0;\n        font-size: 12px;\n        color: #968D91;\n        height: 18px;\n        line-height: 18px; }\n    .huoguo_list ul li {\n      height: 164px;\n      background: white;\n      margin: 0 1%;\n      position: relative; }\n      .huoguo_list ul li::after {\n        pointer-events: none;\n        position: absolute;\n        z-index: 999;\n        top: 0;\n        left: 0;\n        content: \"\\0020\";\n        border-color: #f5f5f5;\n        border-style: solid;\n        border-width: 0 0 1px 0;\n        -webkit-transform-origin: 0 0;\n        transform-origin: 0 0; }\n        @media (max--moz-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.49), (max-device-pixel-ratio: 1.49), (max-resolution: 143dpi), (max-resolution: 1.49dppx) {\n          .huoguo_list ul li::after {\n            width: 100%;\n            height: 100%; } }\n        @media (min--moz-device-pixel-ratio: 1.5) and (max--moz-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.49), (min-device-pixel-ratio: 1.5) and (max-device-pixel-ratio: 2.49), (min-resolution: 144dpi) and (max-resolution: 239dpi), (min-resolution: 1.5dppx) and (max-resolution: 2.49dppx) {\n          .huoguo_list ul li::after {\n            width: 200%;\n            height: 200%;\n            -webkit-transform: scale(0.5);\n            transform: scale(0.5); } }\n        @media (min--moz-device-pixel-ratio: 2.5), (-webkit-min-device-pixel-ratio: 2.5), (min-device-pixel-ratio: 2.5), (min-resolution: 240dpi), (min-resolution: 2.5dppx) {\n          .huoguo_list ul li::after {\n            width: 300%;\n            height: 300%;\n            -webkit-transform: scale(0.33333);\n            transform: scale(0.33333); } }\n      .huoguo_list ul li div.li_container {\n        width: 100%;\n        height: 100%;\n        padding-top: 20px;\n        padding-bottom: 23px;\n        display: -webkit-box;\n        display: -webkit-flex;\n        display: flex;\n        position: relative; }\n        .huoguo_list ul li div.li_container .img_left {\n          width: 150px;\n          padding: 0 15px;\n          position: relative; }\n          .huoguo_list ul li div.li_container .img_left img {\n            border: 0; }\n            .huoguo_list ul li div.li_container .img_left img:first-child {\n              width: 100%; }\n            .huoguo_list ul li div.li_container .img_left img:last-child {\n              position: absolute;\n              left: 16px;\n              height: 32px;\n              top: 0; }\n        .huoguo_list ul li div.li_container .message_right {\n          -webkit-box-flex: 1;\n          -webkit-flex: 1;\n          flex: 1;\n          width: .1px;\n          width: 100%;\n          position: relative; }\n          .huoguo_list ul li div.li_container .message_right .message_title {\n            font-size: 16px;\n            padding-top: 11px;\n            white-space: nowrap;\n            overflow: hidden;\n            text-overflow: ellipsis;\n            letter-spacing: -1px;\n            color: #474245;\n            width: 140px; }\n          .huoguo_list ul li div.li_container .message_right .message_info {\n            font-size: 14px;\n            color: #969696;\n            white-space: nowrap;\n            text-overflow: ellipsis;\n            overflow: hidden;\n            width: 140px; }\n          .huoguo_list ul li div.li_container .message_right .message_des {\n            height: 25px;\n            line-height: 17px; }\n            .huoguo_list ul li div.li_container .message_right .message_des span {\n              display: inline-block;\n              border-radius: 2px;\n              font-size: 9px;\n              height: 13px;\n              line-height: 11px;\n              background: white;\n              color: #c6c6c6;\n              border: 1px solid #c6c6c6;\n              margin-right: 5px;\n              padding: 1px; }\n          .huoguo_list ul li div.li_container .message_right .message_highprice {\n            font-size: 12px;\n            color: #ffc38d;\n            line-height: 8px; }\n          .huoguo_list ul li div.li_container .message_right .message_lowprice {\n            color: #ff4891;\n            font-size: 12px; }\n            .huoguo_list ul li div.li_container .message_right .message_lowprice span span:first-child {\n              letter-spacing: -3px; }\n            .huoguo_list ul li div.li_container .message_right .message_lowprice span span:last-child {\n              font-size: 16px;\n              letter-spacing: -1px;\n              display: inline-block;\n              height: 22px;\n              vertical-align: bottom; }\n          .huoguo_list ul li div.li_container .message_right .message_cart {\n            position: absolute;\n            bottom: 5px;\n            right: 4%;\n            height: 30px;\n            text-align: right; }\n            .huoguo_list ul li div.li_container .message_right .message_cart img {\n              width: 49px;\n              position: absolute;\n              bottom: -8px;\n              right: -6px !important; }\n"],"sourceRoot":""}]);
+exports.push([module.i, "\n@charset \"UTF-8\";\n/**\r\n * Yo框架全局base定义\r\n * 本文件与variables不同地方在于，这里所定义的map可以使用在variables和任何地方\r\n * 本文件中map使用\"_\"开头，extra中不使用\"_\"\r\n * base ⇌ extra\r\n */\n/**\r\n * Yo框架全局Variables\r\n * Yo基础变量map，如果不想定义某属性，将其value设置为null\r\n * Yo仅使用2种长度单位：px用于边框，rem用于除边框之外的所有地方\r\n * 本文件中map使用\"_\"开头，config中不使用\"_\"\r\n * variables ⇌ config\r\n */\n/**\r\n * Yo框架自定义全局函数\r\n * 扩充Sass默认函数库，用以增强语法\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的第一项\r\n * @function first\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的最后一项\r\n * @function last\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的倒数第几项\r\n * @function nth-last\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $index 指定需要返回的值在list中的倒数位置 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 移除SassList中的某个项目并返回新的List\r\n * @function remove\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {String} $value 指定需要被删除的值 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 截取SassList中的某个部分并返回新的List\r\n * @function slice\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $start 指定需要截取的开始下标 <2.1.0>\r\n * @param {Integer} $end 指定需要截取的结束下标（不包括end），当该值缺省时默认为末尾下标 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 从SassList中添加/删除项目，然后返回新的List。\r\n * @function splice\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $index 指定需要移除的开始下标 <2.1.0>\r\n * @param {Integer} $count 指定需要移除的数量，不可以为负值，0表示不移除 <2.1.0>\r\n * @param {String} $values 指定需要添加的新值（可以是多个），如果该值缺省，则表示只移除不添加新值 <2.1.0>\r\n */\n/**\r\n * Yo框架全局基础方法\r\n * 包括响应式方案，CSS3兼容性方案，厂商前缀方案，iconfont方案，flex布局等全局方法\r\n */\n/**\r\n * @module 常用方法\r\n * @description 给需要的属性加厂家前缀\r\n * @method prefix\r\n * @version 1.0.0\r\n * @param {String} $property 指定属性 <1.0.0>\r\n * @param {String} $value 指定属性值 <1.0.0>\r\n * @skip\r\n */\n/**\r\n * @module 常用方法\r\n * @description 定义字体图标\r\n * @method _iconfont\r\n * @version 1.0.0\r\n * @skip\r\n */\n/**\r\n * @module 常用方法\r\n * @description 四则运算(系统要求：iOS6.0+,Android4.4+)\r\n * @method calc\r\n * @version 1.7.0\r\n * @param {String} $property 指定需要进行计算的CSS属性 <1.7.0>\r\n * @param {String} $value 与原生CSS语法一致，区别在于需要使用引号包裹表达式 <1.7.0>\r\n * @example\r\n * .calc {\r\n *     @include calc(width, \"100% - 100px\");\r\n * }\r\n *\r\n * <div class=\"calc\">四则运算</div>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 定义响应式方案\r\n * @method responsive\r\n * @version 1.0.0\r\n * @param {String} $media 指定媒体查询条件，取值为`config`文件map `media-types`中的值 <1.0.0>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 清除浮动方案\r\n * @method clearfix\r\n * @version 1.0.0\r\n * @param {String} $type 指定清除浮动的方式，包括：pseudo-element | bfc，默认值：pseudo-element <1.8.5>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 清除行内级元素间间隙方案\r\n * @method clearspace\r\n * @version 3.0.3\r\n * @param {Length} $font-size 指定子元素字号，默认值：.14rem <3.0.3>\r\n * @example\r\n * .demo {\r\n *     @include clearspace;\r\n * }\r\n *\r\n * <div class=\"demo\">\r\n *      <span class=\"item\">1</span>\r\n *      <span class=\"item\">2</span>\r\n *      <span class=\"item\">3</span>\r\n * </div>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 描述元素内容在横、纵方向上的对齐方式，默认为水平垂直居中对齐\r\n * @method align\r\n * @version 2.0.0\r\n * @param {String} $flexbox 元素布局方式，可选值：flex | inline-flex，默认值：flex <2.0.0>\r\n * @param {Keyword} $justify-content 元素内容的水平对齐方式，取值与`justify-content`属性一致，默认值：center <2.0.0>\r\n * @param {Keyword} $align-items 元素内容的垂直对齐方式，取值与`align-items`属性一致，默认值：center <2.0.0>\r\n * @example\r\n * .demo {\r\n *     @include align;\r\n * }\r\n *\r\n * <div class=\"demo\">\r\n *      <img alt=\"未知尺寸图片居中\" />\r\n * </div>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 定义是否有滚动条\r\n * @method overflow\r\n * @version 1.0.0\r\n * @param {String} $overflow 取值与最新原生语法一致，默认值：auto <1.0.0>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 生成全屏方法\r\n * @method fullscreen\r\n * @version 1.7.0\r\n * @param {Integer} $z-index 指定层叠级别 <1.7.0>\r\n * @param {Keywords} $position 指定定位方式，取除`static | relative`之外的值，默认值：absolute <1.8.5>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义使用何种滤镜\r\n * @method filter\r\n * @version 1.7.0\r\n * @param {String} $filter 取值与`filter`属性一致 <1.7.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义UA默认外观\r\n * @method appearance\r\n * @version 1.0.0\r\n * @param {String} $appearance 取值与`appearance`属性一致，默认值：none <1.0.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义如何选中内容\r\n * @method user-select\r\n * @version 1.0.0\r\n * @param {String} $user-select 取值与`user-select`属性一致，默认值：none <1.0.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义盒模型\r\n * @method box-sizing\r\n * @version 1.0.0\r\n * @param {String} $box-sizing 指定盒模型类型，取值与`box-sizing`属性一致，默认值：border-box <1.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义渐变色值\r\n * @method gradient\r\n * @version 1.0.0\r\n * @param {String} $type 指定渐变的4种类型：linear, repeating-linear, radial, repeating-radial <1.0.0>\r\n * @param {String} $dir 指定渐变方向，可选值：[left | right] || [top | bottom] | angle <2.0.0>\r\n * @param {String} $gradient 指定渐变取值，与w3c最新原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景图像缩放（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-size\r\n * @version 1.4.0\r\n * @param {Keywords | Length} $background-size 指定背景图缩放值，取值与`background-size`属性一致 <1.4.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景裁减（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-clip\r\n * @version 1.6.0\r\n * @param {Keywords} $background-clip 指定背景图缩放值，取值与`background-clip`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景显示区域（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-origin\r\n * @version 1.6.0\r\n * @param {Keywords} $background-origin 指定背景图`background-position`属性计算相对的参考点，取值与`background-origin`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 为元素添加边框（包括1px边框）\r\n * @method border\r\n * @version 2.0.0\r\n * @param {String} $border-width 指定边框厚度（单位为px），默认值：1px，取值与`border-width`属性一致，不同方向代表边框位置 <2.0.0>\r\n * @param {String} $border-color 指定边框颜色 <2.0.0>\r\n * @param {String} $border-style 指定边框样式 <2.0.0>\r\n * @param {String} $radius 指定边框圆角半径，默认值：null <2.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义圆角，用于修复某些安卓机型上“圆角+边框+背景”，背景溢出的情况\r\n * @method border-radius\r\n * @version 1.6.0\r\n * @param {Length} $border-radius 指定元素的圆角半径，取值与`border-radius`属性一致 <1.6.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 定义简单变换\r\n * @method transform\r\n * @version 1.0.0\r\n * @param {String} $transform 取值范围与`transform`属性一致 <1.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 定义变换原点\r\n * @method transform-origin\r\n * @version 1.0.0\r\n * @param {Length | Percentage | Keywords} $transform-origin 取值范围与`transform-origin`属性一致 <1.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定某元素的子元素是（看起来）位于三维空间内，还是在该元素所在的平面内被扁平化\r\n * @method transform-style\r\n * @version 2.0.0\r\n * @param {String} $transform-style 取值范围与`transform-style`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定观察者与「z=0」平面的距离，使具有三维位置变换的元素产生透视效果。「z>0」的三维元素比正常大，而「z<0」时则比正常小，大小程度由该属性的值决定。\r\n * @method perspective\r\n * @version 2.0.0\r\n * @param {none | Length} $perspective 取值范围与`perspective`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定透视点的位置\r\n * @method perspective-origin\r\n * @version 2.0.0\r\n * @param {Length | Percentage | Keywords} $perspective-origin 取值范围与`perspective-origin`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定元素背面面向用户时是否可见\r\n * @method backface-visibility\r\n * @version 2.0.0\r\n * @param {Keywords} $backface-visibility 取值范围与`backface-visibility`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 定义动画\r\n * @method animation\r\n * @version 1.0.0\r\n * @param {String} $animation 取值与原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定需要引用的动画名称\r\n * @method animation-name\r\n * @version 3.0.0\r\n * @param {String} $animation-name 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画运行一次所持续的时长\r\n * @method animation-duration\r\n * @version 3.0.0\r\n * @param {String} $animation-duration 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画运行方式\r\n * @method animation-timing-function\r\n * @version 3.0.0\r\n * @param {String} $animation-timing-function 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画延迟多久之后再开始\r\n * @method animation-delay\r\n * @version 3.0.0\r\n * @param {String} $animation-delay 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画循环几次\r\n * @method animation-iteration-count\r\n * @version 3.0.0\r\n * @param {String} $animation-iteration-count 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画的运动方向\r\n * @method animation-direction\r\n * @version 3.0.0\r\n * @param {String} $animation-direction 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画的运动状态\r\n * @method animation-play-state\r\n * @version 3.0.0\r\n * @param {String} $animation-play-state 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画时间之外的状态\r\n * @method animation-fill-mode\r\n * @version 3.0.0\r\n * @param {String} $animation-fill-mode 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Transition\r\n * @description 定义补间\r\n * @method transition\r\n * @version 1.0.0\r\n * @param {String} $transition 取值与原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义显示类型为伸缩盒\r\n * @method flexbox\r\n * @version 1.0.0\r\n * @param {String} $flexbox 默认值：flex，可选值：flex | inline-flex <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素如何分配空间\r\n * @method flex\r\n * @version 1.0.0\r\n * @param {Number} $flex 取值与`flex`属性一致，默认值：1 <1.0.0>\r\n * @param {String} $direction 默认值: row，可选值：row | column <1.5.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素的排版顺序\r\n * @method order\r\n * @version 1.0.0\r\n * @param {Integer} $order 取值与`order`属性一致，默认值：1 <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性盒子元素流动方向及遇见边界时是否换行(要求系统：iOS7.0+, Android4.4+)\r\n * @method flex-flow\r\n * @version 2.0.0\r\n * @param {String} $flex-flow 取值与`flex-flow`属性一致，默认值：row nowrap <2.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素的流动方向\r\n * @method flex-direction\r\n * @version 1.0.0\r\n * @param {String} $flex-direction 取值与`flex-direction`属性一致，默认值：row <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性盒子元素溢出后排版(要求系统：iOS7.0+, Android4.4+)\r\n * @method flex-wrap\r\n * @version 1.0.0\r\n * @param {String} $flex-wrap 取值与`flex-wrap`属性一致，默认值：nowrap <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性容器主轴对齐方式(其中`space-around`值需要iOS7.0+,Android4.4+)\r\n * @method justify-content\r\n * @version 1.0.0\r\n * @param {String} $justify-content 取值与`justify-content`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义多行弹性容器侧轴对齐方式(要求系统：iOS7.0+,Android4.4+)\r\n * @method align-content\r\n * @version 1.8.5\r\n * @param {String} $align-content 取值与`align-content`属性一致，默认值：center <1.8.5>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义单行弹性容器侧轴对齐方式\r\n * @method align-items\r\n * @version 1.0.0\r\n * @param {String} $align-items 取值与`align-items`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性容器中子元素自身的在侧轴对齐方式(要求系统：iOS7.0+,Android4.4+)\r\n * @method align-self\r\n * @version 1.0.0\r\n * @param {String} $align-self 取值与`align-self`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成矩形方法\r\n * @method rect\r\n * @version 1.0.0\r\n * @param {Length} $width 定义矩形的长度 <1.0.0>\r\n * @param {Length} $height 定义矩形的高度 <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成正方形方法\r\n * @method square\r\n * @version 1.0.0\r\n * @param {Length} $size 定义正方形的边长 <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成圆形方法\r\n * @method circle\r\n * @version 1.0.0\r\n * @param {Length} $size 定义圆的半径长度 <1.0.0>\r\n * @param {Length} $radius 定义圆的圆角半径长度 <1.0.0>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 在自适应宽度情况下，确保内容元素的宽高比固定，比如：实现随屏幕大小而变化的正方形。\r\n * @method fixed-scale\r\n * @version 3.0.10\r\n * @param {Length} $width 默认值：100%。用以指定内容元素的初始宽度，由于尺寸需动态变化，不要使用固定单位 <3.0.10>\r\n * @param {Length} $scale 默认值：1/1，即正方形。用以指定内容元素的宽度高比 <3.0.10>\r\n */\n/**\r\n * @module 文本\r\n * @description 链接处理方法\r\n * @method link\r\n * @version 1.0.0\r\n * @param {Color} $color 定义链接颜色 <1.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 文本碰到边界是否换行\r\n * @method wrap\r\n * @version 1.0.0\r\n * @param {Boolean} $is-wrap 定义文本是否换行，默认值：true <2.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 单行文本溢出时显示省略号\r\n * @method ellipsis\r\n * @version 1.0.0\r\n * @param {Length} $width 定义容器的宽度，默认值：null <2.0.0>\r\n * @param {Integer} $line-clamp 定义需要显示的行数，默认值：1（即使用单行溢出的处理方案），需要注意的是本参数只支持webkit内核 <2.1.2>\r\n */\n/**\r\n * @module 文本\r\n * @description 文字隐藏方案\r\n * @method texthide\r\n * @version 1.0.0\r\n * @param {Length} $width 定义容器的宽度，默认值：null <2.0.0>\r\n */\n/**\r\n * Yo框架全局Reset\r\n * Yo重置Mobile及高级浏览器上常见的差异\r\n */\n*,\n::before,\n::after {\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n  -webkit-tap-highlight-color: transparent;\n}\nhtml,\nbody {\n  overflow: hidden;\n  height: 100%;\n}\n::-webkit-scrollbar {\n  display: none;\n}\nhtml {\n  background-color: #eee;\n  color: #212121;\n  font-size: 100px;\n  -webkit-user-select: none;\n  user-select: none;\n}\nbody {\n  margin: 0;\n  font-size: 0.14em;\n  line-height: 1.5;\n  font-family: Helvetica Neue, Helvetica, STHeiTi, sans-serif;\n}\nul,\nol,\ndl,\ndd,\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\nfigure,\nform,\nfieldset,\nlegend,\ninput,\ntextarea,\nbutton,\np,\nblockquote,\nth,\ntd,\npre,\nxmp {\n  margin: 0;\n  padding: 0;\n}\ninput,\ntextarea,\nbutton,\nselect,\npre,\nxmp,\ntt,\ncode,\nkbd,\nsamp {\n  line-height: inherit;\n  font-family: inherit;\n}\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\nsmall,\nbig,\ninput,\ntextarea,\nbutton,\nselect {\n  font-size: inherit;\n}\naddress,\ncite,\ndfn,\nem,\ni,\noptgroup,\nvar {\n  font-style: normal;\n}\ntable {\n  border-collapse: collapse;\n  border-spacing: 0;\n  table-layout: fixed;\n  text-align: left;\n}\nul,\nol,\nmenu {\n  list-style: none;\n}\nfieldset,\nimg {\n  border: 0;\n  vertical-align: middle;\n}\narticle,\naside,\ndetails,\nfigcaption,\nfigure,\nfooter,\nheader,\nmain,\nmenu,\nnav,\nsection,\nsummary {\n  display: block;\n}\naudio,\ncanvas,\nvideo {\n  display: inline-block;\n}\nblockquote:before,\nblockquote:after,\nq:before,\nq:after {\n  content: \" \";\n}\ntextarea,\npre,\nxmp {\n  overflow: auto;\n  -webkit-overflow-scrolling: touch;\n}\ntextarea {\n  resize: vertical;\n}\ninput,\ntextarea,\nbutton,\nselect,\nsummary,\na {\n  outline: 0 none;\n}\ninput,\ntextarea,\nbutton,\nselect {\n  color: inherit;\n}\ninput:disabled,\n  textarea:disabled,\n  button:disabled,\n  select:disabled {\n    opacity: 1;\n}\nbutton::-moz-focus-inner,\ninput::-moz-focus-inner {\n  padding: 0;\n  border: 0;\n}\ninput[type=\"button\"],\ninput[type=\"submit\"],\ninput[type=\"reset\"],\ninput[type=\"file\"]::-webkit-file-upload-button,\ninput[type=\"search\"]::-webkit-search-cancel-button {\n  -webkit-appearance: none;\n  appearance: none;\n}\n::-webkit-details-marker {\n  display: none;\n}\nmark {\n  background-color: transparent;\n}\na,\nins,\ns,\nu,\ndel {\n  text-decoration: none;\n}\na,\nimg {\n  -webkit-touch-callout: none;\n}\na {\n  color: #00afc7;\n}\n.g-clear::after,\n.g-mod::after {\n  display: block;\n  overflow: hidden;\n  clear: both;\n  height: 0;\n  content: \" \";\n}\n@font-face {\n  font-family: yofont;\n  src: url(//ss.qunarzz.com/yo/font/1.0.3/yofont.woff) format(\"woff\"), url(//ss.qunarzz.com/yo/font/1.0.3/yofont.ttf) format(\"truetype\");\n}\n.yo-ico {\n  font-family: yofont !important;\n  font-style: normal;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n  vertical-align: middle;\n}\n@font-face {\n  font-family: 'iconfont';\n  src: url(\"http://localhost:7000/media/iconfont/iconfont.woff\") format(\"woff\"), url(\"http://localhost:7000/media/iconfont/iconfont.ttf\") format(\"truetype\");\n}\n.iconfont {\n  font-family: \"iconfont\" !important;\n  font-size: 16px;\n  font-style: normal;\n  -webkit-font-smoothing: antialiased;\n  -webkit-text-stroke-width: 0.2px;\n  -moz-osx-font-smoothing: grayscale;\n}\n.img_first {\n  height: 175px;\n  width: 100%;\n}\n.img_first img {\n    width: 100%;\n    height: 100%;\n}\nsection > div {\n  height: 100%;\n}\n.load_img {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: flex;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n  justify-content: center;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n  align-items: center;\n  height: 100%;\n}\n.load_img img {\n    width: 30%;\n}\n.img_second {\n  height: 335px;\n  width: 100%;\n}\n.img_second img {\n    height: 100%;\n    width: 100%;\n}\n.huoguo_list {\n  height: 100%;\n  background: #9c0e1a;\n  overflow-y: scroll;\n}\n.huoguo_list ul {\n    height: 100%;\n}\n.huoguo_list ul .img_container {\n      height: 92px;\n}\n.huoguo_list ul .img_container img {\n        width: 100%;\n}\n.huoguo_list ul .sell_out {\n      padding-left: 15px;\n      height: 70px;\n      position: relative;\n      background: white;\n}\n.huoguo_list ul .sell_out span:first-child {\n        display: block;\n        position: absolute;\n        color: #4b4b4b;\n        top: 27px;\n        font-size: 18px;\n        height: 20px;\n}\n.huoguo_list ul .sell_out span:last-child {\n        position: absolute;\n        bottom: 0;\n        font-size: 12px;\n        color: #968D91;\n        height: 18px;\n        line-height: 18px;\n}\n.huoguo_list ul li {\n      height: 164px;\n      background: white;\n      margin: 0 1%;\n      position: relative;\n}\n.huoguo_list ul li::after {\n        pointer-events: none;\n        position: absolute;\n        z-index: 999;\n        top: 0;\n        left: 0;\n        content: \" \";\n        border-color: #f5f5f5;\n        border-style: solid;\n        border-width: 0 0 1px 0;\n        -webkit-transform-origin: 0 0;\n        transform-origin: 0 0;\n}\n@media (max--moz-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.49), (max-device-pixel-ratio: 1.49), (max-resolution: 143dpi), (max-resolution: 1.49dppx) {\n.huoguo_list ul li::after {\n            width: 100%;\n            height: 100%;\n}\n}\n@media (min--moz-device-pixel-ratio: 1.5) and (max--moz-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.49), (min-device-pixel-ratio: 1.5) and (max-device-pixel-ratio: 2.49), (min-resolution: 144dpi) and (max-resolution: 239dpi), (min-resolution: 1.5dppx) and (max-resolution: 2.49dppx) {\n.huoguo_list ul li::after {\n            width: 200%;\n            height: 200%;\n            -webkit-transform: scale(0.5);\n            transform: scale(0.5);\n}\n}\n@media (min--moz-device-pixel-ratio: 2.5), (-webkit-min-device-pixel-ratio: 2.5), (min-device-pixel-ratio: 2.5), (min-resolution: 240dpi), (min-resolution: 2.5dppx) {\n.huoguo_list ul li::after {\n            width: 300%;\n            height: 300%;\n            -webkit-transform: scale(0.33333);\n            transform: scale(0.33333);\n}\n}\n.huoguo_list ul li div.li_container {\n        width: 100%;\n        height: 100%;\n        padding-top: 20px;\n        padding-bottom: 23px;\n        display: -webkit-box;\n        display: -webkit-flex;\n        display: flex;\n        position: relative;\n}\n.huoguo_list ul li div.li_container .img_left {\n          width: 150px;\n          padding: 0 15px;\n          position: relative;\n}\n.huoguo_list ul li div.li_container .img_left img {\n            border: 0;\n}\n.huoguo_list ul li div.li_container .img_left img:first-child {\n              width: 100%;\n}\n.huoguo_list ul li div.li_container .img_left img:last-child {\n              position: absolute;\n              left: 16px;\n              height: 32px;\n              top: 0;\n}\n.huoguo_list ul li div.li_container .message_right {\n          -webkit-box-flex: 1;\n          -webkit-flex: 1;\n          flex: 1;\n          width: .1px;\n          width: 100%;\n          position: relative;\n}\n.huoguo_list ul li div.li_container .message_right .message_title {\n            font-size: 16px;\n            padding-top: 11px;\n            white-space: nowrap;\n            overflow: hidden;\n            text-overflow: ellipsis;\n            letter-spacing: -1px;\n            color: #474245;\n            width: 140px;\n}\n.huoguo_list ul li div.li_container .message_right .message_info {\n            font-size: 14px;\n            color: #969696;\n            white-space: nowrap;\n            text-overflow: ellipsis;\n            overflow: hidden;\n            width: 140px;\n}\n.huoguo_list ul li div.li_container .message_right .message_des {\n            height: 25px;\n            line-height: 17px;\n}\n.huoguo_list ul li div.li_container .message_right .message_des span {\n              display: inline-block;\n              border-radius: 2px;\n              font-size: 9px;\n              height: 13px;\n              line-height: 11px;\n              background: white;\n              color: #c6c6c6;\n              border: 1px solid #c6c6c6;\n              margin-right: 5px;\n              padding: 1px;\n}\n.huoguo_list ul li div.li_container .message_right .message_highprice {\n            font-size: 12px;\n            color: #ffc38d;\n            line-height: 8px;\n}\n.huoguo_list ul li div.li_container .message_right .message_lowprice {\n            color: #ff4891;\n            font-size: 12px;\n}\n.huoguo_list ul li div.li_container .message_right .message_lowprice span span:first-child {\n              letter-spacing: -3px;\n}\n.huoguo_list ul li div.li_container .message_right .message_lowprice span span:last-child {\n              font-size: 16px;\n              letter-spacing: -1px;\n              display: inline-block;\n              height: 22px;\n              vertical-align: bottom;\n}\n.huoguo_list ul li div.li_container .message_right .message_cart {\n            position: absolute;\n            bottom: 5px;\n            right: 4%;\n            height: 30px;\n            text-align: right;\n}\n.huoguo_list ul li div.li_container .message_right .message_cart img {\n              width: 49px;\n              position: absolute;\n              bottom: -8px;\n              right: -6px !important;\n}\n", "", {"version":3,"sources":["D:/missFresh/src/modules/index/components/huoguo.vue"],"names":[],"mappings":"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","file":"huoguo.vue","sourcesContent":["@charset \"UTF-8\";\n/**\r\n * Yo框架全局base定义\r\n * 本文件与variables不同地方在于，这里所定义的map可以使用在variables和任何地方\r\n * 本文件中map使用\"_\"开头，extra中不使用\"_\"\r\n * base ⇌ extra\r\n */\n/**\r\n * Yo框架全局Variables\r\n * Yo基础变量map，如果不想定义某属性，将其value设置为null\r\n * Yo仅使用2种长度单位：px用于边框，rem用于除边框之外的所有地方\r\n * 本文件中map使用\"_\"开头，config中不使用\"_\"\r\n * variables ⇌ config\r\n */\n/**\r\n * Yo框架自定义全局函数\r\n * 扩充Sass默认函数库，用以增强语法\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的第一项\r\n * @function first\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的最后一项\r\n * @function last\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的倒数第几项\r\n * @function nth-last\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $index 指定需要返回的值在list中的倒数位置 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 移除SassList中的某个项目并返回新的List\r\n * @function remove\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {String} $value 指定需要被删除的值 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 截取SassList中的某个部分并返回新的List\r\n * @function slice\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $start 指定需要截取的开始下标 <2.1.0>\r\n * @param {Integer} $end 指定需要截取的结束下标（不包括end），当该值缺省时默认为末尾下标 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 从SassList中添加/删除项目，然后返回新的List。\r\n * @function splice\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $index 指定需要移除的开始下标 <2.1.0>\r\n * @param {Integer} $count 指定需要移除的数量，不可以为负值，0表示不移除 <2.1.0>\r\n * @param {String} $values 指定需要添加的新值（可以是多个），如果该值缺省，则表示只移除不添加新值 <2.1.0>\r\n */\n/**\r\n * Yo框架全局基础方法\r\n * 包括响应式方案，CSS3兼容性方案，厂商前缀方案，iconfont方案，flex布局等全局方法\r\n */\n/**\r\n * @module 常用方法\r\n * @description 给需要的属性加厂家前缀\r\n * @method prefix\r\n * @version 1.0.0\r\n * @param {String} $property 指定属性 <1.0.0>\r\n * @param {String} $value 指定属性值 <1.0.0>\r\n * @skip\r\n */\n/**\r\n * @module 常用方法\r\n * @description 定义字体图标\r\n * @method _iconfont\r\n * @version 1.0.0\r\n * @skip\r\n */\n/**\r\n * @module 常用方法\r\n * @description 四则运算(系统要求：iOS6.0+,Android4.4+)\r\n * @method calc\r\n * @version 1.7.0\r\n * @param {String} $property 指定需要进行计算的CSS属性 <1.7.0>\r\n * @param {String} $value 与原生CSS语法一致，区别在于需要使用引号包裹表达式 <1.7.0>\r\n * @example\r\n * .calc {\r\n *     @include calc(width, \"100% - 100px\");\r\n * }\r\n *\r\n * <div class=\"calc\">四则运算</div>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 定义响应式方案\r\n * @method responsive\r\n * @version 1.0.0\r\n * @param {String} $media 指定媒体查询条件，取值为`config`文件map `media-types`中的值 <1.0.0>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 清除浮动方案\r\n * @method clearfix\r\n * @version 1.0.0\r\n * @param {String} $type 指定清除浮动的方式，包括：pseudo-element | bfc，默认值：pseudo-element <1.8.5>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 清除行内级元素间间隙方案\r\n * @method clearspace\r\n * @version 3.0.3\r\n * @param {Length} $font-size 指定子元素字号，默认值：.14rem <3.0.3>\r\n * @example\r\n * .demo {\r\n *     @include clearspace;\r\n * }\r\n *\r\n * <div class=\"demo\">\r\n *      <span class=\"item\">1</span>\r\n *      <span class=\"item\">2</span>\r\n *      <span class=\"item\">3</span>\r\n * </div>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 描述元素内容在横、纵方向上的对齐方式，默认为水平垂直居中对齐\r\n * @method align\r\n * @version 2.0.0\r\n * @param {String} $flexbox 元素布局方式，可选值：flex | inline-flex，默认值：flex <2.0.0>\r\n * @param {Keyword} $justify-content 元素内容的水平对齐方式，取值与`justify-content`属性一致，默认值：center <2.0.0>\r\n * @param {Keyword} $align-items 元素内容的垂直对齐方式，取值与`align-items`属性一致，默认值：center <2.0.0>\r\n * @example\r\n * .demo {\r\n *     @include align;\r\n * }\r\n *\r\n * <div class=\"demo\">\r\n *      <img alt=\"未知尺寸图片居中\" />\r\n * </div>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 定义是否有滚动条\r\n * @method overflow\r\n * @version 1.0.0\r\n * @param {String} $overflow 取值与最新原生语法一致，默认值：auto <1.0.0>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 生成全屏方法\r\n * @method fullscreen\r\n * @version 1.7.0\r\n * @param {Integer} $z-index 指定层叠级别 <1.7.0>\r\n * @param {Keywords} $position 指定定位方式，取除`static | relative`之外的值，默认值：absolute <1.8.5>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义使用何种滤镜\r\n * @method filter\r\n * @version 1.7.0\r\n * @param {String} $filter 取值与`filter`属性一致 <1.7.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义UA默认外观\r\n * @method appearance\r\n * @version 1.0.0\r\n * @param {String} $appearance 取值与`appearance`属性一致，默认值：none <1.0.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义如何选中内容\r\n * @method user-select\r\n * @version 1.0.0\r\n * @param {String} $user-select 取值与`user-select`属性一致，默认值：none <1.0.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义盒模型\r\n * @method box-sizing\r\n * @version 1.0.0\r\n * @param {String} $box-sizing 指定盒模型类型，取值与`box-sizing`属性一致，默认值：border-box <1.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义渐变色值\r\n * @method gradient\r\n * @version 1.0.0\r\n * @param {String} $type 指定渐变的4种类型：linear, repeating-linear, radial, repeating-radial <1.0.0>\r\n * @param {String} $dir 指定渐变方向，可选值：[left | right] || [top | bottom] | angle <2.0.0>\r\n * @param {String} $gradient 指定渐变取值，与w3c最新原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景图像缩放（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-size\r\n * @version 1.4.0\r\n * @param {Keywords | Length} $background-size 指定背景图缩放值，取值与`background-size`属性一致 <1.4.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景裁减（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-clip\r\n * @version 1.6.0\r\n * @param {Keywords} $background-clip 指定背景图缩放值，取值与`background-clip`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景显示区域（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-origin\r\n * @version 1.6.0\r\n * @param {Keywords} $background-origin 指定背景图`background-position`属性计算相对的参考点，取值与`background-origin`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 为元素添加边框（包括1px边框）\r\n * @method border\r\n * @version 2.0.0\r\n * @param {String} $border-width 指定边框厚度（单位为px），默认值：1px，取值与`border-width`属性一致，不同方向代表边框位置 <2.0.0>\r\n * @param {String} $border-color 指定边框颜色 <2.0.0>\r\n * @param {String} $border-style 指定边框样式 <2.0.0>\r\n * @param {String} $radius 指定边框圆角半径，默认值：null <2.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义圆角，用于修复某些安卓机型上“圆角+边框+背景”，背景溢出的情况\r\n * @method border-radius\r\n * @version 1.6.0\r\n * @param {Length} $border-radius 指定元素的圆角半径，取值与`border-radius`属性一致 <1.6.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 定义简单变换\r\n * @method transform\r\n * @version 1.0.0\r\n * @param {String} $transform 取值范围与`transform`属性一致 <1.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 定义变换原点\r\n * @method transform-origin\r\n * @version 1.0.0\r\n * @param {Length | Percentage | Keywords} $transform-origin 取值范围与`transform-origin`属性一致 <1.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定某元素的子元素是（看起来）位于三维空间内，还是在该元素所在的平面内被扁平化\r\n * @method transform-style\r\n * @version 2.0.0\r\n * @param {String} $transform-style 取值范围与`transform-style`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定观察者与「z=0」平面的距离，使具有三维位置变换的元素产生透视效果。「z>0」的三维元素比正常大，而「z<0」时则比正常小，大小程度由该属性的值决定。\r\n * @method perspective\r\n * @version 2.0.0\r\n * @param {none | Length} $perspective 取值范围与`perspective`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定透视点的位置\r\n * @method perspective-origin\r\n * @version 2.0.0\r\n * @param {Length | Percentage | Keywords} $perspective-origin 取值范围与`perspective-origin`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定元素背面面向用户时是否可见\r\n * @method backface-visibility\r\n * @version 2.0.0\r\n * @param {Keywords} $backface-visibility 取值范围与`backface-visibility`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 定义动画\r\n * @method animation\r\n * @version 1.0.0\r\n * @param {String} $animation 取值与原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定需要引用的动画名称\r\n * @method animation-name\r\n * @version 3.0.0\r\n * @param {String} $animation-name 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画运行一次所持续的时长\r\n * @method animation-duration\r\n * @version 3.0.0\r\n * @param {String} $animation-duration 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画运行方式\r\n * @method animation-timing-function\r\n * @version 3.0.0\r\n * @param {String} $animation-timing-function 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画延迟多久之后再开始\r\n * @method animation-delay\r\n * @version 3.0.0\r\n * @param {String} $animation-delay 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画循环几次\r\n * @method animation-iteration-count\r\n * @version 3.0.0\r\n * @param {String} $animation-iteration-count 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画的运动方向\r\n * @method animation-direction\r\n * @version 3.0.0\r\n * @param {String} $animation-direction 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画的运动状态\r\n * @method animation-play-state\r\n * @version 3.0.0\r\n * @param {String} $animation-play-state 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画时间之外的状态\r\n * @method animation-fill-mode\r\n * @version 3.0.0\r\n * @param {String} $animation-fill-mode 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Transition\r\n * @description 定义补间\r\n * @method transition\r\n * @version 1.0.0\r\n * @param {String} $transition 取值与原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义显示类型为伸缩盒\r\n * @method flexbox\r\n * @version 1.0.0\r\n * @param {String} $flexbox 默认值：flex，可选值：flex | inline-flex <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素如何分配空间\r\n * @method flex\r\n * @version 1.0.0\r\n * @param {Number} $flex 取值与`flex`属性一致，默认值：1 <1.0.0>\r\n * @param {String} $direction 默认值: row，可选值：row | column <1.5.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素的排版顺序\r\n * @method order\r\n * @version 1.0.0\r\n * @param {Integer} $order 取值与`order`属性一致，默认值：1 <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性盒子元素流动方向及遇见边界时是否换行(要求系统：iOS7.0+, Android4.4+)\r\n * @method flex-flow\r\n * @version 2.0.0\r\n * @param {String} $flex-flow 取值与`flex-flow`属性一致，默认值：row nowrap <2.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素的流动方向\r\n * @method flex-direction\r\n * @version 1.0.0\r\n * @param {String} $flex-direction 取值与`flex-direction`属性一致，默认值：row <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性盒子元素溢出后排版(要求系统：iOS7.0+, Android4.4+)\r\n * @method flex-wrap\r\n * @version 1.0.0\r\n * @param {String} $flex-wrap 取值与`flex-wrap`属性一致，默认值：nowrap <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性容器主轴对齐方式(其中`space-around`值需要iOS7.0+,Android4.4+)\r\n * @method justify-content\r\n * @version 1.0.0\r\n * @param {String} $justify-content 取值与`justify-content`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义多行弹性容器侧轴对齐方式(要求系统：iOS7.0+,Android4.4+)\r\n * @method align-content\r\n * @version 1.8.5\r\n * @param {String} $align-content 取值与`align-content`属性一致，默认值：center <1.8.5>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义单行弹性容器侧轴对齐方式\r\n * @method align-items\r\n * @version 1.0.0\r\n * @param {String} $align-items 取值与`align-items`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性容器中子元素自身的在侧轴对齐方式(要求系统：iOS7.0+,Android4.4+)\r\n * @method align-self\r\n * @version 1.0.0\r\n * @param {String} $align-self 取值与`align-self`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成矩形方法\r\n * @method rect\r\n * @version 1.0.0\r\n * @param {Length} $width 定义矩形的长度 <1.0.0>\r\n * @param {Length} $height 定义矩形的高度 <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成正方形方法\r\n * @method square\r\n * @version 1.0.0\r\n * @param {Length} $size 定义正方形的边长 <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成圆形方法\r\n * @method circle\r\n * @version 1.0.0\r\n * @param {Length} $size 定义圆的半径长度 <1.0.0>\r\n * @param {Length} $radius 定义圆的圆角半径长度 <1.0.0>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 在自适应宽度情况下，确保内容元素的宽高比固定，比如：实现随屏幕大小而变化的正方形。\r\n * @method fixed-scale\r\n * @version 3.0.10\r\n * @param {Length} $width 默认值：100%。用以指定内容元素的初始宽度，由于尺寸需动态变化，不要使用固定单位 <3.0.10>\r\n * @param {Length} $scale 默认值：1/1，即正方形。用以指定内容元素的宽度高比 <3.0.10>\r\n */\n/**\r\n * @module 文本\r\n * @description 链接处理方法\r\n * @method link\r\n * @version 1.0.0\r\n * @param {Color} $color 定义链接颜色 <1.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 文本碰到边界是否换行\r\n * @method wrap\r\n * @version 1.0.0\r\n * @param {Boolean} $is-wrap 定义文本是否换行，默认值：true <2.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 单行文本溢出时显示省略号\r\n * @method ellipsis\r\n * @version 1.0.0\r\n * @param {Length} $width 定义容器的宽度，默认值：null <2.0.0>\r\n * @param {Integer} $line-clamp 定义需要显示的行数，默认值：1（即使用单行溢出的处理方案），需要注意的是本参数只支持webkit内核 <2.1.2>\r\n */\n/**\r\n * @module 文本\r\n * @description 文字隐藏方案\r\n * @method texthide\r\n * @version 1.0.0\r\n * @param {Length} $width 定义容器的宽度，默认值：null <2.0.0>\r\n */\n/**\r\n * Yo框架全局Reset\r\n * Yo重置Mobile及高级浏览器上常见的差异\r\n */\n*,\n::before,\n::after {\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n  -webkit-tap-highlight-color: transparent; }\n\nhtml,\nbody {\n  overflow: hidden;\n  height: 100%; }\n\n::-webkit-scrollbar {\n  display: none; }\n\nhtml {\n  background-color: #eee;\n  color: #212121;\n  font-size: 100px;\n  -webkit-user-select: none;\n  user-select: none; }\n\nbody {\n  margin: 0;\n  font-size: 0.14em;\n  line-height: 1.5;\n  font-family: Helvetica Neue, Helvetica, STHeiTi, sans-serif; }\n\nul,\nol,\ndl,\ndd,\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\nfigure,\nform,\nfieldset,\nlegend,\ninput,\ntextarea,\nbutton,\np,\nblockquote,\nth,\ntd,\npre,\nxmp {\n  margin: 0;\n  padding: 0; }\n\ninput,\ntextarea,\nbutton,\nselect,\npre,\nxmp,\ntt,\ncode,\nkbd,\nsamp {\n  line-height: inherit;\n  font-family: inherit; }\n\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\nsmall,\nbig,\ninput,\ntextarea,\nbutton,\nselect {\n  font-size: inherit; }\n\naddress,\ncite,\ndfn,\nem,\ni,\noptgroup,\nvar {\n  font-style: normal; }\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0;\n  table-layout: fixed;\n  text-align: left; }\n\nul,\nol,\nmenu {\n  list-style: none; }\n\nfieldset,\nimg {\n  border: 0;\n  vertical-align: middle; }\n\narticle,\naside,\ndetails,\nfigcaption,\nfigure,\nfooter,\nheader,\nmain,\nmenu,\nnav,\nsection,\nsummary {\n  display: block; }\n\naudio,\ncanvas,\nvideo {\n  display: inline-block; }\n\nblockquote:before,\nblockquote:after,\nq:before,\nq:after {\n  content: \"\\0020\"; }\n\ntextarea,\npre,\nxmp {\n  overflow: auto;\n  -webkit-overflow-scrolling: touch; }\n\ntextarea {\n  resize: vertical; }\n\ninput,\ntextarea,\nbutton,\nselect,\nsummary,\na {\n  outline: 0 none; }\n\ninput,\ntextarea,\nbutton,\nselect {\n  color: inherit; }\n  input:disabled,\n  textarea:disabled,\n  button:disabled,\n  select:disabled {\n    opacity: 1; }\n\nbutton::-moz-focus-inner,\ninput::-moz-focus-inner {\n  padding: 0;\n  border: 0; }\n\ninput[type=\"button\"],\ninput[type=\"submit\"],\ninput[type=\"reset\"],\ninput[type=\"file\"]::-webkit-file-upload-button,\ninput[type=\"search\"]::-webkit-search-cancel-button {\n  -webkit-appearance: none;\n  appearance: none; }\n\n::-webkit-details-marker {\n  display: none; }\n\nmark {\n  background-color: transparent; }\n\na,\nins,\ns,\nu,\ndel {\n  text-decoration: none; }\n\na,\nimg {\n  -webkit-touch-callout: none; }\n\na {\n  color: #00afc7; }\n\n.g-clear::after,\n.g-mod::after {\n  display: block;\n  overflow: hidden;\n  clear: both;\n  height: 0;\n  content: \"\\0020\"; }\n\n@font-face {\n  font-family: yofont;\n  src: url(//ss.qunarzz.com/yo/font/1.0.3/yofont.woff) format(\"woff\"), url(//ss.qunarzz.com/yo/font/1.0.3/yofont.ttf) format(\"truetype\"); }\n\n.yo-ico {\n  font-family: yofont !important;\n  font-style: normal;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n  vertical-align: middle; }\n\n@font-face {\n  font-family: 'iconfont';\n  src: url(\"http://localhost:7000/media/iconfont/iconfont.woff\") format(\"woff\"), url(\"http://localhost:7000/media/iconfont/iconfont.ttf\") format(\"truetype\"); }\n\n.iconfont {\n  font-family: \"iconfont\" !important;\n  font-size: 16px;\n  font-style: normal;\n  -webkit-font-smoothing: antialiased;\n  -webkit-text-stroke-width: 0.2px;\n  -moz-osx-font-smoothing: grayscale; }\n\n.img_first {\n  height: 175px;\n  width: 100%; }\n  .img_first img {\n    width: 100%;\n    height: 100%; }\n\nsection > div {\n  height: 100%; }\n\n.load_img {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: flex;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n  justify-content: center;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n  align-items: center;\n  height: 100%; }\n  .load_img img {\n    width: 30%; }\n\n.img_second {\n  height: 335px;\n  width: 100%; }\n  .img_second img {\n    height: 100%;\n    width: 100%; }\n\n.huoguo_list {\n  height: 100%;\n  background: #9c0e1a;\n  overflow-y: scroll; }\n  .huoguo_list ul {\n    height: 100%; }\n    .huoguo_list ul .img_container {\n      height: 92px; }\n      .huoguo_list ul .img_container img {\n        width: 100%; }\n    .huoguo_list ul .sell_out {\n      padding-left: 15px;\n      height: 70px;\n      position: relative;\n      background: white; }\n      .huoguo_list ul .sell_out span:first-child {\n        display: block;\n        position: absolute;\n        color: #4b4b4b;\n        top: 27px;\n        font-size: 18px;\n        height: 20px; }\n      .huoguo_list ul .sell_out span:last-child {\n        position: absolute;\n        bottom: 0;\n        font-size: 12px;\n        color: #968D91;\n        height: 18px;\n        line-height: 18px; }\n    .huoguo_list ul li {\n      height: 164px;\n      background: white;\n      margin: 0 1%;\n      position: relative; }\n      .huoguo_list ul li::after {\n        pointer-events: none;\n        position: absolute;\n        z-index: 999;\n        top: 0;\n        left: 0;\n        content: \"\\0020\";\n        border-color: #f5f5f5;\n        border-style: solid;\n        border-width: 0 0 1px 0;\n        -webkit-transform-origin: 0 0;\n        transform-origin: 0 0; }\n        @media (max--moz-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.49), (max-device-pixel-ratio: 1.49), (max-resolution: 143dpi), (max-resolution: 1.49dppx) {\n          .huoguo_list ul li::after {\n            width: 100%;\n            height: 100%; } }\n        @media (min--moz-device-pixel-ratio: 1.5) and (max--moz-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.49), (min-device-pixel-ratio: 1.5) and (max-device-pixel-ratio: 2.49), (min-resolution: 144dpi) and (max-resolution: 239dpi), (min-resolution: 1.5dppx) and (max-resolution: 2.49dppx) {\n          .huoguo_list ul li::after {\n            width: 200%;\n            height: 200%;\n            -webkit-transform: scale(0.5);\n            transform: scale(0.5); } }\n        @media (min--moz-device-pixel-ratio: 2.5), (-webkit-min-device-pixel-ratio: 2.5), (min-device-pixel-ratio: 2.5), (min-resolution: 240dpi), (min-resolution: 2.5dppx) {\n          .huoguo_list ul li::after {\n            width: 300%;\n            height: 300%;\n            -webkit-transform: scale(0.33333);\n            transform: scale(0.33333); } }\n      .huoguo_list ul li div.li_container {\n        width: 100%;\n        height: 100%;\n        padding-top: 20px;\n        padding-bottom: 23px;\n        display: -webkit-box;\n        display: -webkit-flex;\n        display: flex;\n        position: relative; }\n        .huoguo_list ul li div.li_container .img_left {\n          width: 150px;\n          padding: 0 15px;\n          position: relative; }\n          .huoguo_list ul li div.li_container .img_left img {\n            border: 0; }\n            .huoguo_list ul li div.li_container .img_left img:first-child {\n              width: 100%; }\n            .huoguo_list ul li div.li_container .img_left img:last-child {\n              position: absolute;\n              left: 16px;\n              height: 32px;\n              top: 0; }\n        .huoguo_list ul li div.li_container .message_right {\n          -webkit-box-flex: 1;\n          -webkit-flex: 1;\n          flex: 1;\n          width: .1px;\n          width: 100%;\n          position: relative; }\n          .huoguo_list ul li div.li_container .message_right .message_title {\n            font-size: 16px;\n            padding-top: 11px;\n            white-space: nowrap;\n            overflow: hidden;\n            text-overflow: ellipsis;\n            letter-spacing: -1px;\n            color: #474245;\n            width: 140px; }\n          .huoguo_list ul li div.li_container .message_right .message_info {\n            font-size: 14px;\n            color: #969696;\n            white-space: nowrap;\n            text-overflow: ellipsis;\n            overflow: hidden;\n            width: 140px; }\n          .huoguo_list ul li div.li_container .message_right .message_des {\n            height: 25px;\n            line-height: 17px; }\n            .huoguo_list ul li div.li_container .message_right .message_des span {\n              display: inline-block;\n              border-radius: 2px;\n              font-size: 9px;\n              height: 13px;\n              line-height: 11px;\n              background: white;\n              color: #c6c6c6;\n              border: 1px solid #c6c6c6;\n              margin-right: 5px;\n              padding: 1px; }\n          .huoguo_list ul li div.li_container .message_right .message_highprice {\n            font-size: 12px;\n            color: #ffc38d;\n            line-height: 8px; }\n          .huoguo_list ul li div.li_container .message_right .message_lowprice {\n            color: #ff4891;\n            font-size: 12px; }\n            .huoguo_list ul li div.li_container .message_right .message_lowprice span span:first-child {\n              letter-spacing: -3px; }\n            .huoguo_list ul li div.li_container .message_right .message_lowprice span span:last-child {\n              font-size: 16px;\n              letter-spacing: -1px;\n              display: inline-block;\n              height: 22px;\n              vertical-align: bottom; }\n          .huoguo_list ul li div.li_container .message_right .message_cart {\n            position: absolute;\n            bottom: 5px;\n            right: 4%;\n            height: 30px;\n            text-align: right; }\n            .huoguo_list ul li div.li_container .message_right .message_cart img {\n              width: 49px;\n              position: absolute;\n              bottom: -8px;\n              right: -6px !important; }\n"],"sourceRoot":""}]);
 
 // exports
 
 
 /***/ }),
-/* 35 */
+/* 33 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27198,13 +27125,13 @@ Object.defineProperty(exports, "__esModule", {
 	value: true
 });
 
-var _vue = __webpack_require__(3);
+var _vue = __webpack_require__(4);
 
 var _vue2 = _interopRequireDefault(_vue);
 
-var _mintUi = __webpack_require__(7);
+var _mintUi = __webpack_require__(8);
 
-__webpack_require__(8);
+__webpack_require__(9);
 
 var _axios = __webpack_require__(5);
 
@@ -27280,12 +27207,17 @@ function _defineProperty(obj, key, value) { if (key in obj) { Object.definePrope
 //
 //
 //
+//
+//
+//
 
 _vue2.default.component(_mintUi.Loadmore.name, _mintUi.Loadmore);
 _vue2.default.use(_mintUi.Lazyload);
 exports.default = {
 	data: function data() {
-		return _defineProperty({
+		var _ref;
+
+		return _ref = {
 			img_first: {},
 			img_second: {},
 			godds_lists_all: [],
@@ -27294,7 +27226,7 @@ exports.default = {
 			bottomStatus: '',
 			allLoaded: false,
 			goods_lists: []
-		}, "godds_lists_all", []);
+		}, _defineProperty(_ref, "godds_lists_all", []), _defineProperty(_ref, "isloading", true), _ref;
 	},
 	mounted: function mounted() {
 		var that = this;
@@ -27317,6 +27249,7 @@ exports.default = {
 			that.img_second = response.data.products[0].banner[0];
 			that.goods_lists_all = response.data.products;
 			that.goods_lists = that.goods_lists_all.slice(1, 7);
+			that.isloading = false;
 		});
 	},
 
@@ -27324,8 +27257,8 @@ exports.default = {
 		loadTop: function loadTop() {
 			var that = this;
 			(0, _axios2.default)({
-				url: '/api/v2/product/home/index?device_id=3d48c219f6d8d2386530b0b414bfb6cb&env=web&fromSource=zhuye&platform=web&uuid=3d48c219f6d8d2386530b0b414bfb6cb&version=3.8.0.1',
-				method: 'post',
+				url: '/api/v3/product/category/hbcrd-huoguo?device_id=3d48c219f6d8d2386530b0b414bfb6cb&env=web&fromSource=zhuye&platform=web&uuid=3d48c219f6d8d2386530b0b414bfb6cb&version=3.8.0.1',
+				method: 'get',
 				headers: {
 					"Content-Type": "application/json;charset=UTF-8",
 					"x-region": '{"station_code":"","address_code":"110105"}',
@@ -27337,6 +27270,7 @@ exports.default = {
 					lat: ""
 				}
 			}).then(function (response) {
+				console.log(response);
 				that.img_first = response.data.banner[0];
 				that.img_second = response.data.products[0].banner[0];
 				that.goods_lists = response.data.products;
@@ -27360,7 +27294,7 @@ exports.default = {
 };
 
 /***/ }),
-/* 36 */
+/* 34 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -27368,233 +27302,261 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    [
-      _c(
-        "mt-loadmore",
-        {
-          ref: "loadmore",
-          attrs: {
-            bottomDistance: 0,
-            "top-method": _vm.loadTop,
-            "bottom-method": _vm.loadBottom,
-            "bottom-all-loaded": _vm.allLoaded,
-            bottomAllLoaded: false
-          },
-          on: {
-            "top-status-change": _vm.handleTopChange,
-            "bottom-status-change": _vm.handleBottomChange
-          }
-        },
-        [
-          _c(
-            "div",
-            {
-              staticClass: "mint-loadmore-top",
-              attrs: { slot: "top" },
-              slot: "top"
-            },
-            [
-              _c(
-                "span",
-                {
-                  directives: [
-                    {
-                      name: "show",
-                      rawName: "v-show",
-                      value: _vm.topStatus !== "loading",
-                      expression: "topStatus !== 'loading'"
-                    }
-                  ],
-                  class: { rotate: _vm.topStatus === "drop" }
-                },
-                [
-                  _c("img", {
-                    attrs: {
-                      src: __webpack_require__(4),
-                      width: "120",
-                      height: "40"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("p", [_vm._v("优质生鲜 两小时到")])
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "span",
-                {
-                  directives: [
-                    {
-                      name: "show",
-                      rawName: "v-show",
-                      value: _vm.topStatus === "loading",
-                      expression: "topStatus === 'loading'"
-                    }
-                  ]
-                },
-                [
-                  _c("img", {
-                    attrs: {
-                      src: __webpack_require__(4),
-                      width: "120",
-                      height: "40"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("p", [_vm._v("优质生鲜 两小时到")])
-                ]
-              )
-            ]
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "img_first" }, [
-            _c("img", { attrs: { src: _vm.img_first.path } })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "img_second" }, [
-            _c("img", { attrs: { src: _vm.img_second.path } })
-          ]),
-          _vm._v(" "),
-          _c("div", { staticClass: "huoguo_list" }, [
+  return _c("div", [
+    _vm.isloading
+      ? _c("div", { staticClass: "load_img" }, [
+          _c("img", {
+            attrs: {
+              src: __webpack_require__(1)
+            }
+          })
+        ])
+      : _vm._e(),
+    _vm._v(" "),
+    !_vm.isloading
+      ? _c(
+          "div",
+          [
             _c(
-              "ul",
-              _vm._l(_vm.goods_lists, function(goods_list, i) {
-                return goods_list.buy_permission === 0
-                  ? _c("li", [
-                      _c("div", { staticClass: "li_container" }, [
-                        _c("div", { staticClass: "img_left" }, [
-                          _c("img", {
-                            directives: [
-                              {
-                                name: "lazy",
-                                rawName: "v-lazy",
-                                value: goods_list.image,
-                                expression: "goods_list.image"
-                              }
-                            ],
-                            attrs: { src: goods_list.image }
-                          }),
-                          _vm._v(" "),
-                          _c("img", { attrs: { src: goods_list.promote_tag } })
-                        ]),
+              "mt-loadmore",
+              {
+                ref: "loadmore",
+                attrs: {
+                  bottomDistance: 0,
+                  "top-method": _vm.loadTop,
+                  "bottom-method": _vm.loadBottom,
+                  "bottom-all-loaded": _vm.allLoaded,
+                  bottomAllLoaded: false
+                },
+                on: {
+                  "top-status-change": _vm.handleTopChange,
+                  "bottom-status-change": _vm.handleBottomChange
+                }
+              },
+              [
+                _c(
+                  "div",
+                  {
+                    staticClass: "mint-loadmore-top",
+                    attrs: { slot: "top" },
+                    slot: "top"
+                  },
+                  [
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.topStatus !== "loading",
+                            expression: "topStatus !== 'loading'"
+                          }
+                        ],
+                        class: { rotate: _vm.topStatus === "drop" }
+                      },
+                      [
+                        _c("img", {
+                          attrs: {
+                            src: __webpack_require__(1),
+                            width: "120",
+                            height: "40"
+                          }
+                        }),
                         _vm._v(" "),
-                        _c("div", { staticClass: "message_right" }, [
-                          _c("div", { staticClass: "message_title" }, [
-                            _vm._v(
-                              "\n\t\t\t\t\t\t\t\t" +
-                                _vm._s(goods_list.name) +
-                                "\n\t\t\t\t\t\t\t"
-                            )
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "message_info" }, [
-                            _vm._v(
-                              "\n\t\t\t\t\t\t\t\t" +
-                                _vm._s(goods_list.subtitle) +
-                                "\n\t\t\t\t\t\t\t"
-                            )
-                          ]),
-                          _vm._v(" "),
-                          _c(
-                            "div",
-                            { staticClass: "message_des" },
-                            _vm._l(goods_list.product_tags, function(value) {
-                              return _c("span", [_vm._v(_vm._s(value.name))])
-                            })
-                          ),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "message_highprice" }, [
-                            _c("span", [
-                              _vm._v(
-                                "可用券价 ¥" +
-                                  _vm._s(
-                                    goods_list.vip_price_pro.price_up.price /
-                                      100
+                        _c("p", [_vm._v("优质生鲜 两小时到")])
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.topStatus === "loading",
+                            expression: "topStatus === 'loading'"
+                          }
+                        ]
+                      },
+                      [
+                        _c("img", {
+                          attrs: {
+                            src: __webpack_require__(1),
+                            width: "120",
+                            height: "40"
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("p", [_vm._v("优质生鲜 两小时到")])
+                      ]
+                    )
+                  ]
+                ),
+                _vm._v(" "),
+                _c("div", { staticClass: "img_first" }, [
+                  _c("img", { attrs: { src: _vm.img_first.path } })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "img_second" }, [
+                  _c("img", { attrs: { src: _vm.img_second.path } })
+                ]),
+                _vm._v(" "),
+                _c("div", { staticClass: "huoguo_list" }, [
+                  _c(
+                    "ul",
+                    _vm._l(_vm.goods_lists, function(goods_list, i) {
+                      return goods_list.buy_permission === 0
+                        ? _c("li", [
+                            _c("div", { staticClass: "li_container" }, [
+                              _c("div", { staticClass: "img_left" }, [
+                                _c("img", {
+                                  directives: [
+                                    {
+                                      name: "lazy",
+                                      rawName: "v-lazy",
+                                      value: goods_list.image,
+                                      expression: "goods_list.image"
+                                    }
+                                  ],
+                                  attrs: { src: goods_list.image }
+                                }),
+                                _vm._v(" "),
+                                _c("img", {
+                                  attrs: { src: goods_list.promote_tag }
+                                })
+                              ]),
+                              _vm._v(" "),
+                              _c("div", { staticClass: "message_right" }, [
+                                _c("div", { staticClass: "message_title" }, [
+                                  _vm._v(
+                                    "\n\t\t\t\t\t\t\t\t\t" +
+                                      _vm._s(goods_list.name) +
+                                      "\n\t\t\t\t\t\t\t\t"
                                   )
-                              )
-                            ])
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "message_lowprice" }, [
-                            _c("span", [
-                              _vm._v("商城价 "),
-                              _c("span", [_vm._v("¥ ")]),
-                              _c("span", [
-                                _vm._v(
-                                  " " +
-                                    _vm._s(
-                                      goods_list.vip_price_pro.price_down
-                                        .price / 100
-                                    )
-                                )
+                                ]),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "message_info" }, [
+                                  _vm._v(
+                                    "\n\t\t\t\t\t\t\t\t\t" +
+                                      _vm._s(goods_list.subtitle) +
+                                      "\n\t\t\t\t\t\t\t\t"
+                                  )
+                                ]),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  { staticClass: "message_des" },
+                                  _vm._l(goods_list.product_tags, function(
+                                    value
+                                  ) {
+                                    return _c("span", [
+                                      _vm._v(_vm._s(value.name))
+                                    ])
+                                  })
+                                ),
+                                _vm._v(" "),
+                                _c(
+                                  "div",
+                                  { staticClass: "message_highprice" },
+                                  [
+                                    _c("span", [
+                                      _vm._v(
+                                        "可用券价 ¥" +
+                                          _vm._s(
+                                            goods_list.vip_price_pro.price_up
+                                              .price / 100
+                                          )
+                                      )
+                                    ])
+                                  ]
+                                ),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "message_lowprice" }, [
+                                  _c("span", [
+                                    _vm._v("商城价 "),
+                                    _c("span", [_vm._v("¥ ")]),
+                                    _c("span", [
+                                      _vm._v(
+                                        " " +
+                                          _vm._s(
+                                            goods_list.vip_price_pro.price_down
+                                              .price / 100
+                                          )
+                                      )
+                                    ])
+                                  ])
+                                ]),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "message_cart" }, [
+                                  _c("img", {
+                                    attrs: { src: goods_list.cart_image }
+                                  })
+                                ])
                               ])
                             ])
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "message_cart" }, [
-                            _c("img", { attrs: { src: goods_list.cart_image } })
                           ])
-                        ])
-                      ])
-                    ])
-                  : goods_list.code == "sell-out"
-                    ? _c("div", { staticClass: "sell_out" }, [
-                        _c("span", [_vm._v(_vm._s(goods_list.name))]),
-                        _c("span", [_vm._v(_vm._s(goods_list.second_title))])
-                      ])
-                    : _c(
-                        "div",
-                        { staticClass: "img_container" },
-                        _vm._l(goods_list.banner, function(value, i) {
-                          return _c("img", {
-                            key: i,
-                            attrs: { src: value.path }
-                          })
-                        })
-                      )
-              })
+                        : goods_list.code == "sell-out"
+                          ? _c("div", { staticClass: "sell_out" }, [
+                              _c("span", [_vm._v(_vm._s(goods_list.name))]),
+                              _c("span", [
+                                _vm._v(_vm._s(goods_list.second_title))
+                              ])
+                            ])
+                          : _c(
+                              "div",
+                              { staticClass: "img_container" },
+                              _vm._l(goods_list.banner, function(value, i) {
+                                return _c("img", {
+                                  key: i,
+                                  attrs: { src: value.path }
+                                })
+                              })
+                            )
+                    })
+                  )
+                ]),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  {
+                    staticClass: "mint-loadmore-bottom",
+                    attrs: { slot: "bottom" },
+                    slot: "bottom"
+                  },
+                  [
+                    _c("span", {
+                      directives: [
+                        {
+                          name: "show",
+                          rawName: "v-show",
+                          value: _vm.bottomStatus !== "loading",
+                          expression: "bottomStatus !== 'loading'"
+                        }
+                      ],
+                      class: { rotate: _vm.bottomStatus === "drop" }
+                    }),
+                    _vm._v(" "),
+                    _c("span", {
+                      directives: [
+                        {
+                          name: "show",
+                          rawName: "v-show",
+                          value: _vm.bottomStatus === "loading",
+                          expression: "bottomStatus === 'loading'"
+                        }
+                      ]
+                    })
+                  ]
+                )
+              ]
             )
-          ]),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass: "mint-loadmore-bottom",
-              attrs: { slot: "bottom" },
-              slot: "bottom"
-            },
-            [
-              _c("span", {
-                directives: [
-                  {
-                    name: "show",
-                    rawName: "v-show",
-                    value: _vm.bottomStatus !== "loading",
-                    expression: "bottomStatus !== 'loading'"
-                  }
-                ],
-                class: { rotate: _vm.bottomStatus === "drop" }
-              }),
-              _vm._v(" "),
-              _c("span", {
-                directives: [
-                  {
-                    name: "show",
-                    rawName: "v-show",
-                    value: _vm.bottomStatus === "loading",
-                    expression: "bottomStatus === 'loading'"
-                  }
-                ]
-              })
-            ]
-          )
-        ]
-      )
-    ],
-    1
-  )
+          ],
+          1
+        )
+      : _vm._e()
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -27608,20 +27570,20 @@ if (false) {
 }
 
 /***/ }),
-/* 37 */
+/* 35 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_3_0_vue_loader_lib_selector_type_script_index_0_bustCache_fruits_vue__ = __webpack_require__(40);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_3_0_vue_loader_lib_selector_type_script_index_0_bustCache_fruits_vue__ = __webpack_require__(38);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_3_0_vue_loader_lib_selector_type_script_index_0_bustCache_fruits_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_3_0_vue_loader_lib_selector_type_script_index_0_bustCache_fruits_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_13_3_0_vue_loader_lib_template_compiler_index_id_data_v_9268e1a6_hasScoped_false_buble_transforms_node_modules_vue_loader_13_3_0_vue_loader_lib_selector_type_template_index_0_bustCache_fruits_vue__ = __webpack_require__(42);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_13_3_0_vue_loader_lib_template_compiler_index_id_data_v_9268e1a6_hasScoped_false_buble_transforms_node_modules_vue_loader_13_3_0_vue_loader_lib_selector_type_template_index_0_bustCache_fruits_vue__ = __webpack_require__(40);
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(38)
+  __webpack_require__(36)
 }
-var normalizeComponent = __webpack_require__(2)
+var normalizeComponent = __webpack_require__(3)
 /* script */
 
 /* template */
@@ -27665,17 +27627,17 @@ if (false) {(function () {
 
 
 /***/ }),
-/* 38 */
+/* 36 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(39);
+var content = __webpack_require__(37);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(1)("0d9c833f", content, false);
+var update = __webpack_require__(2)("0d9c833f", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
@@ -27691,7 +27653,7 @@ if(false) {
 }
 
 /***/ }),
-/* 39 */
+/* 37 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(true);
@@ -27699,13 +27661,13 @@ exports = module.exports = __webpack_require__(0)(true);
 
 
 // module
-exports.push([module.i, "\n@charset \"UTF-8\";\n/**\r\n * Yo框架全局base定义\r\n * 本文件与variables不同地方在于，这里所定义的map可以使用在variables和任何地方\r\n * 本文件中map使用\"_\"开头，extra中不使用\"_\"\r\n * base ⇌ extra\r\n */\n/**\r\n * Yo框架全局Variables\r\n * Yo基础变量map，如果不想定义某属性，将其value设置为null\r\n * Yo仅使用2种长度单位：px用于边框，rem用于除边框之外的所有地方\r\n * 本文件中map使用\"_\"开头，config中不使用\"_\"\r\n * variables ⇌ config\r\n */\n/**\r\n * Yo框架自定义全局函数\r\n * 扩充Sass默认函数库，用以增强语法\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的第一项\r\n * @function first\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的最后一项\r\n * @function last\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的倒数第几项\r\n * @function nth-last\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $index 指定需要返回的值在list中的倒数位置 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 移除SassList中的某个项目并返回新的List\r\n * @function remove\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {String} $value 指定需要被删除的值 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 截取SassList中的某个部分并返回新的List\r\n * @function slice\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $start 指定需要截取的开始下标 <2.1.0>\r\n * @param {Integer} $end 指定需要截取的结束下标（不包括end），当该值缺省时默认为末尾下标 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 从SassList中添加/删除项目，然后返回新的List。\r\n * @function splice\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $index 指定需要移除的开始下标 <2.1.0>\r\n * @param {Integer} $count 指定需要移除的数量，不可以为负值，0表示不移除 <2.1.0>\r\n * @param {String} $values 指定需要添加的新值（可以是多个），如果该值缺省，则表示只移除不添加新值 <2.1.0>\r\n */\n/**\r\n * Yo框架全局基础方法\r\n * 包括响应式方案，CSS3兼容性方案，厂商前缀方案，iconfont方案，flex布局等全局方法\r\n */\n/**\r\n * @module 常用方法\r\n * @description 给需要的属性加厂家前缀\r\n * @method prefix\r\n * @version 1.0.0\r\n * @param {String} $property 指定属性 <1.0.0>\r\n * @param {String} $value 指定属性值 <1.0.0>\r\n * @skip\r\n */\n/**\r\n * @module 常用方法\r\n * @description 定义字体图标\r\n * @method _iconfont\r\n * @version 1.0.0\r\n * @skip\r\n */\n/**\r\n * @module 常用方法\r\n * @description 四则运算(系统要求：iOS6.0+,Android4.4+)\r\n * @method calc\r\n * @version 1.7.0\r\n * @param {String} $property 指定需要进行计算的CSS属性 <1.7.0>\r\n * @param {String} $value 与原生CSS语法一致，区别在于需要使用引号包裹表达式 <1.7.0>\r\n * @example\r\n * .calc {\r\n *     @include calc(width, \"100% - 100px\");\r\n * }\r\n *\r\n * <div class=\"calc\">四则运算</div>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 定义响应式方案\r\n * @method responsive\r\n * @version 1.0.0\r\n * @param {String} $media 指定媒体查询条件，取值为`config`文件map `media-types`中的值 <1.0.0>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 清除浮动方案\r\n * @method clearfix\r\n * @version 1.0.0\r\n * @param {String} $type 指定清除浮动的方式，包括：pseudo-element | bfc，默认值：pseudo-element <1.8.5>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 清除行内级元素间间隙方案\r\n * @method clearspace\r\n * @version 3.0.3\r\n * @param {Length} $font-size 指定子元素字号，默认值：.14rem <3.0.3>\r\n * @example\r\n * .demo {\r\n *     @include clearspace;\r\n * }\r\n *\r\n * <div class=\"demo\">\r\n *      <span class=\"item\">1</span>\r\n *      <span class=\"item\">2</span>\r\n *      <span class=\"item\">3</span>\r\n * </div>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 描述元素内容在横、纵方向上的对齐方式，默认为水平垂直居中对齐\r\n * @method align\r\n * @version 2.0.0\r\n * @param {String} $flexbox 元素布局方式，可选值：flex | inline-flex，默认值：flex <2.0.0>\r\n * @param {Keyword} $justify-content 元素内容的水平对齐方式，取值与`justify-content`属性一致，默认值：center <2.0.0>\r\n * @param {Keyword} $align-items 元素内容的垂直对齐方式，取值与`align-items`属性一致，默认值：center <2.0.0>\r\n * @example\r\n * .demo {\r\n *     @include align;\r\n * }\r\n *\r\n * <div class=\"demo\">\r\n *      <img alt=\"未知尺寸图片居中\" />\r\n * </div>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 定义是否有滚动条\r\n * @method overflow\r\n * @version 1.0.0\r\n * @param {String} $overflow 取值与最新原生语法一致，默认值：auto <1.0.0>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 生成全屏方法\r\n * @method fullscreen\r\n * @version 1.7.0\r\n * @param {Integer} $z-index 指定层叠级别 <1.7.0>\r\n * @param {Keywords} $position 指定定位方式，取除`static | relative`之外的值，默认值：absolute <1.8.5>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义使用何种滤镜\r\n * @method filter\r\n * @version 1.7.0\r\n * @param {String} $filter 取值与`filter`属性一致 <1.7.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义UA默认外观\r\n * @method appearance\r\n * @version 1.0.0\r\n * @param {String} $appearance 取值与`appearance`属性一致，默认值：none <1.0.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义如何选中内容\r\n * @method user-select\r\n * @version 1.0.0\r\n * @param {String} $user-select 取值与`user-select`属性一致，默认值：none <1.0.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义盒模型\r\n * @method box-sizing\r\n * @version 1.0.0\r\n * @param {String} $box-sizing 指定盒模型类型，取值与`box-sizing`属性一致，默认值：border-box <1.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义渐变色值\r\n * @method gradient\r\n * @version 1.0.0\r\n * @param {String} $type 指定渐变的4种类型：linear, repeating-linear, radial, repeating-radial <1.0.0>\r\n * @param {String} $dir 指定渐变方向，可选值：[left | right] || [top | bottom] | angle <2.0.0>\r\n * @param {String} $gradient 指定渐变取值，与w3c最新原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景图像缩放（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-size\r\n * @version 1.4.0\r\n * @param {Keywords | Length} $background-size 指定背景图缩放值，取值与`background-size`属性一致 <1.4.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景裁减（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-clip\r\n * @version 1.6.0\r\n * @param {Keywords} $background-clip 指定背景图缩放值，取值与`background-clip`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景显示区域（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-origin\r\n * @version 1.6.0\r\n * @param {Keywords} $background-origin 指定背景图`background-position`属性计算相对的参考点，取值与`background-origin`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 为元素添加边框（包括1px边框）\r\n * @method border\r\n * @version 2.0.0\r\n * @param {String} $border-width 指定边框厚度（单位为px），默认值：1px，取值与`border-width`属性一致，不同方向代表边框位置 <2.0.0>\r\n * @param {String} $border-color 指定边框颜色 <2.0.0>\r\n * @param {String} $border-style 指定边框样式 <2.0.0>\r\n * @param {String} $radius 指定边框圆角半径，默认值：null <2.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义圆角，用于修复某些安卓机型上“圆角+边框+背景”，背景溢出的情况\r\n * @method border-radius\r\n * @version 1.6.0\r\n * @param {Length} $border-radius 指定元素的圆角半径，取值与`border-radius`属性一致 <1.6.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 定义简单变换\r\n * @method transform\r\n * @version 1.0.0\r\n * @param {String} $transform 取值范围与`transform`属性一致 <1.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 定义变换原点\r\n * @method transform-origin\r\n * @version 1.0.0\r\n * @param {Length | Percentage | Keywords} $transform-origin 取值范围与`transform-origin`属性一致 <1.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定某元素的子元素是（看起来）位于三维空间内，还是在该元素所在的平面内被扁平化\r\n * @method transform-style\r\n * @version 2.0.0\r\n * @param {String} $transform-style 取值范围与`transform-style`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定观察者与「z=0」平面的距离，使具有三维位置变换的元素产生透视效果。「z>0」的三维元素比正常大，而「z<0」时则比正常小，大小程度由该属性的值决定。\r\n * @method perspective\r\n * @version 2.0.0\r\n * @param {none | Length} $perspective 取值范围与`perspective`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定透视点的位置\r\n * @method perspective-origin\r\n * @version 2.0.0\r\n * @param {Length | Percentage | Keywords} $perspective-origin 取值范围与`perspective-origin`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定元素背面面向用户时是否可见\r\n * @method backface-visibility\r\n * @version 2.0.0\r\n * @param {Keywords} $backface-visibility 取值范围与`backface-visibility`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 定义动画\r\n * @method animation\r\n * @version 1.0.0\r\n * @param {String} $animation 取值与原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定需要引用的动画名称\r\n * @method animation-name\r\n * @version 3.0.0\r\n * @param {String} $animation-name 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画运行一次所持续的时长\r\n * @method animation-duration\r\n * @version 3.0.0\r\n * @param {String} $animation-duration 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画运行方式\r\n * @method animation-timing-function\r\n * @version 3.0.0\r\n * @param {String} $animation-timing-function 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画延迟多久之后再开始\r\n * @method animation-delay\r\n * @version 3.0.0\r\n * @param {String} $animation-delay 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画循环几次\r\n * @method animation-iteration-count\r\n * @version 3.0.0\r\n * @param {String} $animation-iteration-count 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画的运动方向\r\n * @method animation-direction\r\n * @version 3.0.0\r\n * @param {String} $animation-direction 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画的运动状态\r\n * @method animation-play-state\r\n * @version 3.0.0\r\n * @param {String} $animation-play-state 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画时间之外的状态\r\n * @method animation-fill-mode\r\n * @version 3.0.0\r\n * @param {String} $animation-fill-mode 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Transition\r\n * @description 定义补间\r\n * @method transition\r\n * @version 1.0.0\r\n * @param {String} $transition 取值与原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义显示类型为伸缩盒\r\n * @method flexbox\r\n * @version 1.0.0\r\n * @param {String} $flexbox 默认值：flex，可选值：flex | inline-flex <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素如何分配空间\r\n * @method flex\r\n * @version 1.0.0\r\n * @param {Number} $flex 取值与`flex`属性一致，默认值：1 <1.0.0>\r\n * @param {String} $direction 默认值: row，可选值：row | column <1.5.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素的排版顺序\r\n * @method order\r\n * @version 1.0.0\r\n * @param {Integer} $order 取值与`order`属性一致，默认值：1 <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性盒子元素流动方向及遇见边界时是否换行(要求系统：iOS7.0+, Android4.4+)\r\n * @method flex-flow\r\n * @version 2.0.0\r\n * @param {String} $flex-flow 取值与`flex-flow`属性一致，默认值：row nowrap <2.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素的流动方向\r\n * @method flex-direction\r\n * @version 1.0.0\r\n * @param {String} $flex-direction 取值与`flex-direction`属性一致，默认值：row <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性盒子元素溢出后排版(要求系统：iOS7.0+, Android4.4+)\r\n * @method flex-wrap\r\n * @version 1.0.0\r\n * @param {String} $flex-wrap 取值与`flex-wrap`属性一致，默认值：nowrap <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性容器主轴对齐方式(其中`space-around`值需要iOS7.0+,Android4.4+)\r\n * @method justify-content\r\n * @version 1.0.0\r\n * @param {String} $justify-content 取值与`justify-content`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义多行弹性容器侧轴对齐方式(要求系统：iOS7.0+,Android4.4+)\r\n * @method align-content\r\n * @version 1.8.5\r\n * @param {String} $align-content 取值与`align-content`属性一致，默认值：center <1.8.5>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义单行弹性容器侧轴对齐方式\r\n * @method align-items\r\n * @version 1.0.0\r\n * @param {String} $align-items 取值与`align-items`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性容器中子元素自身的在侧轴对齐方式(要求系统：iOS7.0+,Android4.4+)\r\n * @method align-self\r\n * @version 1.0.0\r\n * @param {String} $align-self 取值与`align-self`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成矩形方法\r\n * @method rect\r\n * @version 1.0.0\r\n * @param {Length} $width 定义矩形的长度 <1.0.0>\r\n * @param {Length} $height 定义矩形的高度 <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成正方形方法\r\n * @method square\r\n * @version 1.0.0\r\n * @param {Length} $size 定义正方形的边长 <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成圆形方法\r\n * @method circle\r\n * @version 1.0.0\r\n * @param {Length} $size 定义圆的半径长度 <1.0.0>\r\n * @param {Length} $radius 定义圆的圆角半径长度 <1.0.0>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 在自适应宽度情况下，确保内容元素的宽高比固定，比如：实现随屏幕大小而变化的正方形。\r\n * @method fixed-scale\r\n * @version 3.0.10\r\n * @param {Length} $width 默认值：100%。用以指定内容元素的初始宽度，由于尺寸需动态变化，不要使用固定单位 <3.0.10>\r\n * @param {Length} $scale 默认值：1/1，即正方形。用以指定内容元素的宽度高比 <3.0.10>\r\n */\n/**\r\n * @module 文本\r\n * @description 链接处理方法\r\n * @method link\r\n * @version 1.0.0\r\n * @param {Color} $color 定义链接颜色 <1.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 文本碰到边界是否换行\r\n * @method wrap\r\n * @version 1.0.0\r\n * @param {Boolean} $is-wrap 定义文本是否换行，默认值：true <2.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 单行文本溢出时显示省略号\r\n * @method ellipsis\r\n * @version 1.0.0\r\n * @param {Length} $width 定义容器的宽度，默认值：null <2.0.0>\r\n * @param {Integer} $line-clamp 定义需要显示的行数，默认值：1（即使用单行溢出的处理方案），需要注意的是本参数只支持webkit内核 <2.1.2>\r\n */\n/**\r\n * @module 文本\r\n * @description 文字隐藏方案\r\n * @method texthide\r\n * @version 1.0.0\r\n * @param {Length} $width 定义容器的宽度，默认值：null <2.0.0>\r\n */\n/**\r\n * Yo框架全局Reset\r\n * Yo重置Mobile及高级浏览器上常见的差异\r\n */\n*,\n::before,\n::after {\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n  -webkit-tap-highlight-color: transparent;\n}\nhtml,\nbody {\n  overflow: hidden;\n  height: 100%;\n}\n::-webkit-scrollbar {\n  display: none;\n}\nhtml {\n  background-color: #eee;\n  color: #212121;\n  font-size: 100px;\n  -webkit-user-select: none;\n  user-select: none;\n}\nbody {\n  margin: 0;\n  font-size: 0.14em;\n  line-height: 1.5;\n  font-family: Helvetica Neue, Helvetica, STHeiTi, sans-serif;\n}\nul,\nol,\ndl,\ndd,\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\nfigure,\nform,\nfieldset,\nlegend,\ninput,\ntextarea,\nbutton,\np,\nblockquote,\nth,\ntd,\npre,\nxmp {\n  margin: 0;\n  padding: 0;\n}\ninput,\ntextarea,\nbutton,\nselect,\npre,\nxmp,\ntt,\ncode,\nkbd,\nsamp {\n  line-height: inherit;\n  font-family: inherit;\n}\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\nsmall,\nbig,\ninput,\ntextarea,\nbutton,\nselect {\n  font-size: inherit;\n}\naddress,\ncite,\ndfn,\nem,\ni,\noptgroup,\nvar {\n  font-style: normal;\n}\ntable {\n  border-collapse: collapse;\n  border-spacing: 0;\n  table-layout: fixed;\n  text-align: left;\n}\nul,\nol,\nmenu {\n  list-style: none;\n}\nfieldset,\nimg {\n  border: 0;\n  vertical-align: middle;\n}\narticle,\naside,\ndetails,\nfigcaption,\nfigure,\nfooter,\nheader,\nmain,\nmenu,\nnav,\nsection,\nsummary {\n  display: block;\n}\naudio,\ncanvas,\nvideo {\n  display: inline-block;\n}\nblockquote:before,\nblockquote:after,\nq:before,\nq:after {\n  content: \" \";\n}\ntextarea,\npre,\nxmp {\n  overflow: auto;\n  -webkit-overflow-scrolling: touch;\n}\ntextarea {\n  resize: vertical;\n}\ninput,\ntextarea,\nbutton,\nselect,\nsummary,\na {\n  outline: 0 none;\n}\ninput,\ntextarea,\nbutton,\nselect {\n  color: inherit;\n}\ninput:disabled,\n  textarea:disabled,\n  button:disabled,\n  select:disabled {\n    opacity: 1;\n}\nbutton::-moz-focus-inner,\ninput::-moz-focus-inner {\n  padding: 0;\n  border: 0;\n}\ninput[type=\"button\"],\ninput[type=\"submit\"],\ninput[type=\"reset\"],\ninput[type=\"file\"]::-webkit-file-upload-button,\ninput[type=\"search\"]::-webkit-search-cancel-button {\n  -webkit-appearance: none;\n  appearance: none;\n}\n::-webkit-details-marker {\n  display: none;\n}\nmark {\n  background-color: transparent;\n}\na,\nins,\ns,\nu,\ndel {\n  text-decoration: none;\n}\na,\nimg {\n  -webkit-touch-callout: none;\n}\na {\n  color: #00afc7;\n}\n.g-clear::after,\n.g-mod::after {\n  display: block;\n  overflow: hidden;\n  clear: both;\n  height: 0;\n  content: \" \";\n}\n@font-face {\n  font-family: yofont;\n  src: url(//ss.qunarzz.com/yo/font/1.0.3/yofont.woff) format(\"woff\"), url(//ss.qunarzz.com/yo/font/1.0.3/yofont.ttf) format(\"truetype\");\n}\n.yo-ico {\n  font-family: yofont !important;\n  font-style: normal;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n  vertical-align: middle;\n}\n@font-face {\n  font-family: 'iconfont';\n  src: url(\"http://localhost:7000/media/iconfont/iconfont.woff\") format(\"woff\"), url(\"http://localhost:7000/media/iconfont/iconfont.ttf\") format(\"truetype\");\n}\n.iconfont {\n  font-family: \"iconfont\" !important;\n  font-size: 16px;\n  font-style: normal;\n  -webkit-font-smoothing: antialiased;\n  -webkit-text-stroke-width: 0.2px;\n  -moz-osx-font-smoothing: grayscale;\n}\n.banner {\n  width: 100%;\n  height: 150px;\n}\n.banner img {\n    height: 100%;\n}\n.goods {\n  height: 100%;\n  overflow-y: scroll;\n}\n.goods .title {\n    height: 60px;\n    padding-left: 15px;\n}\n.goods .title span {\n      color: #ff1d3f;\n      font-size: 18px;\n      line-height: 60px;\n}\n.goods .goods_list {\n    height: 100%;\n}\n.goods .goods_list ul {\n      height: 100%;\n}\n.goods .goods_list ul .img_container {\n        height: 92px;\n}\n.goods .goods_list ul .img_container img {\n          width: 100%;\n}\n.goods .goods_list ul .no_banner {\n        padding-left: 15px;\n        height: 70px;\n        color: #ff1d3f;\n        position: relative;\n}\n.goods .goods_list ul .no_banner span:first-child {\n          position: absolute;\n          margin-top: 27px;\n          height: 20px;\n          font-size: 18px;\n}\n.goods .goods_list ul .sell_out {\n        padding-left: 15px;\n        height: 70px;\n        position: relative;\n}\n.goods .goods_list ul .sell_out span:first-child {\n          display: block;\n          position: absolute;\n          color: #4b4b4b;\n          top: 27px;\n          font-size: 18px;\n          height: 20px;\n}\n.goods .goods_list ul .sell_out span:last-child {\n          position: absolute;\n          bottom: 0;\n          font-size: 12px;\n          color: #968D91;\n          height: 18px;\n          line-height: 18px;\n}\n.goods .goods_list ul li {\n        height: 164px;\n        position: relative;\n}\n.goods .goods_list ul li::after {\n          pointer-events: none;\n          position: absolute;\n          z-index: 999;\n          top: 0;\n          left: 0;\n          content: \" \";\n          border-color: #f5f5f5;\n          border-style: solid;\n          border-width: 0 0 1px 0;\n          -webkit-transform-origin: 0 0;\n          transform-origin: 0 0;\n}\n@media (max--moz-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.49), (max-device-pixel-ratio: 1.49), (max-resolution: 143dpi), (max-resolution: 1.49dppx) {\n.goods .goods_list ul li::after {\n              width: 100%;\n              height: 100%;\n}\n}\n@media (min--moz-device-pixel-ratio: 1.5) and (max--moz-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.49), (min-device-pixel-ratio: 1.5) and (max-device-pixel-ratio: 2.49), (min-resolution: 144dpi) and (max-resolution: 239dpi), (min-resolution: 1.5dppx) and (max-resolution: 2.49dppx) {\n.goods .goods_list ul li::after {\n              width: 200%;\n              height: 200%;\n              -webkit-transform: scale(0.5);\n              transform: scale(0.5);\n}\n}\n@media (min--moz-device-pixel-ratio: 2.5), (-webkit-min-device-pixel-ratio: 2.5), (min-device-pixel-ratio: 2.5), (min-resolution: 240dpi), (min-resolution: 2.5dppx) {\n.goods .goods_list ul li::after {\n              width: 300%;\n              height: 300%;\n              -webkit-transform: scale(0.33333);\n              transform: scale(0.33333);\n}\n}\n.goods .goods_list ul li div.li_container {\n          width: 100%;\n          height: 100%;\n          padding-top: 20px;\n          padding-bottom: 23px;\n          display: -webkit-box;\n          display: -webkit-flex;\n          display: flex;\n          position: relative;\n}\n.goods .goods_list ul li div.li_container .img_left {\n            width: 150px;\n            padding: 0 15px;\n            position: relative;\n}\n.goods .goods_list ul li div.li_container .img_left img {\n              border: 0;\n}\n.goods .goods_list ul li div.li_container .img_left img:first-child {\n                width: 100%;\n}\n.goods .goods_list ul li div.li_container .img_left img:last-child {\n                position: absolute;\n                left: 16px;\n                height: 32px;\n                top: 0;\n}\n.goods .goods_list ul li div.li_container .message_right {\n            -webkit-box-flex: 1;\n            -webkit-flex: 1;\n            flex: 1;\n            width: .1px;\n            width: 100%;\n            position: relative;\n}\n.goods .goods_list ul li div.li_container .message_right .message_title {\n              font-size: 16px;\n              padding-top: 11px;\n              white-space: nowrap;\n              overflow: hidden;\n              text-overflow: ellipsis;\n              letter-spacing: -1px;\n              color: #474245;\n              width: 140px;\n}\n.goods .goods_list ul li div.li_container .message_right .message_info {\n              font-size: 14px;\n              color: #969696;\n              white-space: nowrap;\n              text-overflow: ellipsis;\n              overflow: hidden;\n              width: 140px;\n}\n.goods .goods_list ul li div.li_container .message_right .message_des {\n              height: 25px;\n              line-height: 17px;\n}\n.goods .goods_list ul li div.li_container .message_right .message_des span {\n                display: inline-block;\n                border-radius: 2px;\n                font-size: 9px;\n                height: 13px;\n                line-height: 11px;\n                background: white;\n                color: #c6c6c6;\n                border: 1px solid #c6c6c6;\n                margin-right: 5px;\n                padding: 1px;\n}\n.goods .goods_list ul li div.li_container .message_right .message_highprice {\n              font-size: 12px;\n              color: #ffc38d;\n              line-height: 8px;\n}\n.goods .goods_list ul li div.li_container .message_right .message_lowprice {\n              color: #ff4891;\n              font-size: 12px;\n}\n.goods .goods_list ul li div.li_container .message_right .message_lowprice span span:first-child {\n                letter-spacing: -3px;\n}\n.goods .goods_list ul li div.li_container .message_right .message_lowprice span span:last-child {\n                font-size: 16px;\n                letter-spacing: -1px;\n                display: inline-block;\n                height: 22px;\n                vertical-align: bottom;\n}\n.goods .goods_list ul li div.li_container .message_right .message_cart {\n              position: absolute;\n              bottom: 5px;\n              right: 4%;\n              height: 30px;\n              text-align: right;\n}\n.goods .goods_list ul li div.li_container .message_right .message_cart img {\n                width: 49px;\n                position: absolute;\n                bottom: -8px;\n                right: -6px !important;\n}\n", "", {"version":3,"sources":["D:/missFresh/src/modules/index/components/fruits.vue"],"names":[],"mappings":"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","file":"fruits.vue","sourcesContent":["@charset \"UTF-8\";\n/**\r\n * Yo框架全局base定义\r\n * 本文件与variables不同地方在于，这里所定义的map可以使用在variables和任何地方\r\n * 本文件中map使用\"_\"开头，extra中不使用\"_\"\r\n * base ⇌ extra\r\n */\n/**\r\n * Yo框架全局Variables\r\n * Yo基础变量map，如果不想定义某属性，将其value设置为null\r\n * Yo仅使用2种长度单位：px用于边框，rem用于除边框之外的所有地方\r\n * 本文件中map使用\"_\"开头，config中不使用\"_\"\r\n * variables ⇌ config\r\n */\n/**\r\n * Yo框架自定义全局函数\r\n * 扩充Sass默认函数库，用以增强语法\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的第一项\r\n * @function first\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的最后一项\r\n * @function last\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的倒数第几项\r\n * @function nth-last\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $index 指定需要返回的值在list中的倒数位置 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 移除SassList中的某个项目并返回新的List\r\n * @function remove\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {String} $value 指定需要被删除的值 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 截取SassList中的某个部分并返回新的List\r\n * @function slice\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $start 指定需要截取的开始下标 <2.1.0>\r\n * @param {Integer} $end 指定需要截取的结束下标（不包括end），当该值缺省时默认为末尾下标 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 从SassList中添加/删除项目，然后返回新的List。\r\n * @function splice\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $index 指定需要移除的开始下标 <2.1.0>\r\n * @param {Integer} $count 指定需要移除的数量，不可以为负值，0表示不移除 <2.1.0>\r\n * @param {String} $values 指定需要添加的新值（可以是多个），如果该值缺省，则表示只移除不添加新值 <2.1.0>\r\n */\n/**\r\n * Yo框架全局基础方法\r\n * 包括响应式方案，CSS3兼容性方案，厂商前缀方案，iconfont方案，flex布局等全局方法\r\n */\n/**\r\n * @module 常用方法\r\n * @description 给需要的属性加厂家前缀\r\n * @method prefix\r\n * @version 1.0.0\r\n * @param {String} $property 指定属性 <1.0.0>\r\n * @param {String} $value 指定属性值 <1.0.0>\r\n * @skip\r\n */\n/**\r\n * @module 常用方法\r\n * @description 定义字体图标\r\n * @method _iconfont\r\n * @version 1.0.0\r\n * @skip\r\n */\n/**\r\n * @module 常用方法\r\n * @description 四则运算(系统要求：iOS6.0+,Android4.4+)\r\n * @method calc\r\n * @version 1.7.0\r\n * @param {String} $property 指定需要进行计算的CSS属性 <1.7.0>\r\n * @param {String} $value 与原生CSS语法一致，区别在于需要使用引号包裹表达式 <1.7.0>\r\n * @example\r\n * .calc {\r\n *     @include calc(width, \"100% - 100px\");\r\n * }\r\n *\r\n * <div class=\"calc\">四则运算</div>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 定义响应式方案\r\n * @method responsive\r\n * @version 1.0.0\r\n * @param {String} $media 指定媒体查询条件，取值为`config`文件map `media-types`中的值 <1.0.0>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 清除浮动方案\r\n * @method clearfix\r\n * @version 1.0.0\r\n * @param {String} $type 指定清除浮动的方式，包括：pseudo-element | bfc，默认值：pseudo-element <1.8.5>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 清除行内级元素间间隙方案\r\n * @method clearspace\r\n * @version 3.0.3\r\n * @param {Length} $font-size 指定子元素字号，默认值：.14rem <3.0.3>\r\n * @example\r\n * .demo {\r\n *     @include clearspace;\r\n * }\r\n *\r\n * <div class=\"demo\">\r\n *      <span class=\"item\">1</span>\r\n *      <span class=\"item\">2</span>\r\n *      <span class=\"item\">3</span>\r\n * </div>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 描述元素内容在横、纵方向上的对齐方式，默认为水平垂直居中对齐\r\n * @method align\r\n * @version 2.0.0\r\n * @param {String} $flexbox 元素布局方式，可选值：flex | inline-flex，默认值：flex <2.0.0>\r\n * @param {Keyword} $justify-content 元素内容的水平对齐方式，取值与`justify-content`属性一致，默认值：center <2.0.0>\r\n * @param {Keyword} $align-items 元素内容的垂直对齐方式，取值与`align-items`属性一致，默认值：center <2.0.0>\r\n * @example\r\n * .demo {\r\n *     @include align;\r\n * }\r\n *\r\n * <div class=\"demo\">\r\n *      <img alt=\"未知尺寸图片居中\" />\r\n * </div>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 定义是否有滚动条\r\n * @method overflow\r\n * @version 1.0.0\r\n * @param {String} $overflow 取值与最新原生语法一致，默认值：auto <1.0.0>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 生成全屏方法\r\n * @method fullscreen\r\n * @version 1.7.0\r\n * @param {Integer} $z-index 指定层叠级别 <1.7.0>\r\n * @param {Keywords} $position 指定定位方式，取除`static | relative`之外的值，默认值：absolute <1.8.5>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义使用何种滤镜\r\n * @method filter\r\n * @version 1.7.0\r\n * @param {String} $filter 取值与`filter`属性一致 <1.7.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义UA默认外观\r\n * @method appearance\r\n * @version 1.0.0\r\n * @param {String} $appearance 取值与`appearance`属性一致，默认值：none <1.0.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义如何选中内容\r\n * @method user-select\r\n * @version 1.0.0\r\n * @param {String} $user-select 取值与`user-select`属性一致，默认值：none <1.0.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义盒模型\r\n * @method box-sizing\r\n * @version 1.0.0\r\n * @param {String} $box-sizing 指定盒模型类型，取值与`box-sizing`属性一致，默认值：border-box <1.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义渐变色值\r\n * @method gradient\r\n * @version 1.0.0\r\n * @param {String} $type 指定渐变的4种类型：linear, repeating-linear, radial, repeating-radial <1.0.0>\r\n * @param {String} $dir 指定渐变方向，可选值：[left | right] || [top | bottom] | angle <2.0.0>\r\n * @param {String} $gradient 指定渐变取值，与w3c最新原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景图像缩放（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-size\r\n * @version 1.4.0\r\n * @param {Keywords | Length} $background-size 指定背景图缩放值，取值与`background-size`属性一致 <1.4.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景裁减（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-clip\r\n * @version 1.6.0\r\n * @param {Keywords} $background-clip 指定背景图缩放值，取值与`background-clip`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景显示区域（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-origin\r\n * @version 1.6.0\r\n * @param {Keywords} $background-origin 指定背景图`background-position`属性计算相对的参考点，取值与`background-origin`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 为元素添加边框（包括1px边框）\r\n * @method border\r\n * @version 2.0.0\r\n * @param {String} $border-width 指定边框厚度（单位为px），默认值：1px，取值与`border-width`属性一致，不同方向代表边框位置 <2.0.0>\r\n * @param {String} $border-color 指定边框颜色 <2.0.0>\r\n * @param {String} $border-style 指定边框样式 <2.0.0>\r\n * @param {String} $radius 指定边框圆角半径，默认值：null <2.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义圆角，用于修复某些安卓机型上“圆角+边框+背景”，背景溢出的情况\r\n * @method border-radius\r\n * @version 1.6.0\r\n * @param {Length} $border-radius 指定元素的圆角半径，取值与`border-radius`属性一致 <1.6.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 定义简单变换\r\n * @method transform\r\n * @version 1.0.0\r\n * @param {String} $transform 取值范围与`transform`属性一致 <1.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 定义变换原点\r\n * @method transform-origin\r\n * @version 1.0.0\r\n * @param {Length | Percentage | Keywords} $transform-origin 取值范围与`transform-origin`属性一致 <1.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定某元素的子元素是（看起来）位于三维空间内，还是在该元素所在的平面内被扁平化\r\n * @method transform-style\r\n * @version 2.0.0\r\n * @param {String} $transform-style 取值范围与`transform-style`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定观察者与「z=0」平面的距离，使具有三维位置变换的元素产生透视效果。「z>0」的三维元素比正常大，而「z<0」时则比正常小，大小程度由该属性的值决定。\r\n * @method perspective\r\n * @version 2.0.0\r\n * @param {none | Length} $perspective 取值范围与`perspective`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定透视点的位置\r\n * @method perspective-origin\r\n * @version 2.0.0\r\n * @param {Length | Percentage | Keywords} $perspective-origin 取值范围与`perspective-origin`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定元素背面面向用户时是否可见\r\n * @method backface-visibility\r\n * @version 2.0.0\r\n * @param {Keywords} $backface-visibility 取值范围与`backface-visibility`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 定义动画\r\n * @method animation\r\n * @version 1.0.0\r\n * @param {String} $animation 取值与原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定需要引用的动画名称\r\n * @method animation-name\r\n * @version 3.0.0\r\n * @param {String} $animation-name 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画运行一次所持续的时长\r\n * @method animation-duration\r\n * @version 3.0.0\r\n * @param {String} $animation-duration 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画运行方式\r\n * @method animation-timing-function\r\n * @version 3.0.0\r\n * @param {String} $animation-timing-function 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画延迟多久之后再开始\r\n * @method animation-delay\r\n * @version 3.0.0\r\n * @param {String} $animation-delay 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画循环几次\r\n * @method animation-iteration-count\r\n * @version 3.0.0\r\n * @param {String} $animation-iteration-count 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画的运动方向\r\n * @method animation-direction\r\n * @version 3.0.0\r\n * @param {String} $animation-direction 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画的运动状态\r\n * @method animation-play-state\r\n * @version 3.0.0\r\n * @param {String} $animation-play-state 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画时间之外的状态\r\n * @method animation-fill-mode\r\n * @version 3.0.0\r\n * @param {String} $animation-fill-mode 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Transition\r\n * @description 定义补间\r\n * @method transition\r\n * @version 1.0.0\r\n * @param {String} $transition 取值与原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义显示类型为伸缩盒\r\n * @method flexbox\r\n * @version 1.0.0\r\n * @param {String} $flexbox 默认值：flex，可选值：flex | inline-flex <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素如何分配空间\r\n * @method flex\r\n * @version 1.0.0\r\n * @param {Number} $flex 取值与`flex`属性一致，默认值：1 <1.0.0>\r\n * @param {String} $direction 默认值: row，可选值：row | column <1.5.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素的排版顺序\r\n * @method order\r\n * @version 1.0.0\r\n * @param {Integer} $order 取值与`order`属性一致，默认值：1 <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性盒子元素流动方向及遇见边界时是否换行(要求系统：iOS7.0+, Android4.4+)\r\n * @method flex-flow\r\n * @version 2.0.0\r\n * @param {String} $flex-flow 取值与`flex-flow`属性一致，默认值：row nowrap <2.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素的流动方向\r\n * @method flex-direction\r\n * @version 1.0.0\r\n * @param {String} $flex-direction 取值与`flex-direction`属性一致，默认值：row <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性盒子元素溢出后排版(要求系统：iOS7.0+, Android4.4+)\r\n * @method flex-wrap\r\n * @version 1.0.0\r\n * @param {String} $flex-wrap 取值与`flex-wrap`属性一致，默认值：nowrap <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性容器主轴对齐方式(其中`space-around`值需要iOS7.0+,Android4.4+)\r\n * @method justify-content\r\n * @version 1.0.0\r\n * @param {String} $justify-content 取值与`justify-content`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义多行弹性容器侧轴对齐方式(要求系统：iOS7.0+,Android4.4+)\r\n * @method align-content\r\n * @version 1.8.5\r\n * @param {String} $align-content 取值与`align-content`属性一致，默认值：center <1.8.5>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义单行弹性容器侧轴对齐方式\r\n * @method align-items\r\n * @version 1.0.0\r\n * @param {String} $align-items 取值与`align-items`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性容器中子元素自身的在侧轴对齐方式(要求系统：iOS7.0+,Android4.4+)\r\n * @method align-self\r\n * @version 1.0.0\r\n * @param {String} $align-self 取值与`align-self`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成矩形方法\r\n * @method rect\r\n * @version 1.0.0\r\n * @param {Length} $width 定义矩形的长度 <1.0.0>\r\n * @param {Length} $height 定义矩形的高度 <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成正方形方法\r\n * @method square\r\n * @version 1.0.0\r\n * @param {Length} $size 定义正方形的边长 <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成圆形方法\r\n * @method circle\r\n * @version 1.0.0\r\n * @param {Length} $size 定义圆的半径长度 <1.0.0>\r\n * @param {Length} $radius 定义圆的圆角半径长度 <1.0.0>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 在自适应宽度情况下，确保内容元素的宽高比固定，比如：实现随屏幕大小而变化的正方形。\r\n * @method fixed-scale\r\n * @version 3.0.10\r\n * @param {Length} $width 默认值：100%。用以指定内容元素的初始宽度，由于尺寸需动态变化，不要使用固定单位 <3.0.10>\r\n * @param {Length} $scale 默认值：1/1，即正方形。用以指定内容元素的宽度高比 <3.0.10>\r\n */\n/**\r\n * @module 文本\r\n * @description 链接处理方法\r\n * @method link\r\n * @version 1.0.0\r\n * @param {Color} $color 定义链接颜色 <1.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 文本碰到边界是否换行\r\n * @method wrap\r\n * @version 1.0.0\r\n * @param {Boolean} $is-wrap 定义文本是否换行，默认值：true <2.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 单行文本溢出时显示省略号\r\n * @method ellipsis\r\n * @version 1.0.0\r\n * @param {Length} $width 定义容器的宽度，默认值：null <2.0.0>\r\n * @param {Integer} $line-clamp 定义需要显示的行数，默认值：1（即使用单行溢出的处理方案），需要注意的是本参数只支持webkit内核 <2.1.2>\r\n */\n/**\r\n * @module 文本\r\n * @description 文字隐藏方案\r\n * @method texthide\r\n * @version 1.0.0\r\n * @param {Length} $width 定义容器的宽度，默认值：null <2.0.0>\r\n */\n/**\r\n * Yo框架全局Reset\r\n * Yo重置Mobile及高级浏览器上常见的差异\r\n */\n*,\n::before,\n::after {\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n  -webkit-tap-highlight-color: transparent; }\n\nhtml,\nbody {\n  overflow: hidden;\n  height: 100%; }\n\n::-webkit-scrollbar {\n  display: none; }\n\nhtml {\n  background-color: #eee;\n  color: #212121;\n  font-size: 100px;\n  -webkit-user-select: none;\n  user-select: none; }\n\nbody {\n  margin: 0;\n  font-size: 0.14em;\n  line-height: 1.5;\n  font-family: Helvetica Neue, Helvetica, STHeiTi, sans-serif; }\n\nul,\nol,\ndl,\ndd,\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\nfigure,\nform,\nfieldset,\nlegend,\ninput,\ntextarea,\nbutton,\np,\nblockquote,\nth,\ntd,\npre,\nxmp {\n  margin: 0;\n  padding: 0; }\n\ninput,\ntextarea,\nbutton,\nselect,\npre,\nxmp,\ntt,\ncode,\nkbd,\nsamp {\n  line-height: inherit;\n  font-family: inherit; }\n\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\nsmall,\nbig,\ninput,\ntextarea,\nbutton,\nselect {\n  font-size: inherit; }\n\naddress,\ncite,\ndfn,\nem,\ni,\noptgroup,\nvar {\n  font-style: normal; }\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0;\n  table-layout: fixed;\n  text-align: left; }\n\nul,\nol,\nmenu {\n  list-style: none; }\n\nfieldset,\nimg {\n  border: 0;\n  vertical-align: middle; }\n\narticle,\naside,\ndetails,\nfigcaption,\nfigure,\nfooter,\nheader,\nmain,\nmenu,\nnav,\nsection,\nsummary {\n  display: block; }\n\naudio,\ncanvas,\nvideo {\n  display: inline-block; }\n\nblockquote:before,\nblockquote:after,\nq:before,\nq:after {\n  content: \"\\0020\"; }\n\ntextarea,\npre,\nxmp {\n  overflow: auto;\n  -webkit-overflow-scrolling: touch; }\n\ntextarea {\n  resize: vertical; }\n\ninput,\ntextarea,\nbutton,\nselect,\nsummary,\na {\n  outline: 0 none; }\n\ninput,\ntextarea,\nbutton,\nselect {\n  color: inherit; }\n  input:disabled,\n  textarea:disabled,\n  button:disabled,\n  select:disabled {\n    opacity: 1; }\n\nbutton::-moz-focus-inner,\ninput::-moz-focus-inner {\n  padding: 0;\n  border: 0; }\n\ninput[type=\"button\"],\ninput[type=\"submit\"],\ninput[type=\"reset\"],\ninput[type=\"file\"]::-webkit-file-upload-button,\ninput[type=\"search\"]::-webkit-search-cancel-button {\n  -webkit-appearance: none;\n  appearance: none; }\n\n::-webkit-details-marker {\n  display: none; }\n\nmark {\n  background-color: transparent; }\n\na,\nins,\ns,\nu,\ndel {\n  text-decoration: none; }\n\na,\nimg {\n  -webkit-touch-callout: none; }\n\na {\n  color: #00afc7; }\n\n.g-clear::after,\n.g-mod::after {\n  display: block;\n  overflow: hidden;\n  clear: both;\n  height: 0;\n  content: \"\\0020\"; }\n\n@font-face {\n  font-family: yofont;\n  src: url(//ss.qunarzz.com/yo/font/1.0.3/yofont.woff) format(\"woff\"), url(//ss.qunarzz.com/yo/font/1.0.3/yofont.ttf) format(\"truetype\"); }\n\n.yo-ico {\n  font-family: yofont !important;\n  font-style: normal;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n  vertical-align: middle; }\n\n@font-face {\n  font-family: 'iconfont';\n  src: url(\"http://localhost:7000/media/iconfont/iconfont.woff\") format(\"woff\"), url(\"http://localhost:7000/media/iconfont/iconfont.ttf\") format(\"truetype\"); }\n\n.iconfont {\n  font-family: \"iconfont\" !important;\n  font-size: 16px;\n  font-style: normal;\n  -webkit-font-smoothing: antialiased;\n  -webkit-text-stroke-width: 0.2px;\n  -moz-osx-font-smoothing: grayscale; }\n\n.banner {\n  width: 100%;\n  height: 150px; }\n  .banner img {\n    height: 100%; }\n\n.goods {\n  height: 100%;\n  overflow-y: scroll; }\n  .goods .title {\n    height: 60px;\n    padding-left: 15px; }\n    .goods .title span {\n      color: #ff1d3f;\n      font-size: 18px;\n      line-height: 60px; }\n  .goods .goods_list {\n    height: 100%; }\n    .goods .goods_list ul {\n      height: 100%; }\n      .goods .goods_list ul .img_container {\n        height: 92px; }\n        .goods .goods_list ul .img_container img {\n          width: 100%; }\n      .goods .goods_list ul .no_banner {\n        padding-left: 15px;\n        height: 70px;\n        color: #ff1d3f;\n        position: relative; }\n        .goods .goods_list ul .no_banner span:first-child {\n          position: absolute;\n          margin-top: 27px;\n          height: 20px;\n          font-size: 18px; }\n      .goods .goods_list ul .sell_out {\n        padding-left: 15px;\n        height: 70px;\n        position: relative; }\n        .goods .goods_list ul .sell_out span:first-child {\n          display: block;\n          position: absolute;\n          color: #4b4b4b;\n          top: 27px;\n          font-size: 18px;\n          height: 20px; }\n        .goods .goods_list ul .sell_out span:last-child {\n          position: absolute;\n          bottom: 0;\n          font-size: 12px;\n          color: #968D91;\n          height: 18px;\n          line-height: 18px; }\n      .goods .goods_list ul li {\n        height: 164px;\n        position: relative; }\n        .goods .goods_list ul li::after {\n          pointer-events: none;\n          position: absolute;\n          z-index: 999;\n          top: 0;\n          left: 0;\n          content: \"\\0020\";\n          border-color: #f5f5f5;\n          border-style: solid;\n          border-width: 0 0 1px 0;\n          -webkit-transform-origin: 0 0;\n          transform-origin: 0 0; }\n          @media (max--moz-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.49), (max-device-pixel-ratio: 1.49), (max-resolution: 143dpi), (max-resolution: 1.49dppx) {\n            .goods .goods_list ul li::after {\n              width: 100%;\n              height: 100%; } }\n          @media (min--moz-device-pixel-ratio: 1.5) and (max--moz-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.49), (min-device-pixel-ratio: 1.5) and (max-device-pixel-ratio: 2.49), (min-resolution: 144dpi) and (max-resolution: 239dpi), (min-resolution: 1.5dppx) and (max-resolution: 2.49dppx) {\n            .goods .goods_list ul li::after {\n              width: 200%;\n              height: 200%;\n              -webkit-transform: scale(0.5);\n              transform: scale(0.5); } }\n          @media (min--moz-device-pixel-ratio: 2.5), (-webkit-min-device-pixel-ratio: 2.5), (min-device-pixel-ratio: 2.5), (min-resolution: 240dpi), (min-resolution: 2.5dppx) {\n            .goods .goods_list ul li::after {\n              width: 300%;\n              height: 300%;\n              -webkit-transform: scale(0.33333);\n              transform: scale(0.33333); } }\n        .goods .goods_list ul li div.li_container {\n          width: 100%;\n          height: 100%;\n          padding-top: 20px;\n          padding-bottom: 23px;\n          display: -webkit-box;\n          display: -webkit-flex;\n          display: flex;\n          position: relative; }\n          .goods .goods_list ul li div.li_container .img_left {\n            width: 150px;\n            padding: 0 15px;\n            position: relative; }\n            .goods .goods_list ul li div.li_container .img_left img {\n              border: 0; }\n              .goods .goods_list ul li div.li_container .img_left img:first-child {\n                width: 100%; }\n              .goods .goods_list ul li div.li_container .img_left img:last-child {\n                position: absolute;\n                left: 16px;\n                height: 32px;\n                top: 0; }\n          .goods .goods_list ul li div.li_container .message_right {\n            -webkit-box-flex: 1;\n            -webkit-flex: 1;\n            flex: 1;\n            width: .1px;\n            width: 100%;\n            position: relative; }\n            .goods .goods_list ul li div.li_container .message_right .message_title {\n              font-size: 16px;\n              padding-top: 11px;\n              white-space: nowrap;\n              overflow: hidden;\n              text-overflow: ellipsis;\n              letter-spacing: -1px;\n              color: #474245;\n              width: 140px; }\n            .goods .goods_list ul li div.li_container .message_right .message_info {\n              font-size: 14px;\n              color: #969696;\n              white-space: nowrap;\n              text-overflow: ellipsis;\n              overflow: hidden;\n              width: 140px; }\n            .goods .goods_list ul li div.li_container .message_right .message_des {\n              height: 25px;\n              line-height: 17px; }\n              .goods .goods_list ul li div.li_container .message_right .message_des span {\n                display: inline-block;\n                border-radius: 2px;\n                font-size: 9px;\n                height: 13px;\n                line-height: 11px;\n                background: white;\n                color: #c6c6c6;\n                border: 1px solid #c6c6c6;\n                margin-right: 5px;\n                padding: 1px; }\n            .goods .goods_list ul li div.li_container .message_right .message_highprice {\n              font-size: 12px;\n              color: #ffc38d;\n              line-height: 8px; }\n            .goods .goods_list ul li div.li_container .message_right .message_lowprice {\n              color: #ff4891;\n              font-size: 12px; }\n              .goods .goods_list ul li div.li_container .message_right .message_lowprice span span:first-child {\n                letter-spacing: -3px; }\n              .goods .goods_list ul li div.li_container .message_right .message_lowprice span span:last-child {\n                font-size: 16px;\n                letter-spacing: -1px;\n                display: inline-block;\n                height: 22px;\n                vertical-align: bottom; }\n            .goods .goods_list ul li div.li_container .message_right .message_cart {\n              position: absolute;\n              bottom: 5px;\n              right: 4%;\n              height: 30px;\n              text-align: right; }\n              .goods .goods_list ul li div.li_container .message_right .message_cart img {\n                width: 49px;\n                position: absolute;\n                bottom: -8px;\n                right: -6px !important; }\n"],"sourceRoot":""}]);
+exports.push([module.i, "\n@charset \"UTF-8\";\n/**\r\n * Yo框架全局base定义\r\n * 本文件与variables不同地方在于，这里所定义的map可以使用在variables和任何地方\r\n * 本文件中map使用\"_\"开头，extra中不使用\"_\"\r\n * base ⇌ extra\r\n */\n/**\r\n * Yo框架全局Variables\r\n * Yo基础变量map，如果不想定义某属性，将其value设置为null\r\n * Yo仅使用2种长度单位：px用于边框，rem用于除边框之外的所有地方\r\n * 本文件中map使用\"_\"开头，config中不使用\"_\"\r\n * variables ⇌ config\r\n */\n/**\r\n * Yo框架自定义全局函数\r\n * 扩充Sass默认函数库，用以增强语法\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的第一项\r\n * @function first\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的最后一项\r\n * @function last\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的倒数第几项\r\n * @function nth-last\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $index 指定需要返回的值在list中的倒数位置 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 移除SassList中的某个项目并返回新的List\r\n * @function remove\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {String} $value 指定需要被删除的值 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 截取SassList中的某个部分并返回新的List\r\n * @function slice\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $start 指定需要截取的开始下标 <2.1.0>\r\n * @param {Integer} $end 指定需要截取的结束下标（不包括end），当该值缺省时默认为末尾下标 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 从SassList中添加/删除项目，然后返回新的List。\r\n * @function splice\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $index 指定需要移除的开始下标 <2.1.0>\r\n * @param {Integer} $count 指定需要移除的数量，不可以为负值，0表示不移除 <2.1.0>\r\n * @param {String} $values 指定需要添加的新值（可以是多个），如果该值缺省，则表示只移除不添加新值 <2.1.0>\r\n */\n/**\r\n * Yo框架全局基础方法\r\n * 包括响应式方案，CSS3兼容性方案，厂商前缀方案，iconfont方案，flex布局等全局方法\r\n */\n/**\r\n * @module 常用方法\r\n * @description 给需要的属性加厂家前缀\r\n * @method prefix\r\n * @version 1.0.0\r\n * @param {String} $property 指定属性 <1.0.0>\r\n * @param {String} $value 指定属性值 <1.0.0>\r\n * @skip\r\n */\n/**\r\n * @module 常用方法\r\n * @description 定义字体图标\r\n * @method _iconfont\r\n * @version 1.0.0\r\n * @skip\r\n */\n/**\r\n * @module 常用方法\r\n * @description 四则运算(系统要求：iOS6.0+,Android4.4+)\r\n * @method calc\r\n * @version 1.7.0\r\n * @param {String} $property 指定需要进行计算的CSS属性 <1.7.0>\r\n * @param {String} $value 与原生CSS语法一致，区别在于需要使用引号包裹表达式 <1.7.0>\r\n * @example\r\n * .calc {\r\n *     @include calc(width, \"100% - 100px\");\r\n * }\r\n *\r\n * <div class=\"calc\">四则运算</div>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 定义响应式方案\r\n * @method responsive\r\n * @version 1.0.0\r\n * @param {String} $media 指定媒体查询条件，取值为`config`文件map `media-types`中的值 <1.0.0>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 清除浮动方案\r\n * @method clearfix\r\n * @version 1.0.0\r\n * @param {String} $type 指定清除浮动的方式，包括：pseudo-element | bfc，默认值：pseudo-element <1.8.5>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 清除行内级元素间间隙方案\r\n * @method clearspace\r\n * @version 3.0.3\r\n * @param {Length} $font-size 指定子元素字号，默认值：.14rem <3.0.3>\r\n * @example\r\n * .demo {\r\n *     @include clearspace;\r\n * }\r\n *\r\n * <div class=\"demo\">\r\n *      <span class=\"item\">1</span>\r\n *      <span class=\"item\">2</span>\r\n *      <span class=\"item\">3</span>\r\n * </div>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 描述元素内容在横、纵方向上的对齐方式，默认为水平垂直居中对齐\r\n * @method align\r\n * @version 2.0.0\r\n * @param {String} $flexbox 元素布局方式，可选值：flex | inline-flex，默认值：flex <2.0.0>\r\n * @param {Keyword} $justify-content 元素内容的水平对齐方式，取值与`justify-content`属性一致，默认值：center <2.0.0>\r\n * @param {Keyword} $align-items 元素内容的垂直对齐方式，取值与`align-items`属性一致，默认值：center <2.0.0>\r\n * @example\r\n * .demo {\r\n *     @include align;\r\n * }\r\n *\r\n * <div class=\"demo\">\r\n *      <img alt=\"未知尺寸图片居中\" />\r\n * </div>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 定义是否有滚动条\r\n * @method overflow\r\n * @version 1.0.0\r\n * @param {String} $overflow 取值与最新原生语法一致，默认值：auto <1.0.0>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 生成全屏方法\r\n * @method fullscreen\r\n * @version 1.7.0\r\n * @param {Integer} $z-index 指定层叠级别 <1.7.0>\r\n * @param {Keywords} $position 指定定位方式，取除`static | relative`之外的值，默认值：absolute <1.8.5>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义使用何种滤镜\r\n * @method filter\r\n * @version 1.7.0\r\n * @param {String} $filter 取值与`filter`属性一致 <1.7.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义UA默认外观\r\n * @method appearance\r\n * @version 1.0.0\r\n * @param {String} $appearance 取值与`appearance`属性一致，默认值：none <1.0.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义如何选中内容\r\n * @method user-select\r\n * @version 1.0.0\r\n * @param {String} $user-select 取值与`user-select`属性一致，默认值：none <1.0.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义盒模型\r\n * @method box-sizing\r\n * @version 1.0.0\r\n * @param {String} $box-sizing 指定盒模型类型，取值与`box-sizing`属性一致，默认值：border-box <1.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义渐变色值\r\n * @method gradient\r\n * @version 1.0.0\r\n * @param {String} $type 指定渐变的4种类型：linear, repeating-linear, radial, repeating-radial <1.0.0>\r\n * @param {String} $dir 指定渐变方向，可选值：[left | right] || [top | bottom] | angle <2.0.0>\r\n * @param {String} $gradient 指定渐变取值，与w3c最新原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景图像缩放（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-size\r\n * @version 1.4.0\r\n * @param {Keywords | Length} $background-size 指定背景图缩放值，取值与`background-size`属性一致 <1.4.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景裁减（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-clip\r\n * @version 1.6.0\r\n * @param {Keywords} $background-clip 指定背景图缩放值，取值与`background-clip`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景显示区域（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-origin\r\n * @version 1.6.0\r\n * @param {Keywords} $background-origin 指定背景图`background-position`属性计算相对的参考点，取值与`background-origin`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 为元素添加边框（包括1px边框）\r\n * @method border\r\n * @version 2.0.0\r\n * @param {String} $border-width 指定边框厚度（单位为px），默认值：1px，取值与`border-width`属性一致，不同方向代表边框位置 <2.0.0>\r\n * @param {String} $border-color 指定边框颜色 <2.0.0>\r\n * @param {String} $border-style 指定边框样式 <2.0.0>\r\n * @param {String} $radius 指定边框圆角半径，默认值：null <2.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义圆角，用于修复某些安卓机型上“圆角+边框+背景”，背景溢出的情况\r\n * @method border-radius\r\n * @version 1.6.0\r\n * @param {Length} $border-radius 指定元素的圆角半径，取值与`border-radius`属性一致 <1.6.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 定义简单变换\r\n * @method transform\r\n * @version 1.0.0\r\n * @param {String} $transform 取值范围与`transform`属性一致 <1.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 定义变换原点\r\n * @method transform-origin\r\n * @version 1.0.0\r\n * @param {Length | Percentage | Keywords} $transform-origin 取值范围与`transform-origin`属性一致 <1.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定某元素的子元素是（看起来）位于三维空间内，还是在该元素所在的平面内被扁平化\r\n * @method transform-style\r\n * @version 2.0.0\r\n * @param {String} $transform-style 取值范围与`transform-style`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定观察者与「z=0」平面的距离，使具有三维位置变换的元素产生透视效果。「z>0」的三维元素比正常大，而「z<0」时则比正常小，大小程度由该属性的值决定。\r\n * @method perspective\r\n * @version 2.0.0\r\n * @param {none | Length} $perspective 取值范围与`perspective`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定透视点的位置\r\n * @method perspective-origin\r\n * @version 2.0.0\r\n * @param {Length | Percentage | Keywords} $perspective-origin 取值范围与`perspective-origin`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定元素背面面向用户时是否可见\r\n * @method backface-visibility\r\n * @version 2.0.0\r\n * @param {Keywords} $backface-visibility 取值范围与`backface-visibility`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 定义动画\r\n * @method animation\r\n * @version 1.0.0\r\n * @param {String} $animation 取值与原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定需要引用的动画名称\r\n * @method animation-name\r\n * @version 3.0.0\r\n * @param {String} $animation-name 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画运行一次所持续的时长\r\n * @method animation-duration\r\n * @version 3.0.0\r\n * @param {String} $animation-duration 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画运行方式\r\n * @method animation-timing-function\r\n * @version 3.0.0\r\n * @param {String} $animation-timing-function 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画延迟多久之后再开始\r\n * @method animation-delay\r\n * @version 3.0.0\r\n * @param {String} $animation-delay 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画循环几次\r\n * @method animation-iteration-count\r\n * @version 3.0.0\r\n * @param {String} $animation-iteration-count 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画的运动方向\r\n * @method animation-direction\r\n * @version 3.0.0\r\n * @param {String} $animation-direction 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画的运动状态\r\n * @method animation-play-state\r\n * @version 3.0.0\r\n * @param {String} $animation-play-state 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画时间之外的状态\r\n * @method animation-fill-mode\r\n * @version 3.0.0\r\n * @param {String} $animation-fill-mode 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Transition\r\n * @description 定义补间\r\n * @method transition\r\n * @version 1.0.0\r\n * @param {String} $transition 取值与原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义显示类型为伸缩盒\r\n * @method flexbox\r\n * @version 1.0.0\r\n * @param {String} $flexbox 默认值：flex，可选值：flex | inline-flex <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素如何分配空间\r\n * @method flex\r\n * @version 1.0.0\r\n * @param {Number} $flex 取值与`flex`属性一致，默认值：1 <1.0.0>\r\n * @param {String} $direction 默认值: row，可选值：row | column <1.5.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素的排版顺序\r\n * @method order\r\n * @version 1.0.0\r\n * @param {Integer} $order 取值与`order`属性一致，默认值：1 <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性盒子元素流动方向及遇见边界时是否换行(要求系统：iOS7.0+, Android4.4+)\r\n * @method flex-flow\r\n * @version 2.0.0\r\n * @param {String} $flex-flow 取值与`flex-flow`属性一致，默认值：row nowrap <2.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素的流动方向\r\n * @method flex-direction\r\n * @version 1.0.0\r\n * @param {String} $flex-direction 取值与`flex-direction`属性一致，默认值：row <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性盒子元素溢出后排版(要求系统：iOS7.0+, Android4.4+)\r\n * @method flex-wrap\r\n * @version 1.0.0\r\n * @param {String} $flex-wrap 取值与`flex-wrap`属性一致，默认值：nowrap <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性容器主轴对齐方式(其中`space-around`值需要iOS7.0+,Android4.4+)\r\n * @method justify-content\r\n * @version 1.0.0\r\n * @param {String} $justify-content 取值与`justify-content`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义多行弹性容器侧轴对齐方式(要求系统：iOS7.0+,Android4.4+)\r\n * @method align-content\r\n * @version 1.8.5\r\n * @param {String} $align-content 取值与`align-content`属性一致，默认值：center <1.8.5>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义单行弹性容器侧轴对齐方式\r\n * @method align-items\r\n * @version 1.0.0\r\n * @param {String} $align-items 取值与`align-items`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性容器中子元素自身的在侧轴对齐方式(要求系统：iOS7.0+,Android4.4+)\r\n * @method align-self\r\n * @version 1.0.0\r\n * @param {String} $align-self 取值与`align-self`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成矩形方法\r\n * @method rect\r\n * @version 1.0.0\r\n * @param {Length} $width 定义矩形的长度 <1.0.0>\r\n * @param {Length} $height 定义矩形的高度 <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成正方形方法\r\n * @method square\r\n * @version 1.0.0\r\n * @param {Length} $size 定义正方形的边长 <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成圆形方法\r\n * @method circle\r\n * @version 1.0.0\r\n * @param {Length} $size 定义圆的半径长度 <1.0.0>\r\n * @param {Length} $radius 定义圆的圆角半径长度 <1.0.0>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 在自适应宽度情况下，确保内容元素的宽高比固定，比如：实现随屏幕大小而变化的正方形。\r\n * @method fixed-scale\r\n * @version 3.0.10\r\n * @param {Length} $width 默认值：100%。用以指定内容元素的初始宽度，由于尺寸需动态变化，不要使用固定单位 <3.0.10>\r\n * @param {Length} $scale 默认值：1/1，即正方形。用以指定内容元素的宽度高比 <3.0.10>\r\n */\n/**\r\n * @module 文本\r\n * @description 链接处理方法\r\n * @method link\r\n * @version 1.0.0\r\n * @param {Color} $color 定义链接颜色 <1.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 文本碰到边界是否换行\r\n * @method wrap\r\n * @version 1.0.0\r\n * @param {Boolean} $is-wrap 定义文本是否换行，默认值：true <2.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 单行文本溢出时显示省略号\r\n * @method ellipsis\r\n * @version 1.0.0\r\n * @param {Length} $width 定义容器的宽度，默认值：null <2.0.0>\r\n * @param {Integer} $line-clamp 定义需要显示的行数，默认值：1（即使用单行溢出的处理方案），需要注意的是本参数只支持webkit内核 <2.1.2>\r\n */\n/**\r\n * @module 文本\r\n * @description 文字隐藏方案\r\n * @method texthide\r\n * @version 1.0.0\r\n * @param {Length} $width 定义容器的宽度，默认值：null <2.0.0>\r\n */\n/**\r\n * Yo框架全局Reset\r\n * Yo重置Mobile及高级浏览器上常见的差异\r\n */\n*,\n::before,\n::after {\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n  -webkit-tap-highlight-color: transparent;\n}\nhtml,\nbody {\n  overflow: hidden;\n  height: 100%;\n}\n::-webkit-scrollbar {\n  display: none;\n}\nhtml {\n  background-color: #eee;\n  color: #212121;\n  font-size: 100px;\n  -webkit-user-select: none;\n  user-select: none;\n}\nbody {\n  margin: 0;\n  font-size: 0.14em;\n  line-height: 1.5;\n  font-family: Helvetica Neue, Helvetica, STHeiTi, sans-serif;\n}\nul,\nol,\ndl,\ndd,\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\nfigure,\nform,\nfieldset,\nlegend,\ninput,\ntextarea,\nbutton,\np,\nblockquote,\nth,\ntd,\npre,\nxmp {\n  margin: 0;\n  padding: 0;\n}\ninput,\ntextarea,\nbutton,\nselect,\npre,\nxmp,\ntt,\ncode,\nkbd,\nsamp {\n  line-height: inherit;\n  font-family: inherit;\n}\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\nsmall,\nbig,\ninput,\ntextarea,\nbutton,\nselect {\n  font-size: inherit;\n}\naddress,\ncite,\ndfn,\nem,\ni,\noptgroup,\nvar {\n  font-style: normal;\n}\ntable {\n  border-collapse: collapse;\n  border-spacing: 0;\n  table-layout: fixed;\n  text-align: left;\n}\nul,\nol,\nmenu {\n  list-style: none;\n}\nfieldset,\nimg {\n  border: 0;\n  vertical-align: middle;\n}\narticle,\naside,\ndetails,\nfigcaption,\nfigure,\nfooter,\nheader,\nmain,\nmenu,\nnav,\nsection,\nsummary {\n  display: block;\n}\naudio,\ncanvas,\nvideo {\n  display: inline-block;\n}\nblockquote:before,\nblockquote:after,\nq:before,\nq:after {\n  content: \" \";\n}\ntextarea,\npre,\nxmp {\n  overflow: auto;\n  -webkit-overflow-scrolling: touch;\n}\ntextarea {\n  resize: vertical;\n}\ninput,\ntextarea,\nbutton,\nselect,\nsummary,\na {\n  outline: 0 none;\n}\ninput,\ntextarea,\nbutton,\nselect {\n  color: inherit;\n}\ninput:disabled,\n  textarea:disabled,\n  button:disabled,\n  select:disabled {\n    opacity: 1;\n}\nbutton::-moz-focus-inner,\ninput::-moz-focus-inner {\n  padding: 0;\n  border: 0;\n}\ninput[type=\"button\"],\ninput[type=\"submit\"],\ninput[type=\"reset\"],\ninput[type=\"file\"]::-webkit-file-upload-button,\ninput[type=\"search\"]::-webkit-search-cancel-button {\n  -webkit-appearance: none;\n  appearance: none;\n}\n::-webkit-details-marker {\n  display: none;\n}\nmark {\n  background-color: transparent;\n}\na,\nins,\ns,\nu,\ndel {\n  text-decoration: none;\n}\na,\nimg {\n  -webkit-touch-callout: none;\n}\na {\n  color: #00afc7;\n}\n.g-clear::after,\n.g-mod::after {\n  display: block;\n  overflow: hidden;\n  clear: both;\n  height: 0;\n  content: \" \";\n}\n@font-face {\n  font-family: yofont;\n  src: url(//ss.qunarzz.com/yo/font/1.0.3/yofont.woff) format(\"woff\"), url(//ss.qunarzz.com/yo/font/1.0.3/yofont.ttf) format(\"truetype\");\n}\n.yo-ico {\n  font-family: yofont !important;\n  font-style: normal;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n  vertical-align: middle;\n}\n@font-face {\n  font-family: 'iconfont';\n  src: url(\"http://localhost:7000/media/iconfont/iconfont.woff\") format(\"woff\"), url(\"http://localhost:7000/media/iconfont/iconfont.ttf\") format(\"truetype\");\n}\n.iconfont {\n  font-family: \"iconfont\" !important;\n  font-size: 16px;\n  font-style: normal;\n  -webkit-font-smoothing: antialiased;\n  -webkit-text-stroke-width: 0.2px;\n  -moz-osx-font-smoothing: grayscale;\n}\n.banner {\n  width: 100%;\n  height: 150px;\n}\n.banner img {\n    height: 100%;\n}\nsection > div {\n  height: 100%;\n}\n.load_img {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: flex;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n  justify-content: center;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n  align-items: center;\n  height: 100%;\n}\n.load_img img {\n    width: 30%;\n}\n.goods {\n  height: 100%;\n  overflow-y: scroll;\n}\n.goods .title {\n    height: 60px;\n    padding-left: 15px;\n}\n.goods .title span {\n      color: #ff1d3f;\n      font-size: 18px;\n      line-height: 60px;\n}\n.goods .goods_list {\n    height: 100%;\n}\n.goods .goods_list ul {\n      height: 100%;\n}\n.goods .goods_list ul .img_container {\n        height: 92px;\n}\n.goods .goods_list ul .img_container img {\n          width: 100%;\n}\n.goods .goods_list ul .no_banner {\n        padding-left: 15px;\n        height: 70px;\n        color: #ff1d3f;\n        position: relative;\n}\n.goods .goods_list ul .no_banner span:first-child {\n          position: absolute;\n          margin-top: 27px;\n          height: 20px;\n          font-size: 18px;\n}\n.goods .goods_list ul .sell_out {\n        padding-left: 15px;\n        height: 70px;\n        position: relative;\n}\n.goods .goods_list ul .sell_out span:first-child {\n          display: block;\n          position: absolute;\n          color: #4b4b4b;\n          top: 27px;\n          font-size: 18px;\n          height: 20px;\n}\n.goods .goods_list ul .sell_out span:last-child {\n          position: absolute;\n          bottom: 0;\n          font-size: 12px;\n          color: #968D91;\n          height: 18px;\n          line-height: 18px;\n}\n.goods .goods_list ul li {\n        height: 164px;\n        position: relative;\n}\n.goods .goods_list ul li::after {\n          pointer-events: none;\n          position: absolute;\n          z-index: 999;\n          top: 0;\n          left: 0;\n          content: \" \";\n          border-color: #f5f5f5;\n          border-style: solid;\n          border-width: 0 0 1px 0;\n          -webkit-transform-origin: 0 0;\n          transform-origin: 0 0;\n}\n@media (max--moz-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.49), (max-device-pixel-ratio: 1.49), (max-resolution: 143dpi), (max-resolution: 1.49dppx) {\n.goods .goods_list ul li::after {\n              width: 100%;\n              height: 100%;\n}\n}\n@media (min--moz-device-pixel-ratio: 1.5) and (max--moz-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.49), (min-device-pixel-ratio: 1.5) and (max-device-pixel-ratio: 2.49), (min-resolution: 144dpi) and (max-resolution: 239dpi), (min-resolution: 1.5dppx) and (max-resolution: 2.49dppx) {\n.goods .goods_list ul li::after {\n              width: 200%;\n              height: 200%;\n              -webkit-transform: scale(0.5);\n              transform: scale(0.5);\n}\n}\n@media (min--moz-device-pixel-ratio: 2.5), (-webkit-min-device-pixel-ratio: 2.5), (min-device-pixel-ratio: 2.5), (min-resolution: 240dpi), (min-resolution: 2.5dppx) {\n.goods .goods_list ul li::after {\n              width: 300%;\n              height: 300%;\n              -webkit-transform: scale(0.33333);\n              transform: scale(0.33333);\n}\n}\n.goods .goods_list ul li div.li_container {\n          width: 100%;\n          height: 100%;\n          padding-top: 20px;\n          padding-bottom: 23px;\n          display: -webkit-box;\n          display: -webkit-flex;\n          display: flex;\n          position: relative;\n}\n.goods .goods_list ul li div.li_container .img_left {\n            width: 150px;\n            padding: 0 15px;\n            position: relative;\n}\n.goods .goods_list ul li div.li_container .img_left img {\n              border: 0;\n}\n.goods .goods_list ul li div.li_container .img_left img:first-child {\n                width: 100%;\n}\n.goods .goods_list ul li div.li_container .img_left img:last-child {\n                position: absolute;\n                left: 16px;\n                height: 32px;\n                top: 0;\n}\n.goods .goods_list ul li div.li_container .message_right {\n            -webkit-box-flex: 1;\n            -webkit-flex: 1;\n            flex: 1;\n            width: .1px;\n            width: 100%;\n            position: relative;\n}\n.goods .goods_list ul li div.li_container .message_right .message_title {\n              font-size: 16px;\n              padding-top: 11px;\n              white-space: nowrap;\n              overflow: hidden;\n              text-overflow: ellipsis;\n              letter-spacing: -1px;\n              color: #474245;\n              width: 140px;\n}\n.goods .goods_list ul li div.li_container .message_right .message_info {\n              font-size: 14px;\n              color: #969696;\n              white-space: nowrap;\n              text-overflow: ellipsis;\n              overflow: hidden;\n              width: 140px;\n}\n.goods .goods_list ul li div.li_container .message_right .message_des {\n              height: 25px;\n              line-height: 17px;\n}\n.goods .goods_list ul li div.li_container .message_right .message_des span {\n                display: inline-block;\n                border-radius: 2px;\n                font-size: 9px;\n                height: 13px;\n                line-height: 11px;\n                background: white;\n                color: #c6c6c6;\n                border: 1px solid #c6c6c6;\n                margin-right: 5px;\n                padding: 1px;\n}\n.goods .goods_list ul li div.li_container .message_right .message_highprice {\n              font-size: 12px;\n              color: #ffc38d;\n              line-height: 8px;\n}\n.goods .goods_list ul li div.li_container .message_right .message_lowprice {\n              color: #ff4891;\n              font-size: 12px;\n}\n.goods .goods_list ul li div.li_container .message_right .message_lowprice span span:first-child {\n                letter-spacing: -3px;\n}\n.goods .goods_list ul li div.li_container .message_right .message_lowprice span span:last-child {\n                font-size: 16px;\n                letter-spacing: -1px;\n                display: inline-block;\n                height: 22px;\n                vertical-align: bottom;\n}\n.goods .goods_list ul li div.li_container .message_right .message_cart {\n              position: absolute;\n              bottom: 5px;\n              right: 4%;\n              height: 30px;\n              text-align: right;\n}\n.goods .goods_list ul li div.li_container .message_right .message_cart img {\n                width: 49px;\n                position: absolute;\n                bottom: -8px;\n                right: -6px !important;\n}\n", "", {"version":3,"sources":["D:/missFresh/src/modules/index/components/fruits.vue"],"names":[],"mappings":"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","file":"fruits.vue","sourcesContent":["@charset \"UTF-8\";\n/**\r\n * Yo框架全局base定义\r\n * 本文件与variables不同地方在于，这里所定义的map可以使用在variables和任何地方\r\n * 本文件中map使用\"_\"开头，extra中不使用\"_\"\r\n * base ⇌ extra\r\n */\n/**\r\n * Yo框架全局Variables\r\n * Yo基础变量map，如果不想定义某属性，将其value设置为null\r\n * Yo仅使用2种长度单位：px用于边框，rem用于除边框之外的所有地方\r\n * 本文件中map使用\"_\"开头，config中不使用\"_\"\r\n * variables ⇌ config\r\n */\n/**\r\n * Yo框架自定义全局函数\r\n * 扩充Sass默认函数库，用以增强语法\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的第一项\r\n * @function first\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的最后一项\r\n * @function last\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的倒数第几项\r\n * @function nth-last\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $index 指定需要返回的值在list中的倒数位置 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 移除SassList中的某个项目并返回新的List\r\n * @function remove\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {String} $value 指定需要被删除的值 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 截取SassList中的某个部分并返回新的List\r\n * @function slice\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $start 指定需要截取的开始下标 <2.1.0>\r\n * @param {Integer} $end 指定需要截取的结束下标（不包括end），当该值缺省时默认为末尾下标 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 从SassList中添加/删除项目，然后返回新的List。\r\n * @function splice\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $index 指定需要移除的开始下标 <2.1.0>\r\n * @param {Integer} $count 指定需要移除的数量，不可以为负值，0表示不移除 <2.1.0>\r\n * @param {String} $values 指定需要添加的新值（可以是多个），如果该值缺省，则表示只移除不添加新值 <2.1.0>\r\n */\n/**\r\n * Yo框架全局基础方法\r\n * 包括响应式方案，CSS3兼容性方案，厂商前缀方案，iconfont方案，flex布局等全局方法\r\n */\n/**\r\n * @module 常用方法\r\n * @description 给需要的属性加厂家前缀\r\n * @method prefix\r\n * @version 1.0.0\r\n * @param {String} $property 指定属性 <1.0.0>\r\n * @param {String} $value 指定属性值 <1.0.0>\r\n * @skip\r\n */\n/**\r\n * @module 常用方法\r\n * @description 定义字体图标\r\n * @method _iconfont\r\n * @version 1.0.0\r\n * @skip\r\n */\n/**\r\n * @module 常用方法\r\n * @description 四则运算(系统要求：iOS6.0+,Android4.4+)\r\n * @method calc\r\n * @version 1.7.0\r\n * @param {String} $property 指定需要进行计算的CSS属性 <1.7.0>\r\n * @param {String} $value 与原生CSS语法一致，区别在于需要使用引号包裹表达式 <1.7.0>\r\n * @example\r\n * .calc {\r\n *     @include calc(width, \"100% - 100px\");\r\n * }\r\n *\r\n * <div class=\"calc\">四则运算</div>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 定义响应式方案\r\n * @method responsive\r\n * @version 1.0.0\r\n * @param {String} $media 指定媒体查询条件，取值为`config`文件map `media-types`中的值 <1.0.0>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 清除浮动方案\r\n * @method clearfix\r\n * @version 1.0.0\r\n * @param {String} $type 指定清除浮动的方式，包括：pseudo-element | bfc，默认值：pseudo-element <1.8.5>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 清除行内级元素间间隙方案\r\n * @method clearspace\r\n * @version 3.0.3\r\n * @param {Length} $font-size 指定子元素字号，默认值：.14rem <3.0.3>\r\n * @example\r\n * .demo {\r\n *     @include clearspace;\r\n * }\r\n *\r\n * <div class=\"demo\">\r\n *      <span class=\"item\">1</span>\r\n *      <span class=\"item\">2</span>\r\n *      <span class=\"item\">3</span>\r\n * </div>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 描述元素内容在横、纵方向上的对齐方式，默认为水平垂直居中对齐\r\n * @method align\r\n * @version 2.0.0\r\n * @param {String} $flexbox 元素布局方式，可选值：flex | inline-flex，默认值：flex <2.0.0>\r\n * @param {Keyword} $justify-content 元素内容的水平对齐方式，取值与`justify-content`属性一致，默认值：center <2.0.0>\r\n * @param {Keyword} $align-items 元素内容的垂直对齐方式，取值与`align-items`属性一致，默认值：center <2.0.0>\r\n * @example\r\n * .demo {\r\n *     @include align;\r\n * }\r\n *\r\n * <div class=\"demo\">\r\n *      <img alt=\"未知尺寸图片居中\" />\r\n * </div>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 定义是否有滚动条\r\n * @method overflow\r\n * @version 1.0.0\r\n * @param {String} $overflow 取值与最新原生语法一致，默认值：auto <1.0.0>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 生成全屏方法\r\n * @method fullscreen\r\n * @version 1.7.0\r\n * @param {Integer} $z-index 指定层叠级别 <1.7.0>\r\n * @param {Keywords} $position 指定定位方式，取除`static | relative`之外的值，默认值：absolute <1.8.5>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义使用何种滤镜\r\n * @method filter\r\n * @version 1.7.0\r\n * @param {String} $filter 取值与`filter`属性一致 <1.7.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义UA默认外观\r\n * @method appearance\r\n * @version 1.0.0\r\n * @param {String} $appearance 取值与`appearance`属性一致，默认值：none <1.0.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义如何选中内容\r\n * @method user-select\r\n * @version 1.0.0\r\n * @param {String} $user-select 取值与`user-select`属性一致，默认值：none <1.0.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义盒模型\r\n * @method box-sizing\r\n * @version 1.0.0\r\n * @param {String} $box-sizing 指定盒模型类型，取值与`box-sizing`属性一致，默认值：border-box <1.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义渐变色值\r\n * @method gradient\r\n * @version 1.0.0\r\n * @param {String} $type 指定渐变的4种类型：linear, repeating-linear, radial, repeating-radial <1.0.0>\r\n * @param {String} $dir 指定渐变方向，可选值：[left | right] || [top | bottom] | angle <2.0.0>\r\n * @param {String} $gradient 指定渐变取值，与w3c最新原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景图像缩放（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-size\r\n * @version 1.4.0\r\n * @param {Keywords | Length} $background-size 指定背景图缩放值，取值与`background-size`属性一致 <1.4.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景裁减（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-clip\r\n * @version 1.6.0\r\n * @param {Keywords} $background-clip 指定背景图缩放值，取值与`background-clip`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景显示区域（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-origin\r\n * @version 1.6.0\r\n * @param {Keywords} $background-origin 指定背景图`background-position`属性计算相对的参考点，取值与`background-origin`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 为元素添加边框（包括1px边框）\r\n * @method border\r\n * @version 2.0.0\r\n * @param {String} $border-width 指定边框厚度（单位为px），默认值：1px，取值与`border-width`属性一致，不同方向代表边框位置 <2.0.0>\r\n * @param {String} $border-color 指定边框颜色 <2.0.0>\r\n * @param {String} $border-style 指定边框样式 <2.0.0>\r\n * @param {String} $radius 指定边框圆角半径，默认值：null <2.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义圆角，用于修复某些安卓机型上“圆角+边框+背景”，背景溢出的情况\r\n * @method border-radius\r\n * @version 1.6.0\r\n * @param {Length} $border-radius 指定元素的圆角半径，取值与`border-radius`属性一致 <1.6.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 定义简单变换\r\n * @method transform\r\n * @version 1.0.0\r\n * @param {String} $transform 取值范围与`transform`属性一致 <1.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 定义变换原点\r\n * @method transform-origin\r\n * @version 1.0.0\r\n * @param {Length | Percentage | Keywords} $transform-origin 取值范围与`transform-origin`属性一致 <1.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定某元素的子元素是（看起来）位于三维空间内，还是在该元素所在的平面内被扁平化\r\n * @method transform-style\r\n * @version 2.0.0\r\n * @param {String} $transform-style 取值范围与`transform-style`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定观察者与「z=0」平面的距离，使具有三维位置变换的元素产生透视效果。「z>0」的三维元素比正常大，而「z<0」时则比正常小，大小程度由该属性的值决定。\r\n * @method perspective\r\n * @version 2.0.0\r\n * @param {none | Length} $perspective 取值范围与`perspective`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定透视点的位置\r\n * @method perspective-origin\r\n * @version 2.0.0\r\n * @param {Length | Percentage | Keywords} $perspective-origin 取值范围与`perspective-origin`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定元素背面面向用户时是否可见\r\n * @method backface-visibility\r\n * @version 2.0.0\r\n * @param {Keywords} $backface-visibility 取值范围与`backface-visibility`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 定义动画\r\n * @method animation\r\n * @version 1.0.0\r\n * @param {String} $animation 取值与原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定需要引用的动画名称\r\n * @method animation-name\r\n * @version 3.0.0\r\n * @param {String} $animation-name 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画运行一次所持续的时长\r\n * @method animation-duration\r\n * @version 3.0.0\r\n * @param {String} $animation-duration 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画运行方式\r\n * @method animation-timing-function\r\n * @version 3.0.0\r\n * @param {String} $animation-timing-function 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画延迟多久之后再开始\r\n * @method animation-delay\r\n * @version 3.0.0\r\n * @param {String} $animation-delay 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画循环几次\r\n * @method animation-iteration-count\r\n * @version 3.0.0\r\n * @param {String} $animation-iteration-count 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画的运动方向\r\n * @method animation-direction\r\n * @version 3.0.0\r\n * @param {String} $animation-direction 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画的运动状态\r\n * @method animation-play-state\r\n * @version 3.0.0\r\n * @param {String} $animation-play-state 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画时间之外的状态\r\n * @method animation-fill-mode\r\n * @version 3.0.0\r\n * @param {String} $animation-fill-mode 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Transition\r\n * @description 定义补间\r\n * @method transition\r\n * @version 1.0.0\r\n * @param {String} $transition 取值与原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义显示类型为伸缩盒\r\n * @method flexbox\r\n * @version 1.0.0\r\n * @param {String} $flexbox 默认值：flex，可选值：flex | inline-flex <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素如何分配空间\r\n * @method flex\r\n * @version 1.0.0\r\n * @param {Number} $flex 取值与`flex`属性一致，默认值：1 <1.0.0>\r\n * @param {String} $direction 默认值: row，可选值：row | column <1.5.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素的排版顺序\r\n * @method order\r\n * @version 1.0.0\r\n * @param {Integer} $order 取值与`order`属性一致，默认值：1 <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性盒子元素流动方向及遇见边界时是否换行(要求系统：iOS7.0+, Android4.4+)\r\n * @method flex-flow\r\n * @version 2.0.0\r\n * @param {String} $flex-flow 取值与`flex-flow`属性一致，默认值：row nowrap <2.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素的流动方向\r\n * @method flex-direction\r\n * @version 1.0.0\r\n * @param {String} $flex-direction 取值与`flex-direction`属性一致，默认值：row <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性盒子元素溢出后排版(要求系统：iOS7.0+, Android4.4+)\r\n * @method flex-wrap\r\n * @version 1.0.0\r\n * @param {String} $flex-wrap 取值与`flex-wrap`属性一致，默认值：nowrap <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性容器主轴对齐方式(其中`space-around`值需要iOS7.0+,Android4.4+)\r\n * @method justify-content\r\n * @version 1.0.0\r\n * @param {String} $justify-content 取值与`justify-content`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义多行弹性容器侧轴对齐方式(要求系统：iOS7.0+,Android4.4+)\r\n * @method align-content\r\n * @version 1.8.5\r\n * @param {String} $align-content 取值与`align-content`属性一致，默认值：center <1.8.5>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义单行弹性容器侧轴对齐方式\r\n * @method align-items\r\n * @version 1.0.0\r\n * @param {String} $align-items 取值与`align-items`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性容器中子元素自身的在侧轴对齐方式(要求系统：iOS7.0+,Android4.4+)\r\n * @method align-self\r\n * @version 1.0.0\r\n * @param {String} $align-self 取值与`align-self`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成矩形方法\r\n * @method rect\r\n * @version 1.0.0\r\n * @param {Length} $width 定义矩形的长度 <1.0.0>\r\n * @param {Length} $height 定义矩形的高度 <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成正方形方法\r\n * @method square\r\n * @version 1.0.0\r\n * @param {Length} $size 定义正方形的边长 <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成圆形方法\r\n * @method circle\r\n * @version 1.0.0\r\n * @param {Length} $size 定义圆的半径长度 <1.0.0>\r\n * @param {Length} $radius 定义圆的圆角半径长度 <1.0.0>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 在自适应宽度情况下，确保内容元素的宽高比固定，比如：实现随屏幕大小而变化的正方形。\r\n * @method fixed-scale\r\n * @version 3.0.10\r\n * @param {Length} $width 默认值：100%。用以指定内容元素的初始宽度，由于尺寸需动态变化，不要使用固定单位 <3.0.10>\r\n * @param {Length} $scale 默认值：1/1，即正方形。用以指定内容元素的宽度高比 <3.0.10>\r\n */\n/**\r\n * @module 文本\r\n * @description 链接处理方法\r\n * @method link\r\n * @version 1.0.0\r\n * @param {Color} $color 定义链接颜色 <1.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 文本碰到边界是否换行\r\n * @method wrap\r\n * @version 1.0.0\r\n * @param {Boolean} $is-wrap 定义文本是否换行，默认值：true <2.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 单行文本溢出时显示省略号\r\n * @method ellipsis\r\n * @version 1.0.0\r\n * @param {Length} $width 定义容器的宽度，默认值：null <2.0.0>\r\n * @param {Integer} $line-clamp 定义需要显示的行数，默认值：1（即使用单行溢出的处理方案），需要注意的是本参数只支持webkit内核 <2.1.2>\r\n */\n/**\r\n * @module 文本\r\n * @description 文字隐藏方案\r\n * @method texthide\r\n * @version 1.0.0\r\n * @param {Length} $width 定义容器的宽度，默认值：null <2.0.0>\r\n */\n/**\r\n * Yo框架全局Reset\r\n * Yo重置Mobile及高级浏览器上常见的差异\r\n */\n*,\n::before,\n::after {\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n  -webkit-tap-highlight-color: transparent; }\n\nhtml,\nbody {\n  overflow: hidden;\n  height: 100%; }\n\n::-webkit-scrollbar {\n  display: none; }\n\nhtml {\n  background-color: #eee;\n  color: #212121;\n  font-size: 100px;\n  -webkit-user-select: none;\n  user-select: none; }\n\nbody {\n  margin: 0;\n  font-size: 0.14em;\n  line-height: 1.5;\n  font-family: Helvetica Neue, Helvetica, STHeiTi, sans-serif; }\n\nul,\nol,\ndl,\ndd,\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\nfigure,\nform,\nfieldset,\nlegend,\ninput,\ntextarea,\nbutton,\np,\nblockquote,\nth,\ntd,\npre,\nxmp {\n  margin: 0;\n  padding: 0; }\n\ninput,\ntextarea,\nbutton,\nselect,\npre,\nxmp,\ntt,\ncode,\nkbd,\nsamp {\n  line-height: inherit;\n  font-family: inherit; }\n\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\nsmall,\nbig,\ninput,\ntextarea,\nbutton,\nselect {\n  font-size: inherit; }\n\naddress,\ncite,\ndfn,\nem,\ni,\noptgroup,\nvar {\n  font-style: normal; }\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0;\n  table-layout: fixed;\n  text-align: left; }\n\nul,\nol,\nmenu {\n  list-style: none; }\n\nfieldset,\nimg {\n  border: 0;\n  vertical-align: middle; }\n\narticle,\naside,\ndetails,\nfigcaption,\nfigure,\nfooter,\nheader,\nmain,\nmenu,\nnav,\nsection,\nsummary {\n  display: block; }\n\naudio,\ncanvas,\nvideo {\n  display: inline-block; }\n\nblockquote:before,\nblockquote:after,\nq:before,\nq:after {\n  content: \"\\0020\"; }\n\ntextarea,\npre,\nxmp {\n  overflow: auto;\n  -webkit-overflow-scrolling: touch; }\n\ntextarea {\n  resize: vertical; }\n\ninput,\ntextarea,\nbutton,\nselect,\nsummary,\na {\n  outline: 0 none; }\n\ninput,\ntextarea,\nbutton,\nselect {\n  color: inherit; }\n  input:disabled,\n  textarea:disabled,\n  button:disabled,\n  select:disabled {\n    opacity: 1; }\n\nbutton::-moz-focus-inner,\ninput::-moz-focus-inner {\n  padding: 0;\n  border: 0; }\n\ninput[type=\"button\"],\ninput[type=\"submit\"],\ninput[type=\"reset\"],\ninput[type=\"file\"]::-webkit-file-upload-button,\ninput[type=\"search\"]::-webkit-search-cancel-button {\n  -webkit-appearance: none;\n  appearance: none; }\n\n::-webkit-details-marker {\n  display: none; }\n\nmark {\n  background-color: transparent; }\n\na,\nins,\ns,\nu,\ndel {\n  text-decoration: none; }\n\na,\nimg {\n  -webkit-touch-callout: none; }\n\na {\n  color: #00afc7; }\n\n.g-clear::after,\n.g-mod::after {\n  display: block;\n  overflow: hidden;\n  clear: both;\n  height: 0;\n  content: \"\\0020\"; }\n\n@font-face {\n  font-family: yofont;\n  src: url(//ss.qunarzz.com/yo/font/1.0.3/yofont.woff) format(\"woff\"), url(//ss.qunarzz.com/yo/font/1.0.3/yofont.ttf) format(\"truetype\"); }\n\n.yo-ico {\n  font-family: yofont !important;\n  font-style: normal;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n  vertical-align: middle; }\n\n@font-face {\n  font-family: 'iconfont';\n  src: url(\"http://localhost:7000/media/iconfont/iconfont.woff\") format(\"woff\"), url(\"http://localhost:7000/media/iconfont/iconfont.ttf\") format(\"truetype\"); }\n\n.iconfont {\n  font-family: \"iconfont\" !important;\n  font-size: 16px;\n  font-style: normal;\n  -webkit-font-smoothing: antialiased;\n  -webkit-text-stroke-width: 0.2px;\n  -moz-osx-font-smoothing: grayscale; }\n\n.banner {\n  width: 100%;\n  height: 150px; }\n  .banner img {\n    height: 100%; }\n\nsection > div {\n  height: 100%; }\n\n.load_img {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: flex;\n  -webkit-box-pack: center;\n  -webkit-justify-content: center;\n  justify-content: center;\n  -webkit-box-align: center;\n  -webkit-align-items: center;\n  align-items: center;\n  height: 100%; }\n  .load_img img {\n    width: 30%; }\n\n.goods {\n  height: 100%;\n  overflow-y: scroll; }\n  .goods .title {\n    height: 60px;\n    padding-left: 15px; }\n    .goods .title span {\n      color: #ff1d3f;\n      font-size: 18px;\n      line-height: 60px; }\n  .goods .goods_list {\n    height: 100%; }\n    .goods .goods_list ul {\n      height: 100%; }\n      .goods .goods_list ul .img_container {\n        height: 92px; }\n        .goods .goods_list ul .img_container img {\n          width: 100%; }\n      .goods .goods_list ul .no_banner {\n        padding-left: 15px;\n        height: 70px;\n        color: #ff1d3f;\n        position: relative; }\n        .goods .goods_list ul .no_banner span:first-child {\n          position: absolute;\n          margin-top: 27px;\n          height: 20px;\n          font-size: 18px; }\n      .goods .goods_list ul .sell_out {\n        padding-left: 15px;\n        height: 70px;\n        position: relative; }\n        .goods .goods_list ul .sell_out span:first-child {\n          display: block;\n          position: absolute;\n          color: #4b4b4b;\n          top: 27px;\n          font-size: 18px;\n          height: 20px; }\n        .goods .goods_list ul .sell_out span:last-child {\n          position: absolute;\n          bottom: 0;\n          font-size: 12px;\n          color: #968D91;\n          height: 18px;\n          line-height: 18px; }\n      .goods .goods_list ul li {\n        height: 164px;\n        position: relative; }\n        .goods .goods_list ul li::after {\n          pointer-events: none;\n          position: absolute;\n          z-index: 999;\n          top: 0;\n          left: 0;\n          content: \"\\0020\";\n          border-color: #f5f5f5;\n          border-style: solid;\n          border-width: 0 0 1px 0;\n          -webkit-transform-origin: 0 0;\n          transform-origin: 0 0; }\n          @media (max--moz-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.49), (max-device-pixel-ratio: 1.49), (max-resolution: 143dpi), (max-resolution: 1.49dppx) {\n            .goods .goods_list ul li::after {\n              width: 100%;\n              height: 100%; } }\n          @media (min--moz-device-pixel-ratio: 1.5) and (max--moz-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.49), (min-device-pixel-ratio: 1.5) and (max-device-pixel-ratio: 2.49), (min-resolution: 144dpi) and (max-resolution: 239dpi), (min-resolution: 1.5dppx) and (max-resolution: 2.49dppx) {\n            .goods .goods_list ul li::after {\n              width: 200%;\n              height: 200%;\n              -webkit-transform: scale(0.5);\n              transform: scale(0.5); } }\n          @media (min--moz-device-pixel-ratio: 2.5), (-webkit-min-device-pixel-ratio: 2.5), (min-device-pixel-ratio: 2.5), (min-resolution: 240dpi), (min-resolution: 2.5dppx) {\n            .goods .goods_list ul li::after {\n              width: 300%;\n              height: 300%;\n              -webkit-transform: scale(0.33333);\n              transform: scale(0.33333); } }\n        .goods .goods_list ul li div.li_container {\n          width: 100%;\n          height: 100%;\n          padding-top: 20px;\n          padding-bottom: 23px;\n          display: -webkit-box;\n          display: -webkit-flex;\n          display: flex;\n          position: relative; }\n          .goods .goods_list ul li div.li_container .img_left {\n            width: 150px;\n            padding: 0 15px;\n            position: relative; }\n            .goods .goods_list ul li div.li_container .img_left img {\n              border: 0; }\n              .goods .goods_list ul li div.li_container .img_left img:first-child {\n                width: 100%; }\n              .goods .goods_list ul li div.li_container .img_left img:last-child {\n                position: absolute;\n                left: 16px;\n                height: 32px;\n                top: 0; }\n          .goods .goods_list ul li div.li_container .message_right {\n            -webkit-box-flex: 1;\n            -webkit-flex: 1;\n            flex: 1;\n            width: .1px;\n            width: 100%;\n            position: relative; }\n            .goods .goods_list ul li div.li_container .message_right .message_title {\n              font-size: 16px;\n              padding-top: 11px;\n              white-space: nowrap;\n              overflow: hidden;\n              text-overflow: ellipsis;\n              letter-spacing: -1px;\n              color: #474245;\n              width: 140px; }\n            .goods .goods_list ul li div.li_container .message_right .message_info {\n              font-size: 14px;\n              color: #969696;\n              white-space: nowrap;\n              text-overflow: ellipsis;\n              overflow: hidden;\n              width: 140px; }\n            .goods .goods_list ul li div.li_container .message_right .message_des {\n              height: 25px;\n              line-height: 17px; }\n              .goods .goods_list ul li div.li_container .message_right .message_des span {\n                display: inline-block;\n                border-radius: 2px;\n                font-size: 9px;\n                height: 13px;\n                line-height: 11px;\n                background: white;\n                color: #c6c6c6;\n                border: 1px solid #c6c6c6;\n                margin-right: 5px;\n                padding: 1px; }\n            .goods .goods_list ul li div.li_container .message_right .message_highprice {\n              font-size: 12px;\n              color: #ffc38d;\n              line-height: 8px; }\n            .goods .goods_list ul li div.li_container .message_right .message_lowprice {\n              color: #ff4891;\n              font-size: 12px; }\n              .goods .goods_list ul li div.li_container .message_right .message_lowprice span span:first-child {\n                letter-spacing: -3px; }\n              .goods .goods_list ul li div.li_container .message_right .message_lowprice span span:last-child {\n                font-size: 16px;\n                letter-spacing: -1px;\n                display: inline-block;\n                height: 22px;\n                vertical-align: bottom; }\n            .goods .goods_list ul li div.li_container .message_right .message_cart {\n              position: absolute;\n              bottom: 5px;\n              right: 4%;\n              height: 30px;\n              text-align: right; }\n              .goods .goods_list ul li div.li_container .message_right .message_cart img {\n                width: 49px;\n                position: absolute;\n                bottom: -8px;\n                right: -6px !important; }\n"],"sourceRoot":""}]);
 
 // exports
 
 
 /***/ }),
-/* 40 */
+/* 38 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -27715,19 +27677,19 @@ Object.defineProperty(exports, "__esModule", {
 	value: true
 });
 
-var _vue = __webpack_require__(3);
+var _vue = __webpack_require__(4);
 
 var _vue2 = _interopRequireDefault(_vue);
 
-var _mintUi = __webpack_require__(7);
+var _mintUi = __webpack_require__(8);
 
-__webpack_require__(8);
+__webpack_require__(9);
 
 var _axios = __webpack_require__(5);
 
 var _axios2 = _interopRequireDefault(_axios);
 
-var _store = __webpack_require__(10);
+var _store = __webpack_require__(6);
 
 var _store2 = _interopRequireDefault(_store);
 
@@ -27808,11 +27770,16 @@ _vue2.default.component(_mintUi.Loadmore.name, _mintUi.Loadmore); //
 //
 //
 //
+//
+//
+//
+//
 
 _vue2.default.component(_mintUi.Swipe.name, _mintUi.Swipe);
 _vue2.default.component(_mintUi.SwipeItem.name, _mintUi.SwipeItem);
 _vue2.default.use(_mintUi.Lazyload);
 exports.default = {
+	props: ["type"],
 	data: function data() {
 		return {
 			imgs: [],
@@ -27824,10 +27791,34 @@ exports.default = {
 			allLoaded: false,
 			store: _store2.default,
 			num: this.$route.params,
-			looked: ''
+			looked: 'fruit',
+			isloading: true
 		};
 	},
-	mounted: function mounted() {},
+	mounted: function mounted() {
+		console.log(this.store.state.type);
+		var that = this;
+		(0, _axios2.default)({
+			url: '/api/v3/product/category/hd-' + that.store.state.type + '?device_id=52efdf46fa06eeda247fc87856ff93ae&env=web&fromSource=zhuye&platform=web&uuid=52efdf46fa06eeda247fc87856ff93ae&version=3.8.0.1',
+			method: 'get',
+			headers: {
+				"Content-Type": "application/json;charset=UTF-8",
+				"x-region": '{"station_code":"","address_code":"110105"}',
+				"X-Tingyun-Id": "Q1KLryMuSto;r=75130083",
+				"version": '3.8.0.1',
+				'platform': 'web'
+			},
+			data: {
+				lat: ""
+			}
+		}).then(function (response) {
+			that.imgs = response.data.banner;
+			that.goods_lists_all = response.data.products;
+			that.goods_lists = that.goods_lists_all.slice(1, 7);
+			that.isloading = false;
+		});
+	},
+	updated: function updated() {},
 
 	methods: {
 		loadTop: function loadTop() {
@@ -27852,29 +27843,10 @@ exports.default = {
 			});
 		},
 		loadBottom: function loadBottom() {
-			var that = this;
-			(0, _axios2.default)({
-				url: '/api/v3/product/category/hd-' + that.store.state.type + '?device_id=52efdf46fa06eeda247fc87856ff93ae&env=web&fromSource=zhuye&platform=web&uuid=52efdf46fa06eeda247fc87856ff93ae&version=3.8.0.1',
-				method: 'get',
-				headers: {
-					"Content-Type": "application/json;charset=UTF-8",
-					"x-region": '{"station_code":"","address_code":"110105"}',
-					"X-Tingyun-Id": "Q1KLryMuSto;r=75130083",
-					"version": '3.8.0.1',
-					'platform': 'web'
-				},
-				data: {
-					lat: ""
-				}
-			}).then(function (response) {
-				that.imgs = response.data.banner;
-				that.goods_lists_all = response.data.products;
-				that.goods_lists = that.goods_lists_all.slice(1, 7);
-				that.page_num += 7;
-				that.goods_lists = that.goods_lists_all.slice(1, that.page_num);
-				that.allLoaded = true;
-				that.$refs.loadmore.onBottomLoaded();
-			});
+			this.page_num += 7;
+			this.goods_lists = this.goods_lists_all.slice(1, this.page_num);
+			this.allLoaded = true;
+			this.$refs.loadmore.onBottomLoaded();
 		},
 		handleTopChange: function handleTopChange(status) {
 			this.topStatus = status;
@@ -27891,6 +27863,7 @@ exports.default = {
 	},
 	watch: {
 		looked: function looked() {
+			this.isloading = true;
 			var that = this;
 			(0, _axios2.default)({
 				url: '/api/v3/product/category/hd-' + that.store.state.type + '?device_id=52efdf46fa06eeda247fc87856ff93ae&env=web&fromSource=zhuye&platform=web&uuid=52efdf46fa06eeda247fc87856ff93ae&version=3.8.0.1',
@@ -27909,17 +27882,14 @@ exports.default = {
 				that.imgs = response.data.banner;
 				that.goods_lists_all = response.data.products;
 				that.goods_lists = that.goods_lists_all.slice(1, 7);
-				that.page_num += 7;
-				that.goods_lists = that.goods_lists_all.slice(1, that.page_num);
-				that.allLoaded = true;
-				that.$refs.loadmore.onBottomLoaded();
+				that.isloading = false;
 			});
 		}
 	}
 };
 
 /***/ }),
-/* 41 */
+/* 39 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -28863,10 +28833,10 @@ var index_esm = {
 
 /* harmony default export */ __webpack_exports__["default"] = (index_esm);
 
-/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(6)))
+/* WEBPACK VAR INJECTION */}.call(__webpack_exports__, __webpack_require__(7)))
 
 /***/ }),
-/* 42 */
+/* 40 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -28874,259 +28844,289 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "div",
-    [
-      _c(
-        "mt-loadmore",
-        {
-          ref: "loadmore",
-          attrs: {
-            bottomDistance: 0,
-            "top-method": _vm.loadTop,
-            "bottom-method": _vm.loadBottom,
-            "bottom-all-loaded": _vm.allLoaded,
-            bottomAllLoaded: false
-          },
-          on: {
-            "top-status-change": _vm.handleTopChange,
-            "bottom-status-change": _vm.handleBottomChange
-          }
-        },
-        [
-          _c(
-            "div",
-            {
-              staticClass: "mint-loadmore-top",
-              attrs: { slot: "top" },
-              slot: "top"
-            },
-            [
-              _c(
-                "span",
-                {
-                  directives: [
-                    {
-                      name: "show",
-                      rawName: "v-show",
-                      value: _vm.topStatus !== "loading",
-                      expression: "topStatus !== 'loading'"
-                    }
-                  ],
-                  class: { rotate: _vm.topStatus === "drop" }
+  return _c("div", [
+    _vm.isloading
+      ? _c("div", { staticClass: "load_img" }, [
+          _c("img", {
+            attrs: {
+              src: __webpack_require__(1)
+            }
+          })
+        ])
+      : _vm._e(),
+    _vm._v(" "),
+    !_vm.isloading
+      ? _c(
+          "div",
+          [
+            _c(
+              "mt-loadmore",
+              {
+                ref: "loadmore",
+                attrs: {
+                  bottomDistance: 0,
+                  "top-method": _vm.loadTop,
+                  "bottom-method": _vm.loadBottom,
+                  "bottom-all-loaded": _vm.allLoaded,
+                  bottomAllLoaded: false
                 },
-                [
-                  _c("img", {
-                    attrs: {
-                      src: __webpack_require__(4),
-                      width: "120",
-                      height: "40"
-                    }
-                  }),
-                  _vm._v(" "),
-                  _c("p", [_vm._v("优质生鲜 两小时到")])
-                ]
-              ),
-              _vm._v(" "),
-              _c(
-                "span",
-                {
-                  directives: [
-                    {
-                      name: "show",
-                      rawName: "v-show",
-                      value: _vm.topStatus === "loading",
-                      expression: "topStatus === 'loading'"
-                    }
+                on: {
+                  "top-status-change": _vm.handleTopChange,
+                  "bottom-status-change": _vm.handleBottomChange
+                }
+              },
+              [
+                _c(
+                  "div",
+                  {
+                    staticClass: "mint-loadmore-top",
+                    attrs: { slot: "top" },
+                    slot: "top"
+                  },
+                  [
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.topStatus !== "loading",
+                            expression: "topStatus !== 'loading'"
+                          }
+                        ],
+                        class: { rotate: _vm.topStatus === "drop" }
+                      },
+                      [
+                        _c("img", {
+                          attrs: {
+                            src: __webpack_require__(1),
+                            width: "120",
+                            height: "40"
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("p", [_vm._v("优质生鲜 两小时到")])
+                      ]
+                    ),
+                    _vm._v(" "),
+                    _c(
+                      "span",
+                      {
+                        directives: [
+                          {
+                            name: "show",
+                            rawName: "v-show",
+                            value: _vm.topStatus === "loading",
+                            expression: "topStatus === 'loading'"
+                          }
+                        ]
+                      },
+                      [
+                        _c("img", {
+                          attrs: {
+                            src: __webpack_require__(1),
+                            width: "120",
+                            height: "40"
+                          }
+                        }),
+                        _vm._v(" "),
+                        _c("p", [_vm._v("优质生鲜 两小时到")])
+                      ]
+                    )
                   ]
-                },
-                [
-                  _c("img", {
-                    attrs: {
-                      src: __webpack_require__(4),
-                      width: "120",
-                      height: "40"
-                    }
-                  }),
+                ),
+                _vm._v(" "),
+                _c(
+                  "div",
+                  { staticClass: "banner" },
+                  [
+                    _c(
+                      "mt-swipe",
+                      { attrs: { auto: 4000 } },
+                      _vm._l(_vm.imgs, function(value, i) {
+                        return _c("mt-swipe-item", { key: i }, [
+                          _c("img", { attrs: { src: value.path } })
+                        ])
+                      })
+                    )
+                  ],
+                  1
+                ),
+                _vm._v(" "),
+                _c("div", { staticClass: "goods" }, [
+                  _c("div", { staticClass: "title" }, [
+                    _c("span", [_vm._v("今日特卖")])
+                  ]),
                   _vm._v(" "),
-                  _c("p", [_vm._v("优质生鲜 两小时到")])
-                ]
-              )
-            ]
-          ),
-          _vm._v(" "),
-          _c(
-            "div",
-            { staticClass: "banner" },
-            [
-              _c(
-                "mt-swipe",
-                { attrs: { auto: 4000 } },
-                _vm._l(_vm.imgs, function(value, i) {
-                  return _c("mt-swipe-item", { key: i }, [
-                    _c("img", { attrs: { src: value.path } })
-                  ])
-                })
-              )
-            ],
-            1
-          ),
-          _vm._v(" "),
-          _c("div", { staticClass: "goods" }, [
-            _c("div", { staticClass: "title" }, [_c("span", [_vm._v("今日特卖")])]),
-            _vm._v(" "),
-            _c("div", { staticClass: "goods_list" }, [
-              _c(
-                "ul",
-                _vm._l(_vm.goods_lists, function(goods_list, i) {
-                  return goods_list.buy_permission === 0
-                    ? _c("li", [
-                        _c("div", { staticClass: "li_container" }, [
-                          _c("div", { staticClass: "img_left" }, [
-                            _c("img", {
-                              directives: [
-                                {
-                                  name: "lazy",
-                                  rawName: "v-lazy",
-                                  value: goods_list.image,
-                                  expression: "goods_list.image"
-                                }
-                              ],
-                              attrs: { src: goods_list.image }
-                            }),
-                            _vm._v(" "),
-                            _c("img", {
-                              attrs: { src: goods_list.promote_tag }
-                            })
-                          ]),
-                          _vm._v(" "),
-                          _c("div", { staticClass: "message_right" }, [
-                            _c("div", { staticClass: "message_title" }, [
-                              _vm._v(
-                                "\n\t\t\t\t\t\t\t\t\t" +
-                                  _vm._s(goods_list.name) +
-                                  "\n\t\t\t\t\t\t\t\t"
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "message_info" }, [
-                              _vm._v(
-                                "\n\t\t\t\t\t\t\t\t\t" +
-                                  _vm._s(goods_list.subtitle) +
-                                  "\n\t\t\t\t\t\t\t\t"
-                              )
-                            ]),
-                            _vm._v(" "),
-                            _c(
-                              "div",
-                              { staticClass: "message_des" },
-                              _vm._l(goods_list.product_tags, function(value) {
-                                return _c("span", [_vm._v(_vm._s(value.name))])
-                              })
-                            ),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "message_highprice" }, [
-                              _c("span", [
-                                _vm._v(
-                                  "可用券价 ¥" +
-                                    _vm._s(
-                                      goods_list.vip_price_pro.price_up.price /
-                                        100
+                  _c("div", { staticClass: "goods_list" }, [
+                    _c(
+                      "ul",
+                      _vm._l(_vm.goods_lists, function(goods_list, i) {
+                        return goods_list.buy_permission === 0
+                          ? _c("li", [
+                              _c("div", { staticClass: "li_container" }, [
+                                _c("div", { staticClass: "img_left" }, [
+                                  _c("img", {
+                                    directives: [
+                                      {
+                                        name: "lazy",
+                                        rawName: "v-lazy",
+                                        value: goods_list.image,
+                                        expression: "goods_list.image"
+                                      }
+                                    ],
+                                    attrs: { src: goods_list.image }
+                                  }),
+                                  _vm._v(" "),
+                                  _c("img", {
+                                    attrs: { src: goods_list.promote_tag }
+                                  })
+                                ]),
+                                _vm._v(" "),
+                                _c("div", { staticClass: "message_right" }, [
+                                  _c("div", { staticClass: "message_title" }, [
+                                    _vm._v(
+                                      "\n\t\t\t\t\t\t\t\t\t\t" +
+                                        _vm._s(goods_list.name) +
+                                        "\n\t\t\t\t\t\t\t\t\t"
                                     )
-                                )
-                              ])
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "message_lowprice" }, [
-                              _c("span", [
-                                _vm._v("商城价 "),
-                                _c("span", [_vm._v("¥ ")]),
-                                _c("span", [
-                                  _vm._v(
-                                    " " +
-                                      _vm._s(
-                                        goods_list.vip_price_pro.price_down
-                                          .price / 100
-                                      )
-                                  )
+                                  ]),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "message_info" }, [
+                                    _vm._v(
+                                      "\n\t\t\t\t\t\t\t\t\t\t" +
+                                        _vm._s(goods_list.subtitle) +
+                                        "\n\t\t\t\t\t\t\t\t\t"
+                                    )
+                                  ]),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "message_des" },
+                                    _vm._l(goods_list.product_tags, function(
+                                      value
+                                    ) {
+                                      return _c("span", [
+                                        _vm._v(_vm._s(value.name))
+                                      ])
+                                    })
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "message_highprice" },
+                                    [
+                                      _c("span", [
+                                        _vm._v(
+                                          "可用券价 ¥" +
+                                            _vm._s(
+                                              goods_list.vip_price_pro.price_up
+                                                .price / 100
+                                            )
+                                        )
+                                      ])
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c(
+                                    "div",
+                                    { staticClass: "message_lowprice" },
+                                    [
+                                      _c("span", [
+                                        _vm._v("商城价 "),
+                                        _c("span", [_vm._v("¥ ")]),
+                                        _c("span", [
+                                          _vm._v(
+                                            " " +
+                                              _vm._s(
+                                                goods_list.vip_price_pro
+                                                  .price_down.price / 100
+                                              )
+                                          )
+                                        ])
+                                      ])
+                                    ]
+                                  ),
+                                  _vm._v(" "),
+                                  _c("div", { staticClass: "message_cart" }, [
+                                    _c("img", {
+                                      attrs: { src: goods_list.cart_image }
+                                    })
+                                  ])
                                 ])
                               ])
-                            ]),
-                            _vm._v(" "),
-                            _c("div", { staticClass: "message_cart" }, [
-                              _c("img", {
-                                attrs: { src: goods_list.cart_image }
-                              })
                             ])
-                          ])
-                        ])
-                      ])
-                    : goods_list.code == "sell-out"
-                      ? _c("div", { staticClass: "sell_out" }, [
-                          _c("span", [_vm._v(_vm._s(goods_list.name))]),
-                          _c("span", [_vm._v(_vm._s(goods_list.second_title))])
-                        ])
-                      : goods_list.banner == undefined
-                        ? _c("div", { staticClass: "no_banner" }, [
-                            _c("span", [_vm._v(_vm._s(goods_list.name))]),
-                            _c("span", [
-                              _vm._v(_vm._s(goods_list.second_title))
-                            ])
-                          ])
-                        : _c(
-                            "div",
-                            { staticClass: "img_container" },
-                            _vm._l(goods_list.banner, function(value, i) {
-                              return _c("img", {
-                                key: i,
-                                attrs: { src: value.path }
-                              })
-                            })
-                          )
-                })
-              )
-            ])
-          ]),
-          _vm._v(" "),
-          _c(
-            "div",
-            {
-              staticClass: "mint-loadmore-bottom",
-              attrs: { slot: "bottom" },
-              slot: "bottom"
-            },
-            [
-              _c("span", {
-                directives: [
+                          : goods_list.code == "sell-out"
+                            ? _c("div", { staticClass: "sell_out" }, [
+                                _c("span", [_vm._v(_vm._s(goods_list.name))]),
+                                _c("span", [
+                                  _vm._v(_vm._s(goods_list.second_title))
+                                ])
+                              ])
+                            : goods_list.banner == undefined
+                              ? _c("div", { staticClass: "no_banner" }, [
+                                  _c("span", [_vm._v(_vm._s(goods_list.name))]),
+                                  _c("span", [
+                                    _vm._v(_vm._s(goods_list.second_title))
+                                  ])
+                                ])
+                              : _c(
+                                  "div",
+                                  { staticClass: "img_container" },
+                                  _vm._l(goods_list.banner, function(value, i) {
+                                    return _c("img", {
+                                      key: i,
+                                      attrs: { src: value.path }
+                                    })
+                                  })
+                                )
+                      })
+                    )
+                  ])
+                ]),
+                _vm._v(" "),
+                _c(
+                  "div",
                   {
-                    name: "show",
-                    rawName: "v-show",
-                    value: _vm.bottomStatus !== "loading",
-                    expression: "bottomStatus !== 'loading'"
-                  }
-                ],
-                class: { rotate: _vm.bottomStatus === "drop" }
-              }),
-              _vm._v(" "),
-              _c("span", {
-                directives: [
-                  {
-                    name: "show",
-                    rawName: "v-show",
-                    value: _vm.bottomStatus === "loading",
-                    expression: "bottomStatus === 'loading'"
-                  }
-                ]
-              })
-            ]
-          ),
-          _vm._v(" "),
-          _c("div", [_vm._v(_vm._s(_vm.look()))])
-        ]
-      )
-    ],
-    1
-  )
+                    staticClass: "mint-loadmore-bottom",
+                    attrs: { slot: "bottom" },
+                    slot: "bottom"
+                  },
+                  [
+                    _c("span", {
+                      directives: [
+                        {
+                          name: "show",
+                          rawName: "v-show",
+                          value: _vm.bottomStatus !== "loading",
+                          expression: "bottomStatus !== 'loading'"
+                        }
+                      ],
+                      class: { rotate: _vm.bottomStatus === "drop" }
+                    }),
+                    _vm._v(" "),
+                    _c("span", {
+                      directives: [
+                        {
+                          name: "show",
+                          rawName: "v-show",
+                          value: _vm.bottomStatus === "loading",
+                          expression: "bottomStatus === 'loading'"
+                        }
+                      ]
+                    })
+                  ]
+                ),
+                _vm._v(" "),
+                _c("div", [_vm._v(_vm._s(_vm.look()))])
+              ]
+            )
+          ],
+          1
+        )
+      : _vm._e()
+  ])
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -29140,20 +29140,20 @@ if (false) {
 }
 
 /***/ }),
-/* 43 */
+/* 41 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_3_0_vue_loader_lib_selector_type_script_index_0_bustCache_index_vue__ = __webpack_require__(46);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_3_0_vue_loader_lib_selector_type_script_index_0_bustCache_index_vue__ = __webpack_require__(44);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_3_0_vue_loader_lib_selector_type_script_index_0_bustCache_index_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_3_0_vue_loader_lib_selector_type_script_index_0_bustCache_index_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_13_3_0_vue_loader_lib_template_compiler_index_id_data_v_de2e6318_hasScoped_false_buble_transforms_node_modules_vue_loader_13_3_0_vue_loader_lib_selector_type_template_index_0_bustCache_index_vue__ = __webpack_require__(60);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_13_3_0_vue_loader_lib_template_compiler_index_id_data_v_de2e6318_hasScoped_false_buble_transforms_node_modules_vue_loader_13_3_0_vue_loader_lib_selector_type_template_index_0_bustCache_index_vue__ = __webpack_require__(67);
 var disposed = false
 function injectStyle (ssrContext) {
   if (disposed) return
-  __webpack_require__(44)
+  __webpack_require__(42)
 }
-var normalizeComponent = __webpack_require__(2)
+var normalizeComponent = __webpack_require__(3)
 /* script */
 
 /* template */
@@ -29197,17 +29197,17 @@ if (false) {(function () {
 
 
 /***/ }),
-/* 44 */
+/* 42 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(45);
+var content = __webpack_require__(43);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(1)("0af1ac20", content, false);
+var update = __webpack_require__(2)("0af1ac20", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
@@ -29223,7 +29223,7 @@ if(false) {
 }
 
 /***/ }),
-/* 45 */
+/* 43 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(true);
@@ -29231,13 +29231,13 @@ exports = module.exports = __webpack_require__(0)(true);
 
 
 // module
-exports.push([module.i, "\n@charset \"UTF-8\";\n/**\r\n * Yo框架全局base定义\r\n * 本文件与variables不同地方在于，这里所定义的map可以使用在variables和任何地方\r\n * 本文件中map使用\"_\"开头，extra中不使用\"_\"\r\n * base ⇌ extra\r\n */\n/**\r\n * Yo框架全局Variables\r\n * Yo基础变量map，如果不想定义某属性，将其value设置为null\r\n * Yo仅使用2种长度单位：px用于边框，rem用于除边框之外的所有地方\r\n * 本文件中map使用\"_\"开头，config中不使用\"_\"\r\n * variables ⇌ config\r\n */\n/**\r\n * Yo框架自定义全局函数\r\n * 扩充Sass默认函数库，用以增强语法\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的第一项\r\n * @function first\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的最后一项\r\n * @function last\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的倒数第几项\r\n * @function nth-last\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $index 指定需要返回的值在list中的倒数位置 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 移除SassList中的某个项目并返回新的List\r\n * @function remove\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {String} $value 指定需要被删除的值 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 截取SassList中的某个部分并返回新的List\r\n * @function slice\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $start 指定需要截取的开始下标 <2.1.0>\r\n * @param {Integer} $end 指定需要截取的结束下标（不包括end），当该值缺省时默认为末尾下标 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 从SassList中添加/删除项目，然后返回新的List。\r\n * @function splice\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $index 指定需要移除的开始下标 <2.1.0>\r\n * @param {Integer} $count 指定需要移除的数量，不可以为负值，0表示不移除 <2.1.0>\r\n * @param {String} $values 指定需要添加的新值（可以是多个），如果该值缺省，则表示只移除不添加新值 <2.1.0>\r\n */\n/**\r\n * Yo框架全局基础方法\r\n * 包括响应式方案，CSS3兼容性方案，厂商前缀方案，iconfont方案，flex布局等全局方法\r\n */\n/**\r\n * @module 常用方法\r\n * @description 给需要的属性加厂家前缀\r\n * @method prefix\r\n * @version 1.0.0\r\n * @param {String} $property 指定属性 <1.0.0>\r\n * @param {String} $value 指定属性值 <1.0.0>\r\n * @skip\r\n */\n/**\r\n * @module 常用方法\r\n * @description 定义字体图标\r\n * @method _iconfont\r\n * @version 1.0.0\r\n * @skip\r\n */\n/**\r\n * @module 常用方法\r\n * @description 四则运算(系统要求：iOS6.0+,Android4.4+)\r\n * @method calc\r\n * @version 1.7.0\r\n * @param {String} $property 指定需要进行计算的CSS属性 <1.7.0>\r\n * @param {String} $value 与原生CSS语法一致，区别在于需要使用引号包裹表达式 <1.7.0>\r\n * @example\r\n * .calc {\r\n *     @include calc(width, \"100% - 100px\");\r\n * }\r\n *\r\n * <div class=\"calc\">四则运算</div>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 定义响应式方案\r\n * @method responsive\r\n * @version 1.0.0\r\n * @param {String} $media 指定媒体查询条件，取值为`config`文件map `media-types`中的值 <1.0.0>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 清除浮动方案\r\n * @method clearfix\r\n * @version 1.0.0\r\n * @param {String} $type 指定清除浮动的方式，包括：pseudo-element | bfc，默认值：pseudo-element <1.8.5>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 清除行内级元素间间隙方案\r\n * @method clearspace\r\n * @version 3.0.3\r\n * @param {Length} $font-size 指定子元素字号，默认值：.14rem <3.0.3>\r\n * @example\r\n * .demo {\r\n *     @include clearspace;\r\n * }\r\n *\r\n * <div class=\"demo\">\r\n *      <span class=\"item\">1</span>\r\n *      <span class=\"item\">2</span>\r\n *      <span class=\"item\">3</span>\r\n * </div>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 描述元素内容在横、纵方向上的对齐方式，默认为水平垂直居中对齐\r\n * @method align\r\n * @version 2.0.0\r\n * @param {String} $flexbox 元素布局方式，可选值：flex | inline-flex，默认值：flex <2.0.0>\r\n * @param {Keyword} $justify-content 元素内容的水平对齐方式，取值与`justify-content`属性一致，默认值：center <2.0.0>\r\n * @param {Keyword} $align-items 元素内容的垂直对齐方式，取值与`align-items`属性一致，默认值：center <2.0.0>\r\n * @example\r\n * .demo {\r\n *     @include align;\r\n * }\r\n *\r\n * <div class=\"demo\">\r\n *      <img alt=\"未知尺寸图片居中\" />\r\n * </div>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 定义是否有滚动条\r\n * @method overflow\r\n * @version 1.0.0\r\n * @param {String} $overflow 取值与最新原生语法一致，默认值：auto <1.0.0>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 生成全屏方法\r\n * @method fullscreen\r\n * @version 1.7.0\r\n * @param {Integer} $z-index 指定层叠级别 <1.7.0>\r\n * @param {Keywords} $position 指定定位方式，取除`static | relative`之外的值，默认值：absolute <1.8.5>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义使用何种滤镜\r\n * @method filter\r\n * @version 1.7.0\r\n * @param {String} $filter 取值与`filter`属性一致 <1.7.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义UA默认外观\r\n * @method appearance\r\n * @version 1.0.0\r\n * @param {String} $appearance 取值与`appearance`属性一致，默认值：none <1.0.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义如何选中内容\r\n * @method user-select\r\n * @version 1.0.0\r\n * @param {String} $user-select 取值与`user-select`属性一致，默认值：none <1.0.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义盒模型\r\n * @method box-sizing\r\n * @version 1.0.0\r\n * @param {String} $box-sizing 指定盒模型类型，取值与`box-sizing`属性一致，默认值：border-box <1.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义渐变色值\r\n * @method gradient\r\n * @version 1.0.0\r\n * @param {String} $type 指定渐变的4种类型：linear, repeating-linear, radial, repeating-radial <1.0.0>\r\n * @param {String} $dir 指定渐变方向，可选值：[left | right] || [top | bottom] | angle <2.0.0>\r\n * @param {String} $gradient 指定渐变取值，与w3c最新原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景图像缩放（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-size\r\n * @version 1.4.0\r\n * @param {Keywords | Length} $background-size 指定背景图缩放值，取值与`background-size`属性一致 <1.4.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景裁减（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-clip\r\n * @version 1.6.0\r\n * @param {Keywords} $background-clip 指定背景图缩放值，取值与`background-clip`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景显示区域（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-origin\r\n * @version 1.6.0\r\n * @param {Keywords} $background-origin 指定背景图`background-position`属性计算相对的参考点，取值与`background-origin`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 为元素添加边框（包括1px边框）\r\n * @method border\r\n * @version 2.0.0\r\n * @param {String} $border-width 指定边框厚度（单位为px），默认值：1px，取值与`border-width`属性一致，不同方向代表边框位置 <2.0.0>\r\n * @param {String} $border-color 指定边框颜色 <2.0.0>\r\n * @param {String} $border-style 指定边框样式 <2.0.0>\r\n * @param {String} $radius 指定边框圆角半径，默认值：null <2.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义圆角，用于修复某些安卓机型上“圆角+边框+背景”，背景溢出的情况\r\n * @method border-radius\r\n * @version 1.6.0\r\n * @param {Length} $border-radius 指定元素的圆角半径，取值与`border-radius`属性一致 <1.6.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 定义简单变换\r\n * @method transform\r\n * @version 1.0.0\r\n * @param {String} $transform 取值范围与`transform`属性一致 <1.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 定义变换原点\r\n * @method transform-origin\r\n * @version 1.0.0\r\n * @param {Length | Percentage | Keywords} $transform-origin 取值范围与`transform-origin`属性一致 <1.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定某元素的子元素是（看起来）位于三维空间内，还是在该元素所在的平面内被扁平化\r\n * @method transform-style\r\n * @version 2.0.0\r\n * @param {String} $transform-style 取值范围与`transform-style`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定观察者与「z=0」平面的距离，使具有三维位置变换的元素产生透视效果。「z>0」的三维元素比正常大，而「z<0」时则比正常小，大小程度由该属性的值决定。\r\n * @method perspective\r\n * @version 2.0.0\r\n * @param {none | Length} $perspective 取值范围与`perspective`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定透视点的位置\r\n * @method perspective-origin\r\n * @version 2.0.0\r\n * @param {Length | Percentage | Keywords} $perspective-origin 取值范围与`perspective-origin`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定元素背面面向用户时是否可见\r\n * @method backface-visibility\r\n * @version 2.0.0\r\n * @param {Keywords} $backface-visibility 取值范围与`backface-visibility`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 定义动画\r\n * @method animation\r\n * @version 1.0.0\r\n * @param {String} $animation 取值与原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定需要引用的动画名称\r\n * @method animation-name\r\n * @version 3.0.0\r\n * @param {String} $animation-name 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画运行一次所持续的时长\r\n * @method animation-duration\r\n * @version 3.0.0\r\n * @param {String} $animation-duration 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画运行方式\r\n * @method animation-timing-function\r\n * @version 3.0.0\r\n * @param {String} $animation-timing-function 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画延迟多久之后再开始\r\n * @method animation-delay\r\n * @version 3.0.0\r\n * @param {String} $animation-delay 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画循环几次\r\n * @method animation-iteration-count\r\n * @version 3.0.0\r\n * @param {String} $animation-iteration-count 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画的运动方向\r\n * @method animation-direction\r\n * @version 3.0.0\r\n * @param {String} $animation-direction 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画的运动状态\r\n * @method animation-play-state\r\n * @version 3.0.0\r\n * @param {String} $animation-play-state 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画时间之外的状态\r\n * @method animation-fill-mode\r\n * @version 3.0.0\r\n * @param {String} $animation-fill-mode 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Transition\r\n * @description 定义补间\r\n * @method transition\r\n * @version 1.0.0\r\n * @param {String} $transition 取值与原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义显示类型为伸缩盒\r\n * @method flexbox\r\n * @version 1.0.0\r\n * @param {String} $flexbox 默认值：flex，可选值：flex | inline-flex <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素如何分配空间\r\n * @method flex\r\n * @version 1.0.0\r\n * @param {Number} $flex 取值与`flex`属性一致，默认值：1 <1.0.0>\r\n * @param {String} $direction 默认值: row，可选值：row | column <1.5.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素的排版顺序\r\n * @method order\r\n * @version 1.0.0\r\n * @param {Integer} $order 取值与`order`属性一致，默认值：1 <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性盒子元素流动方向及遇见边界时是否换行(要求系统：iOS7.0+, Android4.4+)\r\n * @method flex-flow\r\n * @version 2.0.0\r\n * @param {String} $flex-flow 取值与`flex-flow`属性一致，默认值：row nowrap <2.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素的流动方向\r\n * @method flex-direction\r\n * @version 1.0.0\r\n * @param {String} $flex-direction 取值与`flex-direction`属性一致，默认值：row <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性盒子元素溢出后排版(要求系统：iOS7.0+, Android4.4+)\r\n * @method flex-wrap\r\n * @version 1.0.0\r\n * @param {String} $flex-wrap 取值与`flex-wrap`属性一致，默认值：nowrap <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性容器主轴对齐方式(其中`space-around`值需要iOS7.0+,Android4.4+)\r\n * @method justify-content\r\n * @version 1.0.0\r\n * @param {String} $justify-content 取值与`justify-content`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义多行弹性容器侧轴对齐方式(要求系统：iOS7.0+,Android4.4+)\r\n * @method align-content\r\n * @version 1.8.5\r\n * @param {String} $align-content 取值与`align-content`属性一致，默认值：center <1.8.5>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义单行弹性容器侧轴对齐方式\r\n * @method align-items\r\n * @version 1.0.0\r\n * @param {String} $align-items 取值与`align-items`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性容器中子元素自身的在侧轴对齐方式(要求系统：iOS7.0+,Android4.4+)\r\n * @method align-self\r\n * @version 1.0.0\r\n * @param {String} $align-self 取值与`align-self`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成矩形方法\r\n * @method rect\r\n * @version 1.0.0\r\n * @param {Length} $width 定义矩形的长度 <1.0.0>\r\n * @param {Length} $height 定义矩形的高度 <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成正方形方法\r\n * @method square\r\n * @version 1.0.0\r\n * @param {Length} $size 定义正方形的边长 <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成圆形方法\r\n * @method circle\r\n * @version 1.0.0\r\n * @param {Length} $size 定义圆的半径长度 <1.0.0>\r\n * @param {Length} $radius 定义圆的圆角半径长度 <1.0.0>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 在自适应宽度情况下，确保内容元素的宽高比固定，比如：实现随屏幕大小而变化的正方形。\r\n * @method fixed-scale\r\n * @version 3.0.10\r\n * @param {Length} $width 默认值：100%。用以指定内容元素的初始宽度，由于尺寸需动态变化，不要使用固定单位 <3.0.10>\r\n * @param {Length} $scale 默认值：1/1，即正方形。用以指定内容元素的宽度高比 <3.0.10>\r\n */\n/**\r\n * @module 文本\r\n * @description 链接处理方法\r\n * @method link\r\n * @version 1.0.0\r\n * @param {Color} $color 定义链接颜色 <1.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 文本碰到边界是否换行\r\n * @method wrap\r\n * @version 1.0.0\r\n * @param {Boolean} $is-wrap 定义文本是否换行，默认值：true <2.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 单行文本溢出时显示省略号\r\n * @method ellipsis\r\n * @version 1.0.0\r\n * @param {Length} $width 定义容器的宽度，默认值：null <2.0.0>\r\n * @param {Integer} $line-clamp 定义需要显示的行数，默认值：1（即使用单行溢出的处理方案），需要注意的是本参数只支持webkit内核 <2.1.2>\r\n */\n/**\r\n * @module 文本\r\n * @description 文字隐藏方案\r\n * @method texthide\r\n * @version 1.0.0\r\n * @param {Length} $width 定义容器的宽度，默认值：null <2.0.0>\r\n */\n/**\r\n * Yo框架全局Reset\r\n * Yo重置Mobile及高级浏览器上常见的差异\r\n */\n*,\n::before,\n::after {\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n  -webkit-tap-highlight-color: transparent;\n}\nhtml,\nbody {\n  overflow: hidden;\n  height: 100%;\n}\n::-webkit-scrollbar {\n  display: none;\n}\nhtml {\n  background-color: #eee;\n  color: #212121;\n  font-size: 100px;\n  -webkit-user-select: none;\n  user-select: none;\n}\nbody {\n  margin: 0;\n  font-size: 0.14em;\n  line-height: 1.5;\n  font-family: Helvetica Neue, Helvetica, STHeiTi, sans-serif;\n}\nul,\nol,\ndl,\ndd,\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\nfigure,\nform,\nfieldset,\nlegend,\ninput,\ntextarea,\nbutton,\np,\nblockquote,\nth,\ntd,\npre,\nxmp {\n  margin: 0;\n  padding: 0;\n}\ninput,\ntextarea,\nbutton,\nselect,\npre,\nxmp,\ntt,\ncode,\nkbd,\nsamp {\n  line-height: inherit;\n  font-family: inherit;\n}\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\nsmall,\nbig,\ninput,\ntextarea,\nbutton,\nselect {\n  font-size: inherit;\n}\naddress,\ncite,\ndfn,\nem,\ni,\noptgroup,\nvar {\n  font-style: normal;\n}\ntable {\n  border-collapse: collapse;\n  border-spacing: 0;\n  table-layout: fixed;\n  text-align: left;\n}\nul,\nol,\nmenu {\n  list-style: none;\n}\nfieldset,\nimg {\n  border: 0;\n  vertical-align: middle;\n}\narticle,\naside,\ndetails,\nfigcaption,\nfigure,\nfooter,\nheader,\nmain,\nmenu,\nnav,\nsection,\nsummary {\n  display: block;\n}\naudio,\ncanvas,\nvideo {\n  display: inline-block;\n}\nblockquote:before,\nblockquote:after,\nq:before,\nq:after {\n  content: \" \";\n}\ntextarea,\npre,\nxmp {\n  overflow: auto;\n  -webkit-overflow-scrolling: touch;\n}\ntextarea {\n  resize: vertical;\n}\ninput,\ntextarea,\nbutton,\nselect,\nsummary,\na {\n  outline: 0 none;\n}\ninput,\ntextarea,\nbutton,\nselect {\n  color: inherit;\n}\ninput:disabled,\n  textarea:disabled,\n  button:disabled,\n  select:disabled {\n    opacity: 1;\n}\nbutton::-moz-focus-inner,\ninput::-moz-focus-inner {\n  padding: 0;\n  border: 0;\n}\ninput[type=\"button\"],\ninput[type=\"submit\"],\ninput[type=\"reset\"],\ninput[type=\"file\"]::-webkit-file-upload-button,\ninput[type=\"search\"]::-webkit-search-cancel-button {\n  -webkit-appearance: none;\n  appearance: none;\n}\n::-webkit-details-marker {\n  display: none;\n}\nmark {\n  background-color: transparent;\n}\na,\nins,\ns,\nu,\ndel {\n  text-decoration: none;\n}\na,\nimg {\n  -webkit-touch-callout: none;\n}\na {\n  color: #00afc7;\n}\n.g-clear::after,\n.g-mod::after {\n  display: block;\n  overflow: hidden;\n  clear: both;\n  height: 0;\n  content: \" \";\n}\n@font-face {\n  font-family: yofont;\n  src: url(//ss.qunarzz.com/yo/font/1.0.3/yofont.woff) format(\"woff\"), url(//ss.qunarzz.com/yo/font/1.0.3/yofont.ttf) format(\"truetype\");\n}\n.yo-ico {\n  font-family: yofont !important;\n  font-style: normal;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n  vertical-align: middle;\n}\n@font-face {\n  font-family: 'iconfont';\n  src: url(\"http://localhost:7000/media/iconfont/iconfont.woff\") format(\"woff\"), url(\"http://localhost:7000/media/iconfont/iconfont.ttf\") format(\"truetype\");\n}\n.iconfont {\n  font-family: \"iconfont\" !important;\n  font-size: 16px;\n  font-style: normal;\n  -webkit-font-smoothing: antialiased;\n  -webkit-text-stroke-width: 0.2px;\n  -moz-osx-font-smoothing: grayscale;\n}\nbody {\n  height: 100%;\n  width: 100%;\n}\n#app {\n  height: 100%;\n  width: 100%;\n  background: white;\n}\n.m-index {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n  flex-direction: column;\n  height: 100%;\n}\n.m-index header {\n    height: 1.24rem;\n}\n.m-index section {\n    -webkit-box-flex: 1;\n    -webkit-flex: 1;\n    flex: 1;\n    width: .1px;\n    width: 100%;\n    overflow-y: scroll;\n}\n.m-index footer {\n    height: .5rem;\n}\n", "", {"version":3,"sources":["D:/missFresh/src/modules/index/components/index.vue"],"names":[],"mappings":";AAAA,iBAAiB;AACjB;;;;;GAKG;AACH;;;;;;GAMG;AACH;;;GAGG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;;GAOG;AACH;;;;;;;GAOG;AACH;;;;;;;;GAQG;AACH;;;;;;;;;GASG;AACH;;;GAGG;AACH;;;;;;;;GAQG;AACH;;;;;;GAMG;AACH;;;;;;;;;;;;;GAaG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;;;;;;;;;;;GAgBG;AACH;;;;;;;;;;;;;;;;GAgBG;AACH;;;;;;GAMG;AACH;;;;;;;GAOG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;;;GAQG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;;;;GASG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;;GAOG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;;GAOG;AACH;;;;;;GAMG;AACH;;;;;;;GAOG;AACH;;;;;;;GAOG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;;GAOG;AACH;;;;;;GAMG;AACH;;;GAGG;AACH;;;EAGE,+BAA+B;EAC/B,uBAAuB;EACvB,yCAAyC;CAAE;AAE7C;;EAEE,iBAAiB;EACjB,aAAa;CAAE;AAEjB;EACE,cAAc;CAAE;AAElB;EACE,uBAAuB;EACvB,eAAe;EACf,iBAAiB;EACjB,0BAA0B;EAC1B,kBAAkB;CAAE;AAEtB;EACE,UAAU;EACV,kBAAkB;EAClB,iBAAiB;EACjB,4DAA4D;CAAE;AAEhE;;;;;;;;;;;;;;;;;;;;;;;EAuBE,UAAU;EACV,WAAW;CAAE;AAEf;;;;;;;;;;EAUE,qBAAqB;EACrB,qBAAqB;CAAE;AAEzB;;;;;;;;;;;;EAYE,mBAAmB;CAAE;AAEvB;;;;;;;EAOE,mBAAmB;CAAE;AAEvB;EACE,0BAA0B;EAC1B,kBAAkB;EAClB,oBAAoB;EACpB,iBAAiB;CAAE;AAErB;;;EAGE,iBAAiB;CAAE;AAErB;;EAEE,UAAU;EACV,uBAAuB;CAAE;AAE3B;;;;;;;;;;;;EAYE,eAAe;CAAE;AAEnB;;;EAGE,sBAAsB;CAAE;AAE1B;;;;EAIE,aAAiB;CAAE;AAErB;;;EAGE,eAAe;EACf,kCAAkC;CAAE;AAEtC;EACE,iBAAiB;CAAE;AAErB;;;;;;EAME,gBAAgB;CAAE;AAEpB;;;;EAIE,eAAe;CAAE;AACjB;;;;IAIE,WAAW;CAAE;AAEjB;;EAEE,WAAW;EACX,UAAU;CAAE;AAEd;;;;;EAKE,yBAAyB;EACzB,iBAAiB;CAAE;AAErB;EACE,cAAc;CAAE;AAElB;EACE,8BAA8B;CAAE;AAElC;;;;;EAKE,sBAAsB;CAAE;AAE1B;;EAEE,4BAA4B;CAAE;AAEhC;EACE,eAAe;CAAE;AAEnB;;EAEE,eAAe;EACf,iBAAiB;EACjB,YAAY;EACZ,UAAU;EACV,aAAiB;CAAE;AAErB;EACE,oBAAoB;EACpB,uIAAuI;CAAE;AAE3I;EACE,+BAA+B;EAC/B,mBAAmB;EACnB,oCAAoC;EACpC,mCAAmC;EACnC,uBAAuB;CAAE;AAE3B;EACE,wBAAwB;EACxB,2JAA2J;CAAE;AAE/J;EACE,mCAAmC;EACnC,gBAAgB;EAChB,mBAAmB;EACnB,oCAAoC;EACpC,iCAAiC;EACjC,mCAAmC;CAAE;AAEvC;EACE,aAAa;EACb,YAAY;CAAE;AAEhB;EACE,aAAa;EACb,YAAY;EACZ,kBAAkB;CAAE;AAEtB;EACE,qBAAqB;EACrB,sBAAsB;EACtB,cAAc;EACd,6BAA6B;EAC7B,8BAA8B;EAC9B,+BAA+B;EAC/B,uBAAuB;EACvB,aAAa;CAAE;AACf;IACE,gBAAgB;CAAE;AACpB;IACE,oBAAoB;IACpB,gBAAgB;IAChB,QAAQ;IACR,YAAY;IACZ,YAAY;IACZ,mBAAmB;CAAE;AACvB;IACE,cAAc;CAAE","file":"index.vue","sourcesContent":["@charset \"UTF-8\";\n/**\r\n * Yo框架全局base定义\r\n * 本文件与variables不同地方在于，这里所定义的map可以使用在variables和任何地方\r\n * 本文件中map使用\"_\"开头，extra中不使用\"_\"\r\n * base ⇌ extra\r\n */\n/**\r\n * Yo框架全局Variables\r\n * Yo基础变量map，如果不想定义某属性，将其value设置为null\r\n * Yo仅使用2种长度单位：px用于边框，rem用于除边框之外的所有地方\r\n * 本文件中map使用\"_\"开头，config中不使用\"_\"\r\n * variables ⇌ config\r\n */\n/**\r\n * Yo框架自定义全局函数\r\n * 扩充Sass默认函数库，用以增强语法\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的第一项\r\n * @function first\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的最后一项\r\n * @function last\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的倒数第几项\r\n * @function nth-last\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $index 指定需要返回的值在list中的倒数位置 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 移除SassList中的某个项目并返回新的List\r\n * @function remove\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {String} $value 指定需要被删除的值 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 截取SassList中的某个部分并返回新的List\r\n * @function slice\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $start 指定需要截取的开始下标 <2.1.0>\r\n * @param {Integer} $end 指定需要截取的结束下标（不包括end），当该值缺省时默认为末尾下标 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 从SassList中添加/删除项目，然后返回新的List。\r\n * @function splice\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $index 指定需要移除的开始下标 <2.1.0>\r\n * @param {Integer} $count 指定需要移除的数量，不可以为负值，0表示不移除 <2.1.0>\r\n * @param {String} $values 指定需要添加的新值（可以是多个），如果该值缺省，则表示只移除不添加新值 <2.1.0>\r\n */\n/**\r\n * Yo框架全局基础方法\r\n * 包括响应式方案，CSS3兼容性方案，厂商前缀方案，iconfont方案，flex布局等全局方法\r\n */\n/**\r\n * @module 常用方法\r\n * @description 给需要的属性加厂家前缀\r\n * @method prefix\r\n * @version 1.0.0\r\n * @param {String} $property 指定属性 <1.0.0>\r\n * @param {String} $value 指定属性值 <1.0.0>\r\n * @skip\r\n */\n/**\r\n * @module 常用方法\r\n * @description 定义字体图标\r\n * @method _iconfont\r\n * @version 1.0.0\r\n * @skip\r\n */\n/**\r\n * @module 常用方法\r\n * @description 四则运算(系统要求：iOS6.0+,Android4.4+)\r\n * @method calc\r\n * @version 1.7.0\r\n * @param {String} $property 指定需要进行计算的CSS属性 <1.7.0>\r\n * @param {String} $value 与原生CSS语法一致，区别在于需要使用引号包裹表达式 <1.7.0>\r\n * @example\r\n * .calc {\r\n *     @include calc(width, \"100% - 100px\");\r\n * }\r\n *\r\n * <div class=\"calc\">四则运算</div>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 定义响应式方案\r\n * @method responsive\r\n * @version 1.0.0\r\n * @param {String} $media 指定媒体查询条件，取值为`config`文件map `media-types`中的值 <1.0.0>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 清除浮动方案\r\n * @method clearfix\r\n * @version 1.0.0\r\n * @param {String} $type 指定清除浮动的方式，包括：pseudo-element | bfc，默认值：pseudo-element <1.8.5>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 清除行内级元素间间隙方案\r\n * @method clearspace\r\n * @version 3.0.3\r\n * @param {Length} $font-size 指定子元素字号，默认值：.14rem <3.0.3>\r\n * @example\r\n * .demo {\r\n *     @include clearspace;\r\n * }\r\n *\r\n * <div class=\"demo\">\r\n *      <span class=\"item\">1</span>\r\n *      <span class=\"item\">2</span>\r\n *      <span class=\"item\">3</span>\r\n * </div>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 描述元素内容在横、纵方向上的对齐方式，默认为水平垂直居中对齐\r\n * @method align\r\n * @version 2.0.0\r\n * @param {String} $flexbox 元素布局方式，可选值：flex | inline-flex，默认值：flex <2.0.0>\r\n * @param {Keyword} $justify-content 元素内容的水平对齐方式，取值与`justify-content`属性一致，默认值：center <2.0.0>\r\n * @param {Keyword} $align-items 元素内容的垂直对齐方式，取值与`align-items`属性一致，默认值：center <2.0.0>\r\n * @example\r\n * .demo {\r\n *     @include align;\r\n * }\r\n *\r\n * <div class=\"demo\">\r\n *      <img alt=\"未知尺寸图片居中\" />\r\n * </div>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 定义是否有滚动条\r\n * @method overflow\r\n * @version 1.0.0\r\n * @param {String} $overflow 取值与最新原生语法一致，默认值：auto <1.0.0>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 生成全屏方法\r\n * @method fullscreen\r\n * @version 1.7.0\r\n * @param {Integer} $z-index 指定层叠级别 <1.7.0>\r\n * @param {Keywords} $position 指定定位方式，取除`static | relative`之外的值，默认值：absolute <1.8.5>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义使用何种滤镜\r\n * @method filter\r\n * @version 1.7.0\r\n * @param {String} $filter 取值与`filter`属性一致 <1.7.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义UA默认外观\r\n * @method appearance\r\n * @version 1.0.0\r\n * @param {String} $appearance 取值与`appearance`属性一致，默认值：none <1.0.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义如何选中内容\r\n * @method user-select\r\n * @version 1.0.0\r\n * @param {String} $user-select 取值与`user-select`属性一致，默认值：none <1.0.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义盒模型\r\n * @method box-sizing\r\n * @version 1.0.0\r\n * @param {String} $box-sizing 指定盒模型类型，取值与`box-sizing`属性一致，默认值：border-box <1.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义渐变色值\r\n * @method gradient\r\n * @version 1.0.0\r\n * @param {String} $type 指定渐变的4种类型：linear, repeating-linear, radial, repeating-radial <1.0.0>\r\n * @param {String} $dir 指定渐变方向，可选值：[left | right] || [top | bottom] | angle <2.0.0>\r\n * @param {String} $gradient 指定渐变取值，与w3c最新原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景图像缩放（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-size\r\n * @version 1.4.0\r\n * @param {Keywords | Length} $background-size 指定背景图缩放值，取值与`background-size`属性一致 <1.4.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景裁减（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-clip\r\n * @version 1.6.0\r\n * @param {Keywords} $background-clip 指定背景图缩放值，取值与`background-clip`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景显示区域（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-origin\r\n * @version 1.6.0\r\n * @param {Keywords} $background-origin 指定背景图`background-position`属性计算相对的参考点，取值与`background-origin`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 为元素添加边框（包括1px边框）\r\n * @method border\r\n * @version 2.0.0\r\n * @param {String} $border-width 指定边框厚度（单位为px），默认值：1px，取值与`border-width`属性一致，不同方向代表边框位置 <2.0.0>\r\n * @param {String} $border-color 指定边框颜色 <2.0.0>\r\n * @param {String} $border-style 指定边框样式 <2.0.0>\r\n * @param {String} $radius 指定边框圆角半径，默认值：null <2.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义圆角，用于修复某些安卓机型上“圆角+边框+背景”，背景溢出的情况\r\n * @method border-radius\r\n * @version 1.6.0\r\n * @param {Length} $border-radius 指定元素的圆角半径，取值与`border-radius`属性一致 <1.6.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 定义简单变换\r\n * @method transform\r\n * @version 1.0.0\r\n * @param {String} $transform 取值范围与`transform`属性一致 <1.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 定义变换原点\r\n * @method transform-origin\r\n * @version 1.0.0\r\n * @param {Length | Percentage | Keywords} $transform-origin 取值范围与`transform-origin`属性一致 <1.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定某元素的子元素是（看起来）位于三维空间内，还是在该元素所在的平面内被扁平化\r\n * @method transform-style\r\n * @version 2.0.0\r\n * @param {String} $transform-style 取值范围与`transform-style`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定观察者与「z=0」平面的距离，使具有三维位置变换的元素产生透视效果。「z>0」的三维元素比正常大，而「z<0」时则比正常小，大小程度由该属性的值决定。\r\n * @method perspective\r\n * @version 2.0.0\r\n * @param {none | Length} $perspective 取值范围与`perspective`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定透视点的位置\r\n * @method perspective-origin\r\n * @version 2.0.0\r\n * @param {Length | Percentage | Keywords} $perspective-origin 取值范围与`perspective-origin`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定元素背面面向用户时是否可见\r\n * @method backface-visibility\r\n * @version 2.0.0\r\n * @param {Keywords} $backface-visibility 取值范围与`backface-visibility`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 定义动画\r\n * @method animation\r\n * @version 1.0.0\r\n * @param {String} $animation 取值与原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定需要引用的动画名称\r\n * @method animation-name\r\n * @version 3.0.0\r\n * @param {String} $animation-name 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画运行一次所持续的时长\r\n * @method animation-duration\r\n * @version 3.0.0\r\n * @param {String} $animation-duration 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画运行方式\r\n * @method animation-timing-function\r\n * @version 3.0.0\r\n * @param {String} $animation-timing-function 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画延迟多久之后再开始\r\n * @method animation-delay\r\n * @version 3.0.0\r\n * @param {String} $animation-delay 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画循环几次\r\n * @method animation-iteration-count\r\n * @version 3.0.0\r\n * @param {String} $animation-iteration-count 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画的运动方向\r\n * @method animation-direction\r\n * @version 3.0.0\r\n * @param {String} $animation-direction 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画的运动状态\r\n * @method animation-play-state\r\n * @version 3.0.0\r\n * @param {String} $animation-play-state 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画时间之外的状态\r\n * @method animation-fill-mode\r\n * @version 3.0.0\r\n * @param {String} $animation-fill-mode 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Transition\r\n * @description 定义补间\r\n * @method transition\r\n * @version 1.0.0\r\n * @param {String} $transition 取值与原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义显示类型为伸缩盒\r\n * @method flexbox\r\n * @version 1.0.0\r\n * @param {String} $flexbox 默认值：flex，可选值：flex | inline-flex <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素如何分配空间\r\n * @method flex\r\n * @version 1.0.0\r\n * @param {Number} $flex 取值与`flex`属性一致，默认值：1 <1.0.0>\r\n * @param {String} $direction 默认值: row，可选值：row | column <1.5.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素的排版顺序\r\n * @method order\r\n * @version 1.0.0\r\n * @param {Integer} $order 取值与`order`属性一致，默认值：1 <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性盒子元素流动方向及遇见边界时是否换行(要求系统：iOS7.0+, Android4.4+)\r\n * @method flex-flow\r\n * @version 2.0.0\r\n * @param {String} $flex-flow 取值与`flex-flow`属性一致，默认值：row nowrap <2.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素的流动方向\r\n * @method flex-direction\r\n * @version 1.0.0\r\n * @param {String} $flex-direction 取值与`flex-direction`属性一致，默认值：row <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性盒子元素溢出后排版(要求系统：iOS7.0+, Android4.4+)\r\n * @method flex-wrap\r\n * @version 1.0.0\r\n * @param {String} $flex-wrap 取值与`flex-wrap`属性一致，默认值：nowrap <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性容器主轴对齐方式(其中`space-around`值需要iOS7.0+,Android4.4+)\r\n * @method justify-content\r\n * @version 1.0.0\r\n * @param {String} $justify-content 取值与`justify-content`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义多行弹性容器侧轴对齐方式(要求系统：iOS7.0+,Android4.4+)\r\n * @method align-content\r\n * @version 1.8.5\r\n * @param {String} $align-content 取值与`align-content`属性一致，默认值：center <1.8.5>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义单行弹性容器侧轴对齐方式\r\n * @method align-items\r\n * @version 1.0.0\r\n * @param {String} $align-items 取值与`align-items`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性容器中子元素自身的在侧轴对齐方式(要求系统：iOS7.0+,Android4.4+)\r\n * @method align-self\r\n * @version 1.0.0\r\n * @param {String} $align-self 取值与`align-self`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成矩形方法\r\n * @method rect\r\n * @version 1.0.0\r\n * @param {Length} $width 定义矩形的长度 <1.0.0>\r\n * @param {Length} $height 定义矩形的高度 <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成正方形方法\r\n * @method square\r\n * @version 1.0.0\r\n * @param {Length} $size 定义正方形的边长 <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成圆形方法\r\n * @method circle\r\n * @version 1.0.0\r\n * @param {Length} $size 定义圆的半径长度 <1.0.0>\r\n * @param {Length} $radius 定义圆的圆角半径长度 <1.0.0>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 在自适应宽度情况下，确保内容元素的宽高比固定，比如：实现随屏幕大小而变化的正方形。\r\n * @method fixed-scale\r\n * @version 3.0.10\r\n * @param {Length} $width 默认值：100%。用以指定内容元素的初始宽度，由于尺寸需动态变化，不要使用固定单位 <3.0.10>\r\n * @param {Length} $scale 默认值：1/1，即正方形。用以指定内容元素的宽度高比 <3.0.10>\r\n */\n/**\r\n * @module 文本\r\n * @description 链接处理方法\r\n * @method link\r\n * @version 1.0.0\r\n * @param {Color} $color 定义链接颜色 <1.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 文本碰到边界是否换行\r\n * @method wrap\r\n * @version 1.0.0\r\n * @param {Boolean} $is-wrap 定义文本是否换行，默认值：true <2.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 单行文本溢出时显示省略号\r\n * @method ellipsis\r\n * @version 1.0.0\r\n * @param {Length} $width 定义容器的宽度，默认值：null <2.0.0>\r\n * @param {Integer} $line-clamp 定义需要显示的行数，默认值：1（即使用单行溢出的处理方案），需要注意的是本参数只支持webkit内核 <2.1.2>\r\n */\n/**\r\n * @module 文本\r\n * @description 文字隐藏方案\r\n * @method texthide\r\n * @version 1.0.0\r\n * @param {Length} $width 定义容器的宽度，默认值：null <2.0.0>\r\n */\n/**\r\n * Yo框架全局Reset\r\n * Yo重置Mobile及高级浏览器上常见的差异\r\n */\n*,\n::before,\n::after {\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n  -webkit-tap-highlight-color: transparent; }\n\nhtml,\nbody {\n  overflow: hidden;\n  height: 100%; }\n\n::-webkit-scrollbar {\n  display: none; }\n\nhtml {\n  background-color: #eee;\n  color: #212121;\n  font-size: 100px;\n  -webkit-user-select: none;\n  user-select: none; }\n\nbody {\n  margin: 0;\n  font-size: 0.14em;\n  line-height: 1.5;\n  font-family: Helvetica Neue, Helvetica, STHeiTi, sans-serif; }\n\nul,\nol,\ndl,\ndd,\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\nfigure,\nform,\nfieldset,\nlegend,\ninput,\ntextarea,\nbutton,\np,\nblockquote,\nth,\ntd,\npre,\nxmp {\n  margin: 0;\n  padding: 0; }\n\ninput,\ntextarea,\nbutton,\nselect,\npre,\nxmp,\ntt,\ncode,\nkbd,\nsamp {\n  line-height: inherit;\n  font-family: inherit; }\n\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\nsmall,\nbig,\ninput,\ntextarea,\nbutton,\nselect {\n  font-size: inherit; }\n\naddress,\ncite,\ndfn,\nem,\ni,\noptgroup,\nvar {\n  font-style: normal; }\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0;\n  table-layout: fixed;\n  text-align: left; }\n\nul,\nol,\nmenu {\n  list-style: none; }\n\nfieldset,\nimg {\n  border: 0;\n  vertical-align: middle; }\n\narticle,\naside,\ndetails,\nfigcaption,\nfigure,\nfooter,\nheader,\nmain,\nmenu,\nnav,\nsection,\nsummary {\n  display: block; }\n\naudio,\ncanvas,\nvideo {\n  display: inline-block; }\n\nblockquote:before,\nblockquote:after,\nq:before,\nq:after {\n  content: \"\\0020\"; }\n\ntextarea,\npre,\nxmp {\n  overflow: auto;\n  -webkit-overflow-scrolling: touch; }\n\ntextarea {\n  resize: vertical; }\n\ninput,\ntextarea,\nbutton,\nselect,\nsummary,\na {\n  outline: 0 none; }\n\ninput,\ntextarea,\nbutton,\nselect {\n  color: inherit; }\n  input:disabled,\n  textarea:disabled,\n  button:disabled,\n  select:disabled {\n    opacity: 1; }\n\nbutton::-moz-focus-inner,\ninput::-moz-focus-inner {\n  padding: 0;\n  border: 0; }\n\ninput[type=\"button\"],\ninput[type=\"submit\"],\ninput[type=\"reset\"],\ninput[type=\"file\"]::-webkit-file-upload-button,\ninput[type=\"search\"]::-webkit-search-cancel-button {\n  -webkit-appearance: none;\n  appearance: none; }\n\n::-webkit-details-marker {\n  display: none; }\n\nmark {\n  background-color: transparent; }\n\na,\nins,\ns,\nu,\ndel {\n  text-decoration: none; }\n\na,\nimg {\n  -webkit-touch-callout: none; }\n\na {\n  color: #00afc7; }\n\n.g-clear::after,\n.g-mod::after {\n  display: block;\n  overflow: hidden;\n  clear: both;\n  height: 0;\n  content: \"\\0020\"; }\n\n@font-face {\n  font-family: yofont;\n  src: url(//ss.qunarzz.com/yo/font/1.0.3/yofont.woff) format(\"woff\"), url(//ss.qunarzz.com/yo/font/1.0.3/yofont.ttf) format(\"truetype\"); }\n\n.yo-ico {\n  font-family: yofont !important;\n  font-style: normal;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n  vertical-align: middle; }\n\n@font-face {\n  font-family: 'iconfont';\n  src: url(\"http://localhost:7000/media/iconfont/iconfont.woff\") format(\"woff\"), url(\"http://localhost:7000/media/iconfont/iconfont.ttf\") format(\"truetype\"); }\n\n.iconfont {\n  font-family: \"iconfont\" !important;\n  font-size: 16px;\n  font-style: normal;\n  -webkit-font-smoothing: antialiased;\n  -webkit-text-stroke-width: 0.2px;\n  -moz-osx-font-smoothing: grayscale; }\n\nbody {\n  height: 100%;\n  width: 100%; }\n\n#app {\n  height: 100%;\n  width: 100%;\n  background: white; }\n\n.m-index {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n  flex-direction: column;\n  height: 100%; }\n  .m-index header {\n    height: 1.24rem; }\n  .m-index section {\n    -webkit-box-flex: 1;\n    -webkit-flex: 1;\n    flex: 1;\n    width: .1px;\n    width: 100%;\n    overflow-y: scroll; }\n  .m-index footer {\n    height: .5rem; }\n"],"sourceRoot":""}]);
+exports.push([module.i, "\n@charset \"UTF-8\";\n/**\r\n * Yo框架全局base定义\r\n * 本文件与variables不同地方在于，这里所定义的map可以使用在variables和任何地方\r\n * 本文件中map使用\"_\"开头，extra中不使用\"_\"\r\n * base ⇌ extra\r\n */\n/**\r\n * Yo框架全局Variables\r\n * Yo基础变量map，如果不想定义某属性，将其value设置为null\r\n * Yo仅使用2种长度单位：px用于边框，rem用于除边框之外的所有地方\r\n * 本文件中map使用\"_\"开头，config中不使用\"_\"\r\n * variables ⇌ config\r\n */\n/**\r\n * Yo框架自定义全局函数\r\n * 扩充Sass默认函数库，用以增强语法\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的第一项\r\n * @function first\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的最后一项\r\n * @function last\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的倒数第几项\r\n * @function nth-last\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $index 指定需要返回的值在list中的倒数位置 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 移除SassList中的某个项目并返回新的List\r\n * @function remove\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {String} $value 指定需要被删除的值 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 截取SassList中的某个部分并返回新的List\r\n * @function slice\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $start 指定需要截取的开始下标 <2.1.0>\r\n * @param {Integer} $end 指定需要截取的结束下标（不包括end），当该值缺省时默认为末尾下标 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 从SassList中添加/删除项目，然后返回新的List。\r\n * @function splice\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $index 指定需要移除的开始下标 <2.1.0>\r\n * @param {Integer} $count 指定需要移除的数量，不可以为负值，0表示不移除 <2.1.0>\r\n * @param {String} $values 指定需要添加的新值（可以是多个），如果该值缺省，则表示只移除不添加新值 <2.1.0>\r\n */\n/**\r\n * Yo框架全局基础方法\r\n * 包括响应式方案，CSS3兼容性方案，厂商前缀方案，iconfont方案，flex布局等全局方法\r\n */\n/**\r\n * @module 常用方法\r\n * @description 给需要的属性加厂家前缀\r\n * @method prefix\r\n * @version 1.0.0\r\n * @param {String} $property 指定属性 <1.0.0>\r\n * @param {String} $value 指定属性值 <1.0.0>\r\n * @skip\r\n */\n/**\r\n * @module 常用方法\r\n * @description 定义字体图标\r\n * @method _iconfont\r\n * @version 1.0.0\r\n * @skip\r\n */\n/**\r\n * @module 常用方法\r\n * @description 四则运算(系统要求：iOS6.0+,Android4.4+)\r\n * @method calc\r\n * @version 1.7.0\r\n * @param {String} $property 指定需要进行计算的CSS属性 <1.7.0>\r\n * @param {String} $value 与原生CSS语法一致，区别在于需要使用引号包裹表达式 <1.7.0>\r\n * @example\r\n * .calc {\r\n *     @include calc(width, \"100% - 100px\");\r\n * }\r\n *\r\n * <div class=\"calc\">四则运算</div>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 定义响应式方案\r\n * @method responsive\r\n * @version 1.0.0\r\n * @param {String} $media 指定媒体查询条件，取值为`config`文件map `media-types`中的值 <1.0.0>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 清除浮动方案\r\n * @method clearfix\r\n * @version 1.0.0\r\n * @param {String} $type 指定清除浮动的方式，包括：pseudo-element | bfc，默认值：pseudo-element <1.8.5>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 清除行内级元素间间隙方案\r\n * @method clearspace\r\n * @version 3.0.3\r\n * @param {Length} $font-size 指定子元素字号，默认值：.14rem <3.0.3>\r\n * @example\r\n * .demo {\r\n *     @include clearspace;\r\n * }\r\n *\r\n * <div class=\"demo\">\r\n *      <span class=\"item\">1</span>\r\n *      <span class=\"item\">2</span>\r\n *      <span class=\"item\">3</span>\r\n * </div>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 描述元素内容在横、纵方向上的对齐方式，默认为水平垂直居中对齐\r\n * @method align\r\n * @version 2.0.0\r\n * @param {String} $flexbox 元素布局方式，可选值：flex | inline-flex，默认值：flex <2.0.0>\r\n * @param {Keyword} $justify-content 元素内容的水平对齐方式，取值与`justify-content`属性一致，默认值：center <2.0.0>\r\n * @param {Keyword} $align-items 元素内容的垂直对齐方式，取值与`align-items`属性一致，默认值：center <2.0.0>\r\n * @example\r\n * .demo {\r\n *     @include align;\r\n * }\r\n *\r\n * <div class=\"demo\">\r\n *      <img alt=\"未知尺寸图片居中\" />\r\n * </div>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 定义是否有滚动条\r\n * @method overflow\r\n * @version 1.0.0\r\n * @param {String} $overflow 取值与最新原生语法一致，默认值：auto <1.0.0>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 生成全屏方法\r\n * @method fullscreen\r\n * @version 1.7.0\r\n * @param {Integer} $z-index 指定层叠级别 <1.7.0>\r\n * @param {Keywords} $position 指定定位方式，取除`static | relative`之外的值，默认值：absolute <1.8.5>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义使用何种滤镜\r\n * @method filter\r\n * @version 1.7.0\r\n * @param {String} $filter 取值与`filter`属性一致 <1.7.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义UA默认外观\r\n * @method appearance\r\n * @version 1.0.0\r\n * @param {String} $appearance 取值与`appearance`属性一致，默认值：none <1.0.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义如何选中内容\r\n * @method user-select\r\n * @version 1.0.0\r\n * @param {String} $user-select 取值与`user-select`属性一致，默认值：none <1.0.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义盒模型\r\n * @method box-sizing\r\n * @version 1.0.0\r\n * @param {String} $box-sizing 指定盒模型类型，取值与`box-sizing`属性一致，默认值：border-box <1.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义渐变色值\r\n * @method gradient\r\n * @version 1.0.0\r\n * @param {String} $type 指定渐变的4种类型：linear, repeating-linear, radial, repeating-radial <1.0.0>\r\n * @param {String} $dir 指定渐变方向，可选值：[left | right] || [top | bottom] | angle <2.0.0>\r\n * @param {String} $gradient 指定渐变取值，与w3c最新原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景图像缩放（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-size\r\n * @version 1.4.0\r\n * @param {Keywords | Length} $background-size 指定背景图缩放值，取值与`background-size`属性一致 <1.4.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景裁减（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-clip\r\n * @version 1.6.0\r\n * @param {Keywords} $background-clip 指定背景图缩放值，取值与`background-clip`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景显示区域（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-origin\r\n * @version 1.6.0\r\n * @param {Keywords} $background-origin 指定背景图`background-position`属性计算相对的参考点，取值与`background-origin`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 为元素添加边框（包括1px边框）\r\n * @method border\r\n * @version 2.0.0\r\n * @param {String} $border-width 指定边框厚度（单位为px），默认值：1px，取值与`border-width`属性一致，不同方向代表边框位置 <2.0.0>\r\n * @param {String} $border-color 指定边框颜色 <2.0.0>\r\n * @param {String} $border-style 指定边框样式 <2.0.0>\r\n * @param {String} $radius 指定边框圆角半径，默认值：null <2.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义圆角，用于修复某些安卓机型上“圆角+边框+背景”，背景溢出的情况\r\n * @method border-radius\r\n * @version 1.6.0\r\n * @param {Length} $border-radius 指定元素的圆角半径，取值与`border-radius`属性一致 <1.6.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 定义简单变换\r\n * @method transform\r\n * @version 1.0.0\r\n * @param {String} $transform 取值范围与`transform`属性一致 <1.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 定义变换原点\r\n * @method transform-origin\r\n * @version 1.0.0\r\n * @param {Length | Percentage | Keywords} $transform-origin 取值范围与`transform-origin`属性一致 <1.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定某元素的子元素是（看起来）位于三维空间内，还是在该元素所在的平面内被扁平化\r\n * @method transform-style\r\n * @version 2.0.0\r\n * @param {String} $transform-style 取值范围与`transform-style`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定观察者与「z=0」平面的距离，使具有三维位置变换的元素产生透视效果。「z>0」的三维元素比正常大，而「z<0」时则比正常小，大小程度由该属性的值决定。\r\n * @method perspective\r\n * @version 2.0.0\r\n * @param {none | Length} $perspective 取值范围与`perspective`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定透视点的位置\r\n * @method perspective-origin\r\n * @version 2.0.0\r\n * @param {Length | Percentage | Keywords} $perspective-origin 取值范围与`perspective-origin`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定元素背面面向用户时是否可见\r\n * @method backface-visibility\r\n * @version 2.0.0\r\n * @param {Keywords} $backface-visibility 取值范围与`backface-visibility`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 定义动画\r\n * @method animation\r\n * @version 1.0.0\r\n * @param {String} $animation 取值与原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定需要引用的动画名称\r\n * @method animation-name\r\n * @version 3.0.0\r\n * @param {String} $animation-name 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画运行一次所持续的时长\r\n * @method animation-duration\r\n * @version 3.0.0\r\n * @param {String} $animation-duration 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画运行方式\r\n * @method animation-timing-function\r\n * @version 3.0.0\r\n * @param {String} $animation-timing-function 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画延迟多久之后再开始\r\n * @method animation-delay\r\n * @version 3.0.0\r\n * @param {String} $animation-delay 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画循环几次\r\n * @method animation-iteration-count\r\n * @version 3.0.0\r\n * @param {String} $animation-iteration-count 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画的运动方向\r\n * @method animation-direction\r\n * @version 3.0.0\r\n * @param {String} $animation-direction 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画的运动状态\r\n * @method animation-play-state\r\n * @version 3.0.0\r\n * @param {String} $animation-play-state 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画时间之外的状态\r\n * @method animation-fill-mode\r\n * @version 3.0.0\r\n * @param {String} $animation-fill-mode 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Transition\r\n * @description 定义补间\r\n * @method transition\r\n * @version 1.0.0\r\n * @param {String} $transition 取值与原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义显示类型为伸缩盒\r\n * @method flexbox\r\n * @version 1.0.0\r\n * @param {String} $flexbox 默认值：flex，可选值：flex | inline-flex <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素如何分配空间\r\n * @method flex\r\n * @version 1.0.0\r\n * @param {Number} $flex 取值与`flex`属性一致，默认值：1 <1.0.0>\r\n * @param {String} $direction 默认值: row，可选值：row | column <1.5.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素的排版顺序\r\n * @method order\r\n * @version 1.0.0\r\n * @param {Integer} $order 取值与`order`属性一致，默认值：1 <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性盒子元素流动方向及遇见边界时是否换行(要求系统：iOS7.0+, Android4.4+)\r\n * @method flex-flow\r\n * @version 2.0.0\r\n * @param {String} $flex-flow 取值与`flex-flow`属性一致，默认值：row nowrap <2.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素的流动方向\r\n * @method flex-direction\r\n * @version 1.0.0\r\n * @param {String} $flex-direction 取值与`flex-direction`属性一致，默认值：row <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性盒子元素溢出后排版(要求系统：iOS7.0+, Android4.4+)\r\n * @method flex-wrap\r\n * @version 1.0.0\r\n * @param {String} $flex-wrap 取值与`flex-wrap`属性一致，默认值：nowrap <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性容器主轴对齐方式(其中`space-around`值需要iOS7.0+,Android4.4+)\r\n * @method justify-content\r\n * @version 1.0.0\r\n * @param {String} $justify-content 取值与`justify-content`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义多行弹性容器侧轴对齐方式(要求系统：iOS7.0+,Android4.4+)\r\n * @method align-content\r\n * @version 1.8.5\r\n * @param {String} $align-content 取值与`align-content`属性一致，默认值：center <1.8.5>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义单行弹性容器侧轴对齐方式\r\n * @method align-items\r\n * @version 1.0.0\r\n * @param {String} $align-items 取值与`align-items`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性容器中子元素自身的在侧轴对齐方式(要求系统：iOS7.0+,Android4.4+)\r\n * @method align-self\r\n * @version 1.0.0\r\n * @param {String} $align-self 取值与`align-self`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成矩形方法\r\n * @method rect\r\n * @version 1.0.0\r\n * @param {Length} $width 定义矩形的长度 <1.0.0>\r\n * @param {Length} $height 定义矩形的高度 <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成正方形方法\r\n * @method square\r\n * @version 1.0.0\r\n * @param {Length} $size 定义正方形的边长 <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成圆形方法\r\n * @method circle\r\n * @version 1.0.0\r\n * @param {Length} $size 定义圆的半径长度 <1.0.0>\r\n * @param {Length} $radius 定义圆的圆角半径长度 <1.0.0>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 在自适应宽度情况下，确保内容元素的宽高比固定，比如：实现随屏幕大小而变化的正方形。\r\n * @method fixed-scale\r\n * @version 3.0.10\r\n * @param {Length} $width 默认值：100%。用以指定内容元素的初始宽度，由于尺寸需动态变化，不要使用固定单位 <3.0.10>\r\n * @param {Length} $scale 默认值：1/1，即正方形。用以指定内容元素的宽度高比 <3.0.10>\r\n */\n/**\r\n * @module 文本\r\n * @description 链接处理方法\r\n * @method link\r\n * @version 1.0.0\r\n * @param {Color} $color 定义链接颜色 <1.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 文本碰到边界是否换行\r\n * @method wrap\r\n * @version 1.0.0\r\n * @param {Boolean} $is-wrap 定义文本是否换行，默认值：true <2.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 单行文本溢出时显示省略号\r\n * @method ellipsis\r\n * @version 1.0.0\r\n * @param {Length} $width 定义容器的宽度，默认值：null <2.0.0>\r\n * @param {Integer} $line-clamp 定义需要显示的行数，默认值：1（即使用单行溢出的处理方案），需要注意的是本参数只支持webkit内核 <2.1.2>\r\n */\n/**\r\n * @module 文本\r\n * @description 文字隐藏方案\r\n * @method texthide\r\n * @version 1.0.0\r\n * @param {Length} $width 定义容器的宽度，默认值：null <2.0.0>\r\n */\n/**\r\n * Yo框架全局Reset\r\n * Yo重置Mobile及高级浏览器上常见的差异\r\n */\n*,\n::before,\n::after {\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n  -webkit-tap-highlight-color: transparent;\n}\nhtml,\nbody {\n  overflow: hidden;\n  height: 100%;\n}\n::-webkit-scrollbar {\n  display: none;\n}\nhtml {\n  background-color: #eee;\n  color: #212121;\n  font-size: 100px;\n  -webkit-user-select: none;\n  user-select: none;\n}\nbody {\n  margin: 0;\n  font-size: 0.14em;\n  line-height: 1.5;\n  font-family: Helvetica Neue, Helvetica, STHeiTi, sans-serif;\n}\nul,\nol,\ndl,\ndd,\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\nfigure,\nform,\nfieldset,\nlegend,\ninput,\ntextarea,\nbutton,\np,\nblockquote,\nth,\ntd,\npre,\nxmp {\n  margin: 0;\n  padding: 0;\n}\ninput,\ntextarea,\nbutton,\nselect,\npre,\nxmp,\ntt,\ncode,\nkbd,\nsamp {\n  line-height: inherit;\n  font-family: inherit;\n}\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\nsmall,\nbig,\ninput,\ntextarea,\nbutton,\nselect {\n  font-size: inherit;\n}\naddress,\ncite,\ndfn,\nem,\ni,\noptgroup,\nvar {\n  font-style: normal;\n}\ntable {\n  border-collapse: collapse;\n  border-spacing: 0;\n  table-layout: fixed;\n  text-align: left;\n}\nul,\nol,\nmenu {\n  list-style: none;\n}\nfieldset,\nimg {\n  border: 0;\n  vertical-align: middle;\n}\narticle,\naside,\ndetails,\nfigcaption,\nfigure,\nfooter,\nheader,\nmain,\nmenu,\nnav,\nsection,\nsummary {\n  display: block;\n}\naudio,\ncanvas,\nvideo {\n  display: inline-block;\n}\nblockquote:before,\nblockquote:after,\nq:before,\nq:after {\n  content: \" \";\n}\ntextarea,\npre,\nxmp {\n  overflow: auto;\n  -webkit-overflow-scrolling: touch;\n}\ntextarea {\n  resize: vertical;\n}\ninput,\ntextarea,\nbutton,\nselect,\nsummary,\na {\n  outline: 0 none;\n}\ninput,\ntextarea,\nbutton,\nselect {\n  color: inherit;\n}\ninput:disabled,\n  textarea:disabled,\n  button:disabled,\n  select:disabled {\n    opacity: 1;\n}\nbutton::-moz-focus-inner,\ninput::-moz-focus-inner {\n  padding: 0;\n  border: 0;\n}\ninput[type=\"button\"],\ninput[type=\"submit\"],\ninput[type=\"reset\"],\ninput[type=\"file\"]::-webkit-file-upload-button,\ninput[type=\"search\"]::-webkit-search-cancel-button {\n  -webkit-appearance: none;\n  appearance: none;\n}\n::-webkit-details-marker {\n  display: none;\n}\nmark {\n  background-color: transparent;\n}\na,\nins,\ns,\nu,\ndel {\n  text-decoration: none;\n}\na,\nimg {\n  -webkit-touch-callout: none;\n}\na {\n  color: #00afc7;\n}\n.g-clear::after,\n.g-mod::after {\n  display: block;\n  overflow: hidden;\n  clear: both;\n  height: 0;\n  content: \" \";\n}\n@font-face {\n  font-family: yofont;\n  src: url(//ss.qunarzz.com/yo/font/1.0.3/yofont.woff) format(\"woff\"), url(//ss.qunarzz.com/yo/font/1.0.3/yofont.ttf) format(\"truetype\");\n}\n.yo-ico {\n  font-family: yofont !important;\n  font-style: normal;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n  vertical-align: middle;\n}\n@font-face {\n  font-family: 'iconfont';\n  src: url(\"http://localhost:7000/media/iconfont/iconfont.woff\") format(\"woff\"), url(\"http://localhost:7000/media/iconfont/iconfont.ttf\") format(\"truetype\");\n}\n.iconfont {\n  font-family: \"iconfont\" !important;\n  font-size: 16px;\n  font-style: normal;\n  -webkit-font-smoothing: antialiased;\n  -webkit-text-stroke-width: 0.2px;\n  -moz-osx-font-smoothing: grayscale;\n}\nbody {\n  height: 100%;\n  width: 100%;\n}\n#app {\n  height: 100%;\n  width: 100%;\n  background: white;\n}\n.m-index {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n  flex-direction: column;\n  height: 100%;\n}\n.m-index header {\n    height: 1.24rem;\n}\n.m-index section {\n    -webkit-box-flex: 1;\n    -webkit-flex: 1;\n    flex: 1;\n    width: .1px;\n    width: 100%;\n    overflow-y: scroll;\n}\n.m-index footer {\n    height: .5rem;\n}\n@keyframes slidein {\n0% {\n    right: -100%;\n}\n100% {\n    right: 0;\n}\n}\n@keyframes slideout {\n0% {\n    right: 0;\n}\n100% {\n    right: -100%;\n}\n}\n.slidein {\n  animation: slidein 1s 0s 1;\n  -webkit-animation: slidein 1s 0s 1;\n  /* Safari 和 Chrome */\n  right: 0% !important;\n}\n.slideout {\n  animation: slideout 1s 0s 1;\n  -webkit-animation: slideout 1s 0s 1;\n  /* Safari 和 Chrome */\n  right: -100% !important;\n}\n", "", {"version":3,"sources":["D:/missFresh/src/modules/index/components/index.vue"],"names":[],"mappings":";AAAA,iBAAiB;AACjB;;;;;GAKG;AACH;;;;;;GAMG;AACH;;;GAGG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;;GAOG;AACH;;;;;;;GAOG;AACH;;;;;;;;GAQG;AACH;;;;;;;;;GASG;AACH;;;GAGG;AACH;;;;;;;;GAQG;AACH;;;;;;GAMG;AACH;;;;;;;;;;;;;GAaG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;;;;;;;;;;;GAgBG;AACH;;;;;;;;;;;;;;;;GAgBG;AACH;;;;;;GAMG;AACH;;;;;;;GAOG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;;;GAQG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;;;;GASG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;;GAOG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;;GAOG;AACH;;;;;;GAMG;AACH;;;;;;;GAOG;AACH;;;;;;;GAOG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;;GAOG;AACH;;;;;;GAMG;AACH;;;GAGG;AACH;;;EAGE,+BAA+B;EAC/B,uBAAuB;EACvB,yCAAyC;CAAE;AAE7C;;EAEE,iBAAiB;EACjB,aAAa;CAAE;AAEjB;EACE,cAAc;CAAE;AAElB;EACE,uBAAuB;EACvB,eAAe;EACf,iBAAiB;EACjB,0BAA0B;EAC1B,kBAAkB;CAAE;AAEtB;EACE,UAAU;EACV,kBAAkB;EAClB,iBAAiB;EACjB,4DAA4D;CAAE;AAEhE;;;;;;;;;;;;;;;;;;;;;;;EAuBE,UAAU;EACV,WAAW;CAAE;AAEf;;;;;;;;;;EAUE,qBAAqB;EACrB,qBAAqB;CAAE;AAEzB;;;;;;;;;;;;EAYE,mBAAmB;CAAE;AAEvB;;;;;;;EAOE,mBAAmB;CAAE;AAEvB;EACE,0BAA0B;EAC1B,kBAAkB;EAClB,oBAAoB;EACpB,iBAAiB;CAAE;AAErB;;;EAGE,iBAAiB;CAAE;AAErB;;EAEE,UAAU;EACV,uBAAuB;CAAE;AAE3B;;;;;;;;;;;;EAYE,eAAe;CAAE;AAEnB;;;EAGE,sBAAsB;CAAE;AAE1B;;;;EAIE,aAAiB;CAAE;AAErB;;;EAGE,eAAe;EACf,kCAAkC;CAAE;AAEtC;EACE,iBAAiB;CAAE;AAErB;;;;;;EAME,gBAAgB;CAAE;AAEpB;;;;EAIE,eAAe;CAAE;AACjB;;;;IAIE,WAAW;CAAE;AAEjB;;EAEE,WAAW;EACX,UAAU;CAAE;AAEd;;;;;EAKE,yBAAyB;EACzB,iBAAiB;CAAE;AAErB;EACE,cAAc;CAAE;AAElB;EACE,8BAA8B;CAAE;AAElC;;;;;EAKE,sBAAsB;CAAE;AAE1B;;EAEE,4BAA4B;CAAE;AAEhC;EACE,eAAe;CAAE;AAEnB;;EAEE,eAAe;EACf,iBAAiB;EACjB,YAAY;EACZ,UAAU;EACV,aAAiB;CAAE;AAErB;EACE,oBAAoB;EACpB,uIAAuI;CAAE;AAE3I;EACE,+BAA+B;EAC/B,mBAAmB;EACnB,oCAAoC;EACpC,mCAAmC;EACnC,uBAAuB;CAAE;AAE3B;EACE,wBAAwB;EACxB,2JAA2J;CAAE;AAE/J;EACE,mCAAmC;EACnC,gBAAgB;EAChB,mBAAmB;EACnB,oCAAoC;EACpC,iCAAiC;EACjC,mCAAmC;CAAE;AAEvC;EACE,aAAa;EACb,YAAY;CAAE;AAEhB;EACE,aAAa;EACb,YAAY;EACZ,kBAAkB;CAAE;AAEtB;EACE,qBAAqB;EACrB,sBAAsB;EACtB,cAAc;EACd,6BAA6B;EAC7B,8BAA8B;EAC9B,+BAA+B;EAC/B,uBAAuB;EACvB,aAAa;CAAE;AACf;IACE,gBAAgB;CAAE;AACpB;IACE,oBAAoB;IACpB,gBAAgB;IAChB,QAAQ;IACR,YAAY;IACZ,YAAY;IACZ,mBAAmB;CAAE;AACvB;IACE,cAAc;CAAE;AAEpB;AACE;IACE,aAAa;CAAE;AACjB;IACE,SAAS;CAAE;CAAE;AAEjB;AACE;IACE,SAAS;CAAE;AACb;IACE,aAAa;CAAE;CAAE;AAErB;EACE,2BAA2B;EAC3B,mCAAmC;EACnC,qBAAqB;EACrB,qBAAqB;CAAE;AAEzB;EACE,4BAA4B;EAC5B,oCAAoC;EACpC,qBAAqB;EACrB,wBAAwB;CAAE","file":"index.vue","sourcesContent":["@charset \"UTF-8\";\n/**\r\n * Yo框架全局base定义\r\n * 本文件与variables不同地方在于，这里所定义的map可以使用在variables和任何地方\r\n * 本文件中map使用\"_\"开头，extra中不使用\"_\"\r\n * base ⇌ extra\r\n */\n/**\r\n * Yo框架全局Variables\r\n * Yo基础变量map，如果不想定义某属性，将其value设置为null\r\n * Yo仅使用2种长度单位：px用于边框，rem用于除边框之外的所有地方\r\n * 本文件中map使用\"_\"开头，config中不使用\"_\"\r\n * variables ⇌ config\r\n */\n/**\r\n * Yo框架自定义全局函数\r\n * 扩充Sass默认函数库，用以增强语法\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的第一项\r\n * @function first\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的最后一项\r\n * @function last\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的倒数第几项\r\n * @function nth-last\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $index 指定需要返回的值在list中的倒数位置 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 移除SassList中的某个项目并返回新的List\r\n * @function remove\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {String} $value 指定需要被删除的值 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 截取SassList中的某个部分并返回新的List\r\n * @function slice\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $start 指定需要截取的开始下标 <2.1.0>\r\n * @param {Integer} $end 指定需要截取的结束下标（不包括end），当该值缺省时默认为末尾下标 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 从SassList中添加/删除项目，然后返回新的List。\r\n * @function splice\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $index 指定需要移除的开始下标 <2.1.0>\r\n * @param {Integer} $count 指定需要移除的数量，不可以为负值，0表示不移除 <2.1.0>\r\n * @param {String} $values 指定需要添加的新值（可以是多个），如果该值缺省，则表示只移除不添加新值 <2.1.0>\r\n */\n/**\r\n * Yo框架全局基础方法\r\n * 包括响应式方案，CSS3兼容性方案，厂商前缀方案，iconfont方案，flex布局等全局方法\r\n */\n/**\r\n * @module 常用方法\r\n * @description 给需要的属性加厂家前缀\r\n * @method prefix\r\n * @version 1.0.0\r\n * @param {String} $property 指定属性 <1.0.0>\r\n * @param {String} $value 指定属性值 <1.0.0>\r\n * @skip\r\n */\n/**\r\n * @module 常用方法\r\n * @description 定义字体图标\r\n * @method _iconfont\r\n * @version 1.0.0\r\n * @skip\r\n */\n/**\r\n * @module 常用方法\r\n * @description 四则运算(系统要求：iOS6.0+,Android4.4+)\r\n * @method calc\r\n * @version 1.7.0\r\n * @param {String} $property 指定需要进行计算的CSS属性 <1.7.0>\r\n * @param {String} $value 与原生CSS语法一致，区别在于需要使用引号包裹表达式 <1.7.0>\r\n * @example\r\n * .calc {\r\n *     @include calc(width, \"100% - 100px\");\r\n * }\r\n *\r\n * <div class=\"calc\">四则运算</div>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 定义响应式方案\r\n * @method responsive\r\n * @version 1.0.0\r\n * @param {String} $media 指定媒体查询条件，取值为`config`文件map `media-types`中的值 <1.0.0>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 清除浮动方案\r\n * @method clearfix\r\n * @version 1.0.0\r\n * @param {String} $type 指定清除浮动的方式，包括：pseudo-element | bfc，默认值：pseudo-element <1.8.5>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 清除行内级元素间间隙方案\r\n * @method clearspace\r\n * @version 3.0.3\r\n * @param {Length} $font-size 指定子元素字号，默认值：.14rem <3.0.3>\r\n * @example\r\n * .demo {\r\n *     @include clearspace;\r\n * }\r\n *\r\n * <div class=\"demo\">\r\n *      <span class=\"item\">1</span>\r\n *      <span class=\"item\">2</span>\r\n *      <span class=\"item\">3</span>\r\n * </div>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 描述元素内容在横、纵方向上的对齐方式，默认为水平垂直居中对齐\r\n * @method align\r\n * @version 2.0.0\r\n * @param {String} $flexbox 元素布局方式，可选值：flex | inline-flex，默认值：flex <2.0.0>\r\n * @param {Keyword} $justify-content 元素内容的水平对齐方式，取值与`justify-content`属性一致，默认值：center <2.0.0>\r\n * @param {Keyword} $align-items 元素内容的垂直对齐方式，取值与`align-items`属性一致，默认值：center <2.0.0>\r\n * @example\r\n * .demo {\r\n *     @include align;\r\n * }\r\n *\r\n * <div class=\"demo\">\r\n *      <img alt=\"未知尺寸图片居中\" />\r\n * </div>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 定义是否有滚动条\r\n * @method overflow\r\n * @version 1.0.0\r\n * @param {String} $overflow 取值与最新原生语法一致，默认值：auto <1.0.0>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 生成全屏方法\r\n * @method fullscreen\r\n * @version 1.7.0\r\n * @param {Integer} $z-index 指定层叠级别 <1.7.0>\r\n * @param {Keywords} $position 指定定位方式，取除`static | relative`之外的值，默认值：absolute <1.8.5>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义使用何种滤镜\r\n * @method filter\r\n * @version 1.7.0\r\n * @param {String} $filter 取值与`filter`属性一致 <1.7.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义UA默认外观\r\n * @method appearance\r\n * @version 1.0.0\r\n * @param {String} $appearance 取值与`appearance`属性一致，默认值：none <1.0.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义如何选中内容\r\n * @method user-select\r\n * @version 1.0.0\r\n * @param {String} $user-select 取值与`user-select`属性一致，默认值：none <1.0.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义盒模型\r\n * @method box-sizing\r\n * @version 1.0.0\r\n * @param {String} $box-sizing 指定盒模型类型，取值与`box-sizing`属性一致，默认值：border-box <1.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义渐变色值\r\n * @method gradient\r\n * @version 1.0.0\r\n * @param {String} $type 指定渐变的4种类型：linear, repeating-linear, radial, repeating-radial <1.0.0>\r\n * @param {String} $dir 指定渐变方向，可选值：[left | right] || [top | bottom] | angle <2.0.0>\r\n * @param {String} $gradient 指定渐变取值，与w3c最新原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景图像缩放（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-size\r\n * @version 1.4.0\r\n * @param {Keywords | Length} $background-size 指定背景图缩放值，取值与`background-size`属性一致 <1.4.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景裁减（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-clip\r\n * @version 1.6.0\r\n * @param {Keywords} $background-clip 指定背景图缩放值，取值与`background-clip`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景显示区域（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-origin\r\n * @version 1.6.0\r\n * @param {Keywords} $background-origin 指定背景图`background-position`属性计算相对的参考点，取值与`background-origin`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 为元素添加边框（包括1px边框）\r\n * @method border\r\n * @version 2.0.0\r\n * @param {String} $border-width 指定边框厚度（单位为px），默认值：1px，取值与`border-width`属性一致，不同方向代表边框位置 <2.0.0>\r\n * @param {String} $border-color 指定边框颜色 <2.0.0>\r\n * @param {String} $border-style 指定边框样式 <2.0.0>\r\n * @param {String} $radius 指定边框圆角半径，默认值：null <2.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义圆角，用于修复某些安卓机型上“圆角+边框+背景”，背景溢出的情况\r\n * @method border-radius\r\n * @version 1.6.0\r\n * @param {Length} $border-radius 指定元素的圆角半径，取值与`border-radius`属性一致 <1.6.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 定义简单变换\r\n * @method transform\r\n * @version 1.0.0\r\n * @param {String} $transform 取值范围与`transform`属性一致 <1.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 定义变换原点\r\n * @method transform-origin\r\n * @version 1.0.0\r\n * @param {Length | Percentage | Keywords} $transform-origin 取值范围与`transform-origin`属性一致 <1.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定某元素的子元素是（看起来）位于三维空间内，还是在该元素所在的平面内被扁平化\r\n * @method transform-style\r\n * @version 2.0.0\r\n * @param {String} $transform-style 取值范围与`transform-style`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定观察者与「z=0」平面的距离，使具有三维位置变换的元素产生透视效果。「z>0」的三维元素比正常大，而「z<0」时则比正常小，大小程度由该属性的值决定。\r\n * @method perspective\r\n * @version 2.0.0\r\n * @param {none | Length} $perspective 取值范围与`perspective`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定透视点的位置\r\n * @method perspective-origin\r\n * @version 2.0.0\r\n * @param {Length | Percentage | Keywords} $perspective-origin 取值范围与`perspective-origin`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定元素背面面向用户时是否可见\r\n * @method backface-visibility\r\n * @version 2.0.0\r\n * @param {Keywords} $backface-visibility 取值范围与`backface-visibility`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 定义动画\r\n * @method animation\r\n * @version 1.0.0\r\n * @param {String} $animation 取值与原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定需要引用的动画名称\r\n * @method animation-name\r\n * @version 3.0.0\r\n * @param {String} $animation-name 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画运行一次所持续的时长\r\n * @method animation-duration\r\n * @version 3.0.0\r\n * @param {String} $animation-duration 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画运行方式\r\n * @method animation-timing-function\r\n * @version 3.0.0\r\n * @param {String} $animation-timing-function 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画延迟多久之后再开始\r\n * @method animation-delay\r\n * @version 3.0.0\r\n * @param {String} $animation-delay 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画循环几次\r\n * @method animation-iteration-count\r\n * @version 3.0.0\r\n * @param {String} $animation-iteration-count 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画的运动方向\r\n * @method animation-direction\r\n * @version 3.0.0\r\n * @param {String} $animation-direction 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画的运动状态\r\n * @method animation-play-state\r\n * @version 3.0.0\r\n * @param {String} $animation-play-state 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画时间之外的状态\r\n * @method animation-fill-mode\r\n * @version 3.0.0\r\n * @param {String} $animation-fill-mode 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Transition\r\n * @description 定义补间\r\n * @method transition\r\n * @version 1.0.0\r\n * @param {String} $transition 取值与原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义显示类型为伸缩盒\r\n * @method flexbox\r\n * @version 1.0.0\r\n * @param {String} $flexbox 默认值：flex，可选值：flex | inline-flex <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素如何分配空间\r\n * @method flex\r\n * @version 1.0.0\r\n * @param {Number} $flex 取值与`flex`属性一致，默认值：1 <1.0.0>\r\n * @param {String} $direction 默认值: row，可选值：row | column <1.5.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素的排版顺序\r\n * @method order\r\n * @version 1.0.0\r\n * @param {Integer} $order 取值与`order`属性一致，默认值：1 <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性盒子元素流动方向及遇见边界时是否换行(要求系统：iOS7.0+, Android4.4+)\r\n * @method flex-flow\r\n * @version 2.0.0\r\n * @param {String} $flex-flow 取值与`flex-flow`属性一致，默认值：row nowrap <2.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素的流动方向\r\n * @method flex-direction\r\n * @version 1.0.0\r\n * @param {String} $flex-direction 取值与`flex-direction`属性一致，默认值：row <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性盒子元素溢出后排版(要求系统：iOS7.0+, Android4.4+)\r\n * @method flex-wrap\r\n * @version 1.0.0\r\n * @param {String} $flex-wrap 取值与`flex-wrap`属性一致，默认值：nowrap <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性容器主轴对齐方式(其中`space-around`值需要iOS7.0+,Android4.4+)\r\n * @method justify-content\r\n * @version 1.0.0\r\n * @param {String} $justify-content 取值与`justify-content`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义多行弹性容器侧轴对齐方式(要求系统：iOS7.0+,Android4.4+)\r\n * @method align-content\r\n * @version 1.8.5\r\n * @param {String} $align-content 取值与`align-content`属性一致，默认值：center <1.8.5>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义单行弹性容器侧轴对齐方式\r\n * @method align-items\r\n * @version 1.0.0\r\n * @param {String} $align-items 取值与`align-items`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性容器中子元素自身的在侧轴对齐方式(要求系统：iOS7.0+,Android4.4+)\r\n * @method align-self\r\n * @version 1.0.0\r\n * @param {String} $align-self 取值与`align-self`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成矩形方法\r\n * @method rect\r\n * @version 1.0.0\r\n * @param {Length} $width 定义矩形的长度 <1.0.0>\r\n * @param {Length} $height 定义矩形的高度 <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成正方形方法\r\n * @method square\r\n * @version 1.0.0\r\n * @param {Length} $size 定义正方形的边长 <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成圆形方法\r\n * @method circle\r\n * @version 1.0.0\r\n * @param {Length} $size 定义圆的半径长度 <1.0.0>\r\n * @param {Length} $radius 定义圆的圆角半径长度 <1.0.0>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 在自适应宽度情况下，确保内容元素的宽高比固定，比如：实现随屏幕大小而变化的正方形。\r\n * @method fixed-scale\r\n * @version 3.0.10\r\n * @param {Length} $width 默认值：100%。用以指定内容元素的初始宽度，由于尺寸需动态变化，不要使用固定单位 <3.0.10>\r\n * @param {Length} $scale 默认值：1/1，即正方形。用以指定内容元素的宽度高比 <3.0.10>\r\n */\n/**\r\n * @module 文本\r\n * @description 链接处理方法\r\n * @method link\r\n * @version 1.0.0\r\n * @param {Color} $color 定义链接颜色 <1.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 文本碰到边界是否换行\r\n * @method wrap\r\n * @version 1.0.0\r\n * @param {Boolean} $is-wrap 定义文本是否换行，默认值：true <2.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 单行文本溢出时显示省略号\r\n * @method ellipsis\r\n * @version 1.0.0\r\n * @param {Length} $width 定义容器的宽度，默认值：null <2.0.0>\r\n * @param {Integer} $line-clamp 定义需要显示的行数，默认值：1（即使用单行溢出的处理方案），需要注意的是本参数只支持webkit内核 <2.1.2>\r\n */\n/**\r\n * @module 文本\r\n * @description 文字隐藏方案\r\n * @method texthide\r\n * @version 1.0.0\r\n * @param {Length} $width 定义容器的宽度，默认值：null <2.0.0>\r\n */\n/**\r\n * Yo框架全局Reset\r\n * Yo重置Mobile及高级浏览器上常见的差异\r\n */\n*,\n::before,\n::after {\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n  -webkit-tap-highlight-color: transparent; }\n\nhtml,\nbody {\n  overflow: hidden;\n  height: 100%; }\n\n::-webkit-scrollbar {\n  display: none; }\n\nhtml {\n  background-color: #eee;\n  color: #212121;\n  font-size: 100px;\n  -webkit-user-select: none;\n  user-select: none; }\n\nbody {\n  margin: 0;\n  font-size: 0.14em;\n  line-height: 1.5;\n  font-family: Helvetica Neue, Helvetica, STHeiTi, sans-serif; }\n\nul,\nol,\ndl,\ndd,\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\nfigure,\nform,\nfieldset,\nlegend,\ninput,\ntextarea,\nbutton,\np,\nblockquote,\nth,\ntd,\npre,\nxmp {\n  margin: 0;\n  padding: 0; }\n\ninput,\ntextarea,\nbutton,\nselect,\npre,\nxmp,\ntt,\ncode,\nkbd,\nsamp {\n  line-height: inherit;\n  font-family: inherit; }\n\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\nsmall,\nbig,\ninput,\ntextarea,\nbutton,\nselect {\n  font-size: inherit; }\n\naddress,\ncite,\ndfn,\nem,\ni,\noptgroup,\nvar {\n  font-style: normal; }\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0;\n  table-layout: fixed;\n  text-align: left; }\n\nul,\nol,\nmenu {\n  list-style: none; }\n\nfieldset,\nimg {\n  border: 0;\n  vertical-align: middle; }\n\narticle,\naside,\ndetails,\nfigcaption,\nfigure,\nfooter,\nheader,\nmain,\nmenu,\nnav,\nsection,\nsummary {\n  display: block; }\n\naudio,\ncanvas,\nvideo {\n  display: inline-block; }\n\nblockquote:before,\nblockquote:after,\nq:before,\nq:after {\n  content: \"\\0020\"; }\n\ntextarea,\npre,\nxmp {\n  overflow: auto;\n  -webkit-overflow-scrolling: touch; }\n\ntextarea {\n  resize: vertical; }\n\ninput,\ntextarea,\nbutton,\nselect,\nsummary,\na {\n  outline: 0 none; }\n\ninput,\ntextarea,\nbutton,\nselect {\n  color: inherit; }\n  input:disabled,\n  textarea:disabled,\n  button:disabled,\n  select:disabled {\n    opacity: 1; }\n\nbutton::-moz-focus-inner,\ninput::-moz-focus-inner {\n  padding: 0;\n  border: 0; }\n\ninput[type=\"button\"],\ninput[type=\"submit\"],\ninput[type=\"reset\"],\ninput[type=\"file\"]::-webkit-file-upload-button,\ninput[type=\"search\"]::-webkit-search-cancel-button {\n  -webkit-appearance: none;\n  appearance: none; }\n\n::-webkit-details-marker {\n  display: none; }\n\nmark {\n  background-color: transparent; }\n\na,\nins,\ns,\nu,\ndel {\n  text-decoration: none; }\n\na,\nimg {\n  -webkit-touch-callout: none; }\n\na {\n  color: #00afc7; }\n\n.g-clear::after,\n.g-mod::after {\n  display: block;\n  overflow: hidden;\n  clear: both;\n  height: 0;\n  content: \"\\0020\"; }\n\n@font-face {\n  font-family: yofont;\n  src: url(//ss.qunarzz.com/yo/font/1.0.3/yofont.woff) format(\"woff\"), url(//ss.qunarzz.com/yo/font/1.0.3/yofont.ttf) format(\"truetype\"); }\n\n.yo-ico {\n  font-family: yofont !important;\n  font-style: normal;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n  vertical-align: middle; }\n\n@font-face {\n  font-family: 'iconfont';\n  src: url(\"http://localhost:7000/media/iconfont/iconfont.woff\") format(\"woff\"), url(\"http://localhost:7000/media/iconfont/iconfont.ttf\") format(\"truetype\"); }\n\n.iconfont {\n  font-family: \"iconfont\" !important;\n  font-size: 16px;\n  font-style: normal;\n  -webkit-font-smoothing: antialiased;\n  -webkit-text-stroke-width: 0.2px;\n  -moz-osx-font-smoothing: grayscale; }\n\nbody {\n  height: 100%;\n  width: 100%; }\n\n#app {\n  height: 100%;\n  width: 100%;\n  background: white; }\n\n.m-index {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n  flex-direction: column;\n  height: 100%; }\n  .m-index header {\n    height: 1.24rem; }\n  .m-index section {\n    -webkit-box-flex: 1;\n    -webkit-flex: 1;\n    flex: 1;\n    width: .1px;\n    width: 100%;\n    overflow-y: scroll; }\n  .m-index footer {\n    height: .5rem; }\n\n@keyframes slidein {\n  0% {\n    right: -100%; }\n  100% {\n    right: 0; } }\n\n@keyframes slideout {\n  0% {\n    right: 0; }\n  100% {\n    right: -100%; } }\n\n.slidein {\n  animation: slidein 1s 0s 1;\n  -webkit-animation: slidein 1s 0s 1;\n  /* Safari 和 Chrome */\n  right: 0% !important; }\n\n.slideout {\n  animation: slideout 1s 0s 1;\n  -webkit-animation: slideout 1s 0s 1;\n  /* Safari 和 Chrome */\n  right: -100% !important; }\n"],"sourceRoot":""}]);
 
 // exports
 
 
 /***/ }),
-/* 46 */
+/* 44 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29247,24 +29247,34 @@ Object.defineProperty(exports, "__esModule", {
 	value: true
 });
 
-var _footer = __webpack_require__(11);
+var _footer = __webpack_require__(45);
 
 var _footer2 = _interopRequireDefault(_footer);
 
-var _header = __webpack_require__(12);
+var _header = __webpack_require__(50);
 
 var _header2 = _interopRequireDefault(_header);
 
-var _section = __webpack_require__(13);
+var _section = __webpack_require__(56);
 
 var _section2 = _interopRequireDefault(_section);
+
+var _search = __webpack_require__(11);
+
+var _search2 = _interopRequireDefault(_search);
 
 var _axios = __webpack_require__(5);
 
 var _axios2 = _interopRequireDefault(_axios);
 
+var _store = __webpack_require__(6);
+
+var _store2 = _interopRequireDefault(_store);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
+//
+//
 //
 //
 //
@@ -29283,18 +29293,29 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 exports.default = {
 	props: ["message"],
 	data: function data() {
-		return {};
+		return {
+			type: '',
+			isShow: ''
+		};
 	},
 
 	methods: {
-		getnum: function getnum(title) {}
+		getnum: function getnum(title) {},
+		gettype: function gettype(type) {
+			this.type = type;
+		},
+		getmessage: function getmessage(message) {
+			this.isShow = message;
+		}
 	},
 	components: {
 		IndexFooter: _footer2.default,
 		IndexHeader: _header2.default,
-		IndexSection: _section2.default
+		IndexSection: _section2.default,
+		search: _search2.default
 	},
 	mounted: function mounted() {
+		this.isShow = _store2.default.state.isInSearch;
 		(0, _axios2.default)({
 			url: '/api/v2/product/home/index?device_id=3d48c219f6d8d2386530b0b414bfb6cb&env=web&fromSource=zhuye&platform=web&uuid=3d48c219f6d8d2386530b0b414bfb6cb&version=3.8.0.1',
 			method: 'post',
@@ -29315,17 +29336,74 @@ exports.default = {
 };
 
 /***/ }),
-/* 47 */
+/* 45 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_3_0_vue_loader_lib_selector_type_script_index_0_bustCache_footer_vue__ = __webpack_require__(48);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_3_0_vue_loader_lib_selector_type_script_index_0_bustCache_footer_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_3_0_vue_loader_lib_selector_type_script_index_0_bustCache_footer_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_13_3_0_vue_loader_lib_template_compiler_index_id_data_v_9216102e_hasScoped_false_buble_transforms_node_modules_vue_loader_13_3_0_vue_loader_lib_selector_type_template_index_0_bustCache_footer_vue__ = __webpack_require__(49);
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(46)
+}
+var normalizeComponent = __webpack_require__(3)
+/* script */
+
+/* template */
+
+/* template functional */
+  var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_3_0_vue_loader_lib_selector_type_script_index_0_bustCache_footer_vue___default.a,
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_13_3_0_vue_loader_lib_template_compiler_index_id_data_v_9216102e_hasScoped_false_buble_transforms_node_modules_vue_loader_13_3_0_vue_loader_lib_selector_type_template_index_0_bustCache_footer_vue__["a" /* default */],
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "src\\modules\\index\\components\\footer.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {  return key !== "default" && key.substr(0, 2) !== "__"})) {  console.error("named exports are not supported in *.vue files.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-loader/node_modules/vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-9216102e", Component.options)
+  } else {
+    hotAPI.reload("data-v-9216102e", Component.options)
+' + '  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+/* harmony default export */ __webpack_exports__["default"] = (Component.exports);
+
+
+/***/ }),
+/* 46 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(48);
+var content = __webpack_require__(47);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(1)("2875dba2", content, false);
+var update = __webpack_require__(2)("2875dba2", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
@@ -29341,7 +29419,7 @@ if(false) {
 }
 
 /***/ }),
-/* 48 */
+/* 47 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(true);
@@ -29355,7 +29433,7 @@ exports.push([module.i, "\n@charset \"UTF-8\";\n/**\r\n * Yo框架全局base定�
 
 
 /***/ }),
-/* 49 */
+/* 48 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -29389,7 +29467,7 @@ exports.push([module.i, "\n@charset \"UTF-8\";\n/**\r\n * Yo框架全局base定�
 
 
 /***/ }),
-/* 50 */
+/* 49 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -29450,6 +29528,63 @@ if (false) {
 }
 
 /***/ }),
+/* 50 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_3_0_vue_loader_lib_selector_type_script_index_0_bustCache_header_vue__ = __webpack_require__(53);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_3_0_vue_loader_lib_selector_type_script_index_0_bustCache_header_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_3_0_vue_loader_lib_selector_type_script_index_0_bustCache_header_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_13_3_0_vue_loader_lib_template_compiler_index_id_data_v_4fb1484a_hasScoped_false_buble_transforms_node_modules_vue_loader_13_3_0_vue_loader_lib_selector_type_template_index_0_bustCache_header_vue__ = __webpack_require__(55);
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(51)
+}
+var normalizeComponent = __webpack_require__(3)
+/* script */
+
+/* template */
+
+/* template functional */
+  var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_3_0_vue_loader_lib_selector_type_script_index_0_bustCache_header_vue___default.a,
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_13_3_0_vue_loader_lib_template_compiler_index_id_data_v_4fb1484a_hasScoped_false_buble_transforms_node_modules_vue_loader_13_3_0_vue_loader_lib_selector_type_template_index_0_bustCache_header_vue__["a" /* default */],
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "src\\modules\\index\\components\\header.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {  return key !== "default" && key.substr(0, 2) !== "__"})) {  console.error("named exports are not supported in *.vue files.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-loader/node_modules/vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-4fb1484a", Component.options)
+  } else {
+    hotAPI.reload("data-v-4fb1484a", Component.options)
+' + '  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+/* harmony default export */ __webpack_exports__["default"] = (Component.exports);
+
+
+/***/ }),
 /* 51 */
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -29460,7 +29595,7 @@ var content = __webpack_require__(52);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(1)("dd31d5ca", content, false);
+var update = __webpack_require__(2)("dd31d5ca", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
@@ -29484,7 +29619,7 @@ exports = module.exports = __webpack_require__(0)(true);
 
 
 // module
-exports.push([module.i, "\n@charset \"UTF-8\";\n/**\r\n * Yo框架全局base定义\r\n * 本文件与variables不同地方在于，这里所定义的map可以使用在variables和任何地方\r\n * 本文件中map使用\"_\"开头，extra中不使用\"_\"\r\n * base ⇌ extra\r\n */\n/**\r\n * Yo框架全局Variables\r\n * Yo基础变量map，如果不想定义某属性，将其value设置为null\r\n * Yo仅使用2种长度单位：px用于边框，rem用于除边框之外的所有地方\r\n * 本文件中map使用\"_\"开头，config中不使用\"_\"\r\n * variables ⇌ config\r\n */\n/**\r\n * Yo框架自定义全局函数\r\n * 扩充Sass默认函数库，用以增强语法\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的第一项\r\n * @function first\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的最后一项\r\n * @function last\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的倒数第几项\r\n * @function nth-last\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $index 指定需要返回的值在list中的倒数位置 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 移除SassList中的某个项目并返回新的List\r\n * @function remove\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {String} $value 指定需要被删除的值 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 截取SassList中的某个部分并返回新的List\r\n * @function slice\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $start 指定需要截取的开始下标 <2.1.0>\r\n * @param {Integer} $end 指定需要截取的结束下标（不包括end），当该值缺省时默认为末尾下标 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 从SassList中添加/删除项目，然后返回新的List。\r\n * @function splice\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $index 指定需要移除的开始下标 <2.1.0>\r\n * @param {Integer} $count 指定需要移除的数量，不可以为负值，0表示不移除 <2.1.0>\r\n * @param {String} $values 指定需要添加的新值（可以是多个），如果该值缺省，则表示只移除不添加新值 <2.1.0>\r\n */\n/**\r\n * Yo框架全局基础方法\r\n * 包括响应式方案，CSS3兼容性方案，厂商前缀方案，iconfont方案，flex布局等全局方法\r\n */\n/**\r\n * @module 常用方法\r\n * @description 给需要的属性加厂家前缀\r\n * @method prefix\r\n * @version 1.0.0\r\n * @param {String} $property 指定属性 <1.0.0>\r\n * @param {String} $value 指定属性值 <1.0.0>\r\n * @skip\r\n */\n/**\r\n * @module 常用方法\r\n * @description 定义字体图标\r\n * @method _iconfont\r\n * @version 1.0.0\r\n * @skip\r\n */\n/**\r\n * @module 常用方法\r\n * @description 四则运算(系统要求：iOS6.0+,Android4.4+)\r\n * @method calc\r\n * @version 1.7.0\r\n * @param {String} $property 指定需要进行计算的CSS属性 <1.7.0>\r\n * @param {String} $value 与原生CSS语法一致，区别在于需要使用引号包裹表达式 <1.7.0>\r\n * @example\r\n * .calc {\r\n *     @include calc(width, \"100% - 100px\");\r\n * }\r\n *\r\n * <div class=\"calc\">四则运算</div>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 定义响应式方案\r\n * @method responsive\r\n * @version 1.0.0\r\n * @param {String} $media 指定媒体查询条件，取值为`config`文件map `media-types`中的值 <1.0.0>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 清除浮动方案\r\n * @method clearfix\r\n * @version 1.0.0\r\n * @param {String} $type 指定清除浮动的方式，包括：pseudo-element | bfc，默认值：pseudo-element <1.8.5>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 清除行内级元素间间隙方案\r\n * @method clearspace\r\n * @version 3.0.3\r\n * @param {Length} $font-size 指定子元素字号，默认值：.14rem <3.0.3>\r\n * @example\r\n * .demo {\r\n *     @include clearspace;\r\n * }\r\n *\r\n * <div class=\"demo\">\r\n *      <span class=\"item\">1</span>\r\n *      <span class=\"item\">2</span>\r\n *      <span class=\"item\">3</span>\r\n * </div>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 描述元素内容在横、纵方向上的对齐方式，默认为水平垂直居中对齐\r\n * @method align\r\n * @version 2.0.0\r\n * @param {String} $flexbox 元素布局方式，可选值：flex | inline-flex，默认值：flex <2.0.0>\r\n * @param {Keyword} $justify-content 元素内容的水平对齐方式，取值与`justify-content`属性一致，默认值：center <2.0.0>\r\n * @param {Keyword} $align-items 元素内容的垂直对齐方式，取值与`align-items`属性一致，默认值：center <2.0.0>\r\n * @example\r\n * .demo {\r\n *     @include align;\r\n * }\r\n *\r\n * <div class=\"demo\">\r\n *      <img alt=\"未知尺寸图片居中\" />\r\n * </div>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 定义是否有滚动条\r\n * @method overflow\r\n * @version 1.0.0\r\n * @param {String} $overflow 取值与最新原生语法一致，默认值：auto <1.0.0>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 生成全屏方法\r\n * @method fullscreen\r\n * @version 1.7.0\r\n * @param {Integer} $z-index 指定层叠级别 <1.7.0>\r\n * @param {Keywords} $position 指定定位方式，取除`static | relative`之外的值，默认值：absolute <1.8.5>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义使用何种滤镜\r\n * @method filter\r\n * @version 1.7.0\r\n * @param {String} $filter 取值与`filter`属性一致 <1.7.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义UA默认外观\r\n * @method appearance\r\n * @version 1.0.0\r\n * @param {String} $appearance 取值与`appearance`属性一致，默认值：none <1.0.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义如何选中内容\r\n * @method user-select\r\n * @version 1.0.0\r\n * @param {String} $user-select 取值与`user-select`属性一致，默认值：none <1.0.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义盒模型\r\n * @method box-sizing\r\n * @version 1.0.0\r\n * @param {String} $box-sizing 指定盒模型类型，取值与`box-sizing`属性一致，默认值：border-box <1.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义渐变色值\r\n * @method gradient\r\n * @version 1.0.0\r\n * @param {String} $type 指定渐变的4种类型：linear, repeating-linear, radial, repeating-radial <1.0.0>\r\n * @param {String} $dir 指定渐变方向，可选值：[left | right] || [top | bottom] | angle <2.0.0>\r\n * @param {String} $gradient 指定渐变取值，与w3c最新原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景图像缩放（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-size\r\n * @version 1.4.0\r\n * @param {Keywords | Length} $background-size 指定背景图缩放值，取值与`background-size`属性一致 <1.4.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景裁减（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-clip\r\n * @version 1.6.0\r\n * @param {Keywords} $background-clip 指定背景图缩放值，取值与`background-clip`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景显示区域（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-origin\r\n * @version 1.6.0\r\n * @param {Keywords} $background-origin 指定背景图`background-position`属性计算相对的参考点，取值与`background-origin`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 为元素添加边框（包括1px边框）\r\n * @method border\r\n * @version 2.0.0\r\n * @param {String} $border-width 指定边框厚度（单位为px），默认值：1px，取值与`border-width`属性一致，不同方向代表边框位置 <2.0.0>\r\n * @param {String} $border-color 指定边框颜色 <2.0.0>\r\n * @param {String} $border-style 指定边框样式 <2.0.0>\r\n * @param {String} $radius 指定边框圆角半径，默认值：null <2.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义圆角，用于修复某些安卓机型上“圆角+边框+背景”，背景溢出的情况\r\n * @method border-radius\r\n * @version 1.6.0\r\n * @param {Length} $border-radius 指定元素的圆角半径，取值与`border-radius`属性一致 <1.6.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 定义简单变换\r\n * @method transform\r\n * @version 1.0.0\r\n * @param {String} $transform 取值范围与`transform`属性一致 <1.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 定义变换原点\r\n * @method transform-origin\r\n * @version 1.0.0\r\n * @param {Length | Percentage | Keywords} $transform-origin 取值范围与`transform-origin`属性一致 <1.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定某元素的子元素是（看起来）位于三维空间内，还是在该元素所在的平面内被扁平化\r\n * @method transform-style\r\n * @version 2.0.0\r\n * @param {String} $transform-style 取值范围与`transform-style`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定观察者与「z=0」平面的距离，使具有三维位置变换的元素产生透视效果。「z>0」的三维元素比正常大，而「z<0」时则比正常小，大小程度由该属性的值决定。\r\n * @method perspective\r\n * @version 2.0.0\r\n * @param {none | Length} $perspective 取值范围与`perspective`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定透视点的位置\r\n * @method perspective-origin\r\n * @version 2.0.0\r\n * @param {Length | Percentage | Keywords} $perspective-origin 取值范围与`perspective-origin`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定元素背面面向用户时是否可见\r\n * @method backface-visibility\r\n * @version 2.0.0\r\n * @param {Keywords} $backface-visibility 取值范围与`backface-visibility`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 定义动画\r\n * @method animation\r\n * @version 1.0.0\r\n * @param {String} $animation 取值与原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定需要引用的动画名称\r\n * @method animation-name\r\n * @version 3.0.0\r\n * @param {String} $animation-name 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画运行一次所持续的时长\r\n * @method animation-duration\r\n * @version 3.0.0\r\n * @param {String} $animation-duration 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画运行方式\r\n * @method animation-timing-function\r\n * @version 3.0.0\r\n * @param {String} $animation-timing-function 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画延迟多久之后再开始\r\n * @method animation-delay\r\n * @version 3.0.0\r\n * @param {String} $animation-delay 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画循环几次\r\n * @method animation-iteration-count\r\n * @version 3.0.0\r\n * @param {String} $animation-iteration-count 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画的运动方向\r\n * @method animation-direction\r\n * @version 3.0.0\r\n * @param {String} $animation-direction 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画的运动状态\r\n * @method animation-play-state\r\n * @version 3.0.0\r\n * @param {String} $animation-play-state 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画时间之外的状态\r\n * @method animation-fill-mode\r\n * @version 3.0.0\r\n * @param {String} $animation-fill-mode 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Transition\r\n * @description 定义补间\r\n * @method transition\r\n * @version 1.0.0\r\n * @param {String} $transition 取值与原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义显示类型为伸缩盒\r\n * @method flexbox\r\n * @version 1.0.0\r\n * @param {String} $flexbox 默认值：flex，可选值：flex | inline-flex <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素如何分配空间\r\n * @method flex\r\n * @version 1.0.0\r\n * @param {Number} $flex 取值与`flex`属性一致，默认值：1 <1.0.0>\r\n * @param {String} $direction 默认值: row，可选值：row | column <1.5.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素的排版顺序\r\n * @method order\r\n * @version 1.0.0\r\n * @param {Integer} $order 取值与`order`属性一致，默认值：1 <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性盒子元素流动方向及遇见边界时是否换行(要求系统：iOS7.0+, Android4.4+)\r\n * @method flex-flow\r\n * @version 2.0.0\r\n * @param {String} $flex-flow 取值与`flex-flow`属性一致，默认值：row nowrap <2.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素的流动方向\r\n * @method flex-direction\r\n * @version 1.0.0\r\n * @param {String} $flex-direction 取值与`flex-direction`属性一致，默认值：row <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性盒子元素溢出后排版(要求系统：iOS7.0+, Android4.4+)\r\n * @method flex-wrap\r\n * @version 1.0.0\r\n * @param {String} $flex-wrap 取值与`flex-wrap`属性一致，默认值：nowrap <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性容器主轴对齐方式(其中`space-around`值需要iOS7.0+,Android4.4+)\r\n * @method justify-content\r\n * @version 1.0.0\r\n * @param {String} $justify-content 取值与`justify-content`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义多行弹性容器侧轴对齐方式(要求系统：iOS7.0+,Android4.4+)\r\n * @method align-content\r\n * @version 1.8.5\r\n * @param {String} $align-content 取值与`align-content`属性一致，默认值：center <1.8.5>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义单行弹性容器侧轴对齐方式\r\n * @method align-items\r\n * @version 1.0.0\r\n * @param {String} $align-items 取值与`align-items`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性容器中子元素自身的在侧轴对齐方式(要求系统：iOS7.0+,Android4.4+)\r\n * @method align-self\r\n * @version 1.0.0\r\n * @param {String} $align-self 取值与`align-self`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成矩形方法\r\n * @method rect\r\n * @version 1.0.0\r\n * @param {Length} $width 定义矩形的长度 <1.0.0>\r\n * @param {Length} $height 定义矩形的高度 <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成正方形方法\r\n * @method square\r\n * @version 1.0.0\r\n * @param {Length} $size 定义正方形的边长 <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成圆形方法\r\n * @method circle\r\n * @version 1.0.0\r\n * @param {Length} $size 定义圆的半径长度 <1.0.0>\r\n * @param {Length} $radius 定义圆的圆角半径长度 <1.0.0>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 在自适应宽度情况下，确保内容元素的宽高比固定，比如：实现随屏幕大小而变化的正方形。\r\n * @method fixed-scale\r\n * @version 3.0.10\r\n * @param {Length} $width 默认值：100%。用以指定内容元素的初始宽度，由于尺寸需动态变化，不要使用固定单位 <3.0.10>\r\n * @param {Length} $scale 默认值：1/1，即正方形。用以指定内容元素的宽度高比 <3.0.10>\r\n */\n/**\r\n * @module 文本\r\n * @description 链接处理方法\r\n * @method link\r\n * @version 1.0.0\r\n * @param {Color} $color 定义链接颜色 <1.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 文本碰到边界是否换行\r\n * @method wrap\r\n * @version 1.0.0\r\n * @param {Boolean} $is-wrap 定义文本是否换行，默认值：true <2.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 单行文本溢出时显示省略号\r\n * @method ellipsis\r\n * @version 1.0.0\r\n * @param {Length} $width 定义容器的宽度，默认值：null <2.0.0>\r\n * @param {Integer} $line-clamp 定义需要显示的行数，默认值：1（即使用单行溢出的处理方案），需要注意的是本参数只支持webkit内核 <2.1.2>\r\n */\n/**\r\n * @module 文本\r\n * @description 文字隐藏方案\r\n * @method texthide\r\n * @version 1.0.0\r\n * @param {Length} $width 定义容器的宽度，默认值：null <2.0.0>\r\n */\n/**\r\n * Yo框架全局Reset\r\n * Yo重置Mobile及高级浏览器上常见的差异\r\n */\n*,\n::before,\n::after {\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n  -webkit-tap-highlight-color: transparent;\n}\nhtml,\nbody {\n  overflow: hidden;\n  height: 100%;\n}\n::-webkit-scrollbar {\n  display: none;\n}\nhtml {\n  background-color: #eee;\n  color: #212121;\n  font-size: 100px;\n  -webkit-user-select: none;\n  user-select: none;\n}\nbody {\n  margin: 0;\n  font-size: 0.14em;\n  line-height: 1.5;\n  font-family: Helvetica Neue, Helvetica, STHeiTi, sans-serif;\n}\nul,\nol,\ndl,\ndd,\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\nfigure,\nform,\nfieldset,\nlegend,\ninput,\ntextarea,\nbutton,\np,\nblockquote,\nth,\ntd,\npre,\nxmp {\n  margin: 0;\n  padding: 0;\n}\ninput,\ntextarea,\nbutton,\nselect,\npre,\nxmp,\ntt,\ncode,\nkbd,\nsamp {\n  line-height: inherit;\n  font-family: inherit;\n}\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\nsmall,\nbig,\ninput,\ntextarea,\nbutton,\nselect {\n  font-size: inherit;\n}\naddress,\ncite,\ndfn,\nem,\ni,\noptgroup,\nvar {\n  font-style: normal;\n}\ntable {\n  border-collapse: collapse;\n  border-spacing: 0;\n  table-layout: fixed;\n  text-align: left;\n}\nul,\nol,\nmenu {\n  list-style: none;\n}\nfieldset,\nimg {\n  border: 0;\n  vertical-align: middle;\n}\narticle,\naside,\ndetails,\nfigcaption,\nfigure,\nfooter,\nheader,\nmain,\nmenu,\nnav,\nsection,\nsummary {\n  display: block;\n}\naudio,\ncanvas,\nvideo {\n  display: inline-block;\n}\nblockquote:before,\nblockquote:after,\nq:before,\nq:after {\n  content: \" \";\n}\ntextarea,\npre,\nxmp {\n  overflow: auto;\n  -webkit-overflow-scrolling: touch;\n}\ntextarea {\n  resize: vertical;\n}\ninput,\ntextarea,\nbutton,\nselect,\nsummary,\na {\n  outline: 0 none;\n}\ninput,\ntextarea,\nbutton,\nselect {\n  color: inherit;\n}\ninput:disabled,\n  textarea:disabled,\n  button:disabled,\n  select:disabled {\n    opacity: 1;\n}\nbutton::-moz-focus-inner,\ninput::-moz-focus-inner {\n  padding: 0;\n  border: 0;\n}\ninput[type=\"button\"],\ninput[type=\"submit\"],\ninput[type=\"reset\"],\ninput[type=\"file\"]::-webkit-file-upload-button,\ninput[type=\"search\"]::-webkit-search-cancel-button {\n  -webkit-appearance: none;\n  appearance: none;\n}\n::-webkit-details-marker {\n  display: none;\n}\nmark {\n  background-color: transparent;\n}\na,\nins,\ns,\nu,\ndel {\n  text-decoration: none;\n}\na,\nimg {\n  -webkit-touch-callout: none;\n}\na {\n  color: #00afc7;\n}\n.g-clear::after,\n.g-mod::after {\n  display: block;\n  overflow: hidden;\n  clear: both;\n  height: 0;\n  content: \" \";\n}\n@font-face {\n  font-family: yofont;\n  src: url(//ss.qunarzz.com/yo/font/1.0.3/yofont.woff) format(\"woff\"), url(//ss.qunarzz.com/yo/font/1.0.3/yofont.ttf) format(\"truetype\");\n}\n.yo-ico {\n  font-family: yofont !important;\n  font-style: normal;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n  vertical-align: middle;\n}\n@font-face {\n  font-family: 'iconfont';\n  src: url(\"http://localhost:7000/media/iconfont/iconfont.woff\") format(\"woff\"), url(\"http://localhost:7000/media/iconfont/iconfont.ttf\") format(\"truetype\");\n}\n.iconfont {\n  font-family: \"iconfont\" !important;\n  font-size: 16px;\n  font-style: normal;\n  -webkit-font-smoothing: antialiased;\n  -webkit-text-stroke-width: 0.2px;\n  -moz-osx-font-smoothing: grayscale;\n}\nheader div {\n  height: 100%;\n  width: 100%;\n}\nheader div ul {\n    height: 100%;\n    width: 100%;\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n    -webkit-flex-direction: column;\n    flex-direction: column;\n}\nheader div ul li {\n      -webkit-box-flex: 1;\n      -webkit-flex: 1;\n      flex: 1;\n      width: .1px;\n      width: 100%;\n      height: .33333333rem;\n}\nheader div ul li img {\n        height: 100%;\n        width: 100%;\n}\nheader div ul li:nth-child(2) {\n        display: -webkit-box;\n        display: -webkit-flex;\n        display: flex;\n}\nheader div ul li:nth-child(2) img {\n          vertical-align: top;\n}\nheader div ul li:nth-child(2) div:first-child {\n          -webkit-box-flex: 1;\n          -webkit-flex: 1;\n          flex: 1;\n          width: .1px;\n          display: -webkit-box;\n          display: -webkit-flex;\n          display: flex;\n          -webkit-box-align: center;\n          -webkit-align-items: center;\n          align-items: center;\n          -webkit-box-pack: center;\n          -webkit-justify-content: center;\n          justify-content: center;\n}\nheader div ul li:nth-child(2) div:first-child span:first-child {\n            display: inline-block;\n            width: 74px;\n            height: 16px;\n            margin-right: 5px;\n}\nheader div ul li:nth-child(2) div:first-child span:nth-child(2) {\n            margin-top: 2px;\n            font-size: 14px;\n}\nheader div ul li:nth-child(2) div:first-child span:last-child {\n            margin-left: 5px;\n}\nheader div ul li:nth-child(2) div:first-child span:last-child .iconfont {\n              margin-top: 3px;\n              font-size: 6px;\n}\nheader div ul li:nth-child(2) div:last-child {\n          width: 54px;\n          height: 100%;\n          display: -webkit-box;\n          display: -webkit-flex;\n          display: flex;\n          -webkit-box-align: center;\n          -webkit-align-items: center;\n          align-items: center;\n          -webkit-box-pack: center;\n          -webkit-justify-content: center;\n          justify-content: center;\n}\nheader div ul li:nth-child(2) div:last-child img {\n            width: 21px;\n            height: 30px;\n}\nheader div ul li:last-child {\n        display: -webkit-box;\n        display: -webkit-flex;\n        display: flex;\n        height: 100%;\n        width: 100%;\n        position: relative;\n}\nheader div ul li:last-child::after {\n          pointer-events: none;\n          position: absolute;\n          z-index: 999;\n          top: 0;\n          left: 0;\n          content: \" \";\n          border-color: #ccc;\n          border-style: solid;\n          border-width: 0 0 1px 0;\n          -webkit-transform-origin: 0 0;\n          transform-origin: 0 0;\n}\n@media (max--moz-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.49), (max-device-pixel-ratio: 1.49), (max-resolution: 143dpi), (max-resolution: 1.49dppx) {\nheader div ul li:last-child::after {\n              width: 100%;\n              height: 100%;\n}\n}\n@media (min--moz-device-pixel-ratio: 1.5) and (max--moz-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.49), (min-device-pixel-ratio: 1.5) and (max-device-pixel-ratio: 2.49), (min-resolution: 144dpi) and (max-resolution: 239dpi), (min-resolution: 1.5dppx) and (max-resolution: 2.49dppx) {\nheader div ul li:last-child::after {\n              width: 200%;\n              height: 200%;\n              -webkit-transform: scale(0.5);\n              transform: scale(0.5);\n}\n}\n@media (min--moz-device-pixel-ratio: 2.5), (-webkit-min-device-pixel-ratio: 2.5), (min-device-pixel-ratio: 2.5), (min-resolution: 240dpi), (min-resolution: 2.5dppx) {\nheader div ul li:last-child::after {\n              width: 300%;\n              height: 300%;\n              -webkit-transform: scale(0.33333);\n              transform: scale(0.33333);\n}\n}\nheader div ul li:last-child div:first-child {\n          -webkit-box-flex: 1;\n          -webkit-flex: 1;\n          flex: 1;\n          width: .1px;\n          overflow-x: scroll;\n}\nheader div ul li:last-child div:first-child ul {\n            width: 702px;\n            display: -webkit-box;\n            display: -webkit-flex;\n            display: flex;\n            -webkit-box-orient: horizontal;\n            -webkit-box-direction: normal;\n            -webkit-flex-direction: row;\n            flex-direction: row;\n            overflow: hidden;\n            margin-left: 5px;\n}\nheader div ul li:last-child div:first-child ul li {\n              height: 100%;\n              line-height: 40px;\n              width: 54px;\n}\nheader div ul li:last-child div:first-child ul li:nth-child(2) {\n                background: url(\"https://j-image.missfresh.cn/img_20171013205830872.png\") center right no-repeat;\n                background-size: contain;\n}\nheader div ul li:last-child div:first-child ul li span {\n                color: black;\n                display: inline-block;\n                height: 100%;\n                white-space: nowrap;\n                margin: 0 10px 0 10px;\n}\nheader div ul li:last-child div:first-child ul li span.active {\n                  border-bottom: 2px solid #ff4891;\n}\nheader div ul li:last-child div:last-child {\n          width: 54px;\n          display: -webkit-box;\n          display: -webkit-flex;\n          display: flex;\n          -webkit-box-align: center;\n          -webkit-align-items: center;\n          align-items: center;\n          -webkit-box-pack: center;\n          -webkit-justify-content: center;\n          justify-content: center;\n}\nheader div ul li:last-child div:last-child i {\n            color: #a6a6a6;\n}\n", "", {"version":3,"sources":["D:/missFresh/src/modules/index/components/header.vue"],"names":[],"mappings":";AAAA,iBAAiB;AACjB;;;;;GAKG;AACH;;;;;;GAMG;AACH;;;GAGG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;;GAOG;AACH;;;;;;;GAOG;AACH;;;;;;;;GAQG;AACH;;;;;;;;;GASG;AACH;;;GAGG;AACH;;;;;;;;GAQG;AACH;;;;;;GAMG;AACH;;;;;;;;;;;;;GAaG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;;;;;;;;;;;GAgBG;AACH;;;;;;;;;;;;;;;;GAgBG;AACH;;;;;;GAMG;AACH;;;;;;;GAOG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;;;GAQG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;;;;GASG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;;GAOG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;;GAOG;AACH;;;;;;GAMG;AACH;;;;;;;GAOG;AACH;;;;;;;GAOG;AACH;;;;;;GAMG;AACH;;;;;;GAMG;AACH;;;;;;;GAOG;AACH;;;;;;GAMG;AACH;;;GAGG;AACH;;;EAGE,+BAA+B;EAC/B,uBAAuB;EACvB,yCAAyC;CAAE;AAE7C;;EAEE,iBAAiB;EACjB,aAAa;CAAE;AAEjB;EACE,cAAc;CAAE;AAElB;EACE,uBAAuB;EACvB,eAAe;EACf,iBAAiB;EACjB,0BAA0B;EAC1B,kBAAkB;CAAE;AAEtB;EACE,UAAU;EACV,kBAAkB;EAClB,iBAAiB;EACjB,4DAA4D;CAAE;AAEhE;;;;;;;;;;;;;;;;;;;;;;;EAuBE,UAAU;EACV,WAAW;CAAE;AAEf;;;;;;;;;;EAUE,qBAAqB;EACrB,qBAAqB;CAAE;AAEzB;;;;;;;;;;;;EAYE,mBAAmB;CAAE;AAEvB;;;;;;;EAOE,mBAAmB;CAAE;AAEvB;EACE,0BAA0B;EAC1B,kBAAkB;EAClB,oBAAoB;EACpB,iBAAiB;CAAE;AAErB;;;EAGE,iBAAiB;CAAE;AAErB;;EAEE,UAAU;EACV,uBAAuB;CAAE;AAE3B;;;;;;;;;;;;EAYE,eAAe;CAAE;AAEnB;;;EAGE,sBAAsB;CAAE;AAE1B;;;;EAIE,aAAiB;CAAE;AAErB;;;EAGE,eAAe;EACf,kCAAkC;CAAE;AAEtC;EACE,iBAAiB;CAAE;AAErB;;;;;;EAME,gBAAgB;CAAE;AAEpB;;;;EAIE,eAAe;CAAE;AACjB;;;;IAIE,WAAW;CAAE;AAEjB;;EAEE,WAAW;EACX,UAAU;CAAE;AAEd;;;;;EAKE,yBAAyB;EACzB,iBAAiB;CAAE;AAErB;EACE,cAAc;CAAE;AAElB;EACE,8BAA8B;CAAE;AAElC;;;;;EAKE,sBAAsB;CAAE;AAE1B;;EAEE,4BAA4B;CAAE;AAEhC;EACE,eAAe;CAAE;AAEnB;;EAEE,eAAe;EACf,iBAAiB;EACjB,YAAY;EACZ,UAAU;EACV,aAAiB;CAAE;AAErB;EACE,oBAAoB;EACpB,uIAAuI;CAAE;AAE3I;EACE,+BAA+B;EAC/B,mBAAmB;EACnB,oCAAoC;EACpC,mCAAmC;EACnC,uBAAuB;CAAE;AAE3B;EACE,wBAAwB;EACxB,2JAA2J;CAAE;AAE/J;EACE,mCAAmC;EACnC,gBAAgB;EAChB,mBAAmB;EACnB,oCAAoC;EACpC,iCAAiC;EACjC,mCAAmC;CAAE;AAEvC;EACE,aAAa;EACb,YAAY;CAAE;AACd;IACE,aAAa;IACb,YAAY;IACZ,qBAAqB;IACrB,sBAAsB;IACtB,cAAc;IACd,6BAA6B;IAC7B,8BAA8B;IAC9B,+BAA+B;IAC/B,uBAAuB;CAAE;AACzB;MACE,oBAAoB;MACpB,gBAAgB;MAChB,QAAQ;MACR,YAAY;MACZ,YAAY;MACZ,qBAAqB;CAAE;AACvB;QACE,aAAa;QACb,YAAY;CAAE;AAChB;QACE,qBAAqB;QACrB,sBAAsB;QACtB,cAAc;CAAE;AAChB;UACE,oBAAoB;CAAE;AACxB;UACE,oBAAoB;UACpB,gBAAgB;UAChB,QAAQ;UACR,YAAY;UACZ,qBAAqB;UACrB,sBAAsB;UACtB,cAAc;UACd,0BAA0B;UAC1B,4BAA4B;UAC5B,oBAAoB;UACpB,yBAAyB;UACzB,gCAAgC;UAChC,wBAAwB;CAAE;AAC1B;YACE,sBAAsB;YACtB,YAAY;YACZ,aAAa;YACb,kBAAkB;CAAE;AACtB;YACE,gBAAgB;YAChB,gBAAgB;CAAE;AACpB;YACE,iBAAiB;CAAE;AACnB;cACE,gBAAgB;cAChB,eAAe;CAAE;AACvB;UACE,YAAY;UACZ,aAAa;UACb,qBAAqB;UACrB,sBAAsB;UACtB,cAAc;UACd,0BAA0B;UAC1B,4BAA4B;UAC5B,oBAAoB;UACpB,yBAAyB;UACzB,gCAAgC;UAChC,wBAAwB;CAAE;AAC1B;YACE,YAAY;YACZ,aAAa;CAAE;AACrB;QACE,qBAAqB;QACrB,sBAAsB;QACtB,cAAc;QACd,aAAa;QACb,YAAY;QACZ,mBAAmB;CAAE;AACrB;UACE,qBAAqB;UACrB,mBAAmB;UACnB,aAAa;UACb,OAAO;UACP,QAAQ;UACR,aAAiB;UACjB,mBAAmB;UACnB,oBAAoB;UACpB,wBAAwB;UACxB,8BAA8B;UAC9B,sBAAsB;CAAE;AACxB;AACE;cACE,YAAY;cACZ,aAAa;CAAE;CAAE;AACrB;AACE;cACE,YAAY;cACZ,aAAa;cACb,8BAA8B;cAC9B,sBAAsB;CAAE;CAAE;AAC9B;AACE;cACE,YAAY;cACZ,aAAa;cACb,kCAAkC;cAClC,0BAA0B;CAAE;CAAE;AACpC;UACE,oBAAoB;UACpB,gBAAgB;UAChB,QAAQ;UACR,YAAY;UACZ,mBAAmB;CAAE;AACrB;YACE,aAAa;YACb,qBAAqB;YACrB,sBAAsB;YACtB,cAAc;YACd,+BAA+B;YAC/B,8BAA8B;YAC9B,4BAA4B;YAC5B,oBAAoB;YACpB,iBAAiB;YACjB,iBAAiB;CAAE;AACnB;cACE,aAAa;cACb,kBAAkB;cAClB,YAAY;CAAE;AACd;gBACE,iGAAiG;gBACjG,yBAAyB;CAAE;AAC7B;gBACE,aAAa;gBACb,sBAAsB;gBACtB,aAAa;gBACb,oBAAoB;gBACpB,sBAAsB;CAAE;AACxB;kBACE,iCAAiC;CAAE;AAC7C;UACE,YAAY;UACZ,qBAAqB;UACrB,sBAAsB;UACtB,cAAc;UACd,0BAA0B;UAC1B,4BAA4B;UAC5B,oBAAoB;UACpB,yBAAyB;UACzB,gCAAgC;UAChC,wBAAwB;CAAE;AAC1B;YACE,eAAe;CAAE","file":"header.vue","sourcesContent":["@charset \"UTF-8\";\n/**\r\n * Yo框架全局base定义\r\n * 本文件与variables不同地方在于，这里所定义的map可以使用在variables和任何地方\r\n * 本文件中map使用\"_\"开头，extra中不使用\"_\"\r\n * base ⇌ extra\r\n */\n/**\r\n * Yo框架全局Variables\r\n * Yo基础变量map，如果不想定义某属性，将其value设置为null\r\n * Yo仅使用2种长度单位：px用于边框，rem用于除边框之外的所有地方\r\n * 本文件中map使用\"_\"开头，config中不使用\"_\"\r\n * variables ⇌ config\r\n */\n/**\r\n * Yo框架自定义全局函数\r\n * 扩充Sass默认函数库，用以增强语法\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的第一项\r\n * @function first\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的最后一项\r\n * @function last\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的倒数第几项\r\n * @function nth-last\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $index 指定需要返回的值在list中的倒数位置 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 移除SassList中的某个项目并返回新的List\r\n * @function remove\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {String} $value 指定需要被删除的值 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 截取SassList中的某个部分并返回新的List\r\n * @function slice\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $start 指定需要截取的开始下标 <2.1.0>\r\n * @param {Integer} $end 指定需要截取的结束下标（不包括end），当该值缺省时默认为末尾下标 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 从SassList中添加/删除项目，然后返回新的List。\r\n * @function splice\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $index 指定需要移除的开始下标 <2.1.0>\r\n * @param {Integer} $count 指定需要移除的数量，不可以为负值，0表示不移除 <2.1.0>\r\n * @param {String} $values 指定需要添加的新值（可以是多个），如果该值缺省，则表示只移除不添加新值 <2.1.0>\r\n */\n/**\r\n * Yo框架全局基础方法\r\n * 包括响应式方案，CSS3兼容性方案，厂商前缀方案，iconfont方案，flex布局等全局方法\r\n */\n/**\r\n * @module 常用方法\r\n * @description 给需要的属性加厂家前缀\r\n * @method prefix\r\n * @version 1.0.0\r\n * @param {String} $property 指定属性 <1.0.0>\r\n * @param {String} $value 指定属性值 <1.0.0>\r\n * @skip\r\n */\n/**\r\n * @module 常用方法\r\n * @description 定义字体图标\r\n * @method _iconfont\r\n * @version 1.0.0\r\n * @skip\r\n */\n/**\r\n * @module 常用方法\r\n * @description 四则运算(系统要求：iOS6.0+,Android4.4+)\r\n * @method calc\r\n * @version 1.7.0\r\n * @param {String} $property 指定需要进行计算的CSS属性 <1.7.0>\r\n * @param {String} $value 与原生CSS语法一致，区别在于需要使用引号包裹表达式 <1.7.0>\r\n * @example\r\n * .calc {\r\n *     @include calc(width, \"100% - 100px\");\r\n * }\r\n *\r\n * <div class=\"calc\">四则运算</div>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 定义响应式方案\r\n * @method responsive\r\n * @version 1.0.0\r\n * @param {String} $media 指定媒体查询条件，取值为`config`文件map `media-types`中的值 <1.0.0>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 清除浮动方案\r\n * @method clearfix\r\n * @version 1.0.0\r\n * @param {String} $type 指定清除浮动的方式，包括：pseudo-element | bfc，默认值：pseudo-element <1.8.5>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 清除行内级元素间间隙方案\r\n * @method clearspace\r\n * @version 3.0.3\r\n * @param {Length} $font-size 指定子元素字号，默认值：.14rem <3.0.3>\r\n * @example\r\n * .demo {\r\n *     @include clearspace;\r\n * }\r\n *\r\n * <div class=\"demo\">\r\n *      <span class=\"item\">1</span>\r\n *      <span class=\"item\">2</span>\r\n *      <span class=\"item\">3</span>\r\n * </div>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 描述元素内容在横、纵方向上的对齐方式，默认为水平垂直居中对齐\r\n * @method align\r\n * @version 2.0.0\r\n * @param {String} $flexbox 元素布局方式，可选值：flex | inline-flex，默认值：flex <2.0.0>\r\n * @param {Keyword} $justify-content 元素内容的水平对齐方式，取值与`justify-content`属性一致，默认值：center <2.0.0>\r\n * @param {Keyword} $align-items 元素内容的垂直对齐方式，取值与`align-items`属性一致，默认值：center <2.0.0>\r\n * @example\r\n * .demo {\r\n *     @include align;\r\n * }\r\n *\r\n * <div class=\"demo\">\r\n *      <img alt=\"未知尺寸图片居中\" />\r\n * </div>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 定义是否有滚动条\r\n * @method overflow\r\n * @version 1.0.0\r\n * @param {String} $overflow 取值与最新原生语法一致，默认值：auto <1.0.0>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 生成全屏方法\r\n * @method fullscreen\r\n * @version 1.7.0\r\n * @param {Integer} $z-index 指定层叠级别 <1.7.0>\r\n * @param {Keywords} $position 指定定位方式，取除`static | relative`之外的值，默认值：absolute <1.8.5>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义使用何种滤镜\r\n * @method filter\r\n * @version 1.7.0\r\n * @param {String} $filter 取值与`filter`属性一致 <1.7.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义UA默认外观\r\n * @method appearance\r\n * @version 1.0.0\r\n * @param {String} $appearance 取值与`appearance`属性一致，默认值：none <1.0.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义如何选中内容\r\n * @method user-select\r\n * @version 1.0.0\r\n * @param {String} $user-select 取值与`user-select`属性一致，默认值：none <1.0.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义盒模型\r\n * @method box-sizing\r\n * @version 1.0.0\r\n * @param {String} $box-sizing 指定盒模型类型，取值与`box-sizing`属性一致，默认值：border-box <1.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义渐变色值\r\n * @method gradient\r\n * @version 1.0.0\r\n * @param {String} $type 指定渐变的4种类型：linear, repeating-linear, radial, repeating-radial <1.0.0>\r\n * @param {String} $dir 指定渐变方向，可选值：[left | right] || [top | bottom] | angle <2.0.0>\r\n * @param {String} $gradient 指定渐变取值，与w3c最新原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景图像缩放（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-size\r\n * @version 1.4.0\r\n * @param {Keywords | Length} $background-size 指定背景图缩放值，取值与`background-size`属性一致 <1.4.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景裁减（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-clip\r\n * @version 1.6.0\r\n * @param {Keywords} $background-clip 指定背景图缩放值，取值与`background-clip`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景显示区域（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-origin\r\n * @version 1.6.0\r\n * @param {Keywords} $background-origin 指定背景图`background-position`属性计算相对的参考点，取值与`background-origin`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 为元素添加边框（包括1px边框）\r\n * @method border\r\n * @version 2.0.0\r\n * @param {String} $border-width 指定边框厚度（单位为px），默认值：1px，取值与`border-width`属性一致，不同方向代表边框位置 <2.0.0>\r\n * @param {String} $border-color 指定边框颜色 <2.0.0>\r\n * @param {String} $border-style 指定边框样式 <2.0.0>\r\n * @param {String} $radius 指定边框圆角半径，默认值：null <2.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义圆角，用于修复某些安卓机型上“圆角+边框+背景”，背景溢出的情况\r\n * @method border-radius\r\n * @version 1.6.0\r\n * @param {Length} $border-radius 指定元素的圆角半径，取值与`border-radius`属性一致 <1.6.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 定义简单变换\r\n * @method transform\r\n * @version 1.0.0\r\n * @param {String} $transform 取值范围与`transform`属性一致 <1.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 定义变换原点\r\n * @method transform-origin\r\n * @version 1.0.0\r\n * @param {Length | Percentage | Keywords} $transform-origin 取值范围与`transform-origin`属性一致 <1.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定某元素的子元素是（看起来）位于三维空间内，还是在该元素所在的平面内被扁平化\r\n * @method transform-style\r\n * @version 2.0.0\r\n * @param {String} $transform-style 取值范围与`transform-style`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定观察者与「z=0」平面的距离，使具有三维位置变换的元素产生透视效果。「z>0」的三维元素比正常大，而「z<0」时则比正常小，大小程度由该属性的值决定。\r\n * @method perspective\r\n * @version 2.0.0\r\n * @param {none | Length} $perspective 取值范围与`perspective`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定透视点的位置\r\n * @method perspective-origin\r\n * @version 2.0.0\r\n * @param {Length | Percentage | Keywords} $perspective-origin 取值范围与`perspective-origin`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定元素背面面向用户时是否可见\r\n * @method backface-visibility\r\n * @version 2.0.0\r\n * @param {Keywords} $backface-visibility 取值范围与`backface-visibility`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 定义动画\r\n * @method animation\r\n * @version 1.0.0\r\n * @param {String} $animation 取值与原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定需要引用的动画名称\r\n * @method animation-name\r\n * @version 3.0.0\r\n * @param {String} $animation-name 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画运行一次所持续的时长\r\n * @method animation-duration\r\n * @version 3.0.0\r\n * @param {String} $animation-duration 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画运行方式\r\n * @method animation-timing-function\r\n * @version 3.0.0\r\n * @param {String} $animation-timing-function 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画延迟多久之后再开始\r\n * @method animation-delay\r\n * @version 3.0.0\r\n * @param {String} $animation-delay 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画循环几次\r\n * @method animation-iteration-count\r\n * @version 3.0.0\r\n * @param {String} $animation-iteration-count 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画的运动方向\r\n * @method animation-direction\r\n * @version 3.0.0\r\n * @param {String} $animation-direction 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画的运动状态\r\n * @method animation-play-state\r\n * @version 3.0.0\r\n * @param {String} $animation-play-state 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画时间之外的状态\r\n * @method animation-fill-mode\r\n * @version 3.0.0\r\n * @param {String} $animation-fill-mode 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Transition\r\n * @description 定义补间\r\n * @method transition\r\n * @version 1.0.0\r\n * @param {String} $transition 取值与原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义显示类型为伸缩盒\r\n * @method flexbox\r\n * @version 1.0.0\r\n * @param {String} $flexbox 默认值：flex，可选值：flex | inline-flex <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素如何分配空间\r\n * @method flex\r\n * @version 1.0.0\r\n * @param {Number} $flex 取值与`flex`属性一致，默认值：1 <1.0.0>\r\n * @param {String} $direction 默认值: row，可选值：row | column <1.5.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素的排版顺序\r\n * @method order\r\n * @version 1.0.0\r\n * @param {Integer} $order 取值与`order`属性一致，默认值：1 <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性盒子元素流动方向及遇见边界时是否换行(要求系统：iOS7.0+, Android4.4+)\r\n * @method flex-flow\r\n * @version 2.0.0\r\n * @param {String} $flex-flow 取值与`flex-flow`属性一致，默认值：row nowrap <2.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素的流动方向\r\n * @method flex-direction\r\n * @version 1.0.0\r\n * @param {String} $flex-direction 取值与`flex-direction`属性一致，默认值：row <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性盒子元素溢出后排版(要求系统：iOS7.0+, Android4.4+)\r\n * @method flex-wrap\r\n * @version 1.0.0\r\n * @param {String} $flex-wrap 取值与`flex-wrap`属性一致，默认值：nowrap <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性容器主轴对齐方式(其中`space-around`值需要iOS7.0+,Android4.4+)\r\n * @method justify-content\r\n * @version 1.0.0\r\n * @param {String} $justify-content 取值与`justify-content`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义多行弹性容器侧轴对齐方式(要求系统：iOS7.0+,Android4.4+)\r\n * @method align-content\r\n * @version 1.8.5\r\n * @param {String} $align-content 取值与`align-content`属性一致，默认值：center <1.8.5>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义单行弹性容器侧轴对齐方式\r\n * @method align-items\r\n * @version 1.0.0\r\n * @param {String} $align-items 取值与`align-items`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性容器中子元素自身的在侧轴对齐方式(要求系统：iOS7.0+,Android4.4+)\r\n * @method align-self\r\n * @version 1.0.0\r\n * @param {String} $align-self 取值与`align-self`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成矩形方法\r\n * @method rect\r\n * @version 1.0.0\r\n * @param {Length} $width 定义矩形的长度 <1.0.0>\r\n * @param {Length} $height 定义矩形的高度 <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成正方形方法\r\n * @method square\r\n * @version 1.0.0\r\n * @param {Length} $size 定义正方形的边长 <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成圆形方法\r\n * @method circle\r\n * @version 1.0.0\r\n * @param {Length} $size 定义圆的半径长度 <1.0.0>\r\n * @param {Length} $radius 定义圆的圆角半径长度 <1.0.0>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 在自适应宽度情况下，确保内容元素的宽高比固定，比如：实现随屏幕大小而变化的正方形。\r\n * @method fixed-scale\r\n * @version 3.0.10\r\n * @param {Length} $width 默认值：100%。用以指定内容元素的初始宽度，由于尺寸需动态变化，不要使用固定单位 <3.0.10>\r\n * @param {Length} $scale 默认值：1/1，即正方形。用以指定内容元素的宽度高比 <3.0.10>\r\n */\n/**\r\n * @module 文本\r\n * @description 链接处理方法\r\n * @method link\r\n * @version 1.0.0\r\n * @param {Color} $color 定义链接颜色 <1.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 文本碰到边界是否换行\r\n * @method wrap\r\n * @version 1.0.0\r\n * @param {Boolean} $is-wrap 定义文本是否换行，默认值：true <2.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 单行文本溢出时显示省略号\r\n * @method ellipsis\r\n * @version 1.0.0\r\n * @param {Length} $width 定义容器的宽度，默认值：null <2.0.0>\r\n * @param {Integer} $line-clamp 定义需要显示的行数，默认值：1（即使用单行溢出的处理方案），需要注意的是本参数只支持webkit内核 <2.1.2>\r\n */\n/**\r\n * @module 文本\r\n * @description 文字隐藏方案\r\n * @method texthide\r\n * @version 1.0.0\r\n * @param {Length} $width 定义容器的宽度，默认值：null <2.0.0>\r\n */\n/**\r\n * Yo框架全局Reset\r\n * Yo重置Mobile及高级浏览器上常见的差异\r\n */\n*,\n::before,\n::after {\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n  -webkit-tap-highlight-color: transparent; }\n\nhtml,\nbody {\n  overflow: hidden;\n  height: 100%; }\n\n::-webkit-scrollbar {\n  display: none; }\n\nhtml {\n  background-color: #eee;\n  color: #212121;\n  font-size: 100px;\n  -webkit-user-select: none;\n  user-select: none; }\n\nbody {\n  margin: 0;\n  font-size: 0.14em;\n  line-height: 1.5;\n  font-family: Helvetica Neue, Helvetica, STHeiTi, sans-serif; }\n\nul,\nol,\ndl,\ndd,\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\nfigure,\nform,\nfieldset,\nlegend,\ninput,\ntextarea,\nbutton,\np,\nblockquote,\nth,\ntd,\npre,\nxmp {\n  margin: 0;\n  padding: 0; }\n\ninput,\ntextarea,\nbutton,\nselect,\npre,\nxmp,\ntt,\ncode,\nkbd,\nsamp {\n  line-height: inherit;\n  font-family: inherit; }\n\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\nsmall,\nbig,\ninput,\ntextarea,\nbutton,\nselect {\n  font-size: inherit; }\n\naddress,\ncite,\ndfn,\nem,\ni,\noptgroup,\nvar {\n  font-style: normal; }\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0;\n  table-layout: fixed;\n  text-align: left; }\n\nul,\nol,\nmenu {\n  list-style: none; }\n\nfieldset,\nimg {\n  border: 0;\n  vertical-align: middle; }\n\narticle,\naside,\ndetails,\nfigcaption,\nfigure,\nfooter,\nheader,\nmain,\nmenu,\nnav,\nsection,\nsummary {\n  display: block; }\n\naudio,\ncanvas,\nvideo {\n  display: inline-block; }\n\nblockquote:before,\nblockquote:after,\nq:before,\nq:after {\n  content: \"\\0020\"; }\n\ntextarea,\npre,\nxmp {\n  overflow: auto;\n  -webkit-overflow-scrolling: touch; }\n\ntextarea {\n  resize: vertical; }\n\ninput,\ntextarea,\nbutton,\nselect,\nsummary,\na {\n  outline: 0 none; }\n\ninput,\ntextarea,\nbutton,\nselect {\n  color: inherit; }\n  input:disabled,\n  textarea:disabled,\n  button:disabled,\n  select:disabled {\n    opacity: 1; }\n\nbutton::-moz-focus-inner,\ninput::-moz-focus-inner {\n  padding: 0;\n  border: 0; }\n\ninput[type=\"button\"],\ninput[type=\"submit\"],\ninput[type=\"reset\"],\ninput[type=\"file\"]::-webkit-file-upload-button,\ninput[type=\"search\"]::-webkit-search-cancel-button {\n  -webkit-appearance: none;\n  appearance: none; }\n\n::-webkit-details-marker {\n  display: none; }\n\nmark {\n  background-color: transparent; }\n\na,\nins,\ns,\nu,\ndel {\n  text-decoration: none; }\n\na,\nimg {\n  -webkit-touch-callout: none; }\n\na {\n  color: #00afc7; }\n\n.g-clear::after,\n.g-mod::after {\n  display: block;\n  overflow: hidden;\n  clear: both;\n  height: 0;\n  content: \"\\0020\"; }\n\n@font-face {\n  font-family: yofont;\n  src: url(//ss.qunarzz.com/yo/font/1.0.3/yofont.woff) format(\"woff\"), url(//ss.qunarzz.com/yo/font/1.0.3/yofont.ttf) format(\"truetype\"); }\n\n.yo-ico {\n  font-family: yofont !important;\n  font-style: normal;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n  vertical-align: middle; }\n\n@font-face {\n  font-family: 'iconfont';\n  src: url(\"http://localhost:7000/media/iconfont/iconfont.woff\") format(\"woff\"), url(\"http://localhost:7000/media/iconfont/iconfont.ttf\") format(\"truetype\"); }\n\n.iconfont {\n  font-family: \"iconfont\" !important;\n  font-size: 16px;\n  font-style: normal;\n  -webkit-font-smoothing: antialiased;\n  -webkit-text-stroke-width: 0.2px;\n  -moz-osx-font-smoothing: grayscale; }\n\nheader div {\n  height: 100%;\n  width: 100%; }\n  header div ul {\n    height: 100%;\n    width: 100%;\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n    -webkit-flex-direction: column;\n    flex-direction: column; }\n    header div ul li {\n      -webkit-box-flex: 1;\n      -webkit-flex: 1;\n      flex: 1;\n      width: .1px;\n      width: 100%;\n      height: .33333333rem; }\n      header div ul li img {\n        height: 100%;\n        width: 100%; }\n      header div ul li:nth-child(2) {\n        display: -webkit-box;\n        display: -webkit-flex;\n        display: flex; }\n        header div ul li:nth-child(2) img {\n          vertical-align: top; }\n        header div ul li:nth-child(2) div:first-child {\n          -webkit-box-flex: 1;\n          -webkit-flex: 1;\n          flex: 1;\n          width: .1px;\n          display: -webkit-box;\n          display: -webkit-flex;\n          display: flex;\n          -webkit-box-align: center;\n          -webkit-align-items: center;\n          align-items: center;\n          -webkit-box-pack: center;\n          -webkit-justify-content: center;\n          justify-content: center; }\n          header div ul li:nth-child(2) div:first-child span:first-child {\n            display: inline-block;\n            width: 74px;\n            height: 16px;\n            margin-right: 5px; }\n          header div ul li:nth-child(2) div:first-child span:nth-child(2) {\n            margin-top: 2px;\n            font-size: 14px; }\n          header div ul li:nth-child(2) div:first-child span:last-child {\n            margin-left: 5px; }\n            header div ul li:nth-child(2) div:first-child span:last-child .iconfont {\n              margin-top: 3px;\n              font-size: 6px; }\n        header div ul li:nth-child(2) div:last-child {\n          width: 54px;\n          height: 100%;\n          display: -webkit-box;\n          display: -webkit-flex;\n          display: flex;\n          -webkit-box-align: center;\n          -webkit-align-items: center;\n          align-items: center;\n          -webkit-box-pack: center;\n          -webkit-justify-content: center;\n          justify-content: center; }\n          header div ul li:nth-child(2) div:last-child img {\n            width: 21px;\n            height: 30px; }\n      header div ul li:last-child {\n        display: -webkit-box;\n        display: -webkit-flex;\n        display: flex;\n        height: 100%;\n        width: 100%;\n        position: relative; }\n        header div ul li:last-child::after {\n          pointer-events: none;\n          position: absolute;\n          z-index: 999;\n          top: 0;\n          left: 0;\n          content: \"\\0020\";\n          border-color: #ccc;\n          border-style: solid;\n          border-width: 0 0 1px 0;\n          -webkit-transform-origin: 0 0;\n          transform-origin: 0 0; }\n          @media (max--moz-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.49), (max-device-pixel-ratio: 1.49), (max-resolution: 143dpi), (max-resolution: 1.49dppx) {\n            header div ul li:last-child::after {\n              width: 100%;\n              height: 100%; } }\n          @media (min--moz-device-pixel-ratio: 1.5) and (max--moz-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.49), (min-device-pixel-ratio: 1.5) and (max-device-pixel-ratio: 2.49), (min-resolution: 144dpi) and (max-resolution: 239dpi), (min-resolution: 1.5dppx) and (max-resolution: 2.49dppx) {\n            header div ul li:last-child::after {\n              width: 200%;\n              height: 200%;\n              -webkit-transform: scale(0.5);\n              transform: scale(0.5); } }\n          @media (min--moz-device-pixel-ratio: 2.5), (-webkit-min-device-pixel-ratio: 2.5), (min-device-pixel-ratio: 2.5), (min-resolution: 240dpi), (min-resolution: 2.5dppx) {\n            header div ul li:last-child::after {\n              width: 300%;\n              height: 300%;\n              -webkit-transform: scale(0.33333);\n              transform: scale(0.33333); } }\n        header div ul li:last-child div:first-child {\n          -webkit-box-flex: 1;\n          -webkit-flex: 1;\n          flex: 1;\n          width: .1px;\n          overflow-x: scroll; }\n          header div ul li:last-child div:first-child ul {\n            width: 702px;\n            display: -webkit-box;\n            display: -webkit-flex;\n            display: flex;\n            -webkit-box-orient: horizontal;\n            -webkit-box-direction: normal;\n            -webkit-flex-direction: row;\n            flex-direction: row;\n            overflow: hidden;\n            margin-left: 5px; }\n            header div ul li:last-child div:first-child ul li {\n              height: 100%;\n              line-height: 40px;\n              width: 54px; }\n              header div ul li:last-child div:first-child ul li:nth-child(2) {\n                background: url(\"https://j-image.missfresh.cn/img_20171013205830872.png\") center right no-repeat;\n                background-size: contain; }\n              header div ul li:last-child div:first-child ul li span {\n                color: black;\n                display: inline-block;\n                height: 100%;\n                white-space: nowrap;\n                margin: 0 10px 0 10px; }\n                header div ul li:last-child div:first-child ul li span.active {\n                  border-bottom: 2px solid #ff4891; }\n        header div ul li:last-child div:last-child {\n          width: 54px;\n          display: -webkit-box;\n          display: -webkit-flex;\n          display: flex;\n          -webkit-box-align: center;\n          -webkit-align-items: center;\n          align-items: center;\n          -webkit-box-pack: center;\n          -webkit-justify-content: center;\n          justify-content: center; }\n          header div ul li:last-child div:last-child i {\n            color: #a6a6a6; }\n"],"sourceRoot":""}]);
+exports.push([module.i, "\n@charset \"UTF-8\";\n/**\r\n * Yo框架全局base定义\r\n * 本文件与variables不同地方在于，这里所定义的map可以使用在variables和任何地方\r\n * 本文件中map使用\"_\"开头，extra中不使用\"_\"\r\n * base ⇌ extra\r\n */\n/**\r\n * Yo框架全局Variables\r\n * Yo基础变量map，如果不想定义某属性，将其value设置为null\r\n * Yo仅使用2种长度单位：px用于边框，rem用于除边框之外的所有地方\r\n * 本文件中map使用\"_\"开头，config中不使用\"_\"\r\n * variables ⇌ config\r\n */\n/**\r\n * Yo框架自定义全局函数\r\n * 扩充Sass默认函数库，用以增强语法\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的第一项\r\n * @function first\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的最后一项\r\n * @function last\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的倒数第几项\r\n * @function nth-last\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $index 指定需要返回的值在list中的倒数位置 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 移除SassList中的某个项目并返回新的List\r\n * @function remove\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {String} $value 指定需要被删除的值 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 截取SassList中的某个部分并返回新的List\r\n * @function slice\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $start 指定需要截取的开始下标 <2.1.0>\r\n * @param {Integer} $end 指定需要截取的结束下标（不包括end），当该值缺省时默认为末尾下标 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 从SassList中添加/删除项目，然后返回新的List。\r\n * @function splice\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $index 指定需要移除的开始下标 <2.1.0>\r\n * @param {Integer} $count 指定需要移除的数量，不可以为负值，0表示不移除 <2.1.0>\r\n * @param {String} $values 指定需要添加的新值（可以是多个），如果该值缺省，则表示只移除不添加新值 <2.1.0>\r\n */\n/**\r\n * Yo框架全局基础方法\r\n * 包括响应式方案，CSS3兼容性方案，厂商前缀方案，iconfont方案，flex布局等全局方法\r\n */\n/**\r\n * @module 常用方法\r\n * @description 给需要的属性加厂家前缀\r\n * @method prefix\r\n * @version 1.0.0\r\n * @param {String} $property 指定属性 <1.0.0>\r\n * @param {String} $value 指定属性值 <1.0.0>\r\n * @skip\r\n */\n/**\r\n * @module 常用方法\r\n * @description 定义字体图标\r\n * @method _iconfont\r\n * @version 1.0.0\r\n * @skip\r\n */\n/**\r\n * @module 常用方法\r\n * @description 四则运算(系统要求：iOS6.0+,Android4.4+)\r\n * @method calc\r\n * @version 1.7.0\r\n * @param {String} $property 指定需要进行计算的CSS属性 <1.7.0>\r\n * @param {String} $value 与原生CSS语法一致，区别在于需要使用引号包裹表达式 <1.7.0>\r\n * @example\r\n * .calc {\r\n *     @include calc(width, \"100% - 100px\");\r\n * }\r\n *\r\n * <div class=\"calc\">四则运算</div>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 定义响应式方案\r\n * @method responsive\r\n * @version 1.0.0\r\n * @param {String} $media 指定媒体查询条件，取值为`config`文件map `media-types`中的值 <1.0.0>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 清除浮动方案\r\n * @method clearfix\r\n * @version 1.0.0\r\n * @param {String} $type 指定清除浮动的方式，包括：pseudo-element | bfc，默认值：pseudo-element <1.8.5>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 清除行内级元素间间隙方案\r\n * @method clearspace\r\n * @version 3.0.3\r\n * @param {Length} $font-size 指定子元素字号，默认值：.14rem <3.0.3>\r\n * @example\r\n * .demo {\r\n *     @include clearspace;\r\n * }\r\n *\r\n * <div class=\"demo\">\r\n *      <span class=\"item\">1</span>\r\n *      <span class=\"item\">2</span>\r\n *      <span class=\"item\">3</span>\r\n * </div>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 描述元素内容在横、纵方向上的对齐方式，默认为水平垂直居中对齐\r\n * @method align\r\n * @version 2.0.0\r\n * @param {String} $flexbox 元素布局方式，可选值：flex | inline-flex，默认值：flex <2.0.0>\r\n * @param {Keyword} $justify-content 元素内容的水平对齐方式，取值与`justify-content`属性一致，默认值：center <2.0.0>\r\n * @param {Keyword} $align-items 元素内容的垂直对齐方式，取值与`align-items`属性一致，默认值：center <2.0.0>\r\n * @example\r\n * .demo {\r\n *     @include align;\r\n * }\r\n *\r\n * <div class=\"demo\">\r\n *      <img alt=\"未知尺寸图片居中\" />\r\n * </div>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 定义是否有滚动条\r\n * @method overflow\r\n * @version 1.0.0\r\n * @param {String} $overflow 取值与最新原生语法一致，默认值：auto <1.0.0>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 生成全屏方法\r\n * @method fullscreen\r\n * @version 1.7.0\r\n * @param {Integer} $z-index 指定层叠级别 <1.7.0>\r\n * @param {Keywords} $position 指定定位方式，取除`static | relative`之外的值，默认值：absolute <1.8.5>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义使用何种滤镜\r\n * @method filter\r\n * @version 1.7.0\r\n * @param {String} $filter 取值与`filter`属性一致 <1.7.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义UA默认外观\r\n * @method appearance\r\n * @version 1.0.0\r\n * @param {String} $appearance 取值与`appearance`属性一致，默认值：none <1.0.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义如何选中内容\r\n * @method user-select\r\n * @version 1.0.0\r\n * @param {String} $user-select 取值与`user-select`属性一致，默认值：none <1.0.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义盒模型\r\n * @method box-sizing\r\n * @version 1.0.0\r\n * @param {String} $box-sizing 指定盒模型类型，取值与`box-sizing`属性一致，默认值：border-box <1.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义渐变色值\r\n * @method gradient\r\n * @version 1.0.0\r\n * @param {String} $type 指定渐变的4种类型：linear, repeating-linear, radial, repeating-radial <1.0.0>\r\n * @param {String} $dir 指定渐变方向，可选值：[left | right] || [top | bottom] | angle <2.0.0>\r\n * @param {String} $gradient 指定渐变取值，与w3c最新原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景图像缩放（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-size\r\n * @version 1.4.0\r\n * @param {Keywords | Length} $background-size 指定背景图缩放值，取值与`background-size`属性一致 <1.4.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景裁减（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-clip\r\n * @version 1.6.0\r\n * @param {Keywords} $background-clip 指定背景图缩放值，取值与`background-clip`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景显示区域（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-origin\r\n * @version 1.6.0\r\n * @param {Keywords} $background-origin 指定背景图`background-position`属性计算相对的参考点，取值与`background-origin`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 为元素添加边框（包括1px边框）\r\n * @method border\r\n * @version 2.0.0\r\n * @param {String} $border-width 指定边框厚度（单位为px），默认值：1px，取值与`border-width`属性一致，不同方向代表边框位置 <2.0.0>\r\n * @param {String} $border-color 指定边框颜色 <2.0.0>\r\n * @param {String} $border-style 指定边框样式 <2.0.0>\r\n * @param {String} $radius 指定边框圆角半径，默认值：null <2.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义圆角，用于修复某些安卓机型上“圆角+边框+背景”，背景溢出的情况\r\n * @method border-radius\r\n * @version 1.6.0\r\n * @param {Length} $border-radius 指定元素的圆角半径，取值与`border-radius`属性一致 <1.6.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 定义简单变换\r\n * @method transform\r\n * @version 1.0.0\r\n * @param {String} $transform 取值范围与`transform`属性一致 <1.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 定义变换原点\r\n * @method transform-origin\r\n * @version 1.0.0\r\n * @param {Length | Percentage | Keywords} $transform-origin 取值范围与`transform-origin`属性一致 <1.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定某元素的子元素是（看起来）位于三维空间内，还是在该元素所在的平面内被扁平化\r\n * @method transform-style\r\n * @version 2.0.0\r\n * @param {String} $transform-style 取值范围与`transform-style`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定观察者与「z=0」平面的距离，使具有三维位置变换的元素产生透视效果。「z>0」的三维元素比正常大，而「z<0」时则比正常小，大小程度由该属性的值决定。\r\n * @method perspective\r\n * @version 2.0.0\r\n * @param {none | Length} $perspective 取值范围与`perspective`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定透视点的位置\r\n * @method perspective-origin\r\n * @version 2.0.0\r\n * @param {Length | Percentage | Keywords} $perspective-origin 取值范围与`perspective-origin`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定元素背面面向用户时是否可见\r\n * @method backface-visibility\r\n * @version 2.0.0\r\n * @param {Keywords} $backface-visibility 取值范围与`backface-visibility`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 定义动画\r\n * @method animation\r\n * @version 1.0.0\r\n * @param {String} $animation 取值与原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定需要引用的动画名称\r\n * @method animation-name\r\n * @version 3.0.0\r\n * @param {String} $animation-name 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画运行一次所持续的时长\r\n * @method animation-duration\r\n * @version 3.0.0\r\n * @param {String} $animation-duration 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画运行方式\r\n * @method animation-timing-function\r\n * @version 3.0.0\r\n * @param {String} $animation-timing-function 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画延迟多久之后再开始\r\n * @method animation-delay\r\n * @version 3.0.0\r\n * @param {String} $animation-delay 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画循环几次\r\n * @method animation-iteration-count\r\n * @version 3.0.0\r\n * @param {String} $animation-iteration-count 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画的运动方向\r\n * @method animation-direction\r\n * @version 3.0.0\r\n * @param {String} $animation-direction 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画的运动状态\r\n * @method animation-play-state\r\n * @version 3.0.0\r\n * @param {String} $animation-play-state 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画时间之外的状态\r\n * @method animation-fill-mode\r\n * @version 3.0.0\r\n * @param {String} $animation-fill-mode 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Transition\r\n * @description 定义补间\r\n * @method transition\r\n * @version 1.0.0\r\n * @param {String} $transition 取值与原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义显示类型为伸缩盒\r\n * @method flexbox\r\n * @version 1.0.0\r\n * @param {String} $flexbox 默认值：flex，可选值：flex | inline-flex <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素如何分配空间\r\n * @method flex\r\n * @version 1.0.0\r\n * @param {Number} $flex 取值与`flex`属性一致，默认值：1 <1.0.0>\r\n * @param {String} $direction 默认值: row，可选值：row | column <1.5.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素的排版顺序\r\n * @method order\r\n * @version 1.0.0\r\n * @param {Integer} $order 取值与`order`属性一致，默认值：1 <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性盒子元素流动方向及遇见边界时是否换行(要求系统：iOS7.0+, Android4.4+)\r\n * @method flex-flow\r\n * @version 2.0.0\r\n * @param {String} $flex-flow 取值与`flex-flow`属性一致，默认值：row nowrap <2.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素的流动方向\r\n * @method flex-direction\r\n * @version 1.0.0\r\n * @param {String} $flex-direction 取值与`flex-direction`属性一致，默认值：row <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性盒子元素溢出后排版(要求系统：iOS7.0+, Android4.4+)\r\n * @method flex-wrap\r\n * @version 1.0.0\r\n * @param {String} $flex-wrap 取值与`flex-wrap`属性一致，默认值：nowrap <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性容器主轴对齐方式(其中`space-around`值需要iOS7.0+,Android4.4+)\r\n * @method justify-content\r\n * @version 1.0.0\r\n * @param {String} $justify-content 取值与`justify-content`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义多行弹性容器侧轴对齐方式(要求系统：iOS7.0+,Android4.4+)\r\n * @method align-content\r\n * @version 1.8.5\r\n * @param {String} $align-content 取值与`align-content`属性一致，默认值：center <1.8.5>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义单行弹性容器侧轴对齐方式\r\n * @method align-items\r\n * @version 1.0.0\r\n * @param {String} $align-items 取值与`align-items`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性容器中子元素自身的在侧轴对齐方式(要求系统：iOS7.0+,Android4.4+)\r\n * @method align-self\r\n * @version 1.0.0\r\n * @param {String} $align-self 取值与`align-self`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成矩形方法\r\n * @method rect\r\n * @version 1.0.0\r\n * @param {Length} $width 定义矩形的长度 <1.0.0>\r\n * @param {Length} $height 定义矩形的高度 <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成正方形方法\r\n * @method square\r\n * @version 1.0.0\r\n * @param {Length} $size 定义正方形的边长 <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成圆形方法\r\n * @method circle\r\n * @version 1.0.0\r\n * @param {Length} $size 定义圆的半径长度 <1.0.0>\r\n * @param {Length} $radius 定义圆的圆角半径长度 <1.0.0>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 在自适应宽度情况下，确保内容元素的宽高比固定，比如：实现随屏幕大小而变化的正方形。\r\n * @method fixed-scale\r\n * @version 3.0.10\r\n * @param {Length} $width 默认值：100%。用以指定内容元素的初始宽度，由于尺寸需动态变化，不要使用固定单位 <3.0.10>\r\n * @param {Length} $scale 默认值：1/1，即正方形。用以指定内容元素的宽度高比 <3.0.10>\r\n */\n/**\r\n * @module 文本\r\n * @description 链接处理方法\r\n * @method link\r\n * @version 1.0.0\r\n * @param {Color} $color 定义链接颜色 <1.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 文本碰到边界是否换行\r\n * @method wrap\r\n * @version 1.0.0\r\n * @param {Boolean} $is-wrap 定义文本是否换行，默认值：true <2.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 单行文本溢出时显示省略号\r\n * @method ellipsis\r\n * @version 1.0.0\r\n * @param {Length} $width 定义容器的宽度，默认值：null <2.0.0>\r\n * @param {Integer} $line-clamp 定义需要显示的行数，默认值：1（即使用单行溢出的处理方案），需要注意的是本参数只支持webkit内核 <2.1.2>\r\n */\n/**\r\n * @module 文本\r\n * @description 文字隐藏方案\r\n * @method texthide\r\n * @version 1.0.0\r\n * @param {Length} $width 定义容器的宽度，默认值：null <2.0.0>\r\n */\n/**\r\n * Yo框架全局Reset\r\n * Yo重置Mobile及高级浏览器上常见的差异\r\n */\n*,\n::before,\n::after {\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n  -webkit-tap-highlight-color: transparent;\n}\nhtml,\nbody {\n  overflow: hidden;\n  height: 100%;\n}\n::-webkit-scrollbar {\n  display: none;\n}\nhtml {\n  background-color: #eee;\n  color: #212121;\n  font-size: 100px;\n  -webkit-user-select: none;\n  user-select: none;\n}\nbody {\n  margin: 0;\n  font-size: 0.14em;\n  line-height: 1.5;\n  font-family: Helvetica Neue, Helvetica, STHeiTi, sans-serif;\n}\nul,\nol,\ndl,\ndd,\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\nfigure,\nform,\nfieldset,\nlegend,\ninput,\ntextarea,\nbutton,\np,\nblockquote,\nth,\ntd,\npre,\nxmp {\n  margin: 0;\n  padding: 0;\n}\ninput,\ntextarea,\nbutton,\nselect,\npre,\nxmp,\ntt,\ncode,\nkbd,\nsamp {\n  line-height: inherit;\n  font-family: inherit;\n}\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\nsmall,\nbig,\ninput,\ntextarea,\nbutton,\nselect {\n  font-size: inherit;\n}\naddress,\ncite,\ndfn,\nem,\ni,\noptgroup,\nvar {\n  font-style: normal;\n}\ntable {\n  border-collapse: collapse;\n  border-spacing: 0;\n  table-layout: fixed;\n  text-align: left;\n}\nul,\nol,\nmenu {\n  list-style: none;\n}\nfieldset,\nimg {\n  border: 0;\n  vertical-align: middle;\n}\narticle,\naside,\ndetails,\nfigcaption,\nfigure,\nfooter,\nheader,\nmain,\nmenu,\nnav,\nsection,\nsummary {\n  display: block;\n}\naudio,\ncanvas,\nvideo {\n  display: inline-block;\n}\nblockquote:before,\nblockquote:after,\nq:before,\nq:after {\n  content: \" \";\n}\ntextarea,\npre,\nxmp {\n  overflow: auto;\n  -webkit-overflow-scrolling: touch;\n}\ntextarea {\n  resize: vertical;\n}\ninput,\ntextarea,\nbutton,\nselect,\nsummary,\na {\n  outline: 0 none;\n}\ninput,\ntextarea,\nbutton,\nselect {\n  color: inherit;\n}\ninput:disabled,\n  textarea:disabled,\n  button:disabled,\n  select:disabled {\n    opacity: 1;\n}\nbutton::-moz-focus-inner,\ninput::-moz-focus-inner {\n  padding: 0;\n  border: 0;\n}\ninput[type=\"button\"],\ninput[type=\"submit\"],\ninput[type=\"reset\"],\ninput[type=\"file\"]::-webkit-file-upload-button,\ninput[type=\"search\"]::-webkit-search-cancel-button {\n  -webkit-appearance: none;\n  appearance: none;\n}\n::-webkit-details-marker {\n  display: none;\n}\nmark {\n  background-color: transparent;\n}\na,\nins,\ns,\nu,\ndel {\n  text-decoration: none;\n}\na,\nimg {\n  -webkit-touch-callout: none;\n}\na {\n  color: #00afc7;\n}\n.g-clear::after,\n.g-mod::after {\n  display: block;\n  overflow: hidden;\n  clear: both;\n  height: 0;\n  content: \" \";\n}\n@font-face {\n  font-family: yofont;\n  src: url(//ss.qunarzz.com/yo/font/1.0.3/yofont.woff) format(\"woff\"), url(//ss.qunarzz.com/yo/font/1.0.3/yofont.ttf) format(\"truetype\");\n}\n.yo-ico {\n  font-family: yofont !important;\n  font-style: normal;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n  vertical-align: middle;\n}\n@font-face {\n  font-family: 'iconfont';\n  src: url(\"http://localhost:7000/media/iconfont/iconfont.woff\") format(\"woff\"), url(\"http://localhost:7000/media/iconfont/iconfont.ttf\") format(\"truetype\");\n}\n.iconfont {\n  font-family: \"iconfont\" !important;\n  font-size: 16px;\n  font-style: normal;\n  -webkit-font-smoothing: antialiased;\n  -webkit-text-stroke-width: 0.2px;\n  -moz-osx-font-smoothing: grayscale;\n}\nheader > div {\n  height: 100%;\n  width: 100%;\n}\nheader > div > ul {\n    height: 100%;\n    width: 100%;\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n    -webkit-flex-direction: column;\n    flex-direction: column;\n}\nheader > div > ul > li {\n      -webkit-box-flex: 1;\n      -webkit-flex: 1;\n      flex: 1;\n      width: .1px;\n      width: 100%;\n      height: .33333333rem;\n}\nheader > div > ul > li img {\n        height: 100%;\n        width: 100%;\n}\nheader > div > ul > li:nth-child(2) {\n        display: -webkit-box;\n        display: -webkit-flex;\n        display: flex;\n}\nheader > div > ul > li:nth-child(2) img {\n          vertical-align: top;\n}\nheader > div > ul > li:nth-child(2) div:first-child {\n          -webkit-box-flex: 1;\n          -webkit-flex: 1;\n          flex: 1;\n          width: .1px;\n          display: -webkit-box;\n          display: -webkit-flex;\n          display: flex;\n          -webkit-box-align: center;\n          -webkit-align-items: center;\n          align-items: center;\n          -webkit-box-pack: center;\n          -webkit-justify-content: center;\n          justify-content: center;\n}\nheader > div > ul > li:nth-child(2) div:first-child span:first-child {\n            display: inline-block;\n            width: 74px;\n            height: 16px;\n            margin-right: 5px;\n}\nheader > div > ul > li:nth-child(2) div:first-child span:nth-child(2) {\n            margin-top: 2px;\n            font-size: 14px;\n}\nheader > div > ul > li:nth-child(2) div:first-child span:last-child {\n            margin-left: 5px;\n}\nheader > div > ul > li:nth-child(2) div:first-child span:last-child .iconfont {\n              margin-top: 3px;\n              font-size: 6px;\n}\nheader > div > ul > li:nth-child(2) div:last-child {\n          width: 54px;\n          height: 100%;\n          display: -webkit-box;\n          display: -webkit-flex;\n          display: flex;\n          -webkit-box-align: center;\n          -webkit-align-items: center;\n          align-items: center;\n          -webkit-box-pack: center;\n          -webkit-justify-content: center;\n          justify-content: center;\n}\nheader > div > ul > li:nth-child(2) div:last-child img {\n            width: 21px;\n            height: 30px;\n}\nheader > div > ul > li:last-child {\n        display: -webkit-box;\n        display: -webkit-flex;\n        display: flex;\n        height: 100%;\n        width: 100%;\n        position: relative;\n        position: relative;\n}\nheader > div > ul > li:last-child::after {\n          pointer-events: none;\n          position: absolute;\n          z-index: 999;\n          top: 0;\n          left: 0;\n          content: \" \";\n          border-color: #ccc;\n          border-style: solid;\n          border-width: 0 0 1px 0;\n          -webkit-transform-origin: 0 0;\n          transform-origin: 0 0;\n}\n@media (max--moz-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.49), (max-device-pixel-ratio: 1.49), (max-resolution: 143dpi), (max-resolution: 1.49dppx) {\nheader > div > ul > li:last-child::after {\n              width: 100%;\n              height: 100%;\n}\n}\n@media (min--moz-device-pixel-ratio: 1.5) and (max--moz-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.49), (min-device-pixel-ratio: 1.5) and (max-device-pixel-ratio: 2.49), (min-resolution: 144dpi) and (max-resolution: 239dpi), (min-resolution: 1.5dppx) and (max-resolution: 2.49dppx) {\nheader > div > ul > li:last-child::after {\n              width: 200%;\n              height: 200%;\n              -webkit-transform: scale(0.5);\n              transform: scale(0.5);\n}\n}\n@media (min--moz-device-pixel-ratio: 2.5), (-webkit-min-device-pixel-ratio: 2.5), (min-device-pixel-ratio: 2.5), (min-resolution: 240dpi), (min-resolution: 2.5dppx) {\nheader > div > ul > li:last-child::after {\n              width: 300%;\n              height: 300%;\n              -webkit-transform: scale(0.33333);\n              transform: scale(0.33333);\n}\n}\nheader > div > ul > li:last-child div:first-child {\n          -webkit-box-flex: 1;\n          -webkit-flex: 1;\n          flex: 1;\n          width: .1px;\n          overflow-x: scroll;\n}\nheader > div > ul > li:last-child div:first-child ul {\n            width: 702px;\n            display: -webkit-box;\n            display: -webkit-flex;\n            display: flex;\n            -webkit-box-orient: horizontal;\n            -webkit-box-direction: normal;\n            -webkit-flex-direction: row;\n            flex-direction: row;\n            overflow: hidden;\n            margin-left: 5px;\n}\nheader > div > ul > li:last-child div:first-child ul li {\n              height: 100%;\n              line-height: 39px;\n              width: 54px;\n}\nheader > div > ul > li:last-child div:first-child ul li:nth-child(2) {\n                background: url(\"https://j-image.missfresh.cn/img_20171013205830872.png\") center right no-repeat;\n                background-size: contain;\n}\nheader > div > ul > li:last-child div:first-child ul li span {\n                color: black;\n                display: inline-block;\n                height: 100%;\n                white-space: nowrap;\n                margin: 0 10px 0 10px;\n}\nheader > div > ul > li:last-child div:first-child ul li span.active {\n                  border-bottom: 2px solid #ff4891;\n}\nheader > div > ul > li:last-child div:nth-child(2) {\n          width: 54px;\n          display: -webkit-box;\n          display: -webkit-flex;\n          display: flex;\n          -webkit-box-align: center;\n          -webkit-align-items: center;\n          align-items: center;\n          -webkit-box-pack: center;\n          -webkit-justify-content: center;\n          justify-content: center;\n}\nheader > div > ul > li:last-child div:nth-child(2) i {\n            color: #a6a6a6;\n}\nheader > div > ul > li:last-child div.list_more {\n          width: 100%;\n          position: absolute;\n          height: 410px;\n          background: white;\n          z-index: 999;\n}\nheader > div > ul > li:last-child div.list_more .all_title {\n            width: 100%;\n            font-size: 16px;\n            line-height: 44px;\n            text-align: center;\n            color: #262626;\n            height: 44px;\n            margin-bottom: 20px;\n}\nheader > div > ul > li:last-child div.list_more .all_title i {\n              position: absolute;\n              top: 0;\n              right: 0;\n              width: 54px;\n              height: 44px;\n              background: url(\"https://static-as.missfresh.cn/frontend/img/close01.png\") center center no-repeat;\n              background-size: 20px 20px;\n}\nheader > div > ul > li:last-child div.list_more .all_lists {\n            height: 345px;\n            width: 100%;\n}\nheader > div > ul > li:last-child div.list_more .all_lists ul {\n              height: 100%;\n              width: 100%;\n              overflow-y: scroll;\n              display: -webkit-box;\n              display: -webkit-flex;\n              display: flex;\n              -webkit-box-orient: horizontal;\n              -webkit-box-direction: normal;\n              -webkit-flex-direction: row;\n              flex-direction: row;\n              -webkit-flex-wrap: wrap;\n              flex-wrap: wrap;\n}\nheader > div > ul > li:last-child div.list_more .all_lists ul li {\n                width: 33.33333%;\n                margin-bottom: 18px;\n}\nheader > div > ul > li:last-child div.list_more .all_lists ul li i {\n                  display: block;\n                  width: 100%;\n                  height: 58px;\n                  background: center center no-repeat;\n                  background-size: 36px;\n}\nheader > div > ul > li:last-child div.list_more .all_lists ul li h4 {\n                  padding: 0 10px;\n                  height: 18px;\n                  line-height: 18px;\n                  font-size: 12px;\n                  font-weight: 400;\n                  color: #4d4d4d;\n                  text-align: center;\n                  overflow: hidden;\n                  white-space: nowrap;\n                  text-overflow: ellipsis;\n}\n", "", {"version":3,"sources":["D:/missFresh/src/modules/index/components/header.vue"],"names":[],"mappings":"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","file":"header.vue","sourcesContent":["@charset \"UTF-8\";\n/**\r\n * Yo框架全局base定义\r\n * 本文件与variables不同地方在于，这里所定义的map可以使用在variables和任何地方\r\n * 本文件中map使用\"_\"开头，extra中不使用\"_\"\r\n * base ⇌ extra\r\n */\n/**\r\n * Yo框架全局Variables\r\n * Yo基础变量map，如果不想定义某属性，将其value设置为null\r\n * Yo仅使用2种长度单位：px用于边框，rem用于除边框之外的所有地方\r\n * 本文件中map使用\"_\"开头，config中不使用\"_\"\r\n * variables ⇌ config\r\n */\n/**\r\n * Yo框架自定义全局函数\r\n * 扩充Sass默认函数库，用以增强语法\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的第一项\r\n * @function first\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的最后一项\r\n * @function last\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的倒数第几项\r\n * @function nth-last\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $index 指定需要返回的值在list中的倒数位置 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 移除SassList中的某个项目并返回新的List\r\n * @function remove\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {String} $value 指定需要被删除的值 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 截取SassList中的某个部分并返回新的List\r\n * @function slice\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $start 指定需要截取的开始下标 <2.1.0>\r\n * @param {Integer} $end 指定需要截取的结束下标（不包括end），当该值缺省时默认为末尾下标 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 从SassList中添加/删除项目，然后返回新的List。\r\n * @function splice\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $index 指定需要移除的开始下标 <2.1.0>\r\n * @param {Integer} $count 指定需要移除的数量，不可以为负值，0表示不移除 <2.1.0>\r\n * @param {String} $values 指定需要添加的新值（可以是多个），如果该值缺省，则表示只移除不添加新值 <2.1.0>\r\n */\n/**\r\n * Yo框架全局基础方法\r\n * 包括响应式方案，CSS3兼容性方案，厂商前缀方案，iconfont方案，flex布局等全局方法\r\n */\n/**\r\n * @module 常用方法\r\n * @description 给需要的属性加厂家前缀\r\n * @method prefix\r\n * @version 1.0.0\r\n * @param {String} $property 指定属性 <1.0.0>\r\n * @param {String} $value 指定属性值 <1.0.0>\r\n * @skip\r\n */\n/**\r\n * @module 常用方法\r\n * @description 定义字体图标\r\n * @method _iconfont\r\n * @version 1.0.0\r\n * @skip\r\n */\n/**\r\n * @module 常用方法\r\n * @description 四则运算(系统要求：iOS6.0+,Android4.4+)\r\n * @method calc\r\n * @version 1.7.0\r\n * @param {String} $property 指定需要进行计算的CSS属性 <1.7.0>\r\n * @param {String} $value 与原生CSS语法一致，区别在于需要使用引号包裹表达式 <1.7.0>\r\n * @example\r\n * .calc {\r\n *     @include calc(width, \"100% - 100px\");\r\n * }\r\n *\r\n * <div class=\"calc\">四则运算</div>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 定义响应式方案\r\n * @method responsive\r\n * @version 1.0.0\r\n * @param {String} $media 指定媒体查询条件，取值为`config`文件map `media-types`中的值 <1.0.0>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 清除浮动方案\r\n * @method clearfix\r\n * @version 1.0.0\r\n * @param {String} $type 指定清除浮动的方式，包括：pseudo-element | bfc，默认值：pseudo-element <1.8.5>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 清除行内级元素间间隙方案\r\n * @method clearspace\r\n * @version 3.0.3\r\n * @param {Length} $font-size 指定子元素字号，默认值：.14rem <3.0.3>\r\n * @example\r\n * .demo {\r\n *     @include clearspace;\r\n * }\r\n *\r\n * <div class=\"demo\">\r\n *      <span class=\"item\">1</span>\r\n *      <span class=\"item\">2</span>\r\n *      <span class=\"item\">3</span>\r\n * </div>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 描述元素内容在横、纵方向上的对齐方式，默认为水平垂直居中对齐\r\n * @method align\r\n * @version 2.0.0\r\n * @param {String} $flexbox 元素布局方式，可选值：flex | inline-flex，默认值：flex <2.0.0>\r\n * @param {Keyword} $justify-content 元素内容的水平对齐方式，取值与`justify-content`属性一致，默认值：center <2.0.0>\r\n * @param {Keyword} $align-items 元素内容的垂直对齐方式，取值与`align-items`属性一致，默认值：center <2.0.0>\r\n * @example\r\n * .demo {\r\n *     @include align;\r\n * }\r\n *\r\n * <div class=\"demo\">\r\n *      <img alt=\"未知尺寸图片居中\" />\r\n * </div>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 定义是否有滚动条\r\n * @method overflow\r\n * @version 1.0.0\r\n * @param {String} $overflow 取值与最新原生语法一致，默认值：auto <1.0.0>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 生成全屏方法\r\n * @method fullscreen\r\n * @version 1.7.0\r\n * @param {Integer} $z-index 指定层叠级别 <1.7.0>\r\n * @param {Keywords} $position 指定定位方式，取除`static | relative`之外的值，默认值：absolute <1.8.5>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义使用何种滤镜\r\n * @method filter\r\n * @version 1.7.0\r\n * @param {String} $filter 取值与`filter`属性一致 <1.7.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义UA默认外观\r\n * @method appearance\r\n * @version 1.0.0\r\n * @param {String} $appearance 取值与`appearance`属性一致，默认值：none <1.0.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义如何选中内容\r\n * @method user-select\r\n * @version 1.0.0\r\n * @param {String} $user-select 取值与`user-select`属性一致，默认值：none <1.0.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义盒模型\r\n * @method box-sizing\r\n * @version 1.0.0\r\n * @param {String} $box-sizing 指定盒模型类型，取值与`box-sizing`属性一致，默认值：border-box <1.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义渐变色值\r\n * @method gradient\r\n * @version 1.0.0\r\n * @param {String} $type 指定渐变的4种类型：linear, repeating-linear, radial, repeating-radial <1.0.0>\r\n * @param {String} $dir 指定渐变方向，可选值：[left | right] || [top | bottom] | angle <2.0.0>\r\n * @param {String} $gradient 指定渐变取值，与w3c最新原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景图像缩放（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-size\r\n * @version 1.4.0\r\n * @param {Keywords | Length} $background-size 指定背景图缩放值，取值与`background-size`属性一致 <1.4.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景裁减（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-clip\r\n * @version 1.6.0\r\n * @param {Keywords} $background-clip 指定背景图缩放值，取值与`background-clip`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景显示区域（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-origin\r\n * @version 1.6.0\r\n * @param {Keywords} $background-origin 指定背景图`background-position`属性计算相对的参考点，取值与`background-origin`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 为元素添加边框（包括1px边框）\r\n * @method border\r\n * @version 2.0.0\r\n * @param {String} $border-width 指定边框厚度（单位为px），默认值：1px，取值与`border-width`属性一致，不同方向代表边框位置 <2.0.0>\r\n * @param {String} $border-color 指定边框颜色 <2.0.0>\r\n * @param {String} $border-style 指定边框样式 <2.0.0>\r\n * @param {String} $radius 指定边框圆角半径，默认值：null <2.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义圆角，用于修复某些安卓机型上“圆角+边框+背景”，背景溢出的情况\r\n * @method border-radius\r\n * @version 1.6.0\r\n * @param {Length} $border-radius 指定元素的圆角半径，取值与`border-radius`属性一致 <1.6.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 定义简单变换\r\n * @method transform\r\n * @version 1.0.0\r\n * @param {String} $transform 取值范围与`transform`属性一致 <1.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 定义变换原点\r\n * @method transform-origin\r\n * @version 1.0.0\r\n * @param {Length | Percentage | Keywords} $transform-origin 取值范围与`transform-origin`属性一致 <1.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定某元素的子元素是（看起来）位于三维空间内，还是在该元素所在的平面内被扁平化\r\n * @method transform-style\r\n * @version 2.0.0\r\n * @param {String} $transform-style 取值范围与`transform-style`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定观察者与「z=0」平面的距离，使具有三维位置变换的元素产生透视效果。「z>0」的三维元素比正常大，而「z<0」时则比正常小，大小程度由该属性的值决定。\r\n * @method perspective\r\n * @version 2.0.0\r\n * @param {none | Length} $perspective 取值范围与`perspective`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定透视点的位置\r\n * @method perspective-origin\r\n * @version 2.0.0\r\n * @param {Length | Percentage | Keywords} $perspective-origin 取值范围与`perspective-origin`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定元素背面面向用户时是否可见\r\n * @method backface-visibility\r\n * @version 2.0.0\r\n * @param {Keywords} $backface-visibility 取值范围与`backface-visibility`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 定义动画\r\n * @method animation\r\n * @version 1.0.0\r\n * @param {String} $animation 取值与原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定需要引用的动画名称\r\n * @method animation-name\r\n * @version 3.0.0\r\n * @param {String} $animation-name 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画运行一次所持续的时长\r\n * @method animation-duration\r\n * @version 3.0.0\r\n * @param {String} $animation-duration 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画运行方式\r\n * @method animation-timing-function\r\n * @version 3.0.0\r\n * @param {String} $animation-timing-function 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画延迟多久之后再开始\r\n * @method animation-delay\r\n * @version 3.0.0\r\n * @param {String} $animation-delay 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画循环几次\r\n * @method animation-iteration-count\r\n * @version 3.0.0\r\n * @param {String} $animation-iteration-count 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画的运动方向\r\n * @method animation-direction\r\n * @version 3.0.0\r\n * @param {String} $animation-direction 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画的运动状态\r\n * @method animation-play-state\r\n * @version 3.0.0\r\n * @param {String} $animation-play-state 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画时间之外的状态\r\n * @method animation-fill-mode\r\n * @version 3.0.0\r\n * @param {String} $animation-fill-mode 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Transition\r\n * @description 定义补间\r\n * @method transition\r\n * @version 1.0.0\r\n * @param {String} $transition 取值与原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义显示类型为伸缩盒\r\n * @method flexbox\r\n * @version 1.0.0\r\n * @param {String} $flexbox 默认值：flex，可选值：flex | inline-flex <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素如何分配空间\r\n * @method flex\r\n * @version 1.0.0\r\n * @param {Number} $flex 取值与`flex`属性一致，默认值：1 <1.0.0>\r\n * @param {String} $direction 默认值: row，可选值：row | column <1.5.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素的排版顺序\r\n * @method order\r\n * @version 1.0.0\r\n * @param {Integer} $order 取值与`order`属性一致，默认值：1 <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性盒子元素流动方向及遇见边界时是否换行(要求系统：iOS7.0+, Android4.4+)\r\n * @method flex-flow\r\n * @version 2.0.0\r\n * @param {String} $flex-flow 取值与`flex-flow`属性一致，默认值：row nowrap <2.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素的流动方向\r\n * @method flex-direction\r\n * @version 1.0.0\r\n * @param {String} $flex-direction 取值与`flex-direction`属性一致，默认值：row <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性盒子元素溢出后排版(要求系统：iOS7.0+, Android4.4+)\r\n * @method flex-wrap\r\n * @version 1.0.0\r\n * @param {String} $flex-wrap 取值与`flex-wrap`属性一致，默认值：nowrap <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性容器主轴对齐方式(其中`space-around`值需要iOS7.0+,Android4.4+)\r\n * @method justify-content\r\n * @version 1.0.0\r\n * @param {String} $justify-content 取值与`justify-content`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义多行弹性容器侧轴对齐方式(要求系统：iOS7.0+,Android4.4+)\r\n * @method align-content\r\n * @version 1.8.5\r\n * @param {String} $align-content 取值与`align-content`属性一致，默认值：center <1.8.5>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义单行弹性容器侧轴对齐方式\r\n * @method align-items\r\n * @version 1.0.0\r\n * @param {String} $align-items 取值与`align-items`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性容器中子元素自身的在侧轴对齐方式(要求系统：iOS7.0+,Android4.4+)\r\n * @method align-self\r\n * @version 1.0.0\r\n * @param {String} $align-self 取值与`align-self`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成矩形方法\r\n * @method rect\r\n * @version 1.0.0\r\n * @param {Length} $width 定义矩形的长度 <1.0.0>\r\n * @param {Length} $height 定义矩形的高度 <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成正方形方法\r\n * @method square\r\n * @version 1.0.0\r\n * @param {Length} $size 定义正方形的边长 <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成圆形方法\r\n * @method circle\r\n * @version 1.0.0\r\n * @param {Length} $size 定义圆的半径长度 <1.0.0>\r\n * @param {Length} $radius 定义圆的圆角半径长度 <1.0.0>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 在自适应宽度情况下，确保内容元素的宽高比固定，比如：实现随屏幕大小而变化的正方形。\r\n * @method fixed-scale\r\n * @version 3.0.10\r\n * @param {Length} $width 默认值：100%。用以指定内容元素的初始宽度，由于尺寸需动态变化，不要使用固定单位 <3.0.10>\r\n * @param {Length} $scale 默认值：1/1，即正方形。用以指定内容元素的宽度高比 <3.0.10>\r\n */\n/**\r\n * @module 文本\r\n * @description 链接处理方法\r\n * @method link\r\n * @version 1.0.0\r\n * @param {Color} $color 定义链接颜色 <1.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 文本碰到边界是否换行\r\n * @method wrap\r\n * @version 1.0.0\r\n * @param {Boolean} $is-wrap 定义文本是否换行，默认值：true <2.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 单行文本溢出时显示省略号\r\n * @method ellipsis\r\n * @version 1.0.0\r\n * @param {Length} $width 定义容器的宽度，默认值：null <2.0.0>\r\n * @param {Integer} $line-clamp 定义需要显示的行数，默认值：1（即使用单行溢出的处理方案），需要注意的是本参数只支持webkit内核 <2.1.2>\r\n */\n/**\r\n * @module 文本\r\n * @description 文字隐藏方案\r\n * @method texthide\r\n * @version 1.0.0\r\n * @param {Length} $width 定义容器的宽度，默认值：null <2.0.0>\r\n */\n/**\r\n * Yo框架全局Reset\r\n * Yo重置Mobile及高级浏览器上常见的差异\r\n */\n*,\n::before,\n::after {\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n  -webkit-tap-highlight-color: transparent; }\n\nhtml,\nbody {\n  overflow: hidden;\n  height: 100%; }\n\n::-webkit-scrollbar {\n  display: none; }\n\nhtml {\n  background-color: #eee;\n  color: #212121;\n  font-size: 100px;\n  -webkit-user-select: none;\n  user-select: none; }\n\nbody {\n  margin: 0;\n  font-size: 0.14em;\n  line-height: 1.5;\n  font-family: Helvetica Neue, Helvetica, STHeiTi, sans-serif; }\n\nul,\nol,\ndl,\ndd,\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\nfigure,\nform,\nfieldset,\nlegend,\ninput,\ntextarea,\nbutton,\np,\nblockquote,\nth,\ntd,\npre,\nxmp {\n  margin: 0;\n  padding: 0; }\n\ninput,\ntextarea,\nbutton,\nselect,\npre,\nxmp,\ntt,\ncode,\nkbd,\nsamp {\n  line-height: inherit;\n  font-family: inherit; }\n\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\nsmall,\nbig,\ninput,\ntextarea,\nbutton,\nselect {\n  font-size: inherit; }\n\naddress,\ncite,\ndfn,\nem,\ni,\noptgroup,\nvar {\n  font-style: normal; }\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0;\n  table-layout: fixed;\n  text-align: left; }\n\nul,\nol,\nmenu {\n  list-style: none; }\n\nfieldset,\nimg {\n  border: 0;\n  vertical-align: middle; }\n\narticle,\naside,\ndetails,\nfigcaption,\nfigure,\nfooter,\nheader,\nmain,\nmenu,\nnav,\nsection,\nsummary {\n  display: block; }\n\naudio,\ncanvas,\nvideo {\n  display: inline-block; }\n\nblockquote:before,\nblockquote:after,\nq:before,\nq:after {\n  content: \"\\0020\"; }\n\ntextarea,\npre,\nxmp {\n  overflow: auto;\n  -webkit-overflow-scrolling: touch; }\n\ntextarea {\n  resize: vertical; }\n\ninput,\ntextarea,\nbutton,\nselect,\nsummary,\na {\n  outline: 0 none; }\n\ninput,\ntextarea,\nbutton,\nselect {\n  color: inherit; }\n  input:disabled,\n  textarea:disabled,\n  button:disabled,\n  select:disabled {\n    opacity: 1; }\n\nbutton::-moz-focus-inner,\ninput::-moz-focus-inner {\n  padding: 0;\n  border: 0; }\n\ninput[type=\"button\"],\ninput[type=\"submit\"],\ninput[type=\"reset\"],\ninput[type=\"file\"]::-webkit-file-upload-button,\ninput[type=\"search\"]::-webkit-search-cancel-button {\n  -webkit-appearance: none;\n  appearance: none; }\n\n::-webkit-details-marker {\n  display: none; }\n\nmark {\n  background-color: transparent; }\n\na,\nins,\ns,\nu,\ndel {\n  text-decoration: none; }\n\na,\nimg {\n  -webkit-touch-callout: none; }\n\na {\n  color: #00afc7; }\n\n.g-clear::after,\n.g-mod::after {\n  display: block;\n  overflow: hidden;\n  clear: both;\n  height: 0;\n  content: \"\\0020\"; }\n\n@font-face {\n  font-family: yofont;\n  src: url(//ss.qunarzz.com/yo/font/1.0.3/yofont.woff) format(\"woff\"), url(//ss.qunarzz.com/yo/font/1.0.3/yofont.ttf) format(\"truetype\"); }\n\n.yo-ico {\n  font-family: yofont !important;\n  font-style: normal;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n  vertical-align: middle; }\n\n@font-face {\n  font-family: 'iconfont';\n  src: url(\"http://localhost:7000/media/iconfont/iconfont.woff\") format(\"woff\"), url(\"http://localhost:7000/media/iconfont/iconfont.ttf\") format(\"truetype\"); }\n\n.iconfont {\n  font-family: \"iconfont\" !important;\n  font-size: 16px;\n  font-style: normal;\n  -webkit-font-smoothing: antialiased;\n  -webkit-text-stroke-width: 0.2px;\n  -moz-osx-font-smoothing: grayscale; }\n\nheader > div {\n  height: 100%;\n  width: 100%; }\n  header > div > ul {\n    height: 100%;\n    width: 100%;\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: flex;\n    -webkit-box-orient: vertical;\n    -webkit-box-direction: normal;\n    -webkit-flex-direction: column;\n    flex-direction: column; }\n    header > div > ul > li {\n      -webkit-box-flex: 1;\n      -webkit-flex: 1;\n      flex: 1;\n      width: .1px;\n      width: 100%;\n      height: .33333333rem; }\n      header > div > ul > li img {\n        height: 100%;\n        width: 100%; }\n      header > div > ul > li:nth-child(2) {\n        display: -webkit-box;\n        display: -webkit-flex;\n        display: flex; }\n        header > div > ul > li:nth-child(2) img {\n          vertical-align: top; }\n        header > div > ul > li:nth-child(2) div:first-child {\n          -webkit-box-flex: 1;\n          -webkit-flex: 1;\n          flex: 1;\n          width: .1px;\n          display: -webkit-box;\n          display: -webkit-flex;\n          display: flex;\n          -webkit-box-align: center;\n          -webkit-align-items: center;\n          align-items: center;\n          -webkit-box-pack: center;\n          -webkit-justify-content: center;\n          justify-content: center; }\n          header > div > ul > li:nth-child(2) div:first-child span:first-child {\n            display: inline-block;\n            width: 74px;\n            height: 16px;\n            margin-right: 5px; }\n          header > div > ul > li:nth-child(2) div:first-child span:nth-child(2) {\n            margin-top: 2px;\n            font-size: 14px; }\n          header > div > ul > li:nth-child(2) div:first-child span:last-child {\n            margin-left: 5px; }\n            header > div > ul > li:nth-child(2) div:first-child span:last-child .iconfont {\n              margin-top: 3px;\n              font-size: 6px; }\n        header > div > ul > li:nth-child(2) div:last-child {\n          width: 54px;\n          height: 100%;\n          display: -webkit-box;\n          display: -webkit-flex;\n          display: flex;\n          -webkit-box-align: center;\n          -webkit-align-items: center;\n          align-items: center;\n          -webkit-box-pack: center;\n          -webkit-justify-content: center;\n          justify-content: center; }\n          header > div > ul > li:nth-child(2) div:last-child img {\n            width: 21px;\n            height: 30px; }\n      header > div > ul > li:last-child {\n        display: -webkit-box;\n        display: -webkit-flex;\n        display: flex;\n        height: 100%;\n        width: 100%;\n        position: relative;\n        position: relative; }\n        header > div > ul > li:last-child::after {\n          pointer-events: none;\n          position: absolute;\n          z-index: 999;\n          top: 0;\n          left: 0;\n          content: \"\\0020\";\n          border-color: #ccc;\n          border-style: solid;\n          border-width: 0 0 1px 0;\n          -webkit-transform-origin: 0 0;\n          transform-origin: 0 0; }\n          @media (max--moz-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.49), (max-device-pixel-ratio: 1.49), (max-resolution: 143dpi), (max-resolution: 1.49dppx) {\n            header > div > ul > li:last-child::after {\n              width: 100%;\n              height: 100%; } }\n          @media (min--moz-device-pixel-ratio: 1.5) and (max--moz-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.49), (min-device-pixel-ratio: 1.5) and (max-device-pixel-ratio: 2.49), (min-resolution: 144dpi) and (max-resolution: 239dpi), (min-resolution: 1.5dppx) and (max-resolution: 2.49dppx) {\n            header > div > ul > li:last-child::after {\n              width: 200%;\n              height: 200%;\n              -webkit-transform: scale(0.5);\n              transform: scale(0.5); } }\n          @media (min--moz-device-pixel-ratio: 2.5), (-webkit-min-device-pixel-ratio: 2.5), (min-device-pixel-ratio: 2.5), (min-resolution: 240dpi), (min-resolution: 2.5dppx) {\n            header > div > ul > li:last-child::after {\n              width: 300%;\n              height: 300%;\n              -webkit-transform: scale(0.33333);\n              transform: scale(0.33333); } }\n        header > div > ul > li:last-child div:first-child {\n          -webkit-box-flex: 1;\n          -webkit-flex: 1;\n          flex: 1;\n          width: .1px;\n          overflow-x: scroll; }\n          header > div > ul > li:last-child div:first-child ul {\n            width: 702px;\n            display: -webkit-box;\n            display: -webkit-flex;\n            display: flex;\n            -webkit-box-orient: horizontal;\n            -webkit-box-direction: normal;\n            -webkit-flex-direction: row;\n            flex-direction: row;\n            overflow: hidden;\n            margin-left: 5px; }\n            header > div > ul > li:last-child div:first-child ul li {\n              height: 100%;\n              line-height: 39px;\n              width: 54px; }\n              header > div > ul > li:last-child div:first-child ul li:nth-child(2) {\n                background: url(\"https://j-image.missfresh.cn/img_20171013205830872.png\") center right no-repeat;\n                background-size: contain; }\n              header > div > ul > li:last-child div:first-child ul li span {\n                color: black;\n                display: inline-block;\n                height: 100%;\n                white-space: nowrap;\n                margin: 0 10px 0 10px; }\n                header > div > ul > li:last-child div:first-child ul li span.active {\n                  border-bottom: 2px solid #ff4891; }\n        header > div > ul > li:last-child div:nth-child(2) {\n          width: 54px;\n          display: -webkit-box;\n          display: -webkit-flex;\n          display: flex;\n          -webkit-box-align: center;\n          -webkit-align-items: center;\n          align-items: center;\n          -webkit-box-pack: center;\n          -webkit-justify-content: center;\n          justify-content: center; }\n          header > div > ul > li:last-child div:nth-child(2) i {\n            color: #a6a6a6; }\n        header > div > ul > li:last-child div.list_more {\n          width: 100%;\n          position: absolute;\n          height: 410px;\n          background: white;\n          z-index: 999; }\n          header > div > ul > li:last-child div.list_more .all_title {\n            width: 100%;\n            font-size: 16px;\n            line-height: 44px;\n            text-align: center;\n            color: #262626;\n            height: 44px;\n            margin-bottom: 20px; }\n            header > div > ul > li:last-child div.list_more .all_title i {\n              position: absolute;\n              top: 0;\n              right: 0;\n              width: 54px;\n              height: 44px;\n              background: url(\"https://static-as.missfresh.cn/frontend/img/close01.png\") center center no-repeat;\n              background-size: 20px 20px; }\n          header > div > ul > li:last-child div.list_more .all_lists {\n            height: 345px;\n            width: 100%; }\n            header > div > ul > li:last-child div.list_more .all_lists ul {\n              height: 100%;\n              width: 100%;\n              overflow-y: scroll;\n              display: -webkit-box;\n              display: -webkit-flex;\n              display: flex;\n              -webkit-box-orient: horizontal;\n              -webkit-box-direction: normal;\n              -webkit-flex-direction: row;\n              flex-direction: row;\n              -webkit-flex-wrap: wrap;\n              flex-wrap: wrap; }\n              header > div > ul > li:last-child div.list_more .all_lists ul li {\n                width: 33.33333%;\n                margin-bottom: 18px; }\n                header > div > ul > li:last-child div.list_more .all_lists ul li i {\n                  display: block;\n                  width: 100%;\n                  height: 58px;\n                  background: center center no-repeat;\n                  background-size: 36px; }\n                header > div > ul > li:last-child div.list_more .all_lists ul li h4 {\n                  padding: 0 10px;\n                  height: 18px;\n                  line-height: 18px;\n                  font-size: 12px;\n                  font-weight: 400;\n                  color: #4d4d4d;\n                  text-align: center;\n                  overflow: hidden;\n                  white-space: nowrap;\n                  text-overflow: ellipsis; }\n"],"sourceRoot":""}]);
 
 // exports
 
@@ -29504,107 +29639,257 @@ var _iscrollProbe = __webpack_require__(54);
 
 var _iscrollProbe2 = _interopRequireDefault(_iscrollProbe);
 
-var _store = __webpack_require__(10);
+var _store = __webpack_require__(6);
 
 var _store2 = _interopRequireDefault(_store);
 
+var _axios = __webpack_require__(5);
+
+var _axios2 = _interopRequireDefault(_axios);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
 exports.default = {
+	props: ["gettype", "getmessage"],
 	data: function data() {
 		return {
-			store: _store2.default
+			store: _store2.default,
+			img_urls: [],
+			isshow: false
 		};
 	},
 
 	methods: {
 		goto: function goto(type) {
-			this.$router.push({ name: 'fruits', params: { type: type } });
+			if (type == 'huoguo') {
+				this.$router.push('/index/huoguo');
+			} else if (type == 'hot') {
+				this.$router.push('/index/hot');
+			} else {
+				this.$router.push({ name: 'fruits', params: { type: type } });
+			}
+			this.gettype(type);
 			_store2.default.commit('update', type);
-			console.log(this.store.state.type);
+		},
+		showlist: function showlist() {
+			this.isshow = !this.isshow;
+		},
+		gotosearch: function gotosearch() {
+			_store2.default.commit('show', true);
+		},
+		torward: function torward(type) {
+			switch (type) {
+				case '热卖':
+					{
+						this.isshow = !this.isshow;
+						_store2.default.commit('update', 'hot');
+						this.$router.push('/index');
+						break;
+					}
+				case '火锅':
+					{
+						this.isshow = !this.isshow;
+						_store2.default.commit('update', 'huoguo');
+						this.$router.push({ name: 'huoguo' });
+						break;
+					}
+				case '水果':
+					{
+						this.isshow = !this.isshow;
+						_store2.default.commit('update', 'fruit');
+						this.$router.push({ name: 'fruits' });
+						break;
+					}
+				case '蔬菜':
+					{
+						this.isshow = !this.isshow;
+						_store2.default.commit('update', 'sc');
+						this.$router.push({ name: 'fruits' });
+						break;
+					}
+				case '乳品':
+					{
+						this.isshow = !this.isshow;
+						_store2.default.commit('update', 'milk');
+						this.$router.push({ name: 'fruits' });
+						break;
+					}
+				case '肉蛋':
+					{
+						this.isshow = !this.isshow;
+						_store2.default.commit('update', 'food');
+						this.$router.push({ name: 'fruits' });
+						break;
+					}
+				case '零食':
+					{
+						this.isshow = !this.isshow;
+						_store2.default.commit('update', 'snack');
+						this.$router.push({ name: 'fruits' });
+						break;
+					}
+				case '酒饮':
+					{
+						this.isshow = !this.isshow;
+						_store2.default.commit('update', 'drink');
+						this.$router.push({ name: 'fruits' });
+						break;
+					}
+				case '水产':
+					{
+						this.isshow = !this.isshow;
+						_store2.default.commit('update', 'seafood');
+						this.$router.push({ name: 'fruits' });
+						break;
+					}
+				case '速食':
+					{
+						this.isshow = !this.isshow;
+						_store2.default.commit('update', 'fastfood');
+						this.$router.push({ name: 'fruits' });
+						break;
+					}
+				case '粮油':
+					{
+						this.isshow = !this.isshow;
+						_store2.default.commit('update', 'liangyou');
+						this.$router.push({ name: 'fruits' });
+						break;
+					}
+				case '轻食':
+					{
+						this.isshow = !this.isshow;
+						_store2.default.commit('update', 'qingshi');
+						this.$router.push({ name: 'fruits' });
+						break;
+					}
+				case '日百':
+					{
+						this.isshow = !this.isshow;
+						_store2.default.commit('update', 'com');
+						this.$router.push({ name: 'fruits' });
+						break;
+					}
+			}
 		}
 	},
 	mounted: function mounted() {
+		console.log(this.$refs);
 		new _iscrollProbe2.default('.scroll', {
 			scrollX: true
 		});
+		var that = this;
+		(0, _axios2.default)({
+			url: '/api/v2/product/home/index?device_id=3d48c219f6d8d2386530b0b414bfb6cb&env=web&fromSource=zhuye&platform=web&uuid=3d48c219f6d8d2386530b0b414bfb6cb&version=3.8.0.1',
+			method: 'post',
+			headers: {
+				"Content-Type": "application/json;charset=UTF-8",
+				"x-region": '{"station_code":"","address_code":"110105"}',
+				"X-Tingyun-Id": "Q1KLryMuSto;r=75130083",
+				"version": '3.8.0.1',
+				'platform': 'web'
+			},
+			data: {
+				lat: ""
+			}
+		}).then(function (response) {
+			console.log(response.data.category_list);
+			that.img_urls = response.data.category_list;
+		});
 	}
-};
+}; //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /***/ }),
 /* 54 */
@@ -31805,51 +32090,62 @@ var render = function() {
     _c("ul", [
       _vm._m(0),
       _vm._v(" "),
-      _vm._m(1),
+      _c("li", [
+        _vm._m(1),
+        _vm._v(" "),
+        _c("div", [
+          _c("img", {
+            attrs: {
+              src:
+                "//static-as.missfresh.cn/frontend/img/home-search-3x-black.png"
+            },
+            on: {
+              click: function($event) {
+                _vm.getmessage("slidein")
+              }
+            }
+          })
+        ])
+      ]),
       _vm._v(" "),
       _c("li", [
         _c("div", { staticClass: "scroll" }, [
           _c("ul", [
-            _c(
-              "li",
-              [
-                _c(
-                  "router-link",
-                  {
-                    attrs: {
-                      to: "/index/hot",
-                      tag: "span",
-                      "active-class": "active"
+            _c("li", { ref: "huoguo" }, [
+              _c(
+                "span",
+                {
+                  class: { active: this.store.state.type == "hot" },
+                  on: {
+                    click: function($event) {
+                      _vm.goto("hot")
                     }
-                  },
-                  [_vm._v("热卖")]
-                )
-              ],
-              1
-            ),
-            _vm._v(" "),
-            _c(
-              "li",
-              [
-                _c(
-                  "router-link",
-                  {
-                    attrs: {
-                      to: { name: "huoguo", params: { id: 123456 } },
-                      tag: "span",
-                      "active-class": "active"
-                    }
-                  },
-                  [_vm._v("火锅")]
-                )
-              ],
-              1
-            ),
+                  }
+                },
+                [_vm._v("热卖")]
+              )
+            ]),
             _vm._v(" "),
             _c("li", [
               _c(
                 "span",
                 {
+                  class: { active: this.store.state.type == "huoguo" },
+                  on: {
+                    click: function($event) {
+                      _vm.goto("huoguo")
+                    }
+                  }
+                },
+                [_vm._v("火锅")]
+              )
+            ]),
+            _vm._v(" "),
+            _c("li", [
+              _c(
+                "span",
+                {
+                  class: { active: this.store.state.type == "fruit" },
                   on: {
                     click: function($event) {
                       _vm.goto("fruit")
@@ -31864,6 +32160,7 @@ var render = function() {
               _c(
                 "span",
                 {
+                  class: { active: this.store.state.type == "sc" },
                   on: {
                     click: function($event) {
                       _vm.goto("sc")
@@ -31878,6 +32175,7 @@ var render = function() {
               _c(
                 "span",
                 {
+                  class: { active: this.store.state.type == "milk" },
                   on: {
                     click: function($event) {
                       _vm.goto("milk")
@@ -31892,6 +32190,7 @@ var render = function() {
               _c(
                 "span",
                 {
+                  class: { active: this.store.state.type == "food" },
                   on: {
                     click: function($event) {
                       _vm.goto("food")
@@ -31906,6 +32205,7 @@ var render = function() {
               _c(
                 "span",
                 {
+                  class: { active: this.store.state.type == "snack" },
                   on: {
                     click: function($event) {
                       _vm.goto("snack")
@@ -31920,6 +32220,7 @@ var render = function() {
               _c(
                 "span",
                 {
+                  class: { active: this.store.state.type == "drink" },
                   on: {
                     click: function($event) {
                       _vm.goto("drink")
@@ -31934,6 +32235,7 @@ var render = function() {
               _c(
                 "span",
                 {
+                  class: { active: this.store.state.type == "seafood" },
                   on: {
                     click: function($event) {
                       _vm.goto("seafood")
@@ -31948,6 +32250,7 @@ var render = function() {
               _c(
                 "span",
                 {
+                  class: { active: this.store.state.type == "fastfood" },
                   on: {
                     click: function($event) {
                       _vm.goto("fastfood")
@@ -31962,6 +32265,7 @@ var render = function() {
               _c(
                 "span",
                 {
+                  class: { active: this.store.state.type == "liangyou" },
                   on: {
                     click: function($event) {
                       _vm.goto("liangyou")
@@ -31976,6 +32280,7 @@ var render = function() {
               _c(
                 "span",
                 {
+                  class: { active: this.store.state.type == "qingshi" },
                   on: {
                     click: function($event) {
                       _vm.goto("qingshi")
@@ -31990,6 +32295,7 @@ var render = function() {
               _c(
                 "span",
                 {
+                  class: { active: this.store.state.type == "com" },
                   on: {
                     click: function($event) {
                       _vm.goto("com")
@@ -32002,7 +32308,67 @@ var render = function() {
           ])
         ]),
         _vm._v(" "),
-        _vm._m(2)
+        _c("div", [
+          _c(
+            "i",
+            {
+              staticClass: "iconfont",
+              on: {
+                click: function($event) {
+                  _vm.showlist()
+                }
+              }
+            },
+            [_vm._v("")]
+          )
+        ]),
+        _vm._v(" "),
+        _vm.isshow
+          ? _c("div", { staticClass: "list_more" }, [
+              _c("div", { staticClass: "all_title" }, [
+                _vm._v("\n\t\t\t\t\t全部商品\n\t\t\t\t\t"),
+                _c("i", {
+                  on: {
+                    click: function($event) {
+                      _vm.showlist()
+                    }
+                  }
+                })
+              ]),
+              _vm._v(" "),
+              _c("div", { staticClass: "all_lists" }, [
+                _c(
+                  "ul",
+                  _vm._l(_vm.img_urls, function(img_url, i) {
+                    return _c(
+                      "li",
+                      {
+                        key: i,
+                        on: {
+                          click: function($event) {
+                            _vm.torward(img_url.name)
+                          }
+                        }
+                      },
+                      [
+                        _c("i", {
+                          style: "background-image:url(" + img_url.icon + ")"
+                        }),
+                        _vm._v(" "),
+                        _c("h4", [
+                          _vm._v(
+                            "\n\t\t\t\t\t\t\t\t" +
+                              _vm._s(img_url.name) +
+                              "\n\t\t\t\t\t\t\t"
+                          )
+                        ])
+                      ]
+                    )
+                  })
+                )
+              ])
+            ])
+          : _vm._e()
       ])
     ])
   ])
@@ -32022,36 +32388,19 @@ var staticRenderFns = [
     var _vm = this
     var _h = _vm.$createElement
     var _c = _vm._self._c || _h
-    return _c("li", [
-      _c("div", [
-        _c("span", [
-          _c("img", {
-            attrs: {
-              src: "https://j-image.missfresh.cn/img_20161026155951214.png"
-            }
-          })
-        ]),
-        _vm._v(" "),
-        _c("span", [_vm._v("\n\t\t\t\t\t北京市\n\t\t\t\t")]),
-        _vm._v(" "),
-        _c("span", [_c("i", { staticClass: "iconfont" }, [_vm._v("")])])
-      ]),
-      _vm._v(" "),
-      _c("div", [
+    return _c("div", [
+      _c("span", [
         _c("img", {
           attrs: {
-            src:
-              "//static-as.missfresh.cn/frontend/img/home-search-3x-black.png"
+            src: "https://j-image.missfresh.cn/img_20161026155951214.png"
           }
         })
-      ])
+      ]),
+      _vm._v(" "),
+      _c("span", [_vm._v("\n\t\t\t\t\t北京市\n\t\t\t\t")]),
+      _vm._v(" "),
+      _c("span", [_c("i", { staticClass: "iconfont" }, [_vm._v("")])])
     ])
-  },
-  function() {
-    var _vm = this
-    var _h = _vm.$createElement
-    var _c = _vm._self._c || _h
-    return _c("div", [_c("i", { staticClass: "iconfont" }, [_vm._v("")])])
   }
 ]
 render._withStripped = true
@@ -32066,16 +32415,73 @@ if (false) {
 
 /***/ }),
 /* 56 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_3_0_vue_loader_lib_selector_type_script_index_0_bustCache_section_vue__ = __webpack_require__(59);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_3_0_vue_loader_lib_selector_type_script_index_0_bustCache_section_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_3_0_vue_loader_lib_selector_type_script_index_0_bustCache_section_vue__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_13_3_0_vue_loader_lib_template_compiler_index_id_data_v_0b130887_hasScoped_false_buble_transforms_node_modules_vue_loader_13_3_0_vue_loader_lib_selector_type_template_index_0_bustCache_section_vue__ = __webpack_require__(60);
+var disposed = false
+function injectStyle (ssrContext) {
+  if (disposed) return
+  __webpack_require__(57)
+}
+var normalizeComponent = __webpack_require__(3)
+/* script */
+
+/* template */
+
+/* template functional */
+  var __vue_template_functional__ = false
+/* styles */
+var __vue_styles__ = injectStyle
+/* scopeId */
+var __vue_scopeId__ = null
+/* moduleIdentifier (server only) */
+var __vue_module_identifier__ = null
+var Component = normalizeComponent(
+  __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_3_0_vue_loader_lib_selector_type_script_index_0_bustCache_section_vue___default.a,
+  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_13_3_0_vue_loader_lib_template_compiler_index_id_data_v_0b130887_hasScoped_false_buble_transforms_node_modules_vue_loader_13_3_0_vue_loader_lib_selector_type_template_index_0_bustCache_section_vue__["a" /* default */],
+  __vue_template_functional__,
+  __vue_styles__,
+  __vue_scopeId__,
+  __vue_module_identifier__
+)
+Component.options.__file = "src\\modules\\index\\components\\section.vue"
+if (Component.esModule && Object.keys(Component.esModule).some(function (key) {  return key !== "default" && key.substr(0, 2) !== "__"})) {  console.error("named exports are not supported in *.vue files.")}
+
+/* hot reload */
+if (false) {(function () {
+  var hotAPI = require("vue-loader/node_modules/vue-hot-reload-api")
+  hotAPI.install(require("vue"), false)
+  if (!hotAPI.compatible) return
+  module.hot.accept()
+  if (!module.hot.data) {
+    hotAPI.createRecord("data-v-0b130887", Component.options)
+  } else {
+    hotAPI.reload("data-v-0b130887", Component.options)
+' + '  }
+  module.hot.dispose(function (data) {
+    disposed = true
+  })
+})()}
+
+/* harmony default export */ __webpack_exports__["default"] = (Component.exports);
+
+
+/***/ }),
+/* 57 */
 /***/ (function(module, exports, __webpack_require__) {
 
 // style-loader: Adds some css to the DOM by adding a <style> tag
 
 // load the styles
-var content = __webpack_require__(57);
+var content = __webpack_require__(58);
 if(typeof content === 'string') content = [[module.i, content, '']];
 if(content.locals) module.exports = content.locals;
 // add the styles to the DOM
-var update = __webpack_require__(1)("3b26a5fc", content, false);
+var update = __webpack_require__(2)("3b26a5fc", content, false);
 // Hot Module Replacement
 if(false) {
  // When the styles change, update the <style> tags
@@ -32091,7 +32497,7 @@ if(false) {
 }
 
 /***/ }),
-/* 57 */
+/* 58 */
 /***/ (function(module, exports, __webpack_require__) {
 
 exports = module.exports = __webpack_require__(0)(true);
@@ -32105,7 +32511,7 @@ exports.push([module.i, "\n\n\n\n\n\n\n", "", {"version":3,"sources":[],"names":
 
 
 /***/ }),
-/* 58 */
+/* 59 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
@@ -32115,7 +32521,7 @@ exports.push([module.i, "\n\n\n\n\n\n\n", "", {"version":3,"sources":[],"names":
 
 
 /***/ }),
-/* 59 */
+/* 60 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -32137,7 +32543,232 @@ if (false) {
 }
 
 /***/ }),
-/* 60 */
+/* 61 */
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__(62);
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var update = __webpack_require__(2)("28d72d0e", content, false);
+// Hot Module Replacement
+if(false) {
+ // When the styles change, update the <style> tags
+ if(!content.locals) {
+   module.hot.accept("!!../../../../node_modules/_css-loader@0.28.7@css-loader/index.js?sourceMap!../../../../node_modules/_vue-loader@13.3.0@vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-37efd976\",\"scoped\":false,\"hasInlineConfig\":false}!../../../../node_modules/_sass-loader@6.0.6@sass-loader/lib/loader.js!../../../../node_modules/_vue-loader@13.3.0@vue-loader/lib/selector.js?type=styles&index=0&bustCache!./search.vue", function() {
+     var newContent = require("!!../../../../node_modules/_css-loader@0.28.7@css-loader/index.js?sourceMap!../../../../node_modules/_vue-loader@13.3.0@vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-37efd976\",\"scoped\":false,\"hasInlineConfig\":false}!../../../../node_modules/_sass-loader@6.0.6@sass-loader/lib/loader.js!../../../../node_modules/_vue-loader@13.3.0@vue-loader/lib/selector.js?type=styles&index=0&bustCache!./search.vue");
+     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+     update(newContent);
+   });
+ }
+ // When the module is disposed, remove the <style> tags
+ module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+/* 62 */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(0)(true);
+// imports
+
+
+// module
+exports.push([module.i, "\n@charset \"UTF-8\";\n/**\r\n * Yo框架全局base定义\r\n * 本文件与variables不同地方在于，这里所定义的map可以使用在variables和任何地方\r\n * 本文件中map使用\"_\"开头，extra中不使用\"_\"\r\n * base ⇌ extra\r\n */\n/**\r\n * Yo框架全局Variables\r\n * Yo基础变量map，如果不想定义某属性，将其value设置为null\r\n * Yo仅使用2种长度单位：px用于边框，rem用于除边框之外的所有地方\r\n * 本文件中map使用\"_\"开头，config中不使用\"_\"\r\n * variables ⇌ config\r\n */\n/**\r\n * Yo框架自定义全局函数\r\n * 扩充Sass默认函数库，用以增强语法\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的第一项\r\n * @function first\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的最后一项\r\n * @function last\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的倒数第几项\r\n * @function nth-last\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $index 指定需要返回的值在list中的倒数位置 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 移除SassList中的某个项目并返回新的List\r\n * @function remove\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {String} $value 指定需要被删除的值 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 截取SassList中的某个部分并返回新的List\r\n * @function slice\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $start 指定需要截取的开始下标 <2.1.0>\r\n * @param {Integer} $end 指定需要截取的结束下标（不包括end），当该值缺省时默认为末尾下标 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 从SassList中添加/删除项目，然后返回新的List。\r\n * @function splice\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $index 指定需要移除的开始下标 <2.1.0>\r\n * @param {Integer} $count 指定需要移除的数量，不可以为负值，0表示不移除 <2.1.0>\r\n * @param {String} $values 指定需要添加的新值（可以是多个），如果该值缺省，则表示只移除不添加新值 <2.1.0>\r\n */\n/**\r\n * Yo框架全局基础方法\r\n * 包括响应式方案，CSS3兼容性方案，厂商前缀方案，iconfont方案，flex布局等全局方法\r\n */\n/**\r\n * @module 常用方法\r\n * @description 给需要的属性加厂家前缀\r\n * @method prefix\r\n * @version 1.0.0\r\n * @param {String} $property 指定属性 <1.0.0>\r\n * @param {String} $value 指定属性值 <1.0.0>\r\n * @skip\r\n */\n/**\r\n * @module 常用方法\r\n * @description 定义字体图标\r\n * @method _iconfont\r\n * @version 1.0.0\r\n * @skip\r\n */\n/**\r\n * @module 常用方法\r\n * @description 四则运算(系统要求：iOS6.0+,Android4.4+)\r\n * @method calc\r\n * @version 1.7.0\r\n * @param {String} $property 指定需要进行计算的CSS属性 <1.7.0>\r\n * @param {String} $value 与原生CSS语法一致，区别在于需要使用引号包裹表达式 <1.7.0>\r\n * @example\r\n * .calc {\r\n *     @include calc(width, \"100% - 100px\");\r\n * }\r\n *\r\n * <div class=\"calc\">四则运算</div>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 定义响应式方案\r\n * @method responsive\r\n * @version 1.0.0\r\n * @param {String} $media 指定媒体查询条件，取值为`config`文件map `media-types`中的值 <1.0.0>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 清除浮动方案\r\n * @method clearfix\r\n * @version 1.0.0\r\n * @param {String} $type 指定清除浮动的方式，包括：pseudo-element | bfc，默认值：pseudo-element <1.8.5>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 清除行内级元素间间隙方案\r\n * @method clearspace\r\n * @version 3.0.3\r\n * @param {Length} $font-size 指定子元素字号，默认值：.14rem <3.0.3>\r\n * @example\r\n * .demo {\r\n *     @include clearspace;\r\n * }\r\n *\r\n * <div class=\"demo\">\r\n *      <span class=\"item\">1</span>\r\n *      <span class=\"item\">2</span>\r\n *      <span class=\"item\">3</span>\r\n * </div>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 描述元素内容在横、纵方向上的对齐方式，默认为水平垂直居中对齐\r\n * @method align\r\n * @version 2.0.0\r\n * @param {String} $flexbox 元素布局方式，可选值：flex | inline-flex，默认值：flex <2.0.0>\r\n * @param {Keyword} $justify-content 元素内容的水平对齐方式，取值与`justify-content`属性一致，默认值：center <2.0.0>\r\n * @param {Keyword} $align-items 元素内容的垂直对齐方式，取值与`align-items`属性一致，默认值：center <2.0.0>\r\n * @example\r\n * .demo {\r\n *     @include align;\r\n * }\r\n *\r\n * <div class=\"demo\">\r\n *      <img alt=\"未知尺寸图片居中\" />\r\n * </div>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 定义是否有滚动条\r\n * @method overflow\r\n * @version 1.0.0\r\n * @param {String} $overflow 取值与最新原生语法一致，默认值：auto <1.0.0>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 生成全屏方法\r\n * @method fullscreen\r\n * @version 1.7.0\r\n * @param {Integer} $z-index 指定层叠级别 <1.7.0>\r\n * @param {Keywords} $position 指定定位方式，取除`static | relative`之外的值，默认值：absolute <1.8.5>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义使用何种滤镜\r\n * @method filter\r\n * @version 1.7.0\r\n * @param {String} $filter 取值与`filter`属性一致 <1.7.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义UA默认外观\r\n * @method appearance\r\n * @version 1.0.0\r\n * @param {String} $appearance 取值与`appearance`属性一致，默认值：none <1.0.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义如何选中内容\r\n * @method user-select\r\n * @version 1.0.0\r\n * @param {String} $user-select 取值与`user-select`属性一致，默认值：none <1.0.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义盒模型\r\n * @method box-sizing\r\n * @version 1.0.0\r\n * @param {String} $box-sizing 指定盒模型类型，取值与`box-sizing`属性一致，默认值：border-box <1.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义渐变色值\r\n * @method gradient\r\n * @version 1.0.0\r\n * @param {String} $type 指定渐变的4种类型：linear, repeating-linear, radial, repeating-radial <1.0.0>\r\n * @param {String} $dir 指定渐变方向，可选值：[left | right] || [top | bottom] | angle <2.0.0>\r\n * @param {String} $gradient 指定渐变取值，与w3c最新原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景图像缩放（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-size\r\n * @version 1.4.0\r\n * @param {Keywords | Length} $background-size 指定背景图缩放值，取值与`background-size`属性一致 <1.4.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景裁减（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-clip\r\n * @version 1.6.0\r\n * @param {Keywords} $background-clip 指定背景图缩放值，取值与`background-clip`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景显示区域（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-origin\r\n * @version 1.6.0\r\n * @param {Keywords} $background-origin 指定背景图`background-position`属性计算相对的参考点，取值与`background-origin`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 为元素添加边框（包括1px边框）\r\n * @method border\r\n * @version 2.0.0\r\n * @param {String} $border-width 指定边框厚度（单位为px），默认值：1px，取值与`border-width`属性一致，不同方向代表边框位置 <2.0.0>\r\n * @param {String} $border-color 指定边框颜色 <2.0.0>\r\n * @param {String} $border-style 指定边框样式 <2.0.0>\r\n * @param {String} $radius 指定边框圆角半径，默认值：null <2.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义圆角，用于修复某些安卓机型上“圆角+边框+背景”，背景溢出的情况\r\n * @method border-radius\r\n * @version 1.6.0\r\n * @param {Length} $border-radius 指定元素的圆角半径，取值与`border-radius`属性一致 <1.6.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 定义简单变换\r\n * @method transform\r\n * @version 1.0.0\r\n * @param {String} $transform 取值范围与`transform`属性一致 <1.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 定义变换原点\r\n * @method transform-origin\r\n * @version 1.0.0\r\n * @param {Length | Percentage | Keywords} $transform-origin 取值范围与`transform-origin`属性一致 <1.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定某元素的子元素是（看起来）位于三维空间内，还是在该元素所在的平面内被扁平化\r\n * @method transform-style\r\n * @version 2.0.0\r\n * @param {String} $transform-style 取值范围与`transform-style`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定观察者与「z=0」平面的距离，使具有三维位置变换的元素产生透视效果。「z>0」的三维元素比正常大，而「z<0」时则比正常小，大小程度由该属性的值决定。\r\n * @method perspective\r\n * @version 2.0.0\r\n * @param {none | Length} $perspective 取值范围与`perspective`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定透视点的位置\r\n * @method perspective-origin\r\n * @version 2.0.0\r\n * @param {Length | Percentage | Keywords} $perspective-origin 取值范围与`perspective-origin`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定元素背面面向用户时是否可见\r\n * @method backface-visibility\r\n * @version 2.0.0\r\n * @param {Keywords} $backface-visibility 取值范围与`backface-visibility`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 定义动画\r\n * @method animation\r\n * @version 1.0.0\r\n * @param {String} $animation 取值与原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定需要引用的动画名称\r\n * @method animation-name\r\n * @version 3.0.0\r\n * @param {String} $animation-name 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画运行一次所持续的时长\r\n * @method animation-duration\r\n * @version 3.0.0\r\n * @param {String} $animation-duration 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画运行方式\r\n * @method animation-timing-function\r\n * @version 3.0.0\r\n * @param {String} $animation-timing-function 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画延迟多久之后再开始\r\n * @method animation-delay\r\n * @version 3.0.0\r\n * @param {String} $animation-delay 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画循环几次\r\n * @method animation-iteration-count\r\n * @version 3.0.0\r\n * @param {String} $animation-iteration-count 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画的运动方向\r\n * @method animation-direction\r\n * @version 3.0.0\r\n * @param {String} $animation-direction 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画的运动状态\r\n * @method animation-play-state\r\n * @version 3.0.0\r\n * @param {String} $animation-play-state 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画时间之外的状态\r\n * @method animation-fill-mode\r\n * @version 3.0.0\r\n * @param {String} $animation-fill-mode 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Transition\r\n * @description 定义补间\r\n * @method transition\r\n * @version 1.0.0\r\n * @param {String} $transition 取值与原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义显示类型为伸缩盒\r\n * @method flexbox\r\n * @version 1.0.0\r\n * @param {String} $flexbox 默认值：flex，可选值：flex | inline-flex <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素如何分配空间\r\n * @method flex\r\n * @version 1.0.0\r\n * @param {Number} $flex 取值与`flex`属性一致，默认值：1 <1.0.0>\r\n * @param {String} $direction 默认值: row，可选值：row | column <1.5.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素的排版顺序\r\n * @method order\r\n * @version 1.0.0\r\n * @param {Integer} $order 取值与`order`属性一致，默认值：1 <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性盒子元素流动方向及遇见边界时是否换行(要求系统：iOS7.0+, Android4.4+)\r\n * @method flex-flow\r\n * @version 2.0.0\r\n * @param {String} $flex-flow 取值与`flex-flow`属性一致，默认值：row nowrap <2.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素的流动方向\r\n * @method flex-direction\r\n * @version 1.0.0\r\n * @param {String} $flex-direction 取值与`flex-direction`属性一致，默认值：row <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性盒子元素溢出后排版(要求系统：iOS7.0+, Android4.4+)\r\n * @method flex-wrap\r\n * @version 1.0.0\r\n * @param {String} $flex-wrap 取值与`flex-wrap`属性一致，默认值：nowrap <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性容器主轴对齐方式(其中`space-around`值需要iOS7.0+,Android4.4+)\r\n * @method justify-content\r\n * @version 1.0.0\r\n * @param {String} $justify-content 取值与`justify-content`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义多行弹性容器侧轴对齐方式(要求系统：iOS7.0+,Android4.4+)\r\n * @method align-content\r\n * @version 1.8.5\r\n * @param {String} $align-content 取值与`align-content`属性一致，默认值：center <1.8.5>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义单行弹性容器侧轴对齐方式\r\n * @method align-items\r\n * @version 1.0.0\r\n * @param {String} $align-items 取值与`align-items`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性容器中子元素自身的在侧轴对齐方式(要求系统：iOS7.0+,Android4.4+)\r\n * @method align-self\r\n * @version 1.0.0\r\n * @param {String} $align-self 取值与`align-self`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成矩形方法\r\n * @method rect\r\n * @version 1.0.0\r\n * @param {Length} $width 定义矩形的长度 <1.0.0>\r\n * @param {Length} $height 定义矩形的高度 <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成正方形方法\r\n * @method square\r\n * @version 1.0.0\r\n * @param {Length} $size 定义正方形的边长 <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成圆形方法\r\n * @method circle\r\n * @version 1.0.0\r\n * @param {Length} $size 定义圆的半径长度 <1.0.0>\r\n * @param {Length} $radius 定义圆的圆角半径长度 <1.0.0>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 在自适应宽度情况下，确保内容元素的宽高比固定，比如：实现随屏幕大小而变化的正方形。\r\n * @method fixed-scale\r\n * @version 3.0.10\r\n * @param {Length} $width 默认值：100%。用以指定内容元素的初始宽度，由于尺寸需动态变化，不要使用固定单位 <3.0.10>\r\n * @param {Length} $scale 默认值：1/1，即正方形。用以指定内容元素的宽度高比 <3.0.10>\r\n */\n/**\r\n * @module 文本\r\n * @description 链接处理方法\r\n * @method link\r\n * @version 1.0.0\r\n * @param {Color} $color 定义链接颜色 <1.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 文本碰到边界是否换行\r\n * @method wrap\r\n * @version 1.0.0\r\n * @param {Boolean} $is-wrap 定义文本是否换行，默认值：true <2.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 单行文本溢出时显示省略号\r\n * @method ellipsis\r\n * @version 1.0.0\r\n * @param {Length} $width 定义容器的宽度，默认值：null <2.0.0>\r\n * @param {Integer} $line-clamp 定义需要显示的行数，默认值：1（即使用单行溢出的处理方案），需要注意的是本参数只支持webkit内核 <2.1.2>\r\n */\n/**\r\n * @module 文本\r\n * @description 文字隐藏方案\r\n * @method texthide\r\n * @version 1.0.0\r\n * @param {Length} $width 定义容器的宽度，默认值：null <2.0.0>\r\n */\n/**\r\n * Yo框架全局Reset\r\n * Yo重置Mobile及高级浏览器上常见的差异\r\n */\n*,\n::before,\n::after {\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n  -webkit-tap-highlight-color: transparent;\n}\nhtml,\nbody {\n  overflow: hidden;\n  height: 100%;\n}\n::-webkit-scrollbar {\n  display: none;\n}\nhtml {\n  background-color: #eee;\n  color: #212121;\n  font-size: 100px;\n  -webkit-user-select: none;\n  user-select: none;\n}\nbody {\n  margin: 0;\n  font-size: 0.14em;\n  line-height: 1.5;\n  font-family: Helvetica Neue, Helvetica, STHeiTi, sans-serif;\n}\nul,\nol,\ndl,\ndd,\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\nfigure,\nform,\nfieldset,\nlegend,\ninput,\ntextarea,\nbutton,\np,\nblockquote,\nth,\ntd,\npre,\nxmp {\n  margin: 0;\n  padding: 0;\n}\ninput,\ntextarea,\nbutton,\nselect,\npre,\nxmp,\ntt,\ncode,\nkbd,\nsamp {\n  line-height: inherit;\n  font-family: inherit;\n}\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\nsmall,\nbig,\ninput,\ntextarea,\nbutton,\nselect {\n  font-size: inherit;\n}\naddress,\ncite,\ndfn,\nem,\ni,\noptgroup,\nvar {\n  font-style: normal;\n}\ntable {\n  border-collapse: collapse;\n  border-spacing: 0;\n  table-layout: fixed;\n  text-align: left;\n}\nul,\nol,\nmenu {\n  list-style: none;\n}\nfieldset,\nimg {\n  border: 0;\n  vertical-align: middle;\n}\narticle,\naside,\ndetails,\nfigcaption,\nfigure,\nfooter,\nheader,\nmain,\nmenu,\nnav,\nsection,\nsummary {\n  display: block;\n}\naudio,\ncanvas,\nvideo {\n  display: inline-block;\n}\nblockquote:before,\nblockquote:after,\nq:before,\nq:after {\n  content: \" \";\n}\ntextarea,\npre,\nxmp {\n  overflow: auto;\n  -webkit-overflow-scrolling: touch;\n}\ntextarea {\n  resize: vertical;\n}\ninput,\ntextarea,\nbutton,\nselect,\nsummary,\na {\n  outline: 0 none;\n}\ninput,\ntextarea,\nbutton,\nselect {\n  color: inherit;\n}\ninput:disabled,\n  textarea:disabled,\n  button:disabled,\n  select:disabled {\n    opacity: 1;\n}\nbutton::-moz-focus-inner,\ninput::-moz-focus-inner {\n  padding: 0;\n  border: 0;\n}\ninput[type=\"button\"],\ninput[type=\"submit\"],\ninput[type=\"reset\"],\ninput[type=\"file\"]::-webkit-file-upload-button,\ninput[type=\"search\"]::-webkit-search-cancel-button {\n  -webkit-appearance: none;\n  appearance: none;\n}\n::-webkit-details-marker {\n  display: none;\n}\nmark {\n  background-color: transparent;\n}\na,\nins,\ns,\nu,\ndel {\n  text-decoration: none;\n}\na,\nimg {\n  -webkit-touch-callout: none;\n}\na {\n  color: #00afc7;\n}\n.g-clear::after,\n.g-mod::after {\n  display: block;\n  overflow: hidden;\n  clear: both;\n  height: 0;\n  content: \" \";\n}\n@font-face {\n  font-family: yofont;\n  src: url(//ss.qunarzz.com/yo/font/1.0.3/yofont.woff) format(\"woff\"), url(//ss.qunarzz.com/yo/font/1.0.3/yofont.ttf) format(\"truetype\");\n}\n.yo-ico {\n  font-family: yofont !important;\n  font-style: normal;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n  vertical-align: middle;\n}\n@font-face {\n  font-family: 'iconfont';\n  src: url(\"http://localhost:7000/media/iconfont/iconfont.woff\") format(\"woff\"), url(\"http://localhost:7000/media/iconfont/iconfont.ttf\") format(\"truetype\");\n}\n.iconfont {\n  font-family: \"iconfont\" !important;\n  font-size: 16px;\n  font-style: normal;\n  -webkit-font-smoothing: antialiased;\n  -webkit-text-stroke-width: 0.2px;\n  -moz-osx-font-smoothing: grayscale;\n}\n.search_header {\n  height: 44px;\n  background: white;\n  color: #4b4b4b;\n  box-shadow: 0 0 10px rgba(0, 0, 0, 0.06);\n  padding: 5px;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: row;\n  flex-direction: row;\n  width: 100%;\n}\n.search_header .back {\n    line-height: 34px;\n    margin-left: -10px;\n    width: 44px;\n}\n.search_header .back img {\n      height: 18px;\n      width: 18px;\n      margin: auto 15px;\n      vertical-align: middle;\n}\n.search_header .search_box {\n    height: auto;\n    line-height: 30px;\n    width: 75%;\n    background: #e6e6e6;\n    border-radius: 4px;\n}\n.search_header .search_box img {\n      width: 14px;\n      position: relative;\n      margin-left: 10px;\n      margin-right: 6px;\n      vertical-align: middle;\n}\n.search_header .search_box input {\n      display: inline-block;\n      vertical-align: middle;\n      background: #e6e6e6;\n      color: #262626;\n      font-size: 14px;\n      width: 76%;\n      border: 0;\n      height: 34px;\n      line-height: 16px;\n}\n.search_header .search_text {\n    line-height: 34px;\n    margin: auto 15px;\n    color: #262626;\n    position: absolute;\n    right: 0;\n}\n.hot_title {\n  height: 36px;\n  padding-left: 10px;\n  color: #969696;\n}\n.hot_title span {\n    display: inline-block;\n    vertical-align: middle;\n    line-height: 36px;\n}\n.hot_list, .history_list {\n  background: white;\n  padding: 15px 10px 5px;\n}\n.hot_list span, .history_list span {\n    margin: 0 0 10px 10px;\n    display: inline-block;\n    color: #262626;\n    line-height: 30px;\n    padding: 0 10px;\n    background: #f6f5f5;\n    border-radius: 4px;\n}\n.history_title {\n  height: 36px;\n  padding-left: 10px;\n  color: #969696;\n}\n.history_title span {\n    display: inline-block;\n    vertical-align: middle;\n    line-height: 36px;\n}\n.search_all {\n  background: #f0f0f0;\n  height: 100%;\n  width: 100%;\n  position: absolute;\n  z-index: 100000;\n  right: -100%;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n  flex-direction: column;\n}\n.lists_container {\n  -webkit-box-flex: 1;\n  -webkit-flex: 1;\n  flex: 1;\n  width: .1px;\n  overflow-y: scroll;\n  background: white;\n  width: 100%;\n}\n.search_container {\n  -webkit-box-flex: 1;\n  -webkit-flex: 1;\n  flex: 1;\n  width: .1px;\n  width: 100%;\n}\n.lists_title {\n  text-align: left;\n  height: 50px;\n  line-height: 50px;\n}\n.lists_title span {\n    width: .4266rem;\n    height: .1322rem;\n    display: inline-block;\n    background-size: 100% 100%;\n    background-image: url(" + __webpack_require__(63) + ");\n    background-repeat: no-repeat;\n    margin-left: 26px;\n}\n.lists_title1 span {\n  background-image: url(" + __webpack_require__(64) + ");\n}\n.lists_message ul .img_container {\n  height: 92px;\n}\n.lists_message ul .img_container img {\n    width: 100%;\n}\n.lists_message ul .sell_out {\n  padding-left: 15px;\n  height: 70px;\n  position: relative;\n}\n.lists_message ul .sell_out span:first-child {\n    display: block;\n    position: absolute;\n    color: #4b4b4b;\n    top: 27px;\n    font-size: 18px;\n    height: 20px;\n}\n.lists_message ul .sell_out span:last-child {\n    position: absolute;\n    bottom: 0;\n    font-size: 12px;\n    color: #968D91;\n    height: 18px;\n    line-height: 18px;\n}\n.lists_message ul li {\n  height: 164px;\n  position: relative;\n}\n.lists_message ul li::after {\n    pointer-events: none;\n    position: absolute;\n    z-index: 999;\n    top: 0;\n    left: 0;\n    content: \" \";\n    border-color: #f5f5f5;\n    border-style: solid;\n    border-width: 0 0 1px 0;\n    -webkit-transform-origin: 0 0;\n    transform-origin: 0 0;\n}\n@media (max--moz-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.49), (max-device-pixel-ratio: 1.49), (max-resolution: 143dpi), (max-resolution: 1.49dppx) {\n.lists_message ul li::after {\n        width: 100%;\n        height: 100%;\n}\n}\n@media (min--moz-device-pixel-ratio: 1.5) and (max--moz-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.49), (min-device-pixel-ratio: 1.5) and (max-device-pixel-ratio: 2.49), (min-resolution: 144dpi) and (max-resolution: 239dpi), (min-resolution: 1.5dppx) and (max-resolution: 2.49dppx) {\n.lists_message ul li::after {\n        width: 200%;\n        height: 200%;\n        -webkit-transform: scale(0.5);\n        transform: scale(0.5);\n}\n}\n@media (min--moz-device-pixel-ratio: 2.5), (-webkit-min-device-pixel-ratio: 2.5), (min-device-pixel-ratio: 2.5), (min-resolution: 240dpi), (min-resolution: 2.5dppx) {\n.lists_message ul li::after {\n        width: 300%;\n        height: 300%;\n        -webkit-transform: scale(0.33333);\n        transform: scale(0.33333);\n}\n}\n.lists_message ul li div.li_container {\n    width: 100%;\n    height: 100%;\n    padding-top: 20px;\n    padding-bottom: 23px;\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: flex;\n    position: relative;\n}\n.lists_message ul li div.li_container .img_left {\n      width: 150px;\n      padding: 0 15px;\n      position: relative;\n}\n.lists_message ul li div.li_container .img_left img {\n        border: 0;\n}\n.lists_message ul li div.li_container .img_left img:first-child {\n          width: 100%;\n}\n.lists_message ul li div.li_container .img_left img:last-child {\n          position: absolute;\n          left: 16px;\n          height: 32px;\n          top: 0;\n}\n.lists_message ul li div.li_container .message_right {\n      -webkit-box-flex: 1;\n      -webkit-flex: 1;\n      flex: 1;\n      width: .1px;\n      width: 100%;\n      position: relative;\n}\n.lists_message ul li div.li_container .message_right .message_title {\n        font-size: 16px;\n        padding-top: 11px;\n        white-space: nowrap;\n        overflow: hidden;\n        text-overflow: ellipsis;\n        letter-spacing: -1px;\n        color: #474245;\n        width: 140px;\n}\n.lists_message ul li div.li_container .message_right .message_info {\n        font-size: 14px;\n        color: #969696;\n        white-space: nowrap;\n        text-overflow: ellipsis;\n        overflow: hidden;\n        width: 140px;\n}\n.lists_message ul li div.li_container .message_right .message_des {\n        height: 25px;\n        line-height: 17px;\n}\n.lists_message ul li div.li_container .message_right .message_des span {\n          display: inline-block;\n          border-radius: 2px;\n          font-size: 9px;\n          height: 13px;\n          line-height: 11px;\n          background: white;\n          color: #c6c6c6;\n          border: 1px solid #c6c6c6;\n          margin-right: 5px;\n          padding: 1px;\n}\n.lists_message ul li div.li_container .message_right .message_highprice {\n        font-size: 12px;\n        color: #ffc38d;\n        line-height: 8px;\n}\n.lists_message ul li div.li_container .message_right .message_lowprice {\n        color: #ff4891;\n        font-size: 12px;\n}\n.lists_message ul li div.li_container .message_right .message_lowprice span span:first-child {\n          letter-spacing: -3px;\n}\n.lists_message ul li div.li_container .message_right .message_lowprice span span:last-child {\n          font-size: 16px;\n          letter-spacing: -1px;\n          display: inline-block;\n          height: 22px;\n          vertical-align: bottom;\n}\n.lists_message ul li div.li_container .message_right .message_cart {\n        position: absolute;\n        bottom: 5px;\n        right: 4%;\n        height: 30px;\n        text-align: right;\n}\n.lists_message ul li div.li_container .message_right .message_cart img {\n          width: 49px;\n          position: absolute;\n          bottom: -8px;\n          right: -6px !important;\n}\n", "", {"version":3,"sources":["D:/missFresh/src/modules/index/components/search.vue"],"names":[],"mappings":"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","file":"search.vue","sourcesContent":["@charset \"UTF-8\";\n/**\r\n * Yo框架全局base定义\r\n * 本文件与variables不同地方在于，这里所定义的map可以使用在variables和任何地方\r\n * 本文件中map使用\"_\"开头，extra中不使用\"_\"\r\n * base ⇌ extra\r\n */\n/**\r\n * Yo框架全局Variables\r\n * Yo基础变量map，如果不想定义某属性，将其value设置为null\r\n * Yo仅使用2种长度单位：px用于边框，rem用于除边框之外的所有地方\r\n * 本文件中map使用\"_\"开头，config中不使用\"_\"\r\n * variables ⇌ config\r\n */\n/**\r\n * Yo框架自定义全局函数\r\n * 扩充Sass默认函数库，用以增强语法\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的第一项\r\n * @function first\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的最后一项\r\n * @function last\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的倒数第几项\r\n * @function nth-last\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $index 指定需要返回的值在list中的倒数位置 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 移除SassList中的某个项目并返回新的List\r\n * @function remove\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {String} $value 指定需要被删除的值 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 截取SassList中的某个部分并返回新的List\r\n * @function slice\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $start 指定需要截取的开始下标 <2.1.0>\r\n * @param {Integer} $end 指定需要截取的结束下标（不包括end），当该值缺省时默认为末尾下标 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 从SassList中添加/删除项目，然后返回新的List。\r\n * @function splice\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $index 指定需要移除的开始下标 <2.1.0>\r\n * @param {Integer} $count 指定需要移除的数量，不可以为负值，0表示不移除 <2.1.0>\r\n * @param {String} $values 指定需要添加的新值（可以是多个），如果该值缺省，则表示只移除不添加新值 <2.1.0>\r\n */\n/**\r\n * Yo框架全局基础方法\r\n * 包括响应式方案，CSS3兼容性方案，厂商前缀方案，iconfont方案，flex布局等全局方法\r\n */\n/**\r\n * @module 常用方法\r\n * @description 给需要的属性加厂家前缀\r\n * @method prefix\r\n * @version 1.0.0\r\n * @param {String} $property 指定属性 <1.0.0>\r\n * @param {String} $value 指定属性值 <1.0.0>\r\n * @skip\r\n */\n/**\r\n * @module 常用方法\r\n * @description 定义字体图标\r\n * @method _iconfont\r\n * @version 1.0.0\r\n * @skip\r\n */\n/**\r\n * @module 常用方法\r\n * @description 四则运算(系统要求：iOS6.0+,Android4.4+)\r\n * @method calc\r\n * @version 1.7.0\r\n * @param {String} $property 指定需要进行计算的CSS属性 <1.7.0>\r\n * @param {String} $value 与原生CSS语法一致，区别在于需要使用引号包裹表达式 <1.7.0>\r\n * @example\r\n * .calc {\r\n *     @include calc(width, \"100% - 100px\");\r\n * }\r\n *\r\n * <div class=\"calc\">四则运算</div>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 定义响应式方案\r\n * @method responsive\r\n * @version 1.0.0\r\n * @param {String} $media 指定媒体查询条件，取值为`config`文件map `media-types`中的值 <1.0.0>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 清除浮动方案\r\n * @method clearfix\r\n * @version 1.0.0\r\n * @param {String} $type 指定清除浮动的方式，包括：pseudo-element | bfc，默认值：pseudo-element <1.8.5>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 清除行内级元素间间隙方案\r\n * @method clearspace\r\n * @version 3.0.3\r\n * @param {Length} $font-size 指定子元素字号，默认值：.14rem <3.0.3>\r\n * @example\r\n * .demo {\r\n *     @include clearspace;\r\n * }\r\n *\r\n * <div class=\"demo\">\r\n *      <span class=\"item\">1</span>\r\n *      <span class=\"item\">2</span>\r\n *      <span class=\"item\">3</span>\r\n * </div>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 描述元素内容在横、纵方向上的对齐方式，默认为水平垂直居中对齐\r\n * @method align\r\n * @version 2.0.0\r\n * @param {String} $flexbox 元素布局方式，可选值：flex | inline-flex，默认值：flex <2.0.0>\r\n * @param {Keyword} $justify-content 元素内容的水平对齐方式，取值与`justify-content`属性一致，默认值：center <2.0.0>\r\n * @param {Keyword} $align-items 元素内容的垂直对齐方式，取值与`align-items`属性一致，默认值：center <2.0.0>\r\n * @example\r\n * .demo {\r\n *     @include align;\r\n * }\r\n *\r\n * <div class=\"demo\">\r\n *      <img alt=\"未知尺寸图片居中\" />\r\n * </div>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 定义是否有滚动条\r\n * @method overflow\r\n * @version 1.0.0\r\n * @param {String} $overflow 取值与最新原生语法一致，默认值：auto <1.0.0>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 生成全屏方法\r\n * @method fullscreen\r\n * @version 1.7.0\r\n * @param {Integer} $z-index 指定层叠级别 <1.7.0>\r\n * @param {Keywords} $position 指定定位方式，取除`static | relative`之外的值，默认值：absolute <1.8.5>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义使用何种滤镜\r\n * @method filter\r\n * @version 1.7.0\r\n * @param {String} $filter 取值与`filter`属性一致 <1.7.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义UA默认外观\r\n * @method appearance\r\n * @version 1.0.0\r\n * @param {String} $appearance 取值与`appearance`属性一致，默认值：none <1.0.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义如何选中内容\r\n * @method user-select\r\n * @version 1.0.0\r\n * @param {String} $user-select 取值与`user-select`属性一致，默认值：none <1.0.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义盒模型\r\n * @method box-sizing\r\n * @version 1.0.0\r\n * @param {String} $box-sizing 指定盒模型类型，取值与`box-sizing`属性一致，默认值：border-box <1.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义渐变色值\r\n * @method gradient\r\n * @version 1.0.0\r\n * @param {String} $type 指定渐变的4种类型：linear, repeating-linear, radial, repeating-radial <1.0.0>\r\n * @param {String} $dir 指定渐变方向，可选值：[left | right] || [top | bottom] | angle <2.0.0>\r\n * @param {String} $gradient 指定渐变取值，与w3c最新原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景图像缩放（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-size\r\n * @version 1.4.0\r\n * @param {Keywords | Length} $background-size 指定背景图缩放值，取值与`background-size`属性一致 <1.4.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景裁减（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-clip\r\n * @version 1.6.0\r\n * @param {Keywords} $background-clip 指定背景图缩放值，取值与`background-clip`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景显示区域（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-origin\r\n * @version 1.6.0\r\n * @param {Keywords} $background-origin 指定背景图`background-position`属性计算相对的参考点，取值与`background-origin`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 为元素添加边框（包括1px边框）\r\n * @method border\r\n * @version 2.0.0\r\n * @param {String} $border-width 指定边框厚度（单位为px），默认值：1px，取值与`border-width`属性一致，不同方向代表边框位置 <2.0.0>\r\n * @param {String} $border-color 指定边框颜色 <2.0.0>\r\n * @param {String} $border-style 指定边框样式 <2.0.0>\r\n * @param {String} $radius 指定边框圆角半径，默认值：null <2.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义圆角，用于修复某些安卓机型上“圆角+边框+背景”，背景溢出的情况\r\n * @method border-radius\r\n * @version 1.6.0\r\n * @param {Length} $border-radius 指定元素的圆角半径，取值与`border-radius`属性一致 <1.6.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 定义简单变换\r\n * @method transform\r\n * @version 1.0.0\r\n * @param {String} $transform 取值范围与`transform`属性一致 <1.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 定义变换原点\r\n * @method transform-origin\r\n * @version 1.0.0\r\n * @param {Length | Percentage | Keywords} $transform-origin 取值范围与`transform-origin`属性一致 <1.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定某元素的子元素是（看起来）位于三维空间内，还是在该元素所在的平面内被扁平化\r\n * @method transform-style\r\n * @version 2.0.0\r\n * @param {String} $transform-style 取值范围与`transform-style`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定观察者与「z=0」平面的距离，使具有三维位置变换的元素产生透视效果。「z>0」的三维元素比正常大，而「z<0」时则比正常小，大小程度由该属性的值决定。\r\n * @method perspective\r\n * @version 2.0.0\r\n * @param {none | Length} $perspective 取值范围与`perspective`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定透视点的位置\r\n * @method perspective-origin\r\n * @version 2.0.0\r\n * @param {Length | Percentage | Keywords} $perspective-origin 取值范围与`perspective-origin`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定元素背面面向用户时是否可见\r\n * @method backface-visibility\r\n * @version 2.0.0\r\n * @param {Keywords} $backface-visibility 取值范围与`backface-visibility`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 定义动画\r\n * @method animation\r\n * @version 1.0.0\r\n * @param {String} $animation 取值与原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定需要引用的动画名称\r\n * @method animation-name\r\n * @version 3.0.0\r\n * @param {String} $animation-name 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画运行一次所持续的时长\r\n * @method animation-duration\r\n * @version 3.0.0\r\n * @param {String} $animation-duration 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画运行方式\r\n * @method animation-timing-function\r\n * @version 3.0.0\r\n * @param {String} $animation-timing-function 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画延迟多久之后再开始\r\n * @method animation-delay\r\n * @version 3.0.0\r\n * @param {String} $animation-delay 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画循环几次\r\n * @method animation-iteration-count\r\n * @version 3.0.0\r\n * @param {String} $animation-iteration-count 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画的运动方向\r\n * @method animation-direction\r\n * @version 3.0.0\r\n * @param {String} $animation-direction 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画的运动状态\r\n * @method animation-play-state\r\n * @version 3.0.0\r\n * @param {String} $animation-play-state 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画时间之外的状态\r\n * @method animation-fill-mode\r\n * @version 3.0.0\r\n * @param {String} $animation-fill-mode 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Transition\r\n * @description 定义补间\r\n * @method transition\r\n * @version 1.0.0\r\n * @param {String} $transition 取值与原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义显示类型为伸缩盒\r\n * @method flexbox\r\n * @version 1.0.0\r\n * @param {String} $flexbox 默认值：flex，可选值：flex | inline-flex <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素如何分配空间\r\n * @method flex\r\n * @version 1.0.0\r\n * @param {Number} $flex 取值与`flex`属性一致，默认值：1 <1.0.0>\r\n * @param {String} $direction 默认值: row，可选值：row | column <1.5.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素的排版顺序\r\n * @method order\r\n * @version 1.0.0\r\n * @param {Integer} $order 取值与`order`属性一致，默认值：1 <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性盒子元素流动方向及遇见边界时是否换行(要求系统：iOS7.0+, Android4.4+)\r\n * @method flex-flow\r\n * @version 2.0.0\r\n * @param {String} $flex-flow 取值与`flex-flow`属性一致，默认值：row nowrap <2.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素的流动方向\r\n * @method flex-direction\r\n * @version 1.0.0\r\n * @param {String} $flex-direction 取值与`flex-direction`属性一致，默认值：row <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性盒子元素溢出后排版(要求系统：iOS7.0+, Android4.4+)\r\n * @method flex-wrap\r\n * @version 1.0.0\r\n * @param {String} $flex-wrap 取值与`flex-wrap`属性一致，默认值：nowrap <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性容器主轴对齐方式(其中`space-around`值需要iOS7.0+,Android4.4+)\r\n * @method justify-content\r\n * @version 1.0.0\r\n * @param {String} $justify-content 取值与`justify-content`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义多行弹性容器侧轴对齐方式(要求系统：iOS7.0+,Android4.4+)\r\n * @method align-content\r\n * @version 1.8.5\r\n * @param {String} $align-content 取值与`align-content`属性一致，默认值：center <1.8.5>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义单行弹性容器侧轴对齐方式\r\n * @method align-items\r\n * @version 1.0.0\r\n * @param {String} $align-items 取值与`align-items`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性容器中子元素自身的在侧轴对齐方式(要求系统：iOS7.0+,Android4.4+)\r\n * @method align-self\r\n * @version 1.0.0\r\n * @param {String} $align-self 取值与`align-self`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成矩形方法\r\n * @method rect\r\n * @version 1.0.0\r\n * @param {Length} $width 定义矩形的长度 <1.0.0>\r\n * @param {Length} $height 定义矩形的高度 <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成正方形方法\r\n * @method square\r\n * @version 1.0.0\r\n * @param {Length} $size 定义正方形的边长 <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成圆形方法\r\n * @method circle\r\n * @version 1.0.0\r\n * @param {Length} $size 定义圆的半径长度 <1.0.0>\r\n * @param {Length} $radius 定义圆的圆角半径长度 <1.0.0>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 在自适应宽度情况下，确保内容元素的宽高比固定，比如：实现随屏幕大小而变化的正方形。\r\n * @method fixed-scale\r\n * @version 3.0.10\r\n * @param {Length} $width 默认值：100%。用以指定内容元素的初始宽度，由于尺寸需动态变化，不要使用固定单位 <3.0.10>\r\n * @param {Length} $scale 默认值：1/1，即正方形。用以指定内容元素的宽度高比 <3.0.10>\r\n */\n/**\r\n * @module 文本\r\n * @description 链接处理方法\r\n * @method link\r\n * @version 1.0.0\r\n * @param {Color} $color 定义链接颜色 <1.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 文本碰到边界是否换行\r\n * @method wrap\r\n * @version 1.0.0\r\n * @param {Boolean} $is-wrap 定义文本是否换行，默认值：true <2.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 单行文本溢出时显示省略号\r\n * @method ellipsis\r\n * @version 1.0.0\r\n * @param {Length} $width 定义容器的宽度，默认值：null <2.0.0>\r\n * @param {Integer} $line-clamp 定义需要显示的行数，默认值：1（即使用单行溢出的处理方案），需要注意的是本参数只支持webkit内核 <2.1.2>\r\n */\n/**\r\n * @module 文本\r\n * @description 文字隐藏方案\r\n * @method texthide\r\n * @version 1.0.0\r\n * @param {Length} $width 定义容器的宽度，默认值：null <2.0.0>\r\n */\n/**\r\n * Yo框架全局Reset\r\n * Yo重置Mobile及高级浏览器上常见的差异\r\n */\n*,\n::before,\n::after {\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n  -webkit-tap-highlight-color: transparent; }\n\nhtml,\nbody {\n  overflow: hidden;\n  height: 100%; }\n\n::-webkit-scrollbar {\n  display: none; }\n\nhtml {\n  background-color: #eee;\n  color: #212121;\n  font-size: 100px;\n  -webkit-user-select: none;\n  user-select: none; }\n\nbody {\n  margin: 0;\n  font-size: 0.14em;\n  line-height: 1.5;\n  font-family: Helvetica Neue, Helvetica, STHeiTi, sans-serif; }\n\nul,\nol,\ndl,\ndd,\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\nfigure,\nform,\nfieldset,\nlegend,\ninput,\ntextarea,\nbutton,\np,\nblockquote,\nth,\ntd,\npre,\nxmp {\n  margin: 0;\n  padding: 0; }\n\ninput,\ntextarea,\nbutton,\nselect,\npre,\nxmp,\ntt,\ncode,\nkbd,\nsamp {\n  line-height: inherit;\n  font-family: inherit; }\n\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\nsmall,\nbig,\ninput,\ntextarea,\nbutton,\nselect {\n  font-size: inherit; }\n\naddress,\ncite,\ndfn,\nem,\ni,\noptgroup,\nvar {\n  font-style: normal; }\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0;\n  table-layout: fixed;\n  text-align: left; }\n\nul,\nol,\nmenu {\n  list-style: none; }\n\nfieldset,\nimg {\n  border: 0;\n  vertical-align: middle; }\n\narticle,\naside,\ndetails,\nfigcaption,\nfigure,\nfooter,\nheader,\nmain,\nmenu,\nnav,\nsection,\nsummary {\n  display: block; }\n\naudio,\ncanvas,\nvideo {\n  display: inline-block; }\n\nblockquote:before,\nblockquote:after,\nq:before,\nq:after {\n  content: \"\\0020\"; }\n\ntextarea,\npre,\nxmp {\n  overflow: auto;\n  -webkit-overflow-scrolling: touch; }\n\ntextarea {\n  resize: vertical; }\n\ninput,\ntextarea,\nbutton,\nselect,\nsummary,\na {\n  outline: 0 none; }\n\ninput,\ntextarea,\nbutton,\nselect {\n  color: inherit; }\n  input:disabled,\n  textarea:disabled,\n  button:disabled,\n  select:disabled {\n    opacity: 1; }\n\nbutton::-moz-focus-inner,\ninput::-moz-focus-inner {\n  padding: 0;\n  border: 0; }\n\ninput[type=\"button\"],\ninput[type=\"submit\"],\ninput[type=\"reset\"],\ninput[type=\"file\"]::-webkit-file-upload-button,\ninput[type=\"search\"]::-webkit-search-cancel-button {\n  -webkit-appearance: none;\n  appearance: none; }\n\n::-webkit-details-marker {\n  display: none; }\n\nmark {\n  background-color: transparent; }\n\na,\nins,\ns,\nu,\ndel {\n  text-decoration: none; }\n\na,\nimg {\n  -webkit-touch-callout: none; }\n\na {\n  color: #00afc7; }\n\n.g-clear::after,\n.g-mod::after {\n  display: block;\n  overflow: hidden;\n  clear: both;\n  height: 0;\n  content: \"\\0020\"; }\n\n@font-face {\n  font-family: yofont;\n  src: url(//ss.qunarzz.com/yo/font/1.0.3/yofont.woff) format(\"woff\"), url(//ss.qunarzz.com/yo/font/1.0.3/yofont.ttf) format(\"truetype\"); }\n\n.yo-ico {\n  font-family: yofont !important;\n  font-style: normal;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n  vertical-align: middle; }\n\n@font-face {\n  font-family: 'iconfont';\n  src: url(\"http://localhost:7000/media/iconfont/iconfont.woff\") format(\"woff\"), url(\"http://localhost:7000/media/iconfont/iconfont.ttf\") format(\"truetype\"); }\n\n.iconfont {\n  font-family: \"iconfont\" !important;\n  font-size: 16px;\n  font-style: normal;\n  -webkit-font-smoothing: antialiased;\n  -webkit-text-stroke-width: 0.2px;\n  -moz-osx-font-smoothing: grayscale; }\n\n.search_header {\n  height: 44px;\n  background: white;\n  color: #4b4b4b;\n  box-shadow: 0 0 10px rgba(0, 0, 0, 0.06);\n  padding: 5px;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: flex;\n  -webkit-box-orient: horizontal;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: row;\n  flex-direction: row;\n  width: 100%; }\n  .search_header .back {\n    line-height: 34px;\n    margin-left: -10px;\n    width: 44px; }\n    .search_header .back img {\n      height: 18px;\n      width: 18px;\n      margin: auto 15px;\n      vertical-align: middle; }\n  .search_header .search_box {\n    height: auto;\n    line-height: 30px;\n    width: 75%;\n    background: #e6e6e6;\n    border-radius: 4px; }\n    .search_header .search_box img {\n      width: 14px;\n      position: relative;\n      margin-left: 10px;\n      margin-right: 6px;\n      vertical-align: middle; }\n    .search_header .search_box input {\n      display: inline-block;\n      vertical-align: middle;\n      background: #e6e6e6;\n      color: #262626;\n      font-size: 14px;\n      width: 76%;\n      border: 0;\n      height: 34px;\n      line-height: 16px; }\n  .search_header .search_text {\n    line-height: 34px;\n    margin: auto 15px;\n    color: #262626;\n    position: absolute;\n    right: 0; }\n\n.hot_title {\n  height: 36px;\n  padding-left: 10px;\n  color: #969696; }\n  .hot_title span {\n    display: inline-block;\n    vertical-align: middle;\n    line-height: 36px; }\n\n.hot_list, .history_list {\n  background: white;\n  padding: 15px 10px 5px; }\n  .hot_list span, .history_list span {\n    margin: 0 0 10px 10px;\n    display: inline-block;\n    color: #262626;\n    line-height: 30px;\n    padding: 0 10px;\n    background: #f6f5f5;\n    border-radius: 4px; }\n\n.history_title {\n  height: 36px;\n  padding-left: 10px;\n  color: #969696; }\n  .history_title span {\n    display: inline-block;\n    vertical-align: middle;\n    line-height: 36px; }\n\n.search_all {\n  background: #f0f0f0;\n  height: 100%;\n  width: 100%;\n  position: absolute;\n  z-index: 100000;\n  right: -100%;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n  flex-direction: column; }\n\n.lists_container {\n  -webkit-box-flex: 1;\n  -webkit-flex: 1;\n  flex: 1;\n  width: .1px;\n  overflow-y: scroll;\n  background: white;\n  width: 100%; }\n\n.search_container {\n  -webkit-box-flex: 1;\n  -webkit-flex: 1;\n  flex: 1;\n  width: .1px;\n  width: 100%; }\n\n.lists_title {\n  text-align: left;\n  height: 50px;\n  line-height: 50px; }\n  .lists_title span {\n    width: .4266rem;\n    height: .1322rem;\n    display: inline-block;\n    background-size: 100% 100%;\n    background-image: url(../images/tomorrow-chrome.png);\n    background-repeat: no-repeat;\n    margin-left: 26px; }\n\n.lists_title1 span {\n  background-image: url(../images/nation.png); }\n\n.lists_message ul .img_container {\n  height: 92px; }\n  .lists_message ul .img_container img {\n    width: 100%; }\n\n.lists_message ul .sell_out {\n  padding-left: 15px;\n  height: 70px;\n  position: relative; }\n  .lists_message ul .sell_out span:first-child {\n    display: block;\n    position: absolute;\n    color: #4b4b4b;\n    top: 27px;\n    font-size: 18px;\n    height: 20px; }\n  .lists_message ul .sell_out span:last-child {\n    position: absolute;\n    bottom: 0;\n    font-size: 12px;\n    color: #968D91;\n    height: 18px;\n    line-height: 18px; }\n\n.lists_message ul li {\n  height: 164px;\n  position: relative; }\n  .lists_message ul li::after {\n    pointer-events: none;\n    position: absolute;\n    z-index: 999;\n    top: 0;\n    left: 0;\n    content: \"\\0020\";\n    border-color: #f5f5f5;\n    border-style: solid;\n    border-width: 0 0 1px 0;\n    -webkit-transform-origin: 0 0;\n    transform-origin: 0 0; }\n    @media (max--moz-device-pixel-ratio: 1.49), (-webkit-max-device-pixel-ratio: 1.49), (max-device-pixel-ratio: 1.49), (max-resolution: 143dpi), (max-resolution: 1.49dppx) {\n      .lists_message ul li::after {\n        width: 100%;\n        height: 100%; } }\n    @media (min--moz-device-pixel-ratio: 1.5) and (max--moz-device-pixel-ratio: 2.49), (-webkit-min-device-pixel-ratio: 1.5) and (-webkit-max-device-pixel-ratio: 2.49), (min-device-pixel-ratio: 1.5) and (max-device-pixel-ratio: 2.49), (min-resolution: 144dpi) and (max-resolution: 239dpi), (min-resolution: 1.5dppx) and (max-resolution: 2.49dppx) {\n      .lists_message ul li::after {\n        width: 200%;\n        height: 200%;\n        -webkit-transform: scale(0.5);\n        transform: scale(0.5); } }\n    @media (min--moz-device-pixel-ratio: 2.5), (-webkit-min-device-pixel-ratio: 2.5), (min-device-pixel-ratio: 2.5), (min-resolution: 240dpi), (min-resolution: 2.5dppx) {\n      .lists_message ul li::after {\n        width: 300%;\n        height: 300%;\n        -webkit-transform: scale(0.33333);\n        transform: scale(0.33333); } }\n  .lists_message ul li div.li_container {\n    width: 100%;\n    height: 100%;\n    padding-top: 20px;\n    padding-bottom: 23px;\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: flex;\n    position: relative; }\n    .lists_message ul li div.li_container .img_left {\n      width: 150px;\n      padding: 0 15px;\n      position: relative; }\n      .lists_message ul li div.li_container .img_left img {\n        border: 0; }\n        .lists_message ul li div.li_container .img_left img:first-child {\n          width: 100%; }\n        .lists_message ul li div.li_container .img_left img:last-child {\n          position: absolute;\n          left: 16px;\n          height: 32px;\n          top: 0; }\n    .lists_message ul li div.li_container .message_right {\n      -webkit-box-flex: 1;\n      -webkit-flex: 1;\n      flex: 1;\n      width: .1px;\n      width: 100%;\n      position: relative; }\n      .lists_message ul li div.li_container .message_right .message_title {\n        font-size: 16px;\n        padding-top: 11px;\n        white-space: nowrap;\n        overflow: hidden;\n        text-overflow: ellipsis;\n        letter-spacing: -1px;\n        color: #474245;\n        width: 140px; }\n      .lists_message ul li div.li_container .message_right .message_info {\n        font-size: 14px;\n        color: #969696;\n        white-space: nowrap;\n        text-overflow: ellipsis;\n        overflow: hidden;\n        width: 140px; }\n      .lists_message ul li div.li_container .message_right .message_des {\n        height: 25px;\n        line-height: 17px; }\n        .lists_message ul li div.li_container .message_right .message_des span {\n          display: inline-block;\n          border-radius: 2px;\n          font-size: 9px;\n          height: 13px;\n          line-height: 11px;\n          background: white;\n          color: #c6c6c6;\n          border: 1px solid #c6c6c6;\n          margin-right: 5px;\n          padding: 1px; }\n      .lists_message ul li div.li_container .message_right .message_highprice {\n        font-size: 12px;\n        color: #ffc38d;\n        line-height: 8px; }\n      .lists_message ul li div.li_container .message_right .message_lowprice {\n        color: #ff4891;\n        font-size: 12px; }\n        .lists_message ul li div.li_container .message_right .message_lowprice span span:first-child {\n          letter-spacing: -3px; }\n        .lists_message ul li div.li_container .message_right .message_lowprice span span:last-child {\n          font-size: 16px;\n          letter-spacing: -1px;\n          display: inline-block;\n          height: 22px;\n          vertical-align: bottom; }\n      .lists_message ul li div.li_container .message_right .message_cart {\n        position: absolute;\n        bottom: 5px;\n        right: 4%;\n        height: 30px;\n        text-align: right; }\n        .lists_message ul li div.li_container .message_right .message_cart img {\n          width: 49px;\n          position: absolute;\n          bottom: -8px;\n          right: -6px !important; }\n"],"sourceRoot":""}]);
+
+// exports
+
+
+/***/ }),
+/* 63 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "media/images/tomorrow-chrome.png";
+
+/***/ }),
+/* 64 */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "media/images/nation.png";
+
+/***/ }),
+/* 65 */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+
+
+Object.defineProperty(exports, "__esModule", {
+	value: true
+});
+
+var _axios = __webpack_require__(5);
+
+var _axios2 = _interopRequireDefault(_axios);
+
+var _store = __webpack_require__(6);
+
+var _store2 = _interopRequireDefault(_store);
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+
+exports.default = {
+	props: ["getmessage"],
+	data: function data() {
+		return {
+			search_list: [],
+			goods_lists: [],
+			goods_lists1: [],
+			isShow: false
+		};
+	},
+	mounted: function mounted() {
+		(0, _axios2.default)({
+			url: "/api/v3/product/searchhotwords/?device_id=52efdf46fa06eeda247fc87856ff93ae&env=web&fromSource=zhuye&platform=web&uuid=52efdf46fa06eeda247fc87856ff93ae&version=3.8.0.1",
+			method: "get"
+		}).then(function (res) {
+			this.search_list = res.data.data;
+		}.bind(this));
+	},
+
+	methods: {
+		goback: function goback() {
+			this.isShow = false;
+			_store2.default.commit('show', false);
+		},
+		search: function search() {
+			this.isShow = true;
+			(0, _axios2.default)({
+				url: "/api/search/?device_id=52efdf46fa06eeda247fc87856ff93ae&env=web&fromSource=zhuye&kw=%E5%A5%87%E5%BC%82%E6%9E%9C&platform=web&uuid=52efdf46fa06eeda247fc87856ff93ae&version=3.8.0.1",
+				method: "get",
+				headers: {
+					'x-region': '{"station_code":"","address_code":"330100"}',
+					'X-Tingyun-Id': 'Q1KLryMuSto;r=36224154',
+					'platform': 'web',
+					"version": '3.8.0.1'
+				}
+			}).then(function (res) {
+				console.log(res.data.data);
+				this.goods_lists = res.data.data[0];
+				this.goods_lists1 = res.data.data[1];
+			}.bind(this));
+		}
+	}
+};
+
+/***/ }),
+/* 66 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -32145,17 +32776,338 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "m-index" }, [
-    _c("header", [_c("IndexHeader")], 1),
+  return _c("div", { staticClass: "search_all" }, [
+    _c("div", { staticClass: "search_header" }, [
+      _c("div", { staticClass: "back" }, [
+        _c("img", {
+          attrs: {
+            src: "//static-as.missfresh.cn/frontend/img/back-search.png"
+          },
+          on: {
+            click: function($event) {
+              _vm.getmessage("slideout")
+            }
+          }
+        })
+      ]),
+      _vm._v(" "),
+      _vm._m(0),
+      _vm._v(" "),
+      _c("div", { staticClass: "search_text" }, [
+        _c("span", { on: { click: _vm.search } }, [_vm._v("搜索")])
+      ])
+    ]),
     _vm._v(" "),
-    _c(
-      "section",
-      [_c("router-view", [_vm._t("default", [_vm._v("123")])], 2)],
-      1
-    ),
+    !_vm.isShow
+      ? _c("div", { staticClass: "search_container" }, [
+          _c("div", { staticClass: "hot" }, [
+            _vm._m(1),
+            _vm._v(" "),
+            _c(
+              "div",
+              { staticClass: "hot_list" },
+              _vm._l(_vm.search_list, function(value, i) {
+                return _c("span", { key: i }, [_vm._v(_vm._s(value))])
+              })
+            )
+          ]),
+          _vm._v(" "),
+          _vm._m(2)
+        ])
+      : _vm._e(),
     _vm._v(" "),
-    _c("footer", [_c("IndexFooter")], 1)
+    _vm.isShow
+      ? _c("div", { staticClass: "lists_container" }, [
+          _vm._m(3),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "lists_message" },
+            _vm._l(_vm.goods_lists, function(goods, i) {
+              return _c(
+                "ul",
+                _vm._l(goods, function(goods_list, i) {
+                  return goods_list.buy_permission === 0 && i <= 2
+                    ? _c("li", [
+                        _c("div", { staticClass: "li_container" }, [
+                          _c("div", { staticClass: "img_left" }, [
+                            _c("img", {
+                              directives: [
+                                {
+                                  name: "lazy",
+                                  rawName: "v-lazy",
+                                  value: goods_list.image,
+                                  expression: "goods_list.image"
+                                }
+                              ],
+                              attrs: { src: goods_list.image }
+                            }),
+                            _vm._v(" "),
+                            _c("img", {
+                              attrs: { src: goods_list.promote_tag }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "message_right" }, [
+                            _c("div", { staticClass: "message_title" }, [
+                              _vm._v(
+                                "\n\t\t\t\t\t\t\t\t" +
+                                  _vm._s(goods_list.name) +
+                                  "\n\t\t\t\t\t\t\t"
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "message_info" }, [
+                              _vm._v(
+                                "\n\t\t\t\t\t\t\t\t" +
+                                  _vm._s(goods_list.subtitle) +
+                                  "\n\t\t\t\t\t\t\t"
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "message_des" },
+                              _vm._l(goods_list.product_tags, function(value) {
+                                return _c("span", [_vm._v(_vm._s(value.name))])
+                              })
+                            ),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "message_highprice" }, [
+                              _c("span", [
+                                _vm._v(
+                                  "可用券价 ¥" +
+                                    _vm._s(
+                                      goods_list.vip_price_pro.price_up.price /
+                                        100
+                                    )
+                                )
+                              ])
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "message_lowprice" }, [
+                              _c("span", [
+                                _vm._v("商城价 "),
+                                _c("span", [_vm._v("¥ ")]),
+                                _c("span", [
+                                  _vm._v(
+                                    " " +
+                                      _vm._s(
+                                        goods_list.vip_price_pro.price_down
+                                          .price / 100
+                                      )
+                                  )
+                                ])
+                              ])
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "message_cart" }, [
+                              _c("img", {
+                                attrs: { src: goods_list.cart_image }
+                              })
+                            ])
+                          ])
+                        ])
+                      ])
+                    : _vm._e()
+                })
+              )
+            })
+          ),
+          _vm._v(" "),
+          _vm._m(4),
+          _vm._v(" "),
+          _c(
+            "div",
+            { staticClass: "lists_message" },
+            _vm._l(_vm.goods_lists1, function(goods, i) {
+              return _c(
+                "ul",
+                _vm._l(goods, function(goods_list, i) {
+                  return goods_list.buy_permission === 0 && i <= 2
+                    ? _c("li", [
+                        _c("div", { staticClass: "li_container" }, [
+                          _c("div", { staticClass: "img_left" }, [
+                            _c("img", {
+                              directives: [
+                                {
+                                  name: "lazy",
+                                  rawName: "v-lazy",
+                                  value: goods_list.image,
+                                  expression: "goods_list.image"
+                                }
+                              ],
+                              attrs: { src: goods_list.image }
+                            }),
+                            _vm._v(" "),
+                            _c("img", {
+                              attrs: { src: goods_list.promote_tag }
+                            })
+                          ]),
+                          _vm._v(" "),
+                          _c("div", { staticClass: "message_right" }, [
+                            _c("div", { staticClass: "message_title" }, [
+                              _vm._v(
+                                "\n\t\t\t\t\t\t\t\t" +
+                                  _vm._s(goods_list.name) +
+                                  "\n\t\t\t\t\t\t\t"
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "message_info" }, [
+                              _vm._v(
+                                "\n\t\t\t\t\t\t\t\t" +
+                                  _vm._s(goods_list.subtitle) +
+                                  "\n\t\t\t\t\t\t\t"
+                              )
+                            ]),
+                            _vm._v(" "),
+                            _c(
+                              "div",
+                              { staticClass: "message_des" },
+                              _vm._l(goods_list.product_tags, function(value) {
+                                return _c("span", [_vm._v(_vm._s(value.name))])
+                              })
+                            ),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "message_highprice" }, [
+                              _c("span", [
+                                _vm._v(
+                                  "可用券价 ¥" +
+                                    _vm._s(
+                                      goods_list.vip_price_pro.price_up.price /
+                                        100
+                                    )
+                                )
+                              ])
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "message_lowprice" }, [
+                              _c("span", [
+                                _vm._v("商城价 "),
+                                _c("span", [_vm._v("¥ ")]),
+                                _c("span", [
+                                  _vm._v(
+                                    " " +
+                                      _vm._s(
+                                        goods_list.vip_price_pro.price_down
+                                          .price / 100
+                                      )
+                                  )
+                                ])
+                              ])
+                            ]),
+                            _vm._v(" "),
+                            _c("div", { staticClass: "message_cart" }, [
+                              _c("img", {
+                                attrs: { src: goods_list.cart_image }
+                              })
+                            ])
+                          ])
+                        ])
+                      ])
+                    : _vm._e()
+                })
+              )
+            })
+          )
+        ])
+      : _vm._e()
   ])
+}
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "search_box" }, [
+      _c("img", {
+        attrs: { src: "//static-as.missfresh.cn/frontend/img/icon-search.png" }
+      }),
+      _vm._v(" "),
+      _c("input", { attrs: { type: "text", placeholder: "请输入商品名称" } })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "hot_title" }, [
+      _c("span", [_vm._v("热门搜索")])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "history" }, [
+      _c("div", { staticClass: "history_title" }, [
+        _c("span", [_vm._v("历史记录")])
+      ]),
+      _vm._v(" "),
+      _c("div", { staticClass: "history_list" })
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "lists_title" }, [_c("span")])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("div", { staticClass: "lists_title lists_title1" }, [_c("span")])
+  }
+]
+render._withStripped = true
+var esExports = { render: render, staticRenderFns: staticRenderFns }
+/* harmony default export */ __webpack_exports__["a"] = (esExports);
+if (false) {
+  module.hot.accept()
+  if (module.hot.data) {
+    require("vue-loader/node_modules/vue-hot-reload-api")      .rerender("data-v-37efd976", esExports)
+  }
+}
+
+/***/ }),
+/* 67 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "div",
+    { staticClass: "m-index" },
+    [
+      _c(
+        "header",
+        [
+          _c("IndexHeader", {
+            attrs: { gettype: _vm.gettype, getmessage: _vm.getmessage }
+          })
+        ],
+        1
+      ),
+      _vm._v(" "),
+      _c("section", [_c("router-view", { attrs: { type: _vm.type } })], 1),
+      _vm._v(" "),
+      _c("footer", [_c("IndexFooter")], 1),
+      _vm._v(" "),
+      _c("search", {
+        class: {
+          slidein: _vm.isShow == "slidein",
+          slideout: _vm.isShow == "slideout"
+        },
+        attrs: { getmessage: _vm.getmessage }
+      })
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
@@ -32169,199 +33121,19 @@ if (false) {
 }
 
 /***/ }),
-/* 61 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_3_0_vue_loader_lib_selector_type_script_index_0_bustCache_xinxianshi_vue__ = __webpack_require__(64);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_3_0_vue_loader_lib_selector_type_script_index_0_bustCache_xinxianshi_vue___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_3_0_vue_loader_lib_selector_type_script_index_0_bustCache_xinxianshi_vue__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_13_3_0_vue_loader_lib_template_compiler_index_id_data_v_d5a1f9b2_hasScoped_false_buble_transforms_node_modules_vue_loader_13_3_0_vue_loader_lib_selector_type_template_index_0_bustCache_xinxianshi_vue__ = __webpack_require__(65);
-var disposed = false
-function injectStyle (ssrContext) {
-  if (disposed) return
-  __webpack_require__(62)
-}
-var normalizeComponent = __webpack_require__(2)
-/* script */
-
-/* template */
-
-/* template functional */
-  var __vue_template_functional__ = false
-/* styles */
-var __vue_styles__ = injectStyle
-/* scopeId */
-var __vue_scopeId__ = null
-/* moduleIdentifier (server only) */
-var __vue_module_identifier__ = null
-var Component = normalizeComponent(
-  __WEBPACK_IMPORTED_MODULE_0__babel_loader_node_modules_vue_loader_13_3_0_vue_loader_lib_selector_type_script_index_0_bustCache_xinxianshi_vue___default.a,
-  __WEBPACK_IMPORTED_MODULE_1__node_modules_vue_loader_13_3_0_vue_loader_lib_template_compiler_index_id_data_v_d5a1f9b2_hasScoped_false_buble_transforms_node_modules_vue_loader_13_3_0_vue_loader_lib_selector_type_template_index_0_bustCache_xinxianshi_vue__["a" /* default */],
-  __vue_template_functional__,
-  __vue_styles__,
-  __vue_scopeId__,
-  __vue_module_identifier__
-)
-Component.options.__file = "src\\modules\\index\\components\\xinxianshi.vue"
-if (Component.esModule && Object.keys(Component.esModule).some(function (key) {  return key !== "default" && key.substr(0, 2) !== "__"})) {  console.error("named exports are not supported in *.vue files.")}
-
-/* hot reload */
-if (false) {(function () {
-  var hotAPI = require("vue-loader/node_modules/vue-hot-reload-api")
-  hotAPI.install(require("vue"), false)
-  if (!hotAPI.compatible) return
-  module.hot.accept()
-  if (!module.hot.data) {
-    hotAPI.createRecord("data-v-d5a1f9b2", Component.options)
-  } else {
-    hotAPI.reload("data-v-d5a1f9b2", Component.options)
-' + '  }
-  module.hot.dispose(function (data) {
-    disposed = true
-  })
-})()}
-
-/* harmony default export */ __webpack_exports__["default"] = (Component.exports);
-
-
-/***/ }),
-/* 62 */
-/***/ (function(module, exports, __webpack_require__) {
-
-// style-loader: Adds some css to the DOM by adding a <style> tag
-
-// load the styles
-var content = __webpack_require__(63);
-if(typeof content === 'string') content = [[module.i, content, '']];
-if(content.locals) module.exports = content.locals;
-// add the styles to the DOM
-var update = __webpack_require__(1)("24b1fc9d", content, false);
-// Hot Module Replacement
-if(false) {
- // When the styles change, update the <style> tags
- if(!content.locals) {
-   module.hot.accept("!!../../../../node_modules/_css-loader@0.28.7@css-loader/index.js?sourceMap!../../../../node_modules/_vue-loader@13.3.0@vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-d5a1f9b2\",\"scoped\":false,\"hasInlineConfig\":false}!../../../../node_modules/_sass-loader@6.0.6@sass-loader/lib/loader.js!../../../../node_modules/_vue-loader@13.3.0@vue-loader/lib/selector.js?type=styles&index=0&bustCache!./xinxianshi.vue", function() {
-     var newContent = require("!!../../../../node_modules/_css-loader@0.28.7@css-loader/index.js?sourceMap!../../../../node_modules/_vue-loader@13.3.0@vue-loader/lib/style-compiler/index.js?{\"vue\":true,\"id\":\"data-v-d5a1f9b2\",\"scoped\":false,\"hasInlineConfig\":false}!../../../../node_modules/_sass-loader@6.0.6@sass-loader/lib/loader.js!../../../../node_modules/_vue-loader@13.3.0@vue-loader/lib/selector.js?type=styles&index=0&bustCache!./xinxianshi.vue");
-     if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
-     update(newContent);
-   });
- }
- // When the module is disposed, remove the <style> tags
- module.hot.dispose(function() { update(); });
-}
-
-/***/ }),
-/* 63 */
-/***/ (function(module, exports, __webpack_require__) {
-
-exports = module.exports = __webpack_require__(0)(true);
-// imports
-
-
-// module
-exports.push([module.i, "\n@charset \"UTF-8\";\n/**\r\n * Yo框架全局base定义\r\n * 本文件与variables不同地方在于，这里所定义的map可以使用在variables和任何地方\r\n * 本文件中map使用\"_\"开头，extra中不使用\"_\"\r\n * base ⇌ extra\r\n */\n/**\r\n * Yo框架全局Variables\r\n * Yo基础变量map，如果不想定义某属性，将其value设置为null\r\n * Yo仅使用2种长度单位：px用于边框，rem用于除边框之外的所有地方\r\n * 本文件中map使用\"_\"开头，config中不使用\"_\"\r\n * variables ⇌ config\r\n */\n/**\r\n * Yo框架自定义全局函数\r\n * 扩充Sass默认函数库，用以增强语法\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的第一项\r\n * @function first\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的最后一项\r\n * @function last\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的倒数第几项\r\n * @function nth-last\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $index 指定需要返回的值在list中的倒数位置 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 移除SassList中的某个项目并返回新的List\r\n * @function remove\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {String} $value 指定需要被删除的值 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 截取SassList中的某个部分并返回新的List\r\n * @function slice\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $start 指定需要截取的开始下标 <2.1.0>\r\n * @param {Integer} $end 指定需要截取的结束下标（不包括end），当该值缺省时默认为末尾下标 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 从SassList中添加/删除项目，然后返回新的List。\r\n * @function splice\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $index 指定需要移除的开始下标 <2.1.0>\r\n * @param {Integer} $count 指定需要移除的数量，不可以为负值，0表示不移除 <2.1.0>\r\n * @param {String} $values 指定需要添加的新值（可以是多个），如果该值缺省，则表示只移除不添加新值 <2.1.0>\r\n */\n/**\r\n * Yo框架全局基础方法\r\n * 包括响应式方案，CSS3兼容性方案，厂商前缀方案，iconfont方案，flex布局等全局方法\r\n */\n/**\r\n * @module 常用方法\r\n * @description 给需要的属性加厂家前缀\r\n * @method prefix\r\n * @version 1.0.0\r\n * @param {String} $property 指定属性 <1.0.0>\r\n * @param {String} $value 指定属性值 <1.0.0>\r\n * @skip\r\n */\n/**\r\n * @module 常用方法\r\n * @description 定义字体图标\r\n * @method _iconfont\r\n * @version 1.0.0\r\n * @skip\r\n */\n/**\r\n * @module 常用方法\r\n * @description 四则运算(系统要求：iOS6.0+,Android4.4+)\r\n * @method calc\r\n * @version 1.7.0\r\n * @param {String} $property 指定需要进行计算的CSS属性 <1.7.0>\r\n * @param {String} $value 与原生CSS语法一致，区别在于需要使用引号包裹表达式 <1.7.0>\r\n * @example\r\n * .calc {\r\n *     @include calc(width, \"100% - 100px\");\r\n * }\r\n *\r\n * <div class=\"calc\">四则运算</div>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 定义响应式方案\r\n * @method responsive\r\n * @version 1.0.0\r\n * @param {String} $media 指定媒体查询条件，取值为`config`文件map `media-types`中的值 <1.0.0>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 清除浮动方案\r\n * @method clearfix\r\n * @version 1.0.0\r\n * @param {String} $type 指定清除浮动的方式，包括：pseudo-element | bfc，默认值：pseudo-element <1.8.5>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 清除行内级元素间间隙方案\r\n * @method clearspace\r\n * @version 3.0.3\r\n * @param {Length} $font-size 指定子元素字号，默认值：.14rem <3.0.3>\r\n * @example\r\n * .demo {\r\n *     @include clearspace;\r\n * }\r\n *\r\n * <div class=\"demo\">\r\n *      <span class=\"item\">1</span>\r\n *      <span class=\"item\">2</span>\r\n *      <span class=\"item\">3</span>\r\n * </div>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 描述元素内容在横、纵方向上的对齐方式，默认为水平垂直居中对齐\r\n * @method align\r\n * @version 2.0.0\r\n * @param {String} $flexbox 元素布局方式，可选值：flex | inline-flex，默认值：flex <2.0.0>\r\n * @param {Keyword} $justify-content 元素内容的水平对齐方式，取值与`justify-content`属性一致，默认值：center <2.0.0>\r\n * @param {Keyword} $align-items 元素内容的垂直对齐方式，取值与`align-items`属性一致，默认值：center <2.0.0>\r\n * @example\r\n * .demo {\r\n *     @include align;\r\n * }\r\n *\r\n * <div class=\"demo\">\r\n *      <img alt=\"未知尺寸图片居中\" />\r\n * </div>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 定义是否有滚动条\r\n * @method overflow\r\n * @version 1.0.0\r\n * @param {String} $overflow 取值与最新原生语法一致，默认值：auto <1.0.0>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 生成全屏方法\r\n * @method fullscreen\r\n * @version 1.7.0\r\n * @param {Integer} $z-index 指定层叠级别 <1.7.0>\r\n * @param {Keywords} $position 指定定位方式，取除`static | relative`之外的值，默认值：absolute <1.8.5>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义使用何种滤镜\r\n * @method filter\r\n * @version 1.7.0\r\n * @param {String} $filter 取值与`filter`属性一致 <1.7.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义UA默认外观\r\n * @method appearance\r\n * @version 1.0.0\r\n * @param {String} $appearance 取值与`appearance`属性一致，默认值：none <1.0.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义如何选中内容\r\n * @method user-select\r\n * @version 1.0.0\r\n * @param {String} $user-select 取值与`user-select`属性一致，默认值：none <1.0.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义盒模型\r\n * @method box-sizing\r\n * @version 1.0.0\r\n * @param {String} $box-sizing 指定盒模型类型，取值与`box-sizing`属性一致，默认值：border-box <1.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义渐变色值\r\n * @method gradient\r\n * @version 1.0.0\r\n * @param {String} $type 指定渐变的4种类型：linear, repeating-linear, radial, repeating-radial <1.0.0>\r\n * @param {String} $dir 指定渐变方向，可选值：[left | right] || [top | bottom] | angle <2.0.0>\r\n * @param {String} $gradient 指定渐变取值，与w3c最新原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景图像缩放（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-size\r\n * @version 1.4.0\r\n * @param {Keywords | Length} $background-size 指定背景图缩放值，取值与`background-size`属性一致 <1.4.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景裁减（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-clip\r\n * @version 1.6.0\r\n * @param {Keywords} $background-clip 指定背景图缩放值，取值与`background-clip`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景显示区域（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-origin\r\n * @version 1.6.0\r\n * @param {Keywords} $background-origin 指定背景图`background-position`属性计算相对的参考点，取值与`background-origin`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 为元素添加边框（包括1px边框）\r\n * @method border\r\n * @version 2.0.0\r\n * @param {String} $border-width 指定边框厚度（单位为px），默认值：1px，取值与`border-width`属性一致，不同方向代表边框位置 <2.0.0>\r\n * @param {String} $border-color 指定边框颜色 <2.0.0>\r\n * @param {String} $border-style 指定边框样式 <2.0.0>\r\n * @param {String} $radius 指定边框圆角半径，默认值：null <2.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义圆角，用于修复某些安卓机型上“圆角+边框+背景”，背景溢出的情况\r\n * @method border-radius\r\n * @version 1.6.0\r\n * @param {Length} $border-radius 指定元素的圆角半径，取值与`border-radius`属性一致 <1.6.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 定义简单变换\r\n * @method transform\r\n * @version 1.0.0\r\n * @param {String} $transform 取值范围与`transform`属性一致 <1.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 定义变换原点\r\n * @method transform-origin\r\n * @version 1.0.0\r\n * @param {Length | Percentage | Keywords} $transform-origin 取值范围与`transform-origin`属性一致 <1.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定某元素的子元素是（看起来）位于三维空间内，还是在该元素所在的平面内被扁平化\r\n * @method transform-style\r\n * @version 2.0.0\r\n * @param {String} $transform-style 取值范围与`transform-style`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定观察者与「z=0」平面的距离，使具有三维位置变换的元素产生透视效果。「z>0」的三维元素比正常大，而「z<0」时则比正常小，大小程度由该属性的值决定。\r\n * @method perspective\r\n * @version 2.0.0\r\n * @param {none | Length} $perspective 取值范围与`perspective`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定透视点的位置\r\n * @method perspective-origin\r\n * @version 2.0.0\r\n * @param {Length | Percentage | Keywords} $perspective-origin 取值范围与`perspective-origin`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定元素背面面向用户时是否可见\r\n * @method backface-visibility\r\n * @version 2.0.0\r\n * @param {Keywords} $backface-visibility 取值范围与`backface-visibility`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 定义动画\r\n * @method animation\r\n * @version 1.0.0\r\n * @param {String} $animation 取值与原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定需要引用的动画名称\r\n * @method animation-name\r\n * @version 3.0.0\r\n * @param {String} $animation-name 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画运行一次所持续的时长\r\n * @method animation-duration\r\n * @version 3.0.0\r\n * @param {String} $animation-duration 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画运行方式\r\n * @method animation-timing-function\r\n * @version 3.0.0\r\n * @param {String} $animation-timing-function 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画延迟多久之后再开始\r\n * @method animation-delay\r\n * @version 3.0.0\r\n * @param {String} $animation-delay 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画循环几次\r\n * @method animation-iteration-count\r\n * @version 3.0.0\r\n * @param {String} $animation-iteration-count 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画的运动方向\r\n * @method animation-direction\r\n * @version 3.0.0\r\n * @param {String} $animation-direction 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画的运动状态\r\n * @method animation-play-state\r\n * @version 3.0.0\r\n * @param {String} $animation-play-state 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画时间之外的状态\r\n * @method animation-fill-mode\r\n * @version 3.0.0\r\n * @param {String} $animation-fill-mode 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Transition\r\n * @description 定义补间\r\n * @method transition\r\n * @version 1.0.0\r\n * @param {String} $transition 取值与原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义显示类型为伸缩盒\r\n * @method flexbox\r\n * @version 1.0.0\r\n * @param {String} $flexbox 默认值：flex，可选值：flex | inline-flex <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素如何分配空间\r\n * @method flex\r\n * @version 1.0.0\r\n * @param {Number} $flex 取值与`flex`属性一致，默认值：1 <1.0.0>\r\n * @param {String} $direction 默认值: row，可选值：row | column <1.5.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素的排版顺序\r\n * @method order\r\n * @version 1.0.0\r\n * @param {Integer} $order 取值与`order`属性一致，默认值：1 <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性盒子元素流动方向及遇见边界时是否换行(要求系统：iOS7.0+, Android4.4+)\r\n * @method flex-flow\r\n * @version 2.0.0\r\n * @param {String} $flex-flow 取值与`flex-flow`属性一致，默认值：row nowrap <2.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素的流动方向\r\n * @method flex-direction\r\n * @version 1.0.0\r\n * @param {String} $flex-direction 取值与`flex-direction`属性一致，默认值：row <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性盒子元素溢出后排版(要求系统：iOS7.0+, Android4.4+)\r\n * @method flex-wrap\r\n * @version 1.0.0\r\n * @param {String} $flex-wrap 取值与`flex-wrap`属性一致，默认值：nowrap <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性容器主轴对齐方式(其中`space-around`值需要iOS7.0+,Android4.4+)\r\n * @method justify-content\r\n * @version 1.0.0\r\n * @param {String} $justify-content 取值与`justify-content`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义多行弹性容器侧轴对齐方式(要求系统：iOS7.0+,Android4.4+)\r\n * @method align-content\r\n * @version 1.8.5\r\n * @param {String} $align-content 取值与`align-content`属性一致，默认值：center <1.8.5>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义单行弹性容器侧轴对齐方式\r\n * @method align-items\r\n * @version 1.0.0\r\n * @param {String} $align-items 取值与`align-items`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性容器中子元素自身的在侧轴对齐方式(要求系统：iOS7.0+,Android4.4+)\r\n * @method align-self\r\n * @version 1.0.0\r\n * @param {String} $align-self 取值与`align-self`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成矩形方法\r\n * @method rect\r\n * @version 1.0.0\r\n * @param {Length} $width 定义矩形的长度 <1.0.0>\r\n * @param {Length} $height 定义矩形的高度 <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成正方形方法\r\n * @method square\r\n * @version 1.0.0\r\n * @param {Length} $size 定义正方形的边长 <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成圆形方法\r\n * @method circle\r\n * @version 1.0.0\r\n * @param {Length} $size 定义圆的半径长度 <1.0.0>\r\n * @param {Length} $radius 定义圆的圆角半径长度 <1.0.0>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 在自适应宽度情况下，确保内容元素的宽高比固定，比如：实现随屏幕大小而变化的正方形。\r\n * @method fixed-scale\r\n * @version 3.0.10\r\n * @param {Length} $width 默认值：100%。用以指定内容元素的初始宽度，由于尺寸需动态变化，不要使用固定单位 <3.0.10>\r\n * @param {Length} $scale 默认值：1/1，即正方形。用以指定内容元素的宽度高比 <3.0.10>\r\n */\n/**\r\n * @module 文本\r\n * @description 链接处理方法\r\n * @method link\r\n * @version 1.0.0\r\n * @param {Color} $color 定义链接颜色 <1.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 文本碰到边界是否换行\r\n * @method wrap\r\n * @version 1.0.0\r\n * @param {Boolean} $is-wrap 定义文本是否换行，默认值：true <2.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 单行文本溢出时显示省略号\r\n * @method ellipsis\r\n * @version 1.0.0\r\n * @param {Length} $width 定义容器的宽度，默认值：null <2.0.0>\r\n * @param {Integer} $line-clamp 定义需要显示的行数，默认值：1（即使用单行溢出的处理方案），需要注意的是本参数只支持webkit内核 <2.1.2>\r\n */\n/**\r\n * @module 文本\r\n * @description 文字隐藏方案\r\n * @method texthide\r\n * @version 1.0.0\r\n * @param {Length} $width 定义容器的宽度，默认值：null <2.0.0>\r\n */\n/**\r\n * Yo框架全局Reset\r\n * Yo重置Mobile及高级浏览器上常见的差异\r\n */\n*,\n::before,\n::after {\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n  -webkit-tap-highlight-color: transparent;\n}\nhtml,\nbody {\n  overflow: hidden;\n  height: 100%;\n}\n::-webkit-scrollbar {\n  display: none;\n}\nhtml {\n  background-color: #eee;\n  color: #212121;\n  font-size: 100px;\n  -webkit-user-select: none;\n  user-select: none;\n}\nbody {\n  margin: 0;\n  font-size: 0.14em;\n  line-height: 1.5;\n  font-family: Helvetica Neue, Helvetica, STHeiTi, sans-serif;\n}\nul,\nol,\ndl,\ndd,\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\nfigure,\nform,\nfieldset,\nlegend,\ninput,\ntextarea,\nbutton,\np,\nblockquote,\nth,\ntd,\npre,\nxmp {\n  margin: 0;\n  padding: 0;\n}\ninput,\ntextarea,\nbutton,\nselect,\npre,\nxmp,\ntt,\ncode,\nkbd,\nsamp {\n  line-height: inherit;\n  font-family: inherit;\n}\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\nsmall,\nbig,\ninput,\ntextarea,\nbutton,\nselect {\n  font-size: inherit;\n}\naddress,\ncite,\ndfn,\nem,\ni,\noptgroup,\nvar {\n  font-style: normal;\n}\ntable {\n  border-collapse: collapse;\n  border-spacing: 0;\n  table-layout: fixed;\n  text-align: left;\n}\nul,\nol,\nmenu {\n  list-style: none;\n}\nfieldset,\nimg {\n  border: 0;\n  vertical-align: middle;\n}\narticle,\naside,\ndetails,\nfigcaption,\nfigure,\nfooter,\nheader,\nmain,\nmenu,\nnav,\nsection,\nsummary {\n  display: block;\n}\naudio,\ncanvas,\nvideo {\n  display: inline-block;\n}\nblockquote:before,\nblockquote:after,\nq:before,\nq:after {\n  content: \" \";\n}\ntextarea,\npre,\nxmp {\n  overflow: auto;\n  -webkit-overflow-scrolling: touch;\n}\ntextarea {\n  resize: vertical;\n}\ninput,\ntextarea,\nbutton,\nselect,\nsummary,\na {\n  outline: 0 none;\n}\ninput,\ntextarea,\nbutton,\nselect {\n  color: inherit;\n}\ninput:disabled,\n  textarea:disabled,\n  button:disabled,\n  select:disabled {\n    opacity: 1;\n}\nbutton::-moz-focus-inner,\ninput::-moz-focus-inner {\n  padding: 0;\n  border: 0;\n}\ninput[type=\"button\"],\ninput[type=\"submit\"],\ninput[type=\"reset\"],\ninput[type=\"file\"]::-webkit-file-upload-button,\ninput[type=\"search\"]::-webkit-search-cancel-button {\n  -webkit-appearance: none;\n  appearance: none;\n}\n::-webkit-details-marker {\n  display: none;\n}\nmark {\n  background-color: transparent;\n}\na,\nins,\ns,\nu,\ndel {\n  text-decoration: none;\n}\na,\nimg {\n  -webkit-touch-callout: none;\n}\na {\n  color: #00afc7;\n}\n.g-clear::after,\n.g-mod::after {\n  display: block;\n  overflow: hidden;\n  clear: both;\n  height: 0;\n  content: \" \";\n}\n@font-face {\n  font-family: yofont;\n  src: url(//ss.qunarzz.com/yo/font/1.0.3/yofont.woff) format(\"woff\"), url(//ss.qunarzz.com/yo/font/1.0.3/yofont.ttf) format(\"truetype\");\n}\n.yo-ico {\n  font-family: yofont !important;\n  font-style: normal;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n  vertical-align: middle;\n}\n@font-face {\n  font-family: 'iconfont';\n  src: url(\"http://localhost:7000/media/iconfont/iconfont.woff\") format(\"woff\"), url(\"http://localhost:7000/media/iconfont/iconfont.ttf\") format(\"truetype\");\n}\n.iconfont {\n  font-family: \"iconfont\" !important;\n  font-size: 16px;\n  font-style: normal;\n  -webkit-font-smoothing: antialiased;\n  -webkit-text-stroke-width: 0.2px;\n  -moz-osx-font-smoothing: grayscale;\n}\nbody {\n  height: 100%;\n  width: 100%;\n}\n#app {\n  height: 100%;\n  width: 100%;\n  background: white;\n}\n.m-index {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n  flex-direction: column;\n  height: 100%;\n}\n.m-index header {\n    height: 1.24rem;\n}\n.m-index section {\n    -webkit-box-flex: 1;\n    -webkit-flex: 1;\n    flex: 1;\n    width: .1px;\n    width: 100%;\n    overflow-y: scroll;\n}\n.m-index footer {\n    height: .5rem;\n}\n", "", {"version":3,"sources":["D:/missFresh/src/modules/index/components/xinxianshi.vue"],"names":[],"mappings":"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","file":"xinxianshi.vue","sourcesContent":["@charset \"UTF-8\";\n/**\r\n * Yo框架全局base定义\r\n * 本文件与variables不同地方在于，这里所定义的map可以使用在variables和任何地方\r\n * 本文件中map使用\"_\"开头，extra中不使用\"_\"\r\n * base ⇌ extra\r\n */\n/**\r\n * Yo框架全局Variables\r\n * Yo基础变量map，如果不想定义某属性，将其value设置为null\r\n * Yo仅使用2种长度单位：px用于边框，rem用于除边框之外的所有地方\r\n * 本文件中map使用\"_\"开头，config中不使用\"_\"\r\n * variables ⇌ config\r\n */\n/**\r\n * Yo框架自定义全局函数\r\n * 扩充Sass默认函数库，用以增强语法\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的第一项\r\n * @function first\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的最后一项\r\n * @function last\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 返回SassList中的倒数第几项\r\n * @function nth-last\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $index 指定需要返回的值在list中的倒数位置 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 移除SassList中的某个项目并返回新的List\r\n * @function remove\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {String} $value 指定需要被删除的值 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 截取SassList中的某个部分并返回新的List\r\n * @function slice\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $start 指定需要截取的开始下标 <2.1.0>\r\n * @param {Integer} $end 指定需要截取的结束下标（不包括end），当该值缺省时默认为末尾下标 <2.1.0>\r\n */\n/**\r\n * @module List扩展函数\r\n * @description 从SassList中添加/删除项目，然后返回新的List。\r\n * @function splice\r\n * @version 2.1.0\r\n * @param {String} $list 指定一个Sass List <2.1.0>\r\n * @param {Integer} $index 指定需要移除的开始下标 <2.1.0>\r\n * @param {Integer} $count 指定需要移除的数量，不可以为负值，0表示不移除 <2.1.0>\r\n * @param {String} $values 指定需要添加的新值（可以是多个），如果该值缺省，则表示只移除不添加新值 <2.1.0>\r\n */\n/**\r\n * Yo框架全局基础方法\r\n * 包括响应式方案，CSS3兼容性方案，厂商前缀方案，iconfont方案，flex布局等全局方法\r\n */\n/**\r\n * @module 常用方法\r\n * @description 给需要的属性加厂家前缀\r\n * @method prefix\r\n * @version 1.0.0\r\n * @param {String} $property 指定属性 <1.0.0>\r\n * @param {String} $value 指定属性值 <1.0.0>\r\n * @skip\r\n */\n/**\r\n * @module 常用方法\r\n * @description 定义字体图标\r\n * @method _iconfont\r\n * @version 1.0.0\r\n * @skip\r\n */\n/**\r\n * @module 常用方法\r\n * @description 四则运算(系统要求：iOS6.0+,Android4.4+)\r\n * @method calc\r\n * @version 1.7.0\r\n * @param {String} $property 指定需要进行计算的CSS属性 <1.7.0>\r\n * @param {String} $value 与原生CSS语法一致，区别在于需要使用引号包裹表达式 <1.7.0>\r\n * @example\r\n * .calc {\r\n *     @include calc(width, \"100% - 100px\");\r\n * }\r\n *\r\n * <div class=\"calc\">四则运算</div>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 定义响应式方案\r\n * @method responsive\r\n * @version 1.0.0\r\n * @param {String} $media 指定媒体查询条件，取值为`config`文件map `media-types`中的值 <1.0.0>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 清除浮动方案\r\n * @method clearfix\r\n * @version 1.0.0\r\n * @param {String} $type 指定清除浮动的方式，包括：pseudo-element | bfc，默认值：pseudo-element <1.8.5>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 清除行内级元素间间隙方案\r\n * @method clearspace\r\n * @version 3.0.3\r\n * @param {Length} $font-size 指定子元素字号，默认值：.14rem <3.0.3>\r\n * @example\r\n * .demo {\r\n *     @include clearspace;\r\n * }\r\n *\r\n * <div class=\"demo\">\r\n *      <span class=\"item\">1</span>\r\n *      <span class=\"item\">2</span>\r\n *      <span class=\"item\">3</span>\r\n * </div>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 描述元素内容在横、纵方向上的对齐方式，默认为水平垂直居中对齐\r\n * @method align\r\n * @version 2.0.0\r\n * @param {String} $flexbox 元素布局方式，可选值：flex | inline-flex，默认值：flex <2.0.0>\r\n * @param {Keyword} $justify-content 元素内容的水平对齐方式，取值与`justify-content`属性一致，默认值：center <2.0.0>\r\n * @param {Keyword} $align-items 元素内容的垂直对齐方式，取值与`align-items`属性一致，默认值：center <2.0.0>\r\n * @example\r\n * .demo {\r\n *     @include align;\r\n * }\r\n *\r\n * <div class=\"demo\">\r\n *      <img alt=\"未知尺寸图片居中\" />\r\n * </div>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 定义是否有滚动条\r\n * @method overflow\r\n * @version 1.0.0\r\n * @param {String} $overflow 取值与最新原生语法一致，默认值：auto <1.0.0>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 生成全屏方法\r\n * @method fullscreen\r\n * @version 1.7.0\r\n * @param {Integer} $z-index 指定层叠级别 <1.7.0>\r\n * @param {Keywords} $position 指定定位方式，取除`static | relative`之外的值，默认值：absolute <1.8.5>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义使用何种滤镜\r\n * @method filter\r\n * @version 1.7.0\r\n * @param {String} $filter 取值与`filter`属性一致 <1.7.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义UA默认外观\r\n * @method appearance\r\n * @version 1.0.0\r\n * @param {String} $appearance 取值与`appearance`属性一致，默认值：none <1.0.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义如何选中内容\r\n * @method user-select\r\n * @version 1.0.0\r\n * @param {String} $user-select 取值与`user-select`属性一致，默认值：none <1.0.0>\r\n */\n/**\r\n * @module 用户界面\r\n * @description 定义盒模型\r\n * @method box-sizing\r\n * @version 1.0.0\r\n * @param {String} $box-sizing 指定盒模型类型，取值与`box-sizing`属性一致，默认值：border-box <1.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义渐变色值\r\n * @method gradient\r\n * @version 1.0.0\r\n * @param {String} $type 指定渐变的4种类型：linear, repeating-linear, radial, repeating-radial <1.0.0>\r\n * @param {String} $dir 指定渐变方向，可选值：[left | right] || [top | bottom] | angle <2.0.0>\r\n * @param {String} $gradient 指定渐变取值，与w3c最新原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景图像缩放（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-size\r\n * @version 1.4.0\r\n * @param {Keywords | Length} $background-size 指定背景图缩放值，取值与`background-size`属性一致 <1.4.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景裁减（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-clip\r\n * @version 1.6.0\r\n * @param {Keywords} $background-clip 指定背景图缩放值，取值与`background-clip`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义背景显示区域（AndroidBrowser2.3.*还需要厂商前缀）\r\n * @method background-origin\r\n * @version 1.6.0\r\n * @param {Keywords} $background-origin 指定背景图`background-position`属性计算相对的参考点，取值与`background-origin`属性一致 <1.6.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 为元素添加边框（包括1px边框）\r\n * @method border\r\n * @version 2.0.0\r\n * @param {String} $border-width 指定边框厚度（单位为px），默认值：1px，取值与`border-width`属性一致，不同方向代表边框位置 <2.0.0>\r\n * @param {String} $border-color 指定边框颜色 <2.0.0>\r\n * @param {String} $border-style 指定边框样式 <2.0.0>\r\n * @param {String} $radius 指定边框圆角半径，默认值：null <2.0.0>\r\n */\n/**\r\n * @module 背景与边框\r\n * @description 定义圆角，用于修复某些安卓机型上“圆角+边框+背景”，背景溢出的情况\r\n * @method border-radius\r\n * @version 1.6.0\r\n * @param {Length} $border-radius 指定元素的圆角半径，取值与`border-radius`属性一致 <1.6.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 定义简单变换\r\n * @method transform\r\n * @version 1.0.0\r\n * @param {String} $transform 取值范围与`transform`属性一致 <1.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 定义变换原点\r\n * @method transform-origin\r\n * @version 1.0.0\r\n * @param {Length | Percentage | Keywords} $transform-origin 取值范围与`transform-origin`属性一致 <1.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定某元素的子元素是（看起来）位于三维空间内，还是在该元素所在的平面内被扁平化\r\n * @method transform-style\r\n * @version 2.0.0\r\n * @param {String} $transform-style 取值范围与`transform-style`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定观察者与「z=0」平面的距离，使具有三维位置变换的元素产生透视效果。「z>0」的三维元素比正常大，而「z<0」时则比正常小，大小程度由该属性的值决定。\r\n * @method perspective\r\n * @version 2.0.0\r\n * @param {none | Length} $perspective 取值范围与`perspective`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定透视点的位置\r\n * @method perspective-origin\r\n * @version 2.0.0\r\n * @param {Length | Percentage | Keywords} $perspective-origin 取值范围与`perspective-origin`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Transform\r\n * @description 指定元素背面面向用户时是否可见\r\n * @method backface-visibility\r\n * @version 2.0.0\r\n * @param {Keywords} $backface-visibility 取值范围与`backface-visibility`属性一致 <2.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 定义动画\r\n * @method animation\r\n * @version 1.0.0\r\n * @param {String} $animation 取值与原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定需要引用的动画名称\r\n * @method animation-name\r\n * @version 3.0.0\r\n * @param {String} $animation-name 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画运行一次所持续的时长\r\n * @method animation-duration\r\n * @version 3.0.0\r\n * @param {String} $animation-duration 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画运行方式\r\n * @method animation-timing-function\r\n * @version 3.0.0\r\n * @param {String} $animation-timing-function 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画延迟多久之后再开始\r\n * @method animation-delay\r\n * @version 3.0.0\r\n * @param {String} $animation-delay 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画循环几次\r\n * @method animation-iteration-count\r\n * @version 3.0.0\r\n * @param {String} $animation-iteration-count 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画的运动方向\r\n * @method animation-direction\r\n * @version 3.0.0\r\n * @param {String} $animation-direction 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画的运动状态\r\n * @method animation-play-state\r\n * @version 3.0.0\r\n * @param {String} $animation-play-state 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Animation\r\n * @description 指定动画时间之外的状态\r\n * @method animation-fill-mode\r\n * @version 3.0.0\r\n * @param {String} $animation-fill-mode 取值与原生语法一致 <3.0.0>\r\n */\n/**\r\n * @module Transition\r\n * @description 定义补间\r\n * @method transition\r\n * @version 1.0.0\r\n * @param {String} $transition 取值与原生语法一致 <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义显示类型为伸缩盒\r\n * @method flexbox\r\n * @version 1.0.0\r\n * @param {String} $flexbox 默认值：flex，可选值：flex | inline-flex <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素如何分配空间\r\n * @method flex\r\n * @version 1.0.0\r\n * @param {Number} $flex 取值与`flex`属性一致，默认值：1 <1.0.0>\r\n * @param {String} $direction 默认值: row，可选值：row | column <1.5.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素的排版顺序\r\n * @method order\r\n * @version 1.0.0\r\n * @param {Integer} $order 取值与`order`属性一致，默认值：1 <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性盒子元素流动方向及遇见边界时是否换行(要求系统：iOS7.0+, Android4.4+)\r\n * @method flex-flow\r\n * @version 2.0.0\r\n * @param {String} $flex-flow 取值与`flex-flow`属性一致，默认值：row nowrap <2.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义伸缩盒子元素的流动方向\r\n * @method flex-direction\r\n * @version 1.0.0\r\n * @param {String} $flex-direction 取值与`flex-direction`属性一致，默认值：row <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性盒子元素溢出后排版(要求系统：iOS7.0+, Android4.4+)\r\n * @method flex-wrap\r\n * @version 1.0.0\r\n * @param {String} $flex-wrap 取值与`flex-wrap`属性一致，默认值：nowrap <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性容器主轴对齐方式(其中`space-around`值需要iOS7.0+,Android4.4+)\r\n * @method justify-content\r\n * @version 1.0.0\r\n * @param {String} $justify-content 取值与`justify-content`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义多行弹性容器侧轴对齐方式(要求系统：iOS7.0+,Android4.4+)\r\n * @method align-content\r\n * @version 1.8.5\r\n * @param {String} $align-content 取值与`align-content`属性一致，默认值：center <1.8.5>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义单行弹性容器侧轴对齐方式\r\n * @method align-items\r\n * @version 1.0.0\r\n * @param {String} $align-items 取值与`align-items`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module Flexbox\r\n * @description 定义弹性容器中子元素自身的在侧轴对齐方式(要求系统：iOS7.0+,Android4.4+)\r\n * @method align-self\r\n * @version 1.0.0\r\n * @param {String} $align-self 取值与`align-self`属性一致，默认值：center <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成矩形方法\r\n * @method rect\r\n * @version 1.0.0\r\n * @param {Length} $width 定义矩形的长度 <1.0.0>\r\n * @param {Length} $height 定义矩形的高度 <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成正方形方法\r\n * @method square\r\n * @version 1.0.0\r\n * @param {Length} $size 定义正方形的边长 <1.0.0>\r\n */\n/**\r\n * @module 形状\r\n * @description 生成圆形方法\r\n * @method circle\r\n * @version 1.0.0\r\n * @param {Length} $size 定义圆的半径长度 <1.0.0>\r\n * @param {Length} $radius 定义圆的圆角半径长度 <1.0.0>\r\n */\n/**\r\n * @module 常用方法\r\n * @description 在自适应宽度情况下，确保内容元素的宽高比固定，比如：实现随屏幕大小而变化的正方形。\r\n * @method fixed-scale\r\n * @version 3.0.10\r\n * @param {Length} $width 默认值：100%。用以指定内容元素的初始宽度，由于尺寸需动态变化，不要使用固定单位 <3.0.10>\r\n * @param {Length} $scale 默认值：1/1，即正方形。用以指定内容元素的宽度高比 <3.0.10>\r\n */\n/**\r\n * @module 文本\r\n * @description 链接处理方法\r\n * @method link\r\n * @version 1.0.0\r\n * @param {Color} $color 定义链接颜色 <1.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 文本碰到边界是否换行\r\n * @method wrap\r\n * @version 1.0.0\r\n * @param {Boolean} $is-wrap 定义文本是否换行，默认值：true <2.0.0>\r\n */\n/**\r\n * @module 文本\r\n * @description 单行文本溢出时显示省略号\r\n * @method ellipsis\r\n * @version 1.0.0\r\n * @param {Length} $width 定义容器的宽度，默认值：null <2.0.0>\r\n * @param {Integer} $line-clamp 定义需要显示的行数，默认值：1（即使用单行溢出的处理方案），需要注意的是本参数只支持webkit内核 <2.1.2>\r\n */\n/**\r\n * @module 文本\r\n * @description 文字隐藏方案\r\n * @method texthide\r\n * @version 1.0.0\r\n * @param {Length} $width 定义容器的宽度，默认值：null <2.0.0>\r\n */\n/**\r\n * Yo框架全局Reset\r\n * Yo重置Mobile及高级浏览器上常见的差异\r\n */\n*,\n::before,\n::after {\n  -webkit-box-sizing: border-box;\n  box-sizing: border-box;\n  -webkit-tap-highlight-color: transparent; }\n\nhtml,\nbody {\n  overflow: hidden;\n  height: 100%; }\n\n::-webkit-scrollbar {\n  display: none; }\n\nhtml {\n  background-color: #eee;\n  color: #212121;\n  font-size: 100px;\n  -webkit-user-select: none;\n  user-select: none; }\n\nbody {\n  margin: 0;\n  font-size: 0.14em;\n  line-height: 1.5;\n  font-family: Helvetica Neue, Helvetica, STHeiTi, sans-serif; }\n\nul,\nol,\ndl,\ndd,\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\nfigure,\nform,\nfieldset,\nlegend,\ninput,\ntextarea,\nbutton,\np,\nblockquote,\nth,\ntd,\npre,\nxmp {\n  margin: 0;\n  padding: 0; }\n\ninput,\ntextarea,\nbutton,\nselect,\npre,\nxmp,\ntt,\ncode,\nkbd,\nsamp {\n  line-height: inherit;\n  font-family: inherit; }\n\nh1,\nh2,\nh3,\nh4,\nh5,\nh6,\nsmall,\nbig,\ninput,\ntextarea,\nbutton,\nselect {\n  font-size: inherit; }\n\naddress,\ncite,\ndfn,\nem,\ni,\noptgroup,\nvar {\n  font-style: normal; }\n\ntable {\n  border-collapse: collapse;\n  border-spacing: 0;\n  table-layout: fixed;\n  text-align: left; }\n\nul,\nol,\nmenu {\n  list-style: none; }\n\nfieldset,\nimg {\n  border: 0;\n  vertical-align: middle; }\n\narticle,\naside,\ndetails,\nfigcaption,\nfigure,\nfooter,\nheader,\nmain,\nmenu,\nnav,\nsection,\nsummary {\n  display: block; }\n\naudio,\ncanvas,\nvideo {\n  display: inline-block; }\n\nblockquote:before,\nblockquote:after,\nq:before,\nq:after {\n  content: \"\\0020\"; }\n\ntextarea,\npre,\nxmp {\n  overflow: auto;\n  -webkit-overflow-scrolling: touch; }\n\ntextarea {\n  resize: vertical; }\n\ninput,\ntextarea,\nbutton,\nselect,\nsummary,\na {\n  outline: 0 none; }\n\ninput,\ntextarea,\nbutton,\nselect {\n  color: inherit; }\n  input:disabled,\n  textarea:disabled,\n  button:disabled,\n  select:disabled {\n    opacity: 1; }\n\nbutton::-moz-focus-inner,\ninput::-moz-focus-inner {\n  padding: 0;\n  border: 0; }\n\ninput[type=\"button\"],\ninput[type=\"submit\"],\ninput[type=\"reset\"],\ninput[type=\"file\"]::-webkit-file-upload-button,\ninput[type=\"search\"]::-webkit-search-cancel-button {\n  -webkit-appearance: none;\n  appearance: none; }\n\n::-webkit-details-marker {\n  display: none; }\n\nmark {\n  background-color: transparent; }\n\na,\nins,\ns,\nu,\ndel {\n  text-decoration: none; }\n\na,\nimg {\n  -webkit-touch-callout: none; }\n\na {\n  color: #00afc7; }\n\n.g-clear::after,\n.g-mod::after {\n  display: block;\n  overflow: hidden;\n  clear: both;\n  height: 0;\n  content: \"\\0020\"; }\n\n@font-face {\n  font-family: yofont;\n  src: url(//ss.qunarzz.com/yo/font/1.0.3/yofont.woff) format(\"woff\"), url(//ss.qunarzz.com/yo/font/1.0.3/yofont.ttf) format(\"truetype\"); }\n\n.yo-ico {\n  font-family: yofont !important;\n  font-style: normal;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale;\n  vertical-align: middle; }\n\n@font-face {\n  font-family: 'iconfont';\n  src: url(\"http://localhost:7000/media/iconfont/iconfont.woff\") format(\"woff\"), url(\"http://localhost:7000/media/iconfont/iconfont.ttf\") format(\"truetype\"); }\n\n.iconfont {\n  font-family: \"iconfont\" !important;\n  font-size: 16px;\n  font-style: normal;\n  -webkit-font-smoothing: antialiased;\n  -webkit-text-stroke-width: 0.2px;\n  -moz-osx-font-smoothing: grayscale; }\n\nbody {\n  height: 100%;\n  width: 100%; }\n\n#app {\n  height: 100%;\n  width: 100%;\n  background: white; }\n\n.m-index {\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: flex;\n  -webkit-box-orient: vertical;\n  -webkit-box-direction: normal;\n  -webkit-flex-direction: column;\n  flex-direction: column;\n  height: 100%; }\n  .m-index header {\n    height: 1.24rem; }\n  .m-index section {\n    -webkit-box-flex: 1;\n    -webkit-flex: 1;\n    flex: 1;\n    width: .1px;\n    width: 100%;\n    overflow-y: scroll; }\n  .m-index footer {\n    height: .5rem; }\n"],"sourceRoot":""}]);
-
-// exports
-
-
-/***/ }),
-/* 64 */
-/***/ (function(module, exports, __webpack_require__) {
-
-"use strict";
-
-
-Object.defineProperty(exports, "__esModule", {
-	value: true
-});
-
-var _footer = __webpack_require__(11);
-
-var _footer2 = _interopRequireDefault(_footer);
-
-var _header = __webpack_require__(12);
-
-var _header2 = _interopRequireDefault(_header);
-
-var _section = __webpack_require__(13);
-
-var _section2 = _interopRequireDefault(_section);
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-exports.default = {
-	data: function data() {
-		return {};
-	},
-
-	methods: {
-		getnum: function getnum(title) {
-			console.log(title);
-		}
-	},
-	components: {
-		IndexFooter: _footer2.default,
-		IndexHeader: _header2.default,
-		IndexSection: _section2.default
-	}
-}; //
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-//
-
-/***/ }),
-/* 65 */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-var render = function() {
-  var _vm = this
-  var _h = _vm.$createElement
-  var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "m-index" }, [
-    _c("header", [_c("IndexHeader")], 1),
-    _vm._v(" "),
-    _c("section", [_vm._v("\n\t\txinxianshi\n\t")]),
-    _vm._v(" "),
-    _c("footer", [_c("IndexFooter")], 1)
-  ])
-}
-var staticRenderFns = []
-render._withStripped = true
-var esExports = { render: render, staticRenderFns: staticRenderFns }
-/* harmony default export */ __webpack_exports__["a"] = (esExports);
-if (false) {
-  module.hot.accept()
-  if (module.hot.data) {
-    require("vue-loader/node_modules/vue-hot-reload-api")      .rerender("data-v-d5a1f9b2", esExports)
-  }
-}
-
-/***/ }),
-/* 66 */
+/* 68 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "media/iconfont/iconfont.ttf";
 
 /***/ }),
-/* 67 */
+/* 69 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "media/iconfont/iconfont.woff";
 
 /***/ }),
-/* 68 */
+/* 70 */
 /***/ (function(module, exports, __webpack_require__) {
 
 module.exports = __webpack_require__.p + "media/images/loading-gif.gif";
