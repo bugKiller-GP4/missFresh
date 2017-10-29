@@ -72,7 +72,7 @@
 											<span>商城价 <span>¥&nbsp;</span><span>&nbsp;{{(goods_list.vip_price_pro.price_down.price)/100}}</span></span>
 										</div>
 										<div class="message_cart">
-											<img :src="goods_list.cart_image"/>
+											<img :src="goods_list.cart_image" @click="gotocart($event,goods_list)"/>
 										</div>
 									</div>
 								</div>
@@ -103,6 +103,7 @@
 	import { Loadmore } from "mint-ui"
 	import { Lazyload } from 'mint-ui';
 	import "mint-ui/lib/style.css"
+	import store from "../scripts/vuex/store.js"
 	import axios from "axios"
 	Vue.component(Loadmore.name, Loadmore);
 	Vue.component(Swipe.name, Swipe);
@@ -198,6 +199,11 @@
 	      	},
 	      	gotodetail(params){
 	      		this.$router.push({ name : 'detail',query : {sku : params}});
+	      	},
+	      	gotocart(event,obj){
+	      		event.cancelBubble = true;
+	      		console.log(store.state.goods_list);
+	      		store.commit('addtocarts',obj);
 	      	}
 		}
 	}

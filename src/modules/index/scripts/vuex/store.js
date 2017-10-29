@@ -8,6 +8,8 @@ const store = new Vuex.Store({
 		type : 'hot',
 		isInSearch : false,
 		searchhis : [],
+		goods_list : [],
+		
 	},
 	mutations : {
 		update(state,newtype){
@@ -26,6 +28,21 @@ const store = new Vuex.Store({
 			}else{
 				return ;
 				
+			}
+		},
+		addtocarts(state,item){
+			var res = state.goods_list.filter(function(key){
+				return key.sku==item.sku;
+			})
+			if(res.length==0){
+				item.num = 1;
+				state.goods_list.push(item);
+			}else{
+				for(var i=0;i<state.goods_list.length;i++){
+					if(state.goods_list[i].sku==item.sku){
+						state.goods_list[i].num++;
+					}
+				}
 			}
 		}
 	}

@@ -24,7 +24,7 @@
 					</div>
 					<div class="goods_list">
 						<ul>
-							<li v-for="(goods_list,i) in goods_lists" v-if="(goods_list.buy_permission===0)">
+							<li v-for="(goods_list,i) in goods_lists" v-if="(goods_list.buy_permission===0)" @click="gotodetail(goods_list.sku)">
 								<div class="li_container">
 									<div class="img_left">
 										<img :src="goods_list.image" v-lazy="goods_list.image"/>
@@ -47,7 +47,7 @@
 											<span>商城价 <span>¥&nbsp;</span><span>&nbsp;{{(goods_list.vip_price_pro.price_down.price)/100}}</span></span>
 										</div>
 										<div class="message_cart">
-											<img :src="goods_list.cart_image"/>
+											<img :src="goods_list.cart_image" @click="gotocart($event,goods_list)"/>
 										</div>
 									</div>
 								</div>
@@ -173,7 +173,15 @@
 	      			this.looked = this.store.state.type
 	      		}.bind(this),300)
 	      	},
-	      	
+	      	gotodetail(params){
+	      		console.log(params);
+	      		this.$router.push({ name : 'detail',query : {sku : params}});
+	      	},
+	      	gotocart(event,obj){
+	      		event.cancelBubble = true;
+	      		console.log(store.state.goods_list);
+	      		store.commit('addtocarts',obj);
+	      	}
 		},
 		watch:{
 			looked(){

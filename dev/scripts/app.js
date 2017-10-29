@@ -26114,6 +26114,7 @@ exports.default = {
 				lat: ""
 			}
 		}).then(function (response) {
+			console.log(response);
 			that.imgs = response.data.product_list.banner;
 			that.brands = response.data.product_list.brands;
 			that.card_left = response.data.product_list.category_areas[0];
@@ -26165,6 +26166,9 @@ exports.default = {
 		},
 		handleBottomChange: function handleBottomChange(status) {
 			this.bottomStatus = status;
+		},
+		gotodetail: function gotodetail(params) {
+			this.$router.push({ name: 'detail', query: { sku: params } });
 		}
 	}
 };
@@ -26910,99 +26914,113 @@ var render = function() {
                       "ul",
                       _vm._l(_vm.goods_lists, function(goods_list, i) {
                         return goods_list.buy_permission === 0
-                          ? _c("li", [
-                              _c("div", { staticClass: "li_container" }, [
-                                _c("div", { staticClass: "img_left" }, [
-                                  _c("img", {
-                                    directives: [
-                                      {
-                                        name: "lazy",
-                                        rawName: "v-lazy",
-                                        value: goods_list.image,
-                                        expression: "goods_list.image"
-                                      }
-                                    ],
-                                    attrs: { src: goods_list.image }
-                                  }),
-                                  _vm._v(" "),
-                                  _c("img", {
-                                    attrs: { src: goods_list.promote_tag }
-                                  })
-                                ]),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "message_right" }, [
-                                  _c("div", { staticClass: "message_title" }, [
-                                    _vm._v(
-                                      "\n\t\t\t\t\t\t\t\t\t\t" +
-                                        _vm._s(goods_list.name) +
-                                        "\n\t\t\t\t\t\t\t\t\t"
-                                    )
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "message_info" }, [
-                                    _vm._v(
-                                      "\n\t\t\t\t\t\t\t\t\t\t" +
-                                        _vm._s(goods_list.subtitle) +
-                                        "\n\t\t\t\t\t\t\t\t\t"
-                                    )
-                                  ]),
-                                  _vm._v(" "),
-                                  _c(
-                                    "div",
-                                    { staticClass: "message_des" },
-                                    _vm._l(goods_list.product_tags, function(
-                                      value
-                                    ) {
-                                      return _c("span", [
-                                        _vm._v(_vm._s(value.name))
-                                      ])
+                          ? _c(
+                              "li",
+                              {
+                                on: {
+                                  click: function($event) {
+                                    _vm.gotodetail(goods_list.sku)
+                                  }
+                                }
+                              },
+                              [
+                                _c("div", { staticClass: "li_container" }, [
+                                  _c("div", { staticClass: "img_left" }, [
+                                    _c("img", {
+                                      directives: [
+                                        {
+                                          name: "lazy",
+                                          rawName: "v-lazy",
+                                          value: goods_list.image,
+                                          expression: "goods_list.image"
+                                        }
+                                      ],
+                                      attrs: { src: goods_list.image }
+                                    }),
+                                    _vm._v(" "),
+                                    _c("img", {
+                                      attrs: { src: goods_list.promote_tag }
                                     })
-                                  ),
+                                  ]),
                                   _vm._v(" "),
-                                  _c(
-                                    "div",
-                                    { staticClass: "message_highprice" },
-                                    [
-                                      _c("span", [
+                                  _c("div", { staticClass: "message_right" }, [
+                                    _c(
+                                      "div",
+                                      { staticClass: "message_title" },
+                                      [
                                         _vm._v(
-                                          "可用券价 ¥" +
-                                            _vm._s(
-                                              goods_list.vip_price_pro.price_up
-                                                .price / 100
-                                            )
+                                          "\n\t\t\t\t\t\t\t\t\t\t" +
+                                            _vm._s(goods_list.name) +
+                                            "\n\t\t\t\t\t\t\t\t\t"
                                         )
-                                      ])
-                                    ]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "div",
-                                    { staticClass: "message_lowprice" },
-                                    [
-                                      _c("span", [
-                                        _vm._v("商城价 "),
-                                        _c("span", [_vm._v("¥ ")]),
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("div", { staticClass: "message_info" }, [
+                                      _vm._v(
+                                        "\n\t\t\t\t\t\t\t\t\t\t" +
+                                          _vm._s(goods_list.subtitle) +
+                                          "\n\t\t\t\t\t\t\t\t\t"
+                                      )
+                                    ]),
+                                    _vm._v(" "),
+                                    _c(
+                                      "div",
+                                      { staticClass: "message_des" },
+                                      _vm._l(goods_list.product_tags, function(
+                                        value
+                                      ) {
+                                        return _c("span", [
+                                          _vm._v(_vm._s(value.name))
+                                        ])
+                                      })
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "div",
+                                      { staticClass: "message_highprice" },
+                                      [
                                         _c("span", [
                                           _vm._v(
-                                            " " +
+                                            "可用券价 ¥" +
                                               _vm._s(
                                                 goods_list.vip_price_pro
-                                                  .price_down.price / 100
+                                                  .price_up.price / 100
                                               )
                                           )
                                         ])
-                                      ])
-                                    ]
-                                  ),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "message_cart" }, [
-                                    _c("img", {
-                                      attrs: { src: goods_list.cart_image }
-                                    })
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "div",
+                                      { staticClass: "message_lowprice" },
+                                      [
+                                        _c("span", [
+                                          _vm._v("商城价 "),
+                                          _c("span", [_vm._v("¥ ")]),
+                                          _c("span", [
+                                            _vm._v(
+                                              " " +
+                                                _vm._s(
+                                                  goods_list.vip_price_pro
+                                                    .price_down.price / 100
+                                                )
+                                            )
+                                          ])
+                                        ])
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("div", { staticClass: "message_cart" }, [
+                                      _c("img", {
+                                        attrs: { src: goods_list.cart_image }
+                                      })
+                                    ])
                                   ])
                                 ])
-                              ])
-                            ])
+                              ]
+                            )
                           : goods_list.code == "sell-out"
                             ? _c("div", { staticClass: "sell_out" }, [
                                 _c("span", [_vm._v(_vm._s(goods_list.name))]),
@@ -27918,6 +27936,9 @@ exports.default = {
 			setInterval(function () {
 				this.looked = this.store.state.type;
 			}.bind(this), 300);
+		},
+		gotodetail: function gotodetail(params) {
+			this.$router.push({ name: 'detail', query: { sku: params } });
 		}
 	},
 	watch: {
@@ -29023,99 +29044,113 @@ var render = function() {
                       "ul",
                       _vm._l(_vm.goods_lists, function(goods_list, i) {
                         return goods_list.buy_permission === 0
-                          ? _c("li", [
-                              _c("div", { staticClass: "li_container" }, [
-                                _c("div", { staticClass: "img_left" }, [
-                                  _c("img", {
-                                    directives: [
-                                      {
-                                        name: "lazy",
-                                        rawName: "v-lazy",
-                                        value: goods_list.image,
-                                        expression: "goods_list.image"
-                                      }
-                                    ],
-                                    attrs: { src: goods_list.image }
-                                  }),
-                                  _vm._v(" "),
-                                  _c("img", {
-                                    attrs: { src: goods_list.promote_tag }
-                                  })
-                                ]),
-                                _vm._v(" "),
-                                _c("div", { staticClass: "message_right" }, [
-                                  _c("div", { staticClass: "message_title" }, [
-                                    _vm._v(
-                                      "\n\t\t\t\t\t\t\t\t\t\t" +
-                                        _vm._s(goods_list.name) +
-                                        "\n\t\t\t\t\t\t\t\t\t"
-                                    )
-                                  ]),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "message_info" }, [
-                                    _vm._v(
-                                      "\n\t\t\t\t\t\t\t\t\t\t" +
-                                        _vm._s(goods_list.subtitle) +
-                                        "\n\t\t\t\t\t\t\t\t\t"
-                                    )
-                                  ]),
-                                  _vm._v(" "),
-                                  _c(
-                                    "div",
-                                    { staticClass: "message_des" },
-                                    _vm._l(goods_list.product_tags, function(
-                                      value
-                                    ) {
-                                      return _c("span", [
-                                        _vm._v(_vm._s(value.name))
-                                      ])
+                          ? _c(
+                              "li",
+                              {
+                                on: {
+                                  click: function($event) {
+                                    _vm.gotodetail(goods_list.sku)
+                                  }
+                                }
+                              },
+                              [
+                                _c("div", { staticClass: "li_container" }, [
+                                  _c("div", { staticClass: "img_left" }, [
+                                    _c("img", {
+                                      directives: [
+                                        {
+                                          name: "lazy",
+                                          rawName: "v-lazy",
+                                          value: goods_list.image,
+                                          expression: "goods_list.image"
+                                        }
+                                      ],
+                                      attrs: { src: goods_list.image }
+                                    }),
+                                    _vm._v(" "),
+                                    _c("img", {
+                                      attrs: { src: goods_list.promote_tag }
                                     })
-                                  ),
+                                  ]),
                                   _vm._v(" "),
-                                  _c(
-                                    "div",
-                                    { staticClass: "message_highprice" },
-                                    [
-                                      _c("span", [
+                                  _c("div", { staticClass: "message_right" }, [
+                                    _c(
+                                      "div",
+                                      { staticClass: "message_title" },
+                                      [
                                         _vm._v(
-                                          "可用券价 ¥" +
-                                            _vm._s(
-                                              goods_list.vip_price_pro.price_up
-                                                .price / 100
-                                            )
+                                          "\n\t\t\t\t\t\t\t\t\t\t" +
+                                            _vm._s(goods_list.name) +
+                                            "\n\t\t\t\t\t\t\t\t\t"
                                         )
-                                      ])
-                                    ]
-                                  ),
-                                  _vm._v(" "),
-                                  _c(
-                                    "div",
-                                    { staticClass: "message_lowprice" },
-                                    [
-                                      _c("span", [
-                                        _vm._v("商城价 "),
-                                        _c("span", [_vm._v("¥ ")]),
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("div", { staticClass: "message_info" }, [
+                                      _vm._v(
+                                        "\n\t\t\t\t\t\t\t\t\t\t" +
+                                          _vm._s(goods_list.subtitle) +
+                                          "\n\t\t\t\t\t\t\t\t\t"
+                                      )
+                                    ]),
+                                    _vm._v(" "),
+                                    _c(
+                                      "div",
+                                      { staticClass: "message_des" },
+                                      _vm._l(goods_list.product_tags, function(
+                                        value
+                                      ) {
+                                        return _c("span", [
+                                          _vm._v(_vm._s(value.name))
+                                        ])
+                                      })
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "div",
+                                      { staticClass: "message_highprice" },
+                                      [
                                         _c("span", [
                                           _vm._v(
-                                            " " +
+                                            "可用券价 ¥" +
                                               _vm._s(
                                                 goods_list.vip_price_pro
-                                                  .price_down.price / 100
+                                                  .price_up.price / 100
                                               )
                                           )
                                         ])
-                                      ])
-                                    ]
-                                  ),
-                                  _vm._v(" "),
-                                  _c("div", { staticClass: "message_cart" }, [
-                                    _c("img", {
-                                      attrs: { src: goods_list.cart_image }
-                                    })
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c(
+                                      "div",
+                                      { staticClass: "message_lowprice" },
+                                      [
+                                        _c("span", [
+                                          _vm._v("商城价 "),
+                                          _c("span", [_vm._v("¥ ")]),
+                                          _c("span", [
+                                            _vm._v(
+                                              " " +
+                                                _vm._s(
+                                                  goods_list.vip_price_pro
+                                                    .price_down.price / 100
+                                                )
+                                            )
+                                          ])
+                                        ])
+                                      ]
+                                    ),
+                                    _vm._v(" "),
+                                    _c("div", { staticClass: "message_cart" }, [
+                                      _c("img", {
+                                        attrs: { src: goods_list.cart_image }
+                                      })
+                                    ])
                                   ])
                                 ])
-                              ])
-                            ])
+                              ]
+                            )
                           : goods_list.code == "sell-out"
                             ? _c("div", { staticClass: "sell_out" }, [
                                 _c("span", [_vm._v(_vm._s(goods_list.name))]),
