@@ -137,25 +137,5 @@ body{
             background: #ff0;
         }
     }
-    @keyframes slidein 
-    {
-        0%{right: -100%;}
-        100%{right: 0;}
-    }
-    @keyframes slideout 
-    {
-        0%{right: 0;}
-        100%{right: -100%;}
-    }
-    .slidein{
-        animation : slidein 1s 0s 1;
-        -webkit-animation: slidein 1s 0s 1;  /* Safari 和 Chrome */
-        right: 0% !important;
-    }
-    .slideout{
-        animation : slideout 1s 0s 1;
-        -webkit-animation: slideout 1s 0s 1;  /* Safari 和 Chrome */
-        right: -100% !important;
-    }
 }
 

@@ -26,9 +26,4 @@ export default [
         component: Register,
         name: 'Register'
     }
-    // {
-    //     path: '/Setting',
-    //     component: Setting,
-    //     name: 'Setting'
-    // }
 ]

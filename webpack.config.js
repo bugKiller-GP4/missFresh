@@ -16,13 +16,24 @@ if(process.env.NODE_ENV === 'dev'){
 			port : '5000',
 			contentBase : __dirname + '/dev',
 			noInfo : true,
-			proxy: {
-				'/api': {
-					target: 'http://datainfo.duapp.com/shopdata/userinfo.php',
-					changeOrigin: true,
-					pathReWrite: {
-						'^/api': ''
-					} 
+			proxy : 
+			{
+				
+				'/api' : 
+				{
+					target : "https://as-vip.missfresh.cn/",
+					changeOrigin : true,
+					pathRewrite : {
+						'^/api' : ''
+					}
+				},
+				'/list' : 
+				{
+					target : "http://localhost:3000",
+					changeOrigin : true,
+					pathRewrite : {
+						'^/list' :''
+					}
 				}
 			}
 		},
@@ -32,7 +43,8 @@ if(process.env.NODE_ENV === 'dev'){
 	  	resolve : {
 	  		alias : {
 	  			'vue$' : 'vue/dist/vue.js',
-	  			'vue-router$' : 'vue-router/dist/vue-router.js'
+	  			'vue-router$' : 'vue-router/dist/vue-router.js',
+	  			'axios$' : "axios/dist/axios.js"	  		
 	  		}
 	  	},
 	  	

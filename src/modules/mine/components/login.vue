@@ -22,12 +22,10 @@
 </template>
 <script>
     import axios from 'axios';
-    import bus from '../../../scripts/bus';
     export default {
         data() {
             return {
                 isShow : false
-                // wasShow : false
             }
         },
         methods: {  
