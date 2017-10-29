@@ -1,0 +1,97 @@
+@import "../../../styles/app.scss";
+body{
+    background: #fff;
+}
+.login{
+    width: 100%;
+    height: 100%;
+    header{
+        height: 44px;
+        @include border(0 0 1px 0);
+        position: relative;
+        button{
+            position: absolute;
+            top: 0;
+            left: 2%;
+            width: 36px;
+            height: 43px;
+            background: url('../images/login-back.png') center no-repeat;
+            background-size: 19px 19px;
+            border: 0;
+        }
+        span{
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+            font-size: 16px;
+            line-height: 44px;
+        }
+    }
+    .reg{
+        width: 100%;
+        height: .5rem;
+        text-align: center;
+        font-size: .18rem;
+        line-height: .5rem;
+        margin: .05rem .05rem 0 0;
+        color: #ff4891;
+        @include border(0 0 1px 0);
+    }
+    .login-list{
+        padding: .3rem .3rem .1rem;
+        .phone{
+            padding-bottom: .1rem; 
+            @include border(0 0 1px 0);
+            position: relative;
+            .phone-num{
+                border: 0;
+                font-size: 16px;
+                color: #ff4891;
+            }
+            .get-yzm{
+                position: absolute;
+                right: 1%;
+                bottom: 30%;
+                font-size: 14px;
+                color: #ff4891;
+                padding: 5px 5px 4px;
+                border: 1px solid #ff4891;
+                border-radius: 5px;
+                background: #fff;                
+            }
+        }
+        .password{
+            padding-top: .2rem; 
+            .in-yzm{
+                border: 0;
+                font-size: 16px;
+                color: #ff4891;                
+            }
+        }
+        .log{
+            background-color: #ff4891;
+            color: #fff;
+            width: 95%;
+            height: 48px;
+            border-radius: .05rem;
+            border: 0;
+            margin-top: .3rem;
+        }
+        p{
+            font-size: 12px;
+            color: #969696;
+            padding-top: .1rem;
+            text-align: center;
+        }
+    }
+    .warn{
+        width: 50%;
+        margin: 0 auto;
+        height: .5rem;
+        line-height: .5rem;
+        text-align: center;
+        border-radius: .05rem;
+        background: rgba(0,0,0,0.3);
+        color: #fff;
+    }
+}
