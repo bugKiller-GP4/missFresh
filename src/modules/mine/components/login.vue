@@ -58,7 +58,7 @@
                 }
             },
             back(){
-                history.go(-1)
+                this.$router.push('mine');
             },
             inReg(){
                 this.$router.push('register');

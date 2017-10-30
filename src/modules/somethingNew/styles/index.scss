@@ -6,12 +6,12 @@
 .box{
     height: 100%;
     width: 100%;
-    padding:0 0.15rem;
     padding-top: .3rem;
     background: #fff;
     @include flexbox();
     @include flex-direction(column);
     section{
+        padding:0 0.15rem;
         @include flex();
         width: 100%;
         overflow-y:scroll ;

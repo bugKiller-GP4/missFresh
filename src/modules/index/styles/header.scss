@@ -17,9 +17,9 @@ header{
                     height: 100%;
                     width: 100%;
                 }
-                &:first-child{
+                &.head_img{
                 }
-                &:nth-child(2){
+                &.head_pos{
                     @include flexbox();
                     img{
                         vertical-align: top;
@@ -65,7 +65,7 @@ header{
                         
                     }
                 }
-                &:last-child{
+                &.head_nav{
                     @include flexbox();
                     height: 100%;
                     width: 100%;

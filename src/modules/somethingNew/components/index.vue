@@ -1,7 +1,7 @@
 <template lang="html">
     <div class="box">
         <section>
-         <mt-loadmore :top-method="loadTop" :bottom-method="loadBottom" ref="loadmore">   
+         <mt-loadmore :top-method="loadTop" :bottom-method="loadBottom" ref="loadmore">  
             <ul>
                 <li v-for="(list,i) in dataList" :key="i" v-if="sum > i">
                     <div class="img_box">
@@ -17,7 +17,7 @@
         </mt-loadmore>
         </section>
          <footer id="bbb">
-             <div>11111</div>
+             <foot></foot>
          </footer>
     </div>    
 </template>
@@ -27,21 +27,33 @@ import axios from 'axios';
 import { Loadmore } from "mint-ui";
 import Vue from "vue";
 import "mint-ui/lib/style.css";
+import foot from '../../common/footer.vue';
 Vue.component(Loadmore.name, Loadmore );
 
     export default{
         data(){
             return{
                 dataList: [],
-                sum:0,
-               "bottom-all-loaded":false,
-               "distance-index":0
+                sum:0
             }
         },
         methods:{
             handleButtonInfo(title){
                 this.bbc = title
+            },
+            loadTop(){
+                console.log(2)
+                this.$refs.loadmore.onTopLoaded();
+            },
+            loadBottom(){
+              setTimeout(function(){
+                     this.sum += 4
+                     this.$refs.loadmore.onBottomLoaded();
+                 }.bind(this),500)
             }
+        },
+         components:{
+            foot
         },
         mounted(){
             axios({
@@ -56,20 +68,10 @@ Vue.component(Loadmore.name, Loadmore );
             })
             .then((res)=>{
                 this.dataList = res.data.discover_list[0].discover_con_list
-                
-                console.log(this.dataList)
             })
         },
-        methods:{
-            loadTop(){
-                this.$refs.loadmore.onTopLoaded();
-            },
-            loadBottom(){
-              setTimeout(function(){
-                     this.sum += 4
-                     this.$refs.loadmore.onBottomLoaded();
-                 }.bind(this),500)
-            }
+        updated(){
+            console.log(1)
         }
     }
 </script>

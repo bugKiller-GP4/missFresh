@@ -132,10 +132,11 @@
         },
         mounted() {
             store.state.isLogin ? this.isShowButton = store.state.isLogin : (sessionStorage.getItem('User') ? this.isShowButton = true : false)
+            // store.state.isLogin ? this.$router.push('mine') : this.$router.push('Login')
         },
         methods:{
             set(){
-                this.show = false;
+                this.show = false; 
                 this.$router.push('/setting')
             }
         }

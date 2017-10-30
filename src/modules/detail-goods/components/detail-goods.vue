@@ -173,7 +173,6 @@
 			}).then((res) => {
 				this.data = res.data;
 				this.showall = true
-				//console.log(this.data)
 				for(var i=0;i<store.state.goods_list.length;i++){
 					if(res.data.sku==store.state.goods_list[i].sku){
 						this.num=store.state.goods_list[i].num;

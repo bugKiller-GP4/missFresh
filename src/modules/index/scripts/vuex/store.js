@@ -9,7 +9,8 @@ const store = new Vuex.Store({
 		isInSearch : false,
 		searchhis : [],
 		goods_list : [],
-		isLogin : false
+		isLogin : false,
+		newData:{}
 		
 	},
 	mutations : {
@@ -45,6 +46,33 @@ const store = new Vuex.Store({
 					}
 				}
 			}
+		},
+		add(state,data){
+			var index = 0;
+			state.goods_list.forEach(function(key,i){
+				if(key.sku == data.sku){
+					index = i
+				}
+			})
+			this.newData = state.goods_list[index]
+			this.newData.num += 1
+			Vue.set(state.goods_list,index,this.newData)
+		},
+		min(state,data){
+			var index = 0;
+			state.goods_list.forEach(function(key,i){
+				if(key.sku == data.sku){
+					index = i
+				}
+			})
+			this.newData = state.goods_list[index]
+			this.newData.num -= 1
+			if(this.newData.num==0){
+				state.goods_list.splice(index,1)
+			}else{
+				Vue.set(state.goods_list,index,this.newData)
+			}
+			
 		}
 	}
 })

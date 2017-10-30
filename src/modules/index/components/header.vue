@@ -1,10 +1,10 @@
 <template>
 	<div>
 		<ul>
-			<li>
+			<li v-if="!iscart" class="head_img">
 				<img src="https://j-image.missfresh.cn/img_20170816184022244.png"/>
 			</li>
-			<li>
+			<li class="head_pos">
 				<div>
 					<span>
 						<img src="https://j-image.missfresh.cn/img_20161026155951214.png"/>
@@ -20,7 +20,7 @@
 					<img src="//static-as.missfresh.cn/frontend/img/home-search-3x-black.png" @click="getmessage('slidein')"/>
 				</div>
 			</li>
-			<li>
+			<li v-if="!iscart" class="head_nav">
 				<div class="scroll">
 					<ul>
 						<li :ref="'huoguo'">
@@ -96,7 +96,7 @@
 	import store from "../scripts/vuex/store.js"
 	import axios from "axios"
 	export default {
-		props : ["gettype","getmessage"],
+		props : ["gettype","getmessage","iscart"],
 		data(){
 			return {
 				store,
@@ -206,7 +206,6 @@
 			}
 		},
 		mounted(){
-			console.log(this.$refs)
 			new IsScroll('.scroll',{
 				scrollX: true
 			});
